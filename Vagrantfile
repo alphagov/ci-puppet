@@ -2,9 +2,8 @@
 # vi: set ft=ruby :
 
 nodes = {
-  'node0' => {:ip => '172.16.10.10', :memory => 512},
-  'node1' => {:ip => '172.16.10.11'},
-  'node2' => {:ip => '172.16.10.12'},
+  'jenkins-master' => {:ip => '172.16.11.10'},
+  'jenkins-slave'  => {:ip => '172.16.11.11'},
 }
 node_defaults = {
   :domain => 'internal',
@@ -23,6 +22,7 @@ Vagrant.configure("2") do |config|
       "--verbose", "--summarize",
       "--reports", "store",
       "--hiera_config", "/vagrant/hiera.yaml",
+      "--environment", "development",
     ]
   end
 
