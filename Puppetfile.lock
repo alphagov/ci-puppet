@@ -2,7 +2,9 @@ FORGE
   remote: http://forge.puppetlabs.com/
   specs:
     puppetlabs/stdlib (3.2.0)
+    torrancew/account (0.0.3)
 
 DEPENDENCIES
   puppetlabs/stdlib (~> 3.0)
+  torrancew/account (= 0.0.3)
 
