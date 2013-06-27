@@ -1,10 +1,26 @@
 FORGE
+  remote: http://forge.puppetlabs.com
+  specs:
+    puppetlabs/apt (1.1.0)
+      puppetlabs/stdlib (>= 2.2.1)
+
+FORGE
   remote: http://forge.puppetlabs.com/
   specs:
     puppetlabs/stdlib (3.2.0)
     torrancew/account (0.0.3)
 
+GIT
+  remote: git://github.com/alphagov/puppet-jenkins.git
+  ref: 4c7990fa8495b6d84292c2153993ac91c3b2916d
+  sha: 4c7990fa8495b6d84292c2153993ac91c3b2916d
+  specs:
+    jenkins (0.2.4)
+      puppetlabs/apt (>= 0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
+
 DEPENDENCIES
+  jenkins (>= 0)
   puppetlabs/stdlib (~> 3.0)
   torrancew/account (= 0.0.3)
 

@@ -1,0 +1,7 @@
+---
+classes: jenkins
+
+jenkins::version: latest
+jenkins::plugin_hash:
+    greenballs:
+        version: "1.12"
