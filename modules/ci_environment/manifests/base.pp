@@ -7,5 +7,6 @@ class ci_environment::base {
         content => '%gds ALL=(ALL) NOPASSWD: ALL
 '
     }
-    create_resources( 'account', hiera_hash('accounts'), { require => Group['gds'] } )
+    $account_defaults = { require => Group['gds'] }
+    create_resources( 'account', hiera_hash('accounts'), $account_defaults )
 }
