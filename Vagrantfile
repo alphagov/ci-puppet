@@ -3,7 +3,8 @@
 
 nodes = {
   'jenkins-master' => {:ip => '172.16.11.10'},
-  'jenkins-slave'  => {:ip => '172.16.11.11'},
+  'jenkins-slave1' => {:ip => '172.16.11.11'},
+  'jenkins-slave2' => {:ip => '172.16.11.12'},
 }
 node_defaults = {
   :domain => 'internal',
