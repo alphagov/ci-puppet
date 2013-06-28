@@ -1,7 +1,11 @@
 ---
-classes: jenkins
+classes:
+ - ci_environment::jenkins_master
+ - jenkins
 
 jenkins::version: latest
 jenkins::plugin_hash:
     greenballs:
         version: "1.12"
+    swarm:
+        version: "1.9"
