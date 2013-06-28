@@ -32,10 +32,10 @@ Vagrant::VERSION < "1.1.0" and Vagrant::Config.run do |config|
       node_opts = node_defaults.merge(node_opts)
       fqdn = "#{node_name}.#{node_opts[:domain]}"
 
-      node.vm.hostname = fqdn
+      node.vm.host_name = fqdn
 
       if node_opts[:ip]
-        node.vm.network :hostonly, :ip => node_opts[:ip], :netmask => "255.255.255.0"
+        node.vm.network :hostonly, node_opts[:ip], :netmask => "255.255.255.0"
       end
 
       modifyvm_args = ['modifyvm', :id]
