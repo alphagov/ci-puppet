@@ -1,0 +1,15 @@
+---
+accounts:
+    jenkins:
+        home_dir: /home/jenkins
+        comment: Jenkins User
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDTd6RZtnF8VTiIqiWX/c2UjVLvln6dGrzmDX+dBeP9Xv14ImnMrjMbSi+gsDqZm53IKqwexj/vKIpqcJeUqYGCEvjoymo+u4M+76r8UeQRKcSp/OjBJWaydFI/wzBhaadSTqsOEq/y+b67yfbSuPpnbX4ZDtA5rhLH3HIDvTXGNU/tMJnAuDXHN9MrGm288uyIHmgPjrrJFu3ld4lazZuJDTU4Xw/cih56WOufvdBWi07xG8afV2q/dXggzNdvMHhetI+ZltLE71AmGK8bVUhublBDO8yY3Usaa/TvpTJH681KoZpGmezhtcazEjN1sDlvkOyRW8tppeg9/qTpnKef
+
+classes:
+    - ci_environment::jenkins_slave
+
+jenkins::slave::manage_slave_user: 0
+jenkins::slave::slave_user: jenkins
+jenkins::slave::slave_home: /home/jenkins
+jenkins::slave::version: 1.9
+jenkins::slave::broadcast_address: 172.16.11.255
