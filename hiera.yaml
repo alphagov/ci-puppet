@@ -1,4 +1,5 @@
 :hierarchy:
+  - "node.secrets.%{::clientcert}"
   - "node.%{::clientcert}"
   - "env.%{::environment}"
   - common
