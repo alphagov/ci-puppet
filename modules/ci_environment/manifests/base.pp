@@ -13,4 +13,5 @@ class ci_environment::base {
     exec { 'apt-get-update':
         command => '/usr/bin/apt-get update || true',
     }
+    Exec <| title == 'apt-get-update' |> -> Package <| provider == 'apt' |>
 }
