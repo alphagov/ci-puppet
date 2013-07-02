@@ -8,8 +8,9 @@ class ci_environment::base {
 '
     }
     $account_defaults = {
-                        require => Group['gds'],
-                        groups  => ['gds']
+                        require      => Group['gds'],
+                        create_group => false,
+                        groups       => ['gds']
                         }
     create_resources( 'account', hiera_hash('accounts'), $account_defaults )
 
