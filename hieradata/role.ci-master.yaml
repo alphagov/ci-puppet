@@ -7,5 +7,9 @@ jenkins::version: latest
 jenkins::plugin_hash:
     greenballs:
         version: "1.12"
+    monitoring:
+        version: "1.45.0"
+    nodeofflinenotification:
+        version: "1.0.3"
     swarm:
         version: "1.9"
