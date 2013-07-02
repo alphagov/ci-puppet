@@ -9,9 +9,5 @@ jenkins::plugin_hash:
         version: "1.12"
     monitoring:
         version: "1.45.0"
-    nodeofflinenotification:
-        version: "1.0.3"
-    ruby-runtime:
-        version: "0.11"
     swarm:
         version: "1.9"
