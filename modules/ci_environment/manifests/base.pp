@@ -7,7 +7,10 @@ class ci_environment::base {
         content => '%gds ALL=(ALL) NOPASSWD: ALL
 '
     }
-    $account_defaults = { require => Group['gds'] }
+    $account_defaults = {
+                        require => Group['gds'],
+                        groups  => ['gds']
+                        }
     create_resources( 'account', hiera_hash('accounts'), $account_defaults )
 
     exec { 'apt-get-update':
