@@ -32,7 +32,7 @@ check_ruby() {
 
 create_user() {
   echo "--> Creating user" | pp
-  groupadd gds
+  getent group gds >/dev/null || groupadd gds
   useradd -G gds -s /bin/bash -m $1
   mkdir /home/${1}/.ssh
   echo "ssh-rsa $2 ${1}_user" > /home/${1}/.ssh/authorized_keys
