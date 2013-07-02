@@ -54,15 +54,16 @@ nameserver 8.8.8.8
 nameserver 8.8.4.4
 search $MYDOMAIN
 EOF
-  cp /etc/resolv.conf >/etc/resolvconf/resolv.conf.d/original
+  cp /etc/resolv.conf /etc/resolvconf/resolv.conf.d/original
 }
 
+MYHOST=$1
 main() {
   quieten_sudo
   set_uk_apt_sources
   check_ruby
-  if [ "$1" != "" ]; then
-    fix_hostname $1
+  if [ "$MYHOST" != "" ]; then
+    fix_hostname $MYHOST
   fi
   create_user ssharpe 'AAAAB3NzaC1yc2EAAAABIwAAAQEAyNoMftFLf3w0NOW7J0KUwOx9897CU352n3zKD3p/GCcdH4eMv1QI0BhjItZplWG8TzFSBfWOOSruRh1Gksa1l1jiQcisEio6Wr7kZ7bpvMMA45ZoaDc26HTB+r0BZkNn7Lwwxxvy+1pbqStnnKzb9OTYIyVkb495LS0x1EL/P9S/NWtpm8ZULa1JDplYMA5SqMZnhmlGAXdh8UnjdcdOgOm2ngA+geJBSzVbABECiIAklHU1PRzOtrq8SuO8JmXW6NkuL0aabdTgE6noIm+Nn7T5ufZpOpIGYimVI8+mu+efcBzAp5Q0vTRgSBLfggdczZbFfPXpIt1Ib+LEf+Cuqw=='
   create_user dabel 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDWoMjmzyhI3smmKziws6bBgHGf6bp00k2//Tc9l8mDtzBzTJmvSLkb+Zbe/Rmi0BE+sHEANa+K+AsbqRFVFQG+Risx8Mn+e9LVoh3yNKHyBOvXkz/MsV9LECmDpY7tpByb+CWXjsWID/ze7oc85QGXdMWJun0qQOt1pjgCNuEtXyPKT5rbGc7JlJD0VbODtXB2ft2EUEg4l95lcl302fhjZDNXhjPuczhbRXY1B0WUg9uGNmrHdmbdk7Kbcyu9JIlUT93ww+fW1edSiX4BWqGnVyZaLoQr1m1dyvd/wdM9gytfTOLtKUiKgI61nk6Dc9Fz0tGYjmvdIgsk3bqlh/u5'
