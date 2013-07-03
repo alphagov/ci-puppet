@@ -1,3 +1,4 @@
+# Sets up internal DNS on each machine
 class ci_environment::dns {
 
   include dnsmasq
@@ -9,7 +10,7 @@ class ci_environment::dns {
   $hosts = hiera('gds_dns::server::hosts', '')
 
   dnsmasq::conf { 'internal-dns':
-      ensure => present,
+      ensure  => present,
       content => template('ci_environment/internal-dns.erb'),
   }
 
@@ -26,12 +27,12 @@ class ci_environment::dns {
   $use_local_resolver = true
 
   file { '/etc/resolvconf/resolv.conf.d/head':
-    ensure => 'present',
-    owner => 'root',
-    group => 'root',
-    mode => '0644',
+    ensure  => 'present',
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
     content => template('ci_environment/resolv.conf.erb'),
-    notify => Class['dnsmasq::service'],
+    notify  => Class['dnsmasq::service'],
   }
 
 }
