@@ -15,6 +15,7 @@ Vagrant::VERSION < "1.1.0" and Vagrant::Config.run do |config|
   config.vm.box     = "puppet-precise64"
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
+  config.vm.provision :shell, :path => 'tools/bootstrap'
   config.vm.provision :puppet do |puppet|
     puppet.manifest_file  = "site.pp"
     puppet.manifests_path = "manifests"
@@ -55,6 +56,7 @@ Vagrant::VERSION >= "1.1.0" and Vagrant.configure("2") do |config|
   config.vm.box     = "puppet-precise64"
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
 
+  config.vm.provision :shell, :path => 'tools/bootstrap'
   config.vm.provision :puppet do |puppet|
     puppet.manifest_file  = "site.pp"
     puppet.manifests_path = "manifests"
