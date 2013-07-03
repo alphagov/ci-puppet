@@ -20,7 +20,7 @@ set_uk_apt_sources() {
   sed -i 's|http://us|http://gb|' /etc/apt/sources.list
   apt-get update -qq
   apt-get install -qq python-software-properties curl 2>&1 | pp
-  add-apt-repository -y ppa:gds/govuk 2>&1 | pp
+  test -f /etc/apt/sources.list.d/gds-govuk-precise.list || add-apt-repository -y ppa:gds/govuk 2>&1 | pp
   apt-get update -qq
 }
 
@@ -31,15 +31,14 @@ check_ruby() {
 }
 
 create_user() {
-  echo "--> Creating user" | pp
   getent group gds >/dev/null || groupadd gds
   getent passwd $1 >/dev/null || useradd -G gds -s /bin/bash -m $1
   test -d /home/${1}/.ssh ||  mkdir /home/${1}/.ssh
-  echo "ssh-rsa $2 ${1}_user" > /home/${1}/.ssh/authorized_keys
+  echo "ssh-rsa $2 ${1} SSH Key" > /home/${1}/.ssh/authorized_keys
   chmod 700 /home/${1}/.ssh
   chmod 644 /home/${1}/.ssh/authorized_keys
   chown -R $1 /home/${1}/.ssh
-  echo "%gds ALL=NOPASSWD:ALL" >/etc/sudoers.d/gds
+  echo "%gds ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/gds
   chmod 0440 /etc/sudoers.d/gds
 }
 
