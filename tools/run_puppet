@@ -3,5 +3,4 @@ IP=$1
 scp puppet.tgz $IP:
 ssh $IP 'test -d puppet || mkdir puppet'
 ssh $IP 'tar zxvf puppet.tgz -C puppet'
-ssh $IP "sed -i 's:/vagrant:.:g' puppet/hiera.yaml"
-ssh $IP 'cd puppet && sudo ./bin/puppet apply --modulepath=modules:vendor/modules --hiera_config=hiera.yaml --environment=production manifests/site.pp'
+ssh $IP 'cd puppet && sudo ./bin/puppet apply --modulepath=modules:vendor/modules --hiera_config=hiera_prod.yaml --environment=production manifests/site.pp'

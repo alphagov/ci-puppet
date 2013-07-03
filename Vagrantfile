@@ -22,7 +22,7 @@ Vagrant::VERSION < "1.1.0" and Vagrant::Config.run do |config|
     puppet.options = [
       "--verbose", "--summarize",
       "--reports", "store",
-      "--hiera_config", "/vagrant/hiera.yaml",
+      "--hiera_config", "/vagrant/hiera_dev.yaml",
       "--environment", "development",
     ]
   end
