@@ -21,9 +21,25 @@ GIT
       puppetlabs/apt (>= 0.0.3)
       puppetlabs/stdlib (>= 2.0.0)
 
+GIT
+  remote: git://github.com/alphagov/puppet-nginx.git
+  ref: c5737d68d24c48a644917544f1958279a58b9a19
+  sha: c5737d68d24c48a644917544f1958279a58b9a19
+  specs:
+    nginx (0.0.1)
+
+GIT
+  remote: git://github.com/alphagov/puppet-ssl.git
+  ref: 23bbb5ab57f26269acce3d4b43e643781747a551
+  sha: 23bbb5ab57f26269acce3d4b43e643781747a551
+  specs:
+    ssl (0.0.1)
+
 DEPENDENCIES
   jenkins (>= 0)
+  nginx (>= 0)
   puppetlabs/java (= 0.3.0)
   puppetlabs/stdlib (~> 3.0)
+  ssl (>= 0)
   torrancew/account (= 0.0.3)
 
