@@ -10,6 +10,7 @@ FORGE
     puppetlabs/java (0.3.0)
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/stdlib (3.2.0)
+    saz/dnsmasq (1.0.1)
     torrancew/account (0.0.3)
 
 GIT
@@ -40,6 +41,7 @@ DEPENDENCIES
   nginx (>= 0)
   puppetlabs/java (= 0.3.0)
   puppetlabs/stdlib (~> 3.0)
+  saz/dnsmasq (= 1.0.1)
   ssl (>= 0)
   torrancew/account (= 0.0.3)
 

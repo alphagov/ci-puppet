@@ -1,6 +1,7 @@
 ---
 classes:
   - ci_environment::base
+  - ci_environment::dns
 
 ssl::params::ssl_path: '/etc/ssl'
 ssl::params::ssl_cert_file: 'certs/ssl-cert-snakeoil.pem'
