@@ -14,6 +14,13 @@ FORGE
     torrancew/account (0.0.3)
 
 GIT
+  remote: git://github.com/alphagov/puppet-harden.git
+  ref: 5b27ee25e19f0c5421665246b76a13def8058e1c
+  sha: 5b27ee25e19f0c5421665246b76a13def8058e1c
+  specs:
+    harden (0.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-jenkins.git
   ref: 149f22d119ec8851868c4fa6ee0c2c0db01ba398
   sha: 149f22d119ec8851868c4fa6ee0c2c0db01ba398
@@ -37,6 +44,7 @@ GIT
     ssl (0.0.1)
 
 DEPENDENCIES
+  harden (>= 0)
   jenkins (>= 0)
   nginx (>= 0)
   puppetlabs/java (= 0.3.0)

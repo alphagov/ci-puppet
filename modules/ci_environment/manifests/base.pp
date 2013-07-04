@@ -1,5 +1,7 @@
 # Class applied to all CI machines
 class ci_environment::base {
+    include harden
+
     group { 'gds': ensure => present }
     file { '/etc/sudoers.d/gds':
         ensure  => present,
