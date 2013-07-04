@@ -1,5 +1,6 @@
 forge 'http://forge.puppetlabs.com/'
 
+mod 'gdsoperations/openconnect', '0.0.5'
 mod 'puppetlabs/java',      '0.3.0'
 mod 'puppetlabs/stdlib',    '~> 3.0'
 mod 'saz/dnsmasq',          '1.0.1'
