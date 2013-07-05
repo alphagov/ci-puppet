@@ -34,4 +34,19 @@ class ci_environment::jenkins_master ($jenkins_hostname = '') {
         source => 'puppet:///modules/ci_environment/jenkins-plugin-github-oauth-0.14-b34.hpi',
         notify => Class['jenkins::service'],
     }
+
+    file {'/etc/ssl/certs/github.gds.pem':
+        ensure  => 'present',
+        content => hiera('github_enterprise_cert'),
+        notify  => Exec['import-github-cert'],
+    }
+
+    exec {'import-github-cert':
+        command => '/usr/bin/keytool -import -trustcacerts -alias github.gds \
+                    -file /etc/ssl/certs/github.gds.pem \
+                    -keystore /etc/ssl/certs/java/cacerts \
+                    -storepass changeit',
+        unless  => '/usr/bin/keytool -list -keystore /etc/ssl/certs/java/cacerts \
+                    -storepass changeit | grep github.gds',
+    }
 }
