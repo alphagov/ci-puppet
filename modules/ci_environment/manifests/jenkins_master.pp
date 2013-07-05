@@ -18,9 +18,4 @@ class ci_environment::jenkins_master ($jenkins_hostname = '') {
         isdefaultvhost => true,
         servername     => $jenkins_hostname
     }
-
-    jenkins::plugin {
-        'role-strategy':
-            version => '1.1.2';
-    }
 }

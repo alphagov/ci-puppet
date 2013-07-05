@@ -11,3 +11,5 @@ jenkins::plugin_hash:
         version: "1.45.0"
     swarm:
         version: "1.9"
+    role-strategy:
+        version: "1.1.2"
