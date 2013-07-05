@@ -27,14 +27,14 @@ Provision blank Ubuntu 12.04 machines, possibly running [machine-bootstrap](http
      - installs ruby 1.9.3
      - set up basic users to manage the environment (you will need to edit this if your user is not included)
      - tell machines their names: hostname, dns  & etc hosts
-2. Run puppet on the machines (for GDS, this is done with Fabric from https://github.gds/gds/ci-deployment)
+2. Run puppet on the machines (for GDS, this is done with Fabric from the [ci-deployment repository](https://github.gds/gds/ci-deployment))
    - this packages up puppet and puppet code and runs on all the boxes
    - you may need to edit the fabric code to ensure it runs on the correct ip ranges
    - fabric can also deploy the ssl certs that are needed in prod
 3. Manual steps 
    - In order that the Slaves connect using the Swarm plugin, you need to manually "Configure Jenkins" by pressing the appropriate button.
    - On Jenkins server Manage Jenkins -> Configure System
-   - Ensure that the Jenkins Url is correct (likely to be http://internal.machine.name:8080/
+   - Ensure that the Jenkins Url is correct (likely to be http://internal.machine.name:8080/)
    - Be sure to press Save even if you didn’t change anything
 4. Rolling out changes:
    - Once you are happy that the puppet code is correct (follow _Development Workflow_ above), then
