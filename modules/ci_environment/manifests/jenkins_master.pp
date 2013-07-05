@@ -31,7 +31,7 @@ class ci_environment::jenkins_master ($jenkins_hostname = '') {
         owner  => 'jenkins',
         group  => 'nogroup',
         mode   => '0644',
-        source => 'puppet://modules/ci_environment/jenkins-plugin-github-oauth-0.14-b34.hpi',
+        source => 'puppet:///modules/ci_environment/jenkins-plugin-github-oauth-0.14-b34.hpi',
         notify => Class['jenkins::service'],
     }
 }
