@@ -46,7 +46,8 @@ class ci_environment::jenkins_master ($jenkins_hostname = '') {
                     -file /etc/ssl/certs/github.gds.pem \
                     -keystore /etc/ssl/certs/java/cacerts \
                     -storepass changeit',
-        unless  => '/usr/bin/keytool -list -keystore /etc/ssl/certs/java/cacerts \
+        unless  => '/usr/bin/keytool -list \
+                    -keystore /etc/ssl/certs/java/cacerts \
                     -storepass changeit | grep github.gds',
     }
 }
