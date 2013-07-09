@@ -1,5 +1,8 @@
 #Class to install things only on the Jenkins Master
-class ci_environment::jenkins_master ($jenkins_hostname = '') {
+class ci_environment::jenkins_master (
+  $jenkins_hostname = '',
+  $jenkins_serveraliases = []
+) {
 
     Package <| title == 'jenkins' |> -> Jenkins::Plugin <| |>
 
@@ -16,7 +19,8 @@ class ci_environment::jenkins_master ($jenkins_hostname = '') {
         ssl            => true,
         ssl_redirect   => true,
         isdefaultvhost => true,
-        servername     => $jenkins_hostname
+        servername     => $jenkins_hostname,
+        serveraliases  => $jenkins_serveraliases,
     }
 
     # This file resource installs a Jenkins plugin manually. The build we are
