@@ -13,3 +13,5 @@ jenkins::plugin_hash:
         version: "1.9"
     role-strategy:
         version: "1.1.2"
+    github-api:
+        version: "1.42"
