@@ -1,6 +1,6 @@
 #Class to install things only on the Jenkins Master
 class ci_environment::jenkins_master (
-  $jenkins_hostname = '',
+  $jenkins_hostname,
   $jenkins_serveraliases = []
 ) {
 
