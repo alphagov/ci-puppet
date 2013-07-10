@@ -19,7 +19,7 @@ class ci_environment::jenkins_master (
         ssl            => true,
         ssl_redirect   => true,
         isdefaultvhost => true,
-        servername     => $jenkins_hostname,
+        servername     => $jenkins_servername,
         serveraliases  => $jenkins_serveraliases,
     }
 
