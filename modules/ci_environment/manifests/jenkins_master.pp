@@ -2,7 +2,9 @@
 class ci_environment::jenkins_master (
   $github_enterprise_cert,
   $jenkins_servername,
-  $jenkins_serveraliases = []
+  $jenkins_serveraliases = [],
+  $slave_user = 'slave',
+  $slave_token_hash
 ) {
     validate_string($github_enterprise_cert, $jenkins_servername)
     validate_array($jenkins_serveraliases)
@@ -56,5 +58,9 @@ class ci_environment::jenkins_master (
         unless  => '/usr/bin/keytool -list \
                     -keystore /etc/ssl/certs/java/cacerts \
                     -storepass changeit | grep github.gds',
+    }
+
+    jenkins::api_user { $slave_user:
+      token_hash => $slave_token_hash,
     }
 }
