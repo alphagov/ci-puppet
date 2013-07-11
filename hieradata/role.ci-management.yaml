@@ -1,0 +1,4 @@
+---
+classes:
+ - graphite
+ - ci_environment::graphite_server
