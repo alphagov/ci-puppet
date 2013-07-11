@@ -1,5 +1,9 @@
 # Class applied to all CI machines
-class ci_environment::base {
+class ci_environment::base(
+  $accounts
+) {
+    validate_hash($accounts)
+
     include harden
 
     group { 'gds': ensure => present }
@@ -14,7 +18,7 @@ class ci_environment::base {
                         create_group => false,
                         groups       => ['gds']
                         }
-    create_resources( 'account', hiera_hash('accounts'), $account_defaults )
+    create_resources( 'account', $accounts, $account_defaults )
 
     exec { 'apt-get-update':
         command => '/usr/bin/apt-get update || true',

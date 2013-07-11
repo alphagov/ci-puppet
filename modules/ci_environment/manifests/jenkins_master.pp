@@ -1,8 +1,11 @@
 #Class to install things only on the Jenkins Master
 class ci_environment::jenkins_master (
+  $github_enterprise_cert,
   $jenkins_servername,
   $jenkins_serveraliases = []
 ) {
+    validate_string($github_enterprise_cert, $jenkins_servername)
+    validate_array($jenkins_serveraliases)
 
     Package <| title == 'jenkins' |> -> Jenkins::Plugin <| |>
 
@@ -41,7 +44,7 @@ class ci_environment::jenkins_master (
 
     file {'/etc/ssl/certs/github.gds.pem':
         ensure  => 'present',
-        content => hiera('github_enterprise_cert'),
+        content => $github_enterprise_cert,
         notify  => Exec['import-github-cert'],
     }
 
