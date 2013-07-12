@@ -1,7 +1,7 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    puppetlabs/apt (1.1.0)
+    puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
 
 FORGE
@@ -24,8 +24,8 @@ GIT
 
 GIT
   remote: git://github.com/alphagov/puppet-jenkins.git
-  ref: 938d94694f8a5d90061dc246aaacf3a57ce2f027
-  sha: 938d94694f8a5d90061dc246aaacf3a57ce2f027
+  ref: dcec04d914a7de0daa1faf66e01e7985e24a79ad
+  sha: dcec04d914a7de0daa1faf66e01e7985e24a79ad
   specs:
     jenkins (0.2.4)
       puppetlabs/apt (>= 0.0.3)
