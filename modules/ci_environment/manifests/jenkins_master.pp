@@ -4,7 +4,8 @@
 #
 # See opsmanual for manual steps:
 #
-#   https://github.gds/pages/gds/opsmanual/infrastructure/howto/configuring-ci-environment-and-machines.html
+# https://github.gds/pages/gds/opsmanual \
+#   /infrastructure/howto/configuring-ci-environment-and-machines.html
 #
 class ci_environment::jenkins_master (
   $github_enterprise_cert,
