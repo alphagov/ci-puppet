@@ -9,7 +9,7 @@ mod 'torrancew/account',    '0.0.3'
 mod 'harden',   :git => 'git://github.com/alphagov/puppet-harden.git',
                 :ref => '5b27ee25e19f0c5421665246b76a13def8058e1c'
 mod 'jenkins',  :git => 'git://github.com/alphagov/puppet-jenkins.git',
-                :ref => '938d94694f8a5d90061dc246aaacf3a57ce2f027'
+                :ref => 'dcec04d914a7de0daa1faf66e01e7985e24a79ad'
 mod 'nginx',    :git => 'git://github.com/alphagov/puppet-nginx.git',
                 :ref => '1a87dd9fb29f5f137e3d4ee42ddcf45c9054700e'
 mod 'ssl',      :git => 'git://github.com/alphagov/puppet-ssl.git',
