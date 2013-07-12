@@ -1,10 +1,16 @@
-#Class to install things only on the Jenkins Master
+# == Class: ci_environment::jenkins_master
+#
+# Class to install things only on the Jenkins Master
+#
+# See opsmanual for manual steps:
+#
+#   https://github.gds/pages/gds/opsmanual/infrastructure/howto/configuring-ci-environment-and-machines.html
+#
 class ci_environment::jenkins_master (
   $github_enterprise_cert,
   $jenkins_servername,
   $jenkins_serveraliases = [],
-  $slave_user = 'slave',
-  $slave_token_hash
+  $slave_user = 'slave'
 ) {
     validate_string($github_enterprise_cert, $jenkins_servername)
     validate_array($jenkins_serveraliases)
@@ -60,7 +66,5 @@ class ci_environment::jenkins_master (
                     -storepass changeit | grep github.gds',
     }
 
-    jenkins::api_user { $slave_user:
-      token_hash => $slave_token_hash,
-    }
+    jenkins::api_user { $slave_user: }
 }
