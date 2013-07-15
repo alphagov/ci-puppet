@@ -1,6 +1,6 @@
 ---
 classes:
-    - ci_environment::jenkins_slave
+ - ci_environment::jenkins_slave
 
 ci_environment::base::accounts:
     jenkins:
