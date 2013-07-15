@@ -1,9 +1,9 @@
 # Set up collectd to write data to the management box
-#   and the plugs in we want.
+#   and add the plugins we want for data collection and logging 
 #
 # Cribbed from https://github.com/gds-operations/monitoring-inabox
 #
-# The default syslog level in info, incase that gets annoying
+# The default syslog level is 'info', incase that gets annoying
 #
 class gds_collectd {
   class { '::collectd':

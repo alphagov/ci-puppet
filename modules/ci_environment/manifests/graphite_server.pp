@@ -1,4 +1,4 @@
-#class to install things on to the graphite server
+#supporting configuration for the graphite server
 class ci_environment::graphite_server {
 
     package {'ssl-cert':
