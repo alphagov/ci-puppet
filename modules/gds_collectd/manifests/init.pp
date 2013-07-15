@@ -1,5 +1,5 @@
 # Set up collectd to write data to the management box
-#   and add the plugins we want for data collection and logging 
+#   and add the plugins we want for data collection and logging
 #
 # Cribbed from https://github.com/gds-operations/monitoring-inabox
 #
