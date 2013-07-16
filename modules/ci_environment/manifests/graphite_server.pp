@@ -1,5 +1,6 @@
 #supporting configuration for the graphite server
 class ci_environment::graphite_server {
+    include graphite
 
     package {'ssl-cert':
       ensure  => latest,
