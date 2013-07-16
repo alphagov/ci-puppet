@@ -2,6 +2,7 @@
 classes:
   - ci_environment::base
   - ci_environment::dns
+  - gds_collectd
 
 jenkins::lts: 1
 
