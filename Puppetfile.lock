@@ -9,6 +9,8 @@ FORGE
   specs:
     gdsoperations/openconnect (0.0.5)
       puppetlabs/stdlib (>= 3.0.0)
+    pdxcat/collectd (0.0.3)
+      puppetlabs/stdlib (>= 2.0.0)
     puppetlabs/java (0.3.0)
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/stdlib (3.2.0)
@@ -45,11 +47,21 @@ GIT
   specs:
     ssl (0.0.1)
 
+GIT
+  remote: git://github.com/gds-operations/puppet-graphite.git
+  ref: 45663a5cd8ed72d7cb8d19e535136cacd893689d
+  sha: 45663a5cd8ed72d7cb8d19e535136cacd893689d
+  specs:
+    gds/graphite (0.1.0)
+      puppetlabs/stdlib (>= 2.5)
+
 DEPENDENCIES
+  gds/graphite (>= 0)
   gdsoperations/openconnect (= 0.0.5)
   harden (>= 0)
   jenkins (>= 0)
   nginx (>= 0)
+  pdxcat/collectd (~> 0.0)
   puppetlabs/java (= 0.3.0)
   puppetlabs/stdlib (~> 3.0)
   saz/dnsmasq (= 1.0.1)
