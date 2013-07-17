@@ -32,10 +32,7 @@ Provision blank Ubuntu 12.04 machines, possibly running [machine-bootstrap](http
    - you may need to edit the fabric code to ensure it runs on the correct ip ranges
    - fabric can also deploy the ssl certs that are needed in prod
 3. Manual steps 
-   - In order that the Slaves connect using the Swarm plugin, you need to manually "Configure Jenkins" by pressing the appropriate button.
-   - On Jenkins server Manage Jenkins -> Configure System
-   - Ensure that the Jenkins Url is correct (likely to be http://internal.machine.name:8080/)
-   - Be sure to press Save even if you didn’t change anything
+   - The manual steps are contained within the Ops Manual: https://github.gds/pages/gds/opsmanual/infrastructure/howto/configuring-ci-environment-and-machines.html
 4. Rolling out changes:
    - Once you are happy that the puppet code is correct (follow _Development Workflow_ above), then
      you can apply code changes to CI by running the fabric scripts described in Section 2 above.
