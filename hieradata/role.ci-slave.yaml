@@ -2,7 +2,7 @@
 classes:
  - ci_environment::jenkins_slave
 
-ci_environment::base::accounts:
+ci_environment::jenkins_slave::accounts:
     jenkins:
         home_dir: /home/jenkins
         comment: Jenkins User
