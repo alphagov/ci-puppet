@@ -26,6 +26,10 @@ class ci_environment::base(
         ip   => 'any'
     }
 
+    class { 'fail2ban':
+        require => Exec['apt-get-update']
+    }
+
     exec { 'apt-get-update':
         command => '/usr/bin/apt-get update || true',
     }
