@@ -18,7 +18,13 @@ class ci_environment::base(
                         create_group => false,
                         groups       => ['gds']
                         }
-    create_resources('account', $accounts, $account_defaults )
+    create_resources('account', $accounts, $account_defaults)
+
+    include ufw
+    ufw::allow { 'allow-ssh-from-all':
+        port => '22',
+        ip   => 'any'
+    }
 
     exec { 'apt-get-update':
         command => '/usr/bin/apt-get update || true',

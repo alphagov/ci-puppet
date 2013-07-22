@@ -7,6 +7,8 @@ FORGE
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
+    attachmentgenie/ufw (1.1.0)
+      puppetlabs/stdlib (>= 2.2.1)
     gdsoperations/openconnect (0.0.5)
       puppetlabs/stdlib (>= 3.0.0)
     pdxcat/collectd (0.0.3)
@@ -56,6 +58,7 @@ GIT
       puppetlabs/stdlib (>= 2.5)
 
 DEPENDENCIES
+  attachmentgenie/ufw (= 1.1.0)
   gds/graphite (>= 0)
   gdsoperations/openconnect (= 0.0.5)
   harden (>= 0)
