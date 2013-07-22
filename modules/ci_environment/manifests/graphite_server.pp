@@ -13,7 +13,6 @@ class ci_environment::graphite_server {
 
     nginx::vhost::proxy  {'graphite-nginx':
         ssl            => true,
-        ssl_redirect   => true,
         isdefaultvhost => true,
         upstream_port  => 8000,
     }
