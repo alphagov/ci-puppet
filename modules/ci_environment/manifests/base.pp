@@ -30,6 +30,8 @@ class ci_environment::base(
         require => Exec['apt-get-update']
     }
 
+    include ssh::server
+
     exec { 'apt-get-update':
         command => '/usr/bin/apt-get update || true',
     }
