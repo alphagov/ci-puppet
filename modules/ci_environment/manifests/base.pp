@@ -23,12 +23,6 @@ class ci_environment::base(
                         }
     create_resources('account', $accounts, $account_defaults)
 
-    include ufw
-    ufw::allow { 'allow-ssh-from-all':
-        port => '22',
-        ip   => 'any'
-    }
-
     class { 'fail2ban':
         require => Exec['apt-get-update']
     }
