@@ -1,4 +1,7 @@
+# == Class: ci_environment::base
+#
 # Class applied to all CI machines
+#
 class ci_environment::base(
   $accounts
 ) {

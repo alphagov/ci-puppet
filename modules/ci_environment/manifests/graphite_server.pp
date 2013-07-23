@@ -1,4 +1,7 @@
-#supporting configuration for the graphite server
+# == Class: ci_environment::graphite_server
+#
+# Supporting configuration for the graphite server
+#
 class ci_environment::graphite_server {
     include graphite
 
