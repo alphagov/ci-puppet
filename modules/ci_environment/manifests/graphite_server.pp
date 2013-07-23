@@ -19,15 +19,4 @@ class ci_environment::graphite_server {
         isdefaultvhost => true,
         upstream_port  => 8000,
     }
-
-    ufw::allow {'collectd-listening-for-data':
-        port  => '2003',
-        ip    => 'any',
-        proto => 'tcp',
-    }
-    ufw::allow {'https':
-        port  => '443',
-        ip    => 'any',
-        proto => 'tcp',
-    }
 }

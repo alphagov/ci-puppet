@@ -15,10 +15,4 @@ class ci_environment::jenkins_slave(
     create_resources('account', $accounts)
 
     Exec['apt-get-update'] -> Class['java'] -> Class['jenkins::slave']
-
-    ufw::allow { 'allow-jenkins-slave-swarm-to-listen':
-        port  => '32768:65535',
-        proto => 'udp',
-        ip    => 'any',
-    }
 }

@@ -1,6 +1,7 @@
 ---
 classes:
  - ci_environment::jenkins_master
+ - ci_environment::firewall_config::jenkins_master
  - jenkins
 
 jenkins::version: latest
