@@ -1,6 +1,11 @@
 # == Class: ci_environment::ufw_settings::jenkins_slave
 #
-# UFW configuration for jenkins slave
+# firewall configuration for jenkins slave
+#
+# The jenkins slave swarm sends a upd broadcast message to find a master
+#   and then listens on an ephemeral port for a response
+# It then connects to the master and uses standard jenkins slave
+#   behaviours to connect to the master as a slave
 #
 class ci_environment::firewall_config::jenkins_slave
 {
