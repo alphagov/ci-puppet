@@ -1,6 +1,6 @@
-# == Class: ci_environment::ufw_settings::graphite_server
+# == Class: ci_environment::firewall_config::graphite_server
 #
-# UFW configuration for graphite server
+# firewall configuration for graphite server
 #
 class ci_environment::firewall_config::graphite_server
 {
