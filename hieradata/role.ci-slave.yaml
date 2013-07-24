@@ -1,6 +1,7 @@
 ---
 classes:
  - ci_environment::jenkins_slave
+ - ci_environment::firewall_config::jenkins_slave
 
 ci_environment::jenkins_slave::accounts:
     jenkins:

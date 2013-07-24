@@ -7,6 +7,10 @@ FORGE
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
+    attachmentgenie/ssh (1.1.1)
+      puppetlabs/stdlib (>= 2.2.1)
+    attachmentgenie/ufw (1.1.0)
+      puppetlabs/stdlib (>= 2.2.1)
     gdsoperations/openconnect (0.0.5)
       puppetlabs/stdlib (>= 3.0.0)
     pdxcat/collectd (0.0.3)
@@ -55,7 +59,17 @@ GIT
     gds/graphite (0.1.0)
       puppetlabs/stdlib (>= 2.5)
 
+GIT
+  remote: git://github.com/valentinroca/puppet-fail2ban
+  ref: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
+  sha: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
+  specs:
+    fail2ban (1.1.0)
+
 DEPENDENCIES
+  attachmentgenie/ssh (= 1.1.1)
+  attachmentgenie/ufw (= 1.1.0)
+  fail2ban (>= 0)
   gds/graphite (>= 0)
   gdsoperations/openconnect (= 0.0.5)
   harden (>= 0)
