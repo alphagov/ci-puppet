@@ -1,3 +1,5 @@
+# == Class: gds_collectd
+#
 # Set up collectd to write data to the management box
 #   and add the plugins we want for data collection and logging
 #

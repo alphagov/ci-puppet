@@ -1,4 +1,7 @@
+# == Class: ci_environment::dns
+#
 # Sets up internal DNS on each machine
+#
 class ci_environment::dns {
 
   include dnsmasq
