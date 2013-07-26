@@ -16,3 +16,5 @@ jenkins::plugin_hash:
         version: "1.1.2"
     github-api:
         version: "1.42"
+    scm-sync-configuration:
+        version: "0.0.7.3"
