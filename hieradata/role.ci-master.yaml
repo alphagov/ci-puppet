@@ -3,6 +3,7 @@ classes:
  - ci_environment::jenkins_master
  - ci_environment::firewall_config::jenkins_master
  - jenkins
+ - git
 
 jenkins::version: latest
 jenkins::plugin_hash:
@@ -18,3 +19,9 @@ jenkins::plugin_hash:
         version: "1.42"
     scm-sync-configuration:
         version: "0.0.7.3"
+    git:
+        version: "1.4.0"
+    git-client:
+        version: "1.0.6"
+    ssh-credentials:
+        version: "0.4"
