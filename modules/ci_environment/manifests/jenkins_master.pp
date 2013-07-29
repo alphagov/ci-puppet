@@ -19,7 +19,7 @@ class ci_environment::jenkins_master (
     Package <| title == 'jenkins' |> -> Jenkins::Plugin <| |>
 
     package {'ssl-cert':
-        ensure  => latest,
+        ensure  => '1.0.28ubuntu0.1',
         require => Exec['apt-get-update'],
     }
 
