@@ -68,4 +68,5 @@ class ci_environment::jenkins_master (
     }
 
     jenkins::api_user { $slave_user: }
+    jenkins::api_user { 'pingdom': }
 }
