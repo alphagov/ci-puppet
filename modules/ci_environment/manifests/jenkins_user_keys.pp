@@ -5,7 +5,6 @@
 class ci_environment::jenkins_user_keys {
   $jenkins_home = '/var/lib/jenkins'
   $private_key = "${jenkins_home}/.ssh/id_rsa"
-  $public_key = "${jenkins_home}/.ssh/id_rsa.pub"
 
   file { "${jenkins_home}/.ssh":
     ensure => directory,
