@@ -1,11 +1,10 @@
 ---
 classes:
- - jenkins
  - git
  - ci_environment::jenkins_master
  - ci_environment::firewall_config::jenkins_master
- - ci_environment::jenkins_user_keys
- - ci_environment::jenkins_git_config
+
+ci_environment::jenkins_user::jenkins_home: /var/lib/jenkins
 
 jenkins::version: latest
 jenkins::plugin_hash:

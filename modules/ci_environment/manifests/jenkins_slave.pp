@@ -4,15 +4,11 @@
 #
 # API token in hiera needs to be updated after provisioning a new master.
 #
-class ci_environment::jenkins_slave(
-  $accounts
-) {
-    validate_hash($accounts)
+class ci_environment::jenkins_slave {
 
     include java
     include jenkins::slave
+    include jenkins_user
 
-    create_resources('account', $accounts)
-
-    Exec['apt-get-update'] -> Class['java'] -> Class['jenkins::slave']
+    Exec['apt-get-update'] -> Class['java'] -> Class['jenkins::slave'] -> Class['jenkins_user']
 }
