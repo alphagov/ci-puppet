@@ -1,7 +1,7 @@
 # == Class: ci_environment::jenkins_user
 #
 # set up the jenkins user for use accross the environment
-#  this includes the .ssh dir and keys as well as git 
+#  this includes the .ssh dir and keys as well as git
 #  config
 #
 class ci_environment::jenkins_user (
@@ -14,7 +14,7 @@ class ci_environment::jenkins_user (
     path    => "${jenkins_home}/.ssh",
     owner   => 'jenkins',
     group   => 'jenkins',
-    mode    => 0700,
+    mode    => '0700',
   }
 
   $private_key = "${jenkins_home}/.ssh/id_rsa"

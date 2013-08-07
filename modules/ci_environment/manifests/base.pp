@@ -8,6 +8,7 @@ class ci_environment::base(
   validate_hash($accounts)
 
   include harden
+  include github_sshkeys
 
   group { 'gds': ensure => present }
   file { '/etc/sudoers.d/gds':
