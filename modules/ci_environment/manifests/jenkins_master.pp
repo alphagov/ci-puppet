@@ -11,12 +11,11 @@ class ci_environment::jenkins_master (
   $github_enterprise_cert,
   $jenkins_servername,
   $jenkins_serveraliases = [],
-  $slave_user = 'slave'
+  $slave_user = 'slave',
+  $jenkins_home
 ) {
-  validate_string($github_enterprise_cert, $jenkins_servername)
+  validate_string($github_enterprise_cert, $jenkins_servername, $jenkins_home)
   validate_array($jenkins_serveraliases)
-
-  $jenkins_home = '/var/lib/jenkins'
 
   include jenkins
   include jenkins_user
@@ -49,7 +48,7 @@ class ci_environment::jenkins_master (
   #   https://buildhive.cloudbees.com/job/jenkinsci/job/github-oauth-plugin
   #          /34/org.jenkins-ci.plugins$github-oauth/
   #
-  file {'/var/lib/jenkins/plugins/github-oauth.hpi':
+  file {"${jenkins_home}/plugins/github-oauth.hpi":
     ensure => 'present',
     owner  => 'jenkins',
     group  => 'nogroup',
