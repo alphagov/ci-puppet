@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.warnings.WarningsDescriptor plugin="warnings@4.6">
+  <groovyParsers>
+    <hudson.plugins.warnings.GroovyParser>
+      <name>Puppet Lint</name>
+      <regexp>^(\S*) - (\S*): (.*) on line (\d+)$</regexp>
+      <script>import hudson.plugins.warnings.parser.Warning
+
+String fileName = matcher.group(1)
+String category = matcher.group(2)
+String message = matcher.group(3)
+String lineNumber = matcher.group(4)
+
+return new Warning(fileName, Integer.parseInt(lineNumber), &quot;Dynamic Parser&quot;, category, message);</script>
+      <example>modules/hosts/manifests/skyscape/production.pp - ERROR: trailing whitespace found on line 8
+</example>
+      <linkName>puppet-lint</linkName>
+      <trendName>Puppet Lint</trendName>
+    </hudson.plugins.warnings.GroovyParser>
+  </groovyParsers>
+</hudson.plugins.warnings.WarningsDescriptor>
