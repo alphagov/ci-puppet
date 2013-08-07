@@ -11,29 +11,29 @@
 #
 class ci_environment::firewall_config::jenkins_master
 {
-    ufw::allow {'jenkins-slave-to-jenkins-master-on-tcp':
-        port  => '32768:65535',
-        proto => 'tcp',
-        ip    => 'any',
-    }
-    ufw::allow {'jenkins-slave-to-jenkins-master-on-udp':
-        port  => '33848',
-        proto => 'udp',
-        ip    => 'any',
-    }
-    ufw::allow {'http-for-redirects-only':
-        port  => '80',
-        proto => 'tcp',
-        ip    => 'any',
-    }
-    ufw::allow {'internal-http-for-jenkins-and-slaves':
-        port  => '8080',
-        proto => 'tcp',
-        ip    => 'any',
-    }
-    ufw::allow {'https-connections':
-        port  => '443',
-        proto => 'tcp',
-        ip    => 'any',
-    }
+  ufw::allow {'jenkins-slave-to-jenkins-master-on-tcp':
+    port  => '32768:65535',
+    proto => 'tcp',
+    ip    => 'any',
+  }
+  ufw::allow {'jenkins-slave-to-jenkins-master-on-udp':
+    port  => '33848',
+    proto => 'udp',
+    ip    => 'any',
+  }
+  ufw::allow {'http-for-redirects-only':
+    port  => '80',
+    proto => 'tcp',
+    ip    => 'any',
+  }
+  ufw::allow {'internal-http-for-jenkins-and-slaves':
+    port  => '8080',
+    proto => 'tcp',
+    ip    => 'any',
+  }
+  ufw::allow {'https-connections':
+    port  => '443',
+    proto => 'tcp',
+    ip    => 'any',
+  }
 }

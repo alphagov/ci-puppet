@@ -3,20 +3,20 @@
 # Supporting configuration for the graphite server
 #
 class ci_environment::graphite_server {
-    include graphite
+  include graphite
 
-    package {'ssl-cert':
-      ensure  => latest,
-      require => Exec['apt-get-update'],
-    }
+  package {'ssl-cert':
+    ensure  => latest,
+    require => Exec['apt-get-update'],
+  }
 
-    class {'nginx::server':
-      require => Package['ssl-cert'],
-    }
+  class {'nginx::server':
+    require => Package['ssl-cert'],
+  }
 
-    nginx::vhost::proxy  {'graphite-nginx':
-        ssl            => true,
-        isdefaultvhost => true,
-        upstream_port  => 8000,
-    }
+  nginx::vhost::proxy  {'graphite-nginx':
+    ssl            => true,
+    isdefaultvhost => true,
+    upstream_port  => 8000,
+  }
 }
