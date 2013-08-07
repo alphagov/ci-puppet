@@ -5,6 +5,7 @@ classes:
  - ci_environment::firewall_config::jenkins_master
 
 ci_environment::jenkins_user::jenkins_home: /var/lib/jenkins
+ci_environment::jenkins_master::jenkins_home: /var/lib/jenkins
 
 jenkins::version: latest
 jenkins::plugin_hash:

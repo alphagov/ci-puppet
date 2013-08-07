@@ -11,13 +11,15 @@ class ci_environment::jenkins_master (
   $github_enterprise_cert,
   $jenkins_servername,
   $jenkins_serveraliases = [],
-  $slave_user = 'slave'
+  $slave_user = 'slave',
+  $jenkins_home
 ) {
-  validate_string($github_enterprise_cert, $jenkins_servername)
+  validate_string($github_enterprise_cert, $jenkins_servername, $jenkins_home)
   validate_array($jenkins_serveraliases)
 
   include jenkins
   include jenkins_user
+  include jenkins_job_support
 
   Class['jenkins'] -> Class['jenkins_user']
   Package <| title == 'jenkins' |> -> Jenkins::Plugin <| |>
@@ -46,7 +48,7 @@ class ci_environment::jenkins_master (
   #   https://buildhive.cloudbees.com/job/jenkinsci/job/github-oauth-plugin
   #          /34/org.jenkins-ci.plugins$github-oauth/
   #
-  file {'/var/lib/jenkins/plugins/github-oauth.hpi':
+  file {"${jenkins_home}/plugins/github-oauth.hpi":
     ensure => 'present',
     owner  => 'jenkins',
     group  => 'nogroup',
@@ -73,4 +75,11 @@ class ci_environment::jenkins_master (
 
   jenkins::api_user { $slave_user: }
   jenkins::api_user { 'pingdom': }
+
+  file { "${jenkins_home}/hudson.plugins.warnings.WarningsPublisher.xml":
+    ensure => 'present',
+    source => 'puppet:///modules/ci_environment/hudson.plugins.warnings.WarningsPublisher.xml',
+    notify => Class['jenkins::service'],
+  }
+
 }
