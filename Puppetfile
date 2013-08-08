@@ -4,7 +4,6 @@ mod 'gdsoperations/openconnect', '0.0.5'
 mod 'puppetlabs/java',           '0.3.0'
 mod 'puppetlabs/stdlib',         '~> 3.0'
 mod 'saz/dnsmasq',               '1.0.1'
-mod 'torrancew/account',         '0.0.3'
 mod 'pdxcat/collectd',           '~> 0.0'
 mod 'attachmentgenie/ufw',       '1.1.0'
 mod 'attachmentgenie/ssh',       '1.1.1'
@@ -20,5 +19,7 @@ mod 'nginx',        :git => 'git://github.com/alphagov/puppet-nginx.git',
                     :ref => '1a87dd9fb29f5f137e3d4ee42ddcf45c9054700e'
 mod 'ssl',          :git => 'git://github.com/alphagov/puppet-ssl.git',
                     :ref => '23bbb5ab57f26269acce3d4b43e643781747a551'
+mod 'gds_accounts', :git => 'git://github.com/alphagov/puppet-gds_accounts.git',
+                    :ref => 'v0.0.1'
 mod 'gds/graphite', :git => 'git://github.com/gds-operations/puppet-graphite.git',
                     :ref => '45663a5cd8ed72d7cb8d19e535136cacd893689d'

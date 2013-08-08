@@ -3,6 +3,7 @@ FORGE
   specs:
     puppetlabs/apt (1.2.0)
       puppetlabs/stdlib (>= 2.2.1)
+    torrancew/account (0.0.5)
 
 FORGE
   remote: http://forge.puppetlabs.com/
@@ -20,7 +21,15 @@ FORGE
       puppetlabs/stdlib (>= 0.1.6)
     puppetlabs/stdlib (3.2.0)
     saz/dnsmasq (1.0.1)
-    torrancew/account (0.0.3)
+
+GIT
+  remote: git://github.com/alphagov/puppet-gds_accounts.git
+  ref: v0.0.1
+  sha: 3698859f788f95a866f2f7e0fa3cad9bcfa129b5
+  specs:
+    gds_accounts (0.0.1)
+      puppetlabs/stdlib (>= 3.0.0)
+      torrancew/account (= 0.0.5)
 
 GIT
   remote: git://github.com/alphagov/puppet-harden.git
@@ -72,6 +81,7 @@ DEPENDENCIES
   attachmentgenie/ufw (= 1.1.0)
   fail2ban (>= 0)
   gds/graphite (>= 0)
+  gds_accounts (>= 0)
   gdsoperations/openconnect (= 0.0.5)
   harden (>= 0)
   jenkins (>= 0)
@@ -82,5 +92,4 @@ DEPENDENCIES
   puppetlabs/stdlib (~> 3.0)
   saz/dnsmasq (= 1.0.1)
   ssl (>= 0)
-  torrancew/account (= 0.0.3)
 
