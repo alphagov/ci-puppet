@@ -24,6 +24,11 @@ class ci_environment::base(
                       }
   create_resources('account', $accounts, $account_defaults)
 
+  file { '/etc/ssh/ssh_known_hosts':
+    ensure  => present,
+    mode    => '0644',
+  }
+
   class { 'fail2ban':
     require => Exec['apt-get-update']
   }
