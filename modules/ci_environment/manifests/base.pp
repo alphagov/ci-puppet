@@ -2,27 +2,16 @@
 #
 # Class applied to all CI machines
 #
-class ci_environment::base(
-  $accounts
-) {
-  validate_hash($accounts)
-
+class ci_environment::base {
   include harden
   include github_sshkeys
 
-  group { 'gds': ensure => present }
   file { '/etc/sudoers.d/gds':
     ensure  => present,
     mode    => '0440',
     content => '%gds ALL=(ALL) NOPASSWD: ALL
 '
   }
-  $account_defaults = {
-                      require      => Group['gds'],
-                      create_group => false,
-                      groups       => ['gds']
-                      }
-  create_resources('account', $accounts, $account_defaults)
 
   file { '/etc/ssh/ssh_known_hosts':
     ensure  => present,

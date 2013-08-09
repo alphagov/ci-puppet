@@ -3,6 +3,7 @@ classes:
   - ci_environment::base
   - ci_environment::dns
   - gds_collectd
+  - gds_accounts
   - ci_environment::firewall_config::base
 
 jenkins::lts: 1
