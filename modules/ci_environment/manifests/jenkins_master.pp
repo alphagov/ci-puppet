@@ -75,6 +75,7 @@ class ci_environment::jenkins_master (
 
   jenkins::api_user { $slave_user: }
   jenkins::api_user { 'pingdom': }
+  jenkins::api_user { 'github_build_trigger': }
 
   file { "${jenkins_home}/hudson.plugins.warnings.WarningsPublisher.xml":
     ensure => 'present',
