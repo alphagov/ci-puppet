@@ -4,7 +4,7 @@ classes:
  - ci_environment::jenkins_slave
  - ci_environment::firewall_config::jenkins_slave
 
-ci_environment::jenkins_user::jenkins_home: /home/jenkins
+ci_environment::jenkins_slave::jenkins_home: /home/jenkins
 
 jenkins::slave::manage_slave_user: 1
 jenkins::slave::slave_user: jenkins
