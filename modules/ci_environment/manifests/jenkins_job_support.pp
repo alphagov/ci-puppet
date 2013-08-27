@@ -18,6 +18,8 @@ class ci_environment::jenkins_job_support {
   package { [
     'python-virtualenv', # needed for infrastructure::opsmanual
     'ruby1.9.1-dev', # needed to build packages
+    'libxml2-dev', # needed to install nokogiri gem
+    'libxslt1-dev', # needed to install nokogiri gem
     ]:
     ensure => installed,
   }
