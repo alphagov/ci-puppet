@@ -20,6 +20,7 @@ class ci_environment::jenkins_job_support {
     'ruby1.9.1-dev', # needed to build packages
     'libxml2-dev', # needed to install nokogiri gem
     'libxslt1-dev', # needed to install nokogiri gem
+    'nodejs', # uglifier (a JS minifier) requires a JS runtime
     ]:
     ensure => installed,
   }
