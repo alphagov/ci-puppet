@@ -5,6 +5,15 @@
 class ci_environment::base {
   include harden
   include github_sshkeys
+  include rbenv
+
+  rbenv::version { '1.9.3-p392':
+    bundler_version => '1.3.5'
+  }
+
+  rbenv::alias { '1.9.3':
+    to_version => '1.9.3-p392',
+  }
 
   file { '/etc/sudoers.d/gds':
     ensure  => present,
