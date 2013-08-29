@@ -24,4 +24,9 @@ class ci_environment::jenkins_job_support {
     ]:
     ensure => installed,
   }
+
+  package { 'brakeman':
+    ensure   => 'latest',
+    provider => gem,
+  }
 }
