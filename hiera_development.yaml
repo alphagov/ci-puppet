@@ -1,5 +1,6 @@
 :hierarchy:
   - "role.%{::machine_role}.secrets"
+  - "role.%{::machine_role}.%{::machine_id}"
   - "role.%{::machine_role}"
   - "env.%{::environment}"
   - users

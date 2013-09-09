@@ -63,6 +63,14 @@ GIT
     ssl (0.0.1)
 
 GIT
+  remote: git://github.com/alphagov/puppetlabs-mongodb.git
+  ref: 2cd4c04bc553622c0bd90574791f10d7ea695535
+  sha: 2cd4c04bc553622c0bd90574791f10d7ea695535
+  specs:
+    mongodb (0.1.0)
+      puppetlabs/apt (>= 0.0.2)
+
+GIT
   remote: git://github.com/gds-operations/puppet-graphite.git
   ref: 45663a5cd8ed72d7cb8d19e535136cacd893689d
   sha: 45663a5cd8ed72d7cb8d19e535136cacd893689d
@@ -87,6 +95,7 @@ DEPENDENCIES
   gdsoperations/rbenv (= 1.0.1)
   harden (>= 0)
   jenkins (>= 0)
+  mongodb (>= 0)
   nginx (>= 0)
   pdxcat/collectd (~> 0.0)
   puppetlabs/git (= 0.0.2)

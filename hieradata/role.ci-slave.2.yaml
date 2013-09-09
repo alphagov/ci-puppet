@@ -1,0 +1,6 @@
+---
+classes:
+ - mongodb
+
+mongodb::enable_10gen: true
+mongodb::version: 2.4.6
