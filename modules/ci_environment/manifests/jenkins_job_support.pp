@@ -25,7 +25,8 @@ class ci_environment::jenkins_job_support {
     'libmysqlclient-dev', # needed to install mysql2 gem
     'poppler-utils', # Required for running whitehall tests (uses pdfinfo)
     'curl', # Needed by phantomjs class to download phantomjs
-    'imagemagick', # Needed by whitehall to resize images
+    'imagemagick', # Needed by whitehall to resize images,
+    'time', # Needed for timing commands during builds
     ]:
     ensure => installed,
   }
