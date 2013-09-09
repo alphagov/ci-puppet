@@ -22,6 +22,7 @@ class ci_environment::jenkins_job_support {
     'libxslt1-dev', # needed to install nokogiri gem
     'nodejs', # uglifier (a JS minifier) requires a JS runtime
     'build-essential', # need g++ to compile eventmachine rubygem
+    'libmysqlclient-dev', # needed to install mysql2 gem
     ]:
     ensure => installed,
   }
