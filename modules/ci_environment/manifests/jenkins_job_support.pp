@@ -23,6 +23,9 @@ class ci_environment::jenkins_job_support {
     'nodejs', # uglifier (a JS minifier) requires a JS runtime
     'build-essential', # need g++ to compile eventmachine rubygem
     'libmysqlclient-dev', # needed to install mysql2 gem
+    'poppler-utils', # Required for running whitehall tests (uses pdfinfo)
+    'curl', # Needed by phantomjs class to download phantomjs
+    'imagemagick', # Needed by whitehall to resize images
     ]:
     ensure => installed,
   }
@@ -31,4 +34,7 @@ class ci_environment::jenkins_job_support {
     ensure   => 'latest',
     provider => gem,
   }
+
+  class { 'ci_environment::jenkins_job_support::mysql': }
+  class { 'phantomjs': }
 }
