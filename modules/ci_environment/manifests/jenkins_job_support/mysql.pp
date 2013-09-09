@@ -1,3 +1,5 @@
+# == Class: ci_environment::jenkins_job_support::mysql
+# Installs mysql on the server
 class ci_environment::jenkins_job_support::mysql {
   class { '::mysql': }
   class { '::mysql::server':

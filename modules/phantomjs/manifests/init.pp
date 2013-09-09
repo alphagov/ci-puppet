@@ -1,3 +1,6 @@
+# == Class: phantomjs
+#
+# Installs phantomjs, by downloading from our s3 bucket.
 class phantomjs {
 
   exec { 'download phantomjs':
