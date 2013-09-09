@@ -20,6 +20,8 @@ FORGE
     puppetlabs/git (0.0.2)
     puppetlabs/java (0.3.0)
       puppetlabs/stdlib (>= 0.1.6)
+    puppetlabs/mysql (0.9.0)
+      puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/stdlib (3.2.0)
     saz/dnsmasq (1.0.1)
 
@@ -91,6 +93,7 @@ DEPENDENCIES
   pdxcat/collectd (~> 0.0)
   puppetlabs/git (= 0.0.2)
   puppetlabs/java (= 0.3.0)
+  puppetlabs/mysql (= 0.9.0)
   puppetlabs/stdlib (~> 3.0)
   saz/dnsmasq (= 1.0.1)
   ssl (>= 0)
