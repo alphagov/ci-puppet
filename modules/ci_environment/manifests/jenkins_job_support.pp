@@ -32,6 +32,12 @@ class ci_environment::jenkins_job_support {
     ensure => installed,
   }
 
+  # Needed to notify github of build statuses
+  package { 'ghtools':
+    ensure   => '0.20.0',
+    provider => pip,
+  }
+
   package { 'brakeman':
     ensure   => 'latest',
     provider => gem,
