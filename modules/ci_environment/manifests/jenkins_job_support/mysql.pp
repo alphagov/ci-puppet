@@ -6,6 +6,14 @@ class ci_environment::jenkins_job_support::mysql {
     require     => Class['::mysql']
   }
 
+  mysql::server::config { 'innodb':
+    settings => {
+      'mysqld' => {
+        'innodb_flush_log_at_trx_commit'     => '0',
+      },
+    }
+  }
+
   mysql::db {
     [
       'datainsights_todays_activity_test',
