@@ -27,6 +27,7 @@ class ci_environment::jenkins_job_support {
     'curl', # Needed by phantomjs class to download phantomjs
     'imagemagick', # Needed by whitehall to resize images,
     'time', # Needed for timing commands during builds
+    'unzip', # Needed by whitehall
     ]:
     ensure => installed,
   }
