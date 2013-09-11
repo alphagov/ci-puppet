@@ -49,9 +49,11 @@ class ci_environment::jenkins_job_support {
   class { 'clamav': }
 
   # asset-manager relies on this symlink being present
+  # pointing at clamscan not clamdscan because the clamav user doesn't
+  # have read access to the workspace
   file { '/usr/local/bin/govuk_clamscan':
     ensure  => symlink,
-    target  => '/usr/bin/clamdscan',
+    target  => '/usr/bin/clamscan',
     require => Class['clamav'],
   }
 }
