@@ -45,4 +45,13 @@ class ci_environment::jenkins_job_support {
 
   class { 'ci_environment::jenkins_job_support::mysql': }
   class { 'phantomjs': }
+
+  class { 'clamav': }
+
+  # asset-manager relies on this symlink being present
+  file { '/usr/local/bin/govuk_clamscan':
+    ensure  => symlink,
+    target  => '/usr/bin/clamdscan',
+    require => Class['clamav'],
+  }
 }
