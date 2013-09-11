@@ -1,3 +1,4 @@
+# == Class: clamav::config
 class clamav::config {
   file { '/etc/clamav/clamd.conf':
     ensure => present,

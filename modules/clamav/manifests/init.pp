@@ -1,3 +1,6 @@
+# == Class: clamav
+#
+# Installs clamav from the Ubuntu repos
 class clamav {
   anchor { 'clamav::begin':
     notify  => Class['clamav::service'],
