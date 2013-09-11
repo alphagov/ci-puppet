@@ -25,3 +25,5 @@ mod 'gds_accounts', :git => 'git://github.com/alphagov/puppet-gds_accounts.git',
                     :ref => 'v0.0.1'
 mod 'gds/graphite', :git => 'git://github.com/gds-operations/puppet-graphite.git',
                     :ref => '45663a5cd8ed72d7cb8d19e535136cacd893689d'
+mod 'mongodb',      :git => 'git://github.com/alphagov/puppetlabs-mongodb.git',
+                    :ref => '2cd4c04bc553622c0bd90574791f10d7ea695535'
