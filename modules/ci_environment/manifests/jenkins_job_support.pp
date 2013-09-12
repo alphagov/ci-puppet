@@ -16,6 +16,7 @@ class ci_environment::jenkins_job_support {
 
   # add packages here that you require for builds to run in Jenkins
   package { [
+    'python-dev', # needed for pip install C-stuff
     'python-virtualenv', # needed for infrastructure::opsmanual
     'ruby1.9.1-dev', # needed to build packages
     'libxml2-dev', # needed to install nokogiri gem
