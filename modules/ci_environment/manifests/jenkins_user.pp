@@ -5,7 +5,9 @@
 #  config
 #
 class ci_environment::jenkins_user (
-  $jenkins_home
+  $jenkins_home,
+  $rubygems_api_key,
+  $gemfury_api_key
 ) {
   validate_string($jenkins_home)
 
@@ -31,5 +33,31 @@ class ci_environment::jenkins_user (
     group   => 'nogroup',
     mode    => '0644',
     source  => 'puppet:///modules/ci_environment/jenkins-dot-gitconfig',
+  }
+
+  file {'jenkins_dotgem_dir':
+    ensure  => directory,
+    path    => "${jenkins_home}/.gem",
+    owner   => 'jenkins',
+    group   => 'jenkins',
+    mode    => '0700',
+  }
+
+  file {"${jenkins_home}/.gem/credentials":
+    ensure  => present,
+    owner   => 'jenkins',
+    group   => 'jenkins',
+    mode    => '0600',
+    content => template('ci_environment/dotgem/credentials.erb'),
+    require => File['jenkins_dotgem_dir'],
+  }
+
+  file {"${jenkins_home}/.gem/gemfury":
+    ensure  => present,
+    owner   => 'jenkins',
+    group   => 'jenkins',
+    mode    => '0600',
+    content => template('ci_environment/dotgem/gemfury.erb'),
+    require => File['jenkins_dotgem_dir'],
   }
 }
