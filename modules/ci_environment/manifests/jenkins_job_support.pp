@@ -29,6 +29,7 @@ class ci_environment::jenkins_job_support {
     'imagemagick', # Needed by whitehall to resize images,
     'time', # Needed for timing commands during builds
     'unzip', # Needed by whitehall
+    'libsqlite3-dev', # Needed by signonotron2 test suite
     ]:
     ensure => installed,
   }
