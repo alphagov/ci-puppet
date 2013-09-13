@@ -57,4 +57,9 @@ class ci_environment::jenkins_job_support {
     target  => '/usr/bin/clamscan',
     require => Class['clamav'],
   }
+
+  class { 'elasticsearch':
+    version            => "0.20.6-ppa1~${::lsbdistcodename}1",
+    number_of_replicas => '0'
+  }
 }
