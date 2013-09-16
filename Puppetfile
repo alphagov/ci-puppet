@@ -29,3 +29,5 @@ mod 'gds/graphite', :git => 'git://github.com/gds-operations/puppet-graphite.git
                     :ref => '45663a5cd8ed72d7cb8d19e535136cacd893689d'
 mod 'mongodb',      :git => 'git://github.com/alphagov/puppetlabs-mongodb.git',
                     :ref => 'dc077a209efdf8d80fac40d40fec575b6a0949d2'
+mod 'clamav',       :git => 'git://github.com/alphagov/puppet-clamav',
+                    :ref => '31af4f0c2753dd25bca3dd0c7cc69d273c4d640d'

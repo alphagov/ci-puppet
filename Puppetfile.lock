@@ -30,6 +30,14 @@ FORGE
     saz/dnsmasq (1.0.1)
 
 GIT
+  remote: git://github.com/alphagov/puppet-clamav
+  ref: 31af4f0c2753dd25bca3dd0c7cc69d273c4d640d
+  sha: 31af4f0c2753dd25bca3dd0c7cc69d273c4d640d
+  specs:
+    clamav (0.0.1)
+      puppetlabs/stdlib (>= 3.0.0)
+
+GIT
   remote: git://github.com/alphagov/puppet-gds_accounts.git
   ref: v0.0.1
   sha: 3698859f788f95a866f2f7e0fa3cad9bcfa129b5
@@ -95,6 +103,7 @@ DEPENDENCIES
   attachmentgenie/locales (= 1.0.2)
   attachmentgenie/ssh (= 1.1.1)
   attachmentgenie/ufw (= 1.1.0)
+  clamav (>= 0)
   fail2ban (>= 0)
   gds/graphite (>= 0)
   gds_accounts (>= 0)
