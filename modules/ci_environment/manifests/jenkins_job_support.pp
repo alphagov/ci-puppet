@@ -61,4 +61,8 @@ class ci_environment::jenkins_job_support {
     version            => "0.20.6-ppa1~${::lsbdistcodename}1",
     number_of_replicas => '0'
   }
+
+  class { 'redis':
+    max_memory => '256mb',
+  }
 }
