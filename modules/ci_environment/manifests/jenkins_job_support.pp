@@ -28,6 +28,7 @@ class ci_environment::jenkins_job_support {
     'time', # Needed for timing commands during builds
     'dictionaries-common', # Needed by signon
     'wbritish-small', # Needed by signon
+    'sqlite3', # Needed by gds-sso
   ])
 
   # Needed to notify github of build statuses
