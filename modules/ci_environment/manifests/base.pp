@@ -7,6 +7,37 @@ class ci_environment::base {
   include github_sshkeys
   include rbenv
 
+  package {
+    [
+      'ack-grep',
+      'bzip2',
+      'gettext',
+      'htop',
+      'iftop',
+      'iotop',
+      'dstat',
+      'iptraf',
+      'less',
+      'libc6-dev',
+      'libcurl4-openssl-dev',
+      'libreadline-dev',
+      'libreadline5',
+      'libsqlite3-dev',
+      'libxml2-dev',
+      'libxslt1-dev',
+      'logtail',
+      'lsof',
+      'pv',
+      'tar',
+      'tree',
+      'unzip',
+      'vim-nox',
+      'xz-utils',
+      'zip'
+    ]:
+    ensure => installed,
+  }
+
   rbenv::version { '1.9.3-p392':
     bundler_version => '1.3.5'
   }

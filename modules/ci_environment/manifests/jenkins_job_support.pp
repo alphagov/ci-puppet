@@ -19,8 +19,6 @@ class ci_environment::jenkins_job_support {
     'python-dev', # needed for pip install C-stuff
     'python-virtualenv', # needed for infrastructure::opsmanual
     'ruby1.9.1-dev', # needed to build packages
-    'libxml2-dev', # needed to install nokogiri gem
-    'libxslt1-dev', # needed to install nokogiri gem
     'nodejs', # uglifier (a JS minifier) requires a JS runtime
     'build-essential', # need g++ to compile eventmachine rubygem
     'libmysqlclient-dev', # needed to install mysql2 gem
@@ -28,8 +26,6 @@ class ci_environment::jenkins_job_support {
     'curl', # Needed by phantomjs class to download phantomjs
     'imagemagick', # Needed by whitehall to resize images,
     'time', # Needed for timing commands during builds
-    'unzip', # Needed by whitehall
-    'libsqlite3-dev', # Needed by signon test suite
     'dictionaries-common', # Needed by signon
     'wbritish-small', # Needed by signon
     ]:
