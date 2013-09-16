@@ -15,7 +15,7 @@ class ci_environment::jenkins_job_support {
   }
 
   # add packages here that you require for builds to run in Jenkins
-  package { [
+  ensure_packages([
     'python-dev', # needed for pip install C-stuff
     'python-virtualenv', # needed for infrastructure::opsmanual
     'ruby1.9.1-dev', # needed to build packages
@@ -28,9 +28,7 @@ class ci_environment::jenkins_job_support {
     'time', # Needed for timing commands during builds
     'dictionaries-common', # Needed by signon
     'wbritish-small', # Needed by signon
-    ]:
-    ensure => installed,
-  }
+  ])
 
   # Needed to notify github of build statuses
   package { 'ghtools':
