@@ -8,6 +8,8 @@ FORGE
 FORGE
   remote: http://forge.puppetlabs.com/
   specs:
+    attachmentgenie/locales (1.0.2)
+      puppetlabs/stdlib (>= 2.2.1)
     attachmentgenie/ssh (1.1.1)
       puppetlabs/stdlib (>= 2.2.1)
     attachmentgenie/ufw (1.1.0)
@@ -90,6 +92,7 @@ GIT
     fail2ban (1.1.0)
 
 DEPENDENCIES
+  attachmentgenie/locales (= 1.0.2)
   attachmentgenie/ssh (= 1.1.1)
   attachmentgenie/ufw (= 1.1.0)
   fail2ban (>= 0)
