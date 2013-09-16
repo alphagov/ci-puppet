@@ -47,8 +47,8 @@ GIT
 
 GIT
   remote: git://github.com/alphagov/puppet-jenkins.git
-  ref: 9c1f88aeaa3fbe213714ee4854fa703dd46afa52
-  sha: 9c1f88aeaa3fbe213714ee4854fa703dd46afa52
+  ref: ca40459bea5a9dc91e12e8014c9878fcd2856ee7
+  sha: ca40459bea5a9dc91e12e8014c9878fcd2856ee7
   specs:
     jenkins (0.2.4)
       puppetlabs/apt (>= 0.0.3)
