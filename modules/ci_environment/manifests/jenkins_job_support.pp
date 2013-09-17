@@ -46,6 +46,7 @@ class ci_environment::jenkins_job_support {
 
   class { 'ci_environment::jenkins_job_support::mysql': }
   class { 'phantomjs': }
+  class { 'xvfb': } # Needed by capybara-webkit (used in Publisher)
 
   class { 'clamav': }
 
