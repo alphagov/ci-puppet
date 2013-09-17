@@ -30,6 +30,7 @@ class ci_environment::jenkins_job_support {
     'wbritish-small', # Needed by signon
     'sqlite3', # Needed by gds-sso
     'aspell', 'aspell-en', 'libaspell-dev', # Needed by rummager
+    'libqtwebkit-dev', # Needed by capybara-webkit (Publisher)
   ])
 
   # Needed to notify github of build statuses
