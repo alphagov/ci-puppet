@@ -1,8 +1,6 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    puppetlabs/apt (1.2.0)
-      puppetlabs/stdlib (>= 2.2.1)
     torrancew/account (0.0.5)
 
 FORGE
@@ -21,6 +19,8 @@ FORGE
     gdsoperations/rbenv (1.0.1)
     pdxcat/collectd (0.0.3)
       puppetlabs/stdlib (>= 2.0.0)
+    puppetlabs/apt (1.3.0)
+      puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/git (0.0.2)
     puppetlabs/java (0.3.0)
       puppetlabs/stdlib (>= 0.1.6)
@@ -115,6 +115,7 @@ DEPENDENCIES
   mongodb (>= 0)
   nginx (>= 0)
   pdxcat/collectd (~> 0.0)
+  puppetlabs/apt (~> 1.3.0)
   puppetlabs/git (= 0.0.2)
   puppetlabs/java (= 0.3.0)
   puppetlabs/mysql (= 0.9.0)
