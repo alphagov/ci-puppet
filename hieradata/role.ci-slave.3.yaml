@@ -1,0 +1,8 @@
+---
+classes:
+ - mongodb
+
+jenkins::slave::labels: 'mongodb-2.0.9'
+
+mongodb::enable_10gen: true
+mongodb::version: 2.0.9
