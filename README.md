@@ -4,7 +4,7 @@ This is a repo cloned from [puppet-skeleton](https://github.com/alphagov/puppet-
 ## Development Workflow 
 
 - Clone this repository 
-- Run `librarian-puppet install` to gather the external modules
+- Run `bundle exec librarian-puppet install` to gather the external modules
 - Run `bundle exec rake` to run the tests
 - Make changes to the repository
 - Run `bundle exec rake` to run the tests
