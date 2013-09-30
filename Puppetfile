@@ -32,3 +32,5 @@ mod 'mongodb',      :git => 'git://github.com/alphagov/puppetlabs-mongodb.git',
                     :ref => 'dc077a209efdf8d80fac40d40fec575b6a0949d2'
 mod 'clamav',       :git => 'git://github.com/alphagov/puppet-clamav',
                     :ref => '31af4f0c2753dd25bca3dd0c7cc69d273c4d640d'
+mod 'cpanm',        :git => 'git://github.com/alphagov/puppet-cpanm.git',
+                    :ref => '4e3dfca9b5ca25da71a78412305710e665475698'

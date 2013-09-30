@@ -7,6 +7,8 @@
 #  that requires them
 #
 class ci_environment::jenkins_job_support {
+  # redirector's tests require some Perl packages (see below)
+  include cpanm::install
 
   # should be used to install gems in jenkins build scripts
   package { 'bundler':
@@ -47,6 +49,17 @@ class ci_environment::jenkins_job_support {
   class { 'ci_environment::jenkins_job_support::mysql': }
   class { 'phantomjs': }
   class { 'xvfb': } # Needed by capybara-webkit (used in Publisher)
+
+  # redirector's tests require these Perl packages
+  package { [
+    'Text::CSV',
+    'YAML',
+    'Crypt::SSLeay',
+    'Mozilla::CA'
+  ]:
+    ensure   => present,
+    provider => 'cpanm',
+  }
 
   class { 'clamav': }
 

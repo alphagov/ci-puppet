@@ -38,6 +38,13 @@ GIT
       puppetlabs/stdlib (>= 3.0.0)
 
 GIT
+  remote: git://github.com/alphagov/puppet-cpanm.git
+  ref: 4e3dfca9b5ca25da71a78412305710e665475698
+  sha: 4e3dfca9b5ca25da71a78412305710e665475698
+  specs:
+    cpanm (0.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-gds_accounts.git
   ref: v0.0.1
   sha: 3698859f788f95a866f2f7e0fa3cad9bcfa129b5
@@ -104,6 +111,7 @@ DEPENDENCIES
   attachmentgenie/ssh (= 1.1.1)
   attachmentgenie/ufw (= 1.1.0)
   clamav (>= 0)
+  cpanm (>= 0)
   fail2ban (>= 0)
   gds/graphite (>= 0)
   gds_accounts (>= 0)
