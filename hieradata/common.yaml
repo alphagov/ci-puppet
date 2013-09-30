@@ -1,5 +1,6 @@
 ---
 classes:
+  - apt
   - apt::unattended_upgrades
   - ci_environment::base
   - ci_environment::dns
@@ -7,6 +8,8 @@ classes:
   - gds_accounts
   - ci_environment::firewall_config::base
   - locales
+
+apt::ppa: 'ppa:gds/govuk'
 
 jenkins::lts: 1
 
