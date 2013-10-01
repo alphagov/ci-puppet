@@ -39,6 +39,7 @@ class ci_environment::jenkins_job_support {
   package { 'ghtools':
     ensure   => '0.21.0',
     provider => pip,
+    require  => Package['python-pip'],
   }
 
   package { 'brakeman':
