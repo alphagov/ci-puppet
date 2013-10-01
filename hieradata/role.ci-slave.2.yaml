@@ -1,8 +1,10 @@
 ---
 classes:
  - mongodb
+ - rabbitmq
 
 jenkins::slave::labels: 'mongodb-2.4.6'
+jenkins::slave::labels: 'rabbitmq'
 
 mongodb::enable_10gen: true
 mongodb::version: 2.4.6
