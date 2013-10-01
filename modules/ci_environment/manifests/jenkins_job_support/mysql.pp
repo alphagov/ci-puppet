@@ -76,7 +76,7 @@ class ci_environment::jenkins_job_support::mysql {
     ]:
       user     => 'whitehall',
       password => 'whitehall',
-      grant    => ['all'],
+      grant    => ['ALL'],
       require  => Class['::mysql::server'];
   }
 }
