@@ -27,7 +27,7 @@ class ci_environment::jenkins_job_support::mysql {
       'datainsight_insidegov_test',
     ]:
       user     => 'datainsight',
-      password => '',
+      password => 'datainsight',
       require  => Class['::mysql::server'];
 
     [
