@@ -1,10 +1,10 @@
 # ci-puppet
 This is a repo cloned from [puppet-skeleton](https://github.com/alphagov/puppet-skeleton)
 
-## Development Workflow 
+## Development Workflow
 
-- Clone this repository 
-- Run `librarian-puppet install` to gather the external modules
+- Clone this repository
+- Run `bundle exec librarian-puppet install` to gather the external modules
 - Run `bundle exec rake` to run the tests
 - Make changes to the repository
 - Run `bundle exec rake` to run the tests
@@ -22,7 +22,7 @@ Provision blank Ubuntu 12.04 machines, possibly running [machine-bootstrap](http
 
 1. Run the bootstrap script from `tools/bootstrap` on each new machine.
    It should be run as locally on those machines as `./bootstrap machinename.domainname`
-   The script: 
+   The script:
      - sets up apt sources and runs `apt-get update`
      - installs ruby 1.9.3
      - set up basic users to manage the environment (you will need to edit this if your user is not included)
@@ -31,7 +31,7 @@ Provision blank Ubuntu 12.04 machines, possibly running [machine-bootstrap](http
    - this packages up puppet and puppet code and runs on all the boxes
    - you may need to edit the fabric code to ensure it runs on the correct ip ranges
    - fabric can also deploy the ssl certs that are needed in prod
-3. Manual steps 
+3. Manual steps
    - The manual steps are contained within the Ops Manual: https://github.gds/pages/gds/opsmanual/infrastructure/howto/configuring-ci-environment-and-machines.html
 4. Rolling out changes:
    - Once you are happy that the puppet code is correct (follow _Development Workflow_ above), then
