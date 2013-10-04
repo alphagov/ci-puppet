@@ -33,7 +33,12 @@ class ci_environment::jenkins_job_support {
     'sqlite3', # Needed by gds-sso
     'aspell', 'aspell-en', 'libaspell-dev', # Needed by rummager
     'libqtwebkit-dev', # Needed by capybara-webkit (Publisher)
+    'bzr', # needed by some Go builds
   ])
+
+  package { 'golang':
+    ensure => '2:1.1.2-2ubuntu1~ppa1~precise1',
+  }
 
   # Needed to notify github of build statuses
   package { 'ghtools':
