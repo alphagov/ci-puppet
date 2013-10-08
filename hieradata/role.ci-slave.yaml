@@ -3,6 +3,8 @@ classes:
  - git
  - ci_environment::jenkins_slave
  - ci_environment::firewall_config::jenkins_slave
+ - mongodb
+ - gds_mongodb
 
 ci_environment::jenkins_slave::jenkins_home: /home/jenkins
 
@@ -10,3 +12,8 @@ jenkins::slave::manage_slave_user: 1
 jenkins::slave::slave_user: jenkins
 jenkins::slave::slave_home: /home/jenkins
 jenkins::slave::version: 1.9
+mongodb::replSet: 'gds-ci'
+mongodb::enable_10gen: true
+gds_mongodb::members: ['localhost']
+gds_mongodb::replSet: 'gds-ci'
+
