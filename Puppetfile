@@ -11,6 +11,7 @@ mod 'attachmentgenie/ssh',         '1.1.1'
 mod 'puppetlabs/apt',              '~> 1.3.0'
 mod 'puppetlabs/git',              '0.0.2'
 mod 'puppetlabs/mysql',            '0.9.0'
+mod 'puppetlabs/nodejs',           '0.4.0'
 mod 'gdsoperations/elasticsearch', '0.0.1'
 mod 'attachmentgenie/locales',     '1.0.2'
 
