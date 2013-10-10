@@ -3,6 +3,9 @@
 # Class applied to all CI machines
 #
 class ci_environment::base {
+  apt::ppa { 'ppa:gds/govuk': }
+  apt::ppa { 'ppa:gds/ci': }
+
   include harden
   include github_sshkeys
   include rbenv

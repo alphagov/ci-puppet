@@ -21,7 +21,6 @@ class ci_environment::jenkins_job_support {
     'python-dev', # needed for pip install C-stuff
     'python-virtualenv', # needed for infrastructure::opsmanual
     'ruby1.9.1-dev', # needed to build packages
-    'nodejs', # uglifier (a JS minifier) requires a JS runtime
     'build-essential', # need g++ to compile eventmachine rubygem
     'libmysqlclient-dev', # needed to install mysql2 gem
     'poppler-utils', # Required for running whitehall tests (uses pdfinfo)
@@ -84,5 +83,16 @@ class ci_environment::jenkins_job_support {
 
   class { 'redis':
     max_memory => '256mb',
+  }
+
+  # uglifier requires a JavaScript runtime
+  # alphagov/spotlight requires a decent version of Node (0.10+) and grunt-cli
+  package { 'nodejs':
+    ensure => "0.10.20-1chl1~${::lsbdistcodename}1",
+  }
+  package { 'grunt-cli':
+    ensure   => '0.1.9',
+    provider => 'npm',
+    require  => Package['nodejs'],
   }
 }
