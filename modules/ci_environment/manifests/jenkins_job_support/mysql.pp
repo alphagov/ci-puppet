@@ -56,6 +56,11 @@ class ci_environment::jenkins_job_support::mysql {
       password => 'signonotron2',
       require  => Class['::mysql::server'];
 
+    'tariff_admin_test':
+      user     => 'tariff_admin',
+      password => 'tariff_admin',
+      require  => Class['::mysql::server'];
+
     'tariff_test':
       user     => 'tariff',
       password => 'tariff',
