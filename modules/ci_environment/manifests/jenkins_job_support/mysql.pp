@@ -89,7 +89,7 @@ class ci_environment::jenkins_job_support::mysql {
       'whitehall_test13',
       'whitehall_test14',
       'whitehall_test15',
-      'whitehall_test16'
+      'whitehall_test16',
     ]:
       user     => 'whitehall',
       password => 'whitehall',
