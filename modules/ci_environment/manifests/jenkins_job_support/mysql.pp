@@ -78,6 +78,18 @@ class ci_environment::jenkins_job_support::mysql {
       'whitehall_test2',
       'whitehall_test3',
       'whitehall_test4',
+      'whitehall_test5',
+      'whitehall_test6',
+      'whitehall_test7',
+      'whitehall_test8',
+      'whitehall_test9',
+      'whitehall_test10',
+      'whitehall_test11',
+      'whitehall_test12',
+      'whitehall_test13',
+      'whitehall_test14',
+      'whitehall_test15',
+      'whitehall_test16'
     ]:
       user     => 'whitehall',
       password => 'whitehall',
