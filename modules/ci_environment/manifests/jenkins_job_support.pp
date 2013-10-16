@@ -100,13 +100,14 @@ class ci_environment::jenkins_job_support {
   }
 
   # uglifier requires a JavaScript runtime
-  # alphagov/spotlight requires a decent version of Node (0.10+) and grunt-cli
+  # alphagov/spotlight requires a decent version of Node (0.10+)
+  # We install dependencies using nodeenv
   package { 'nodejs':
     ensure => "0.10.20-1chl1~${::lsbdistcodename}1",
   }
-  package { 'grunt-cli':
-    ensure   => '0.1.9',
-    provider => 'npm',
+  package { 'nodeenv':
+    ensure   => '0.7.0',
+    provider => 'pip',
     require  => Package['nodejs'],
   }
 }
