@@ -18,6 +18,7 @@ def vagrant_config(config, version)
     'ci-slave-1'  => {:ip => '172.16.11.11'},
     'ci-slave-2'  => {:ip => '172.16.11.12'},
     'ci-management-1' => {:ip => '172.16.11.13'},
+    'transition-logs-1' => {:ip => '172.16.11.20'},
   }
   node_defaults = {
     :domain => 'internal',
