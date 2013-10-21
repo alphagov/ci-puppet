@@ -1,0 +1,6 @@
+# set the log facility.  "LOG_USER" and "user" are equivalent.
+logfacility = LOG_USER
+<% @accounts.each do |user,details| -%>
+#user=<%= user %>:077:000110:<%= details['home_dir'] %> #chroot doesn't seem to work
+user=<%= user %>:077:000110:
+<% end -%>
