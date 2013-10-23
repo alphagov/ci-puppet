@@ -3,8 +3,8 @@ Transition Logs Machine
 
 The purpose of this machine is twofold:
 
-    1. It is the place where Agencies will be dumping pre-transition logs via SFTP
-    2. Is it the place where we will collect our Fastly CDN logs
+1. It is the place where Agencies will be dumping pre-transition logs via SFTP
+2. Is it the place where we will collect our Fastly CDN logs
 
 1) SFTP for Agencies
 ====================
