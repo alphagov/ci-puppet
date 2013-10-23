@@ -6,6 +6,8 @@
 #
 class ci_environment::jenkins_user (
   $jenkins_home,
+  $npm_auth,
+  $npm_email,
   $rubygems_api_key,
   $gemfury_api_key
 ) {
@@ -59,5 +61,13 @@ class ci_environment::jenkins_user (
     mode    => '0600',
     content => template('ci_environment/dotgem/gemfury.erb'),
     require => File['jenkins_dotgem_dir'],
+  }
+
+  file { "${jenkins_home}/.npmrc":
+    ensure  => present,
+    owner   => 'jenkins',
+    group   => 'jenkins',
+    mode    => '0600',
+    content => template('ci_environment/npmrc.erb'),
   }
 }
