@@ -33,6 +33,7 @@ class ci_environment::jenkins_job_support {
     'aspell', 'aspell-en', 'libaspell-dev', # Needed by rummager
     'libqtwebkit-dev', # Needed by capybara-webkit (Publisher)
     'bzr', # needed by some Go builds
+    'libv8-dev', # Needed by things that require V8 headers
   ])
 
   package { 'golang':
