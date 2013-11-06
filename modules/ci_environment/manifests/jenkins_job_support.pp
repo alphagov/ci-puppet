@@ -34,6 +34,7 @@ class ci_environment::jenkins_job_support {
     'libqtwebkit-dev', # Needed by capybara-webkit (Publisher)
     'bzr', # needed by some Go builds
     'libv8-dev', # Needed by things that require V8 headers
+    'vegeta', # HTTP load testing used by Router.
   ])
 
   package { 'golang':
