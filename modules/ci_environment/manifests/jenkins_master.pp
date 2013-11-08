@@ -63,6 +63,10 @@ class ci_environment::jenkins_master (
     notify  => Exec['import-github-cert'],
   }
 
+  file {'/etc/ssl/certs/java':
+    ensure  => directory,
+  }
+
   exec {'import-github-cert':
     command => '/usr/bin/keytool -import -trustcacerts -alias github.gds \
                 -file /etc/ssl/certs/github.gds.pem \
