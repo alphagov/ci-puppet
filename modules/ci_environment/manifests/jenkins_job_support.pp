@@ -63,7 +63,8 @@ class ci_environment::jenkins_job_support {
     'Text::CSV',
     'YAML',
     'Crypt::SSLeay',
-    'Mozilla::CA'
+    'Mozilla::CA',
+    'XML::Parser',
   ]:
     ensure   => present,
     provider => 'cpanm',
