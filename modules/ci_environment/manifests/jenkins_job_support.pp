@@ -35,6 +35,7 @@ class ci_environment::jenkins_job_support {
     'bzr', # needed by some Go builds
     'libv8-dev', # Needed by things that require V8 headers
     'vegeta', # HTTP load testing used by Router.
+    'php5-cli', # Needed by redirector
   ])
 
   package { 'golang':
