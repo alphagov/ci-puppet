@@ -32,12 +32,12 @@ Connection Details to be supplied to the agency:
     Host: <the DNS name of the transition-logs machine>
     Key:  <the private key created>
 
-Using Private Keys in WinSCP and PuTTY
---------------------------------------
+Transferring files from Windows
+-------------------------------
 
-Agencies may not be using Linux tools to transfer their logs. The programs WinSCP and PuTTY's psftp are
-common ways to transfer files by SFTP in Windows. Both of these programs use the same key format (PPK) and
-instructions for converting an OpenSSH private key are [available here](http://meinit.nl/using-your-openssh-private-key-in-putty)
+Agencies may not be using Linux tools to transfer their logs. On Windows, there are two popular applications which can be used: [WinSCP](http://winscp.net/) and [PuTTY sftp](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) - look for the psftp.exe link. If using PuTTY sftp, note that connections with PuTTY itself won't work, it must be PuTTY sftp.
+
+Both of these programs use the same key format (PPK) and instructions for converting an OpenSSH private key are [available here](http://meinit.nl/using-your-openssh-private-key-in-putty)
 
 2) CDN Logs
 ===========
