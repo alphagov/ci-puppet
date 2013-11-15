@@ -24,6 +24,8 @@ To create the new key for the Agency, you can can use the following command:
 That will create a new RSA private key called `agency_key`. The new public key will be `agency_key.pub`
 and this is what needs to be pasted into the new user in Puppet.
 
+These users will be unable to connect for an interactive session, only scp/sftp type connections will work.
+
 Connection Details to be supplied to the agency:
 
     Protocol: SFTP
