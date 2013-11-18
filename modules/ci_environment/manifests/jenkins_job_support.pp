@@ -36,6 +36,7 @@ class ci_environment::jenkins_job_support {
     'libv8-dev', # Needed by things that require V8 headers
     'vegeta', # HTTP load testing used by Router.
     'php5-cli', # Needed by redirector
+    'dnsutils', # Needed by transition_dns_report
   ])
 
   package { 'golang':
