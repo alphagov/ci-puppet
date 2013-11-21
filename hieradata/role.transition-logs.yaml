@@ -14,3 +14,8 @@ ci_environment::transition_logs::rssh_users:
         comment: UKBA
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEA0pjO3igICcqu2cA6Emy3rFDGUOBMQi3zbK6NN9vg3S7E6OmUoUiHL4n8EaiX+JxEhGJxwTuvJtu9DL/J0UlCzgyMPopE6kzInYTNVGwtoE8KHeBywjDoH8xjNac5ew6c1bJs0Y0SWB5AK5NNSXKohSPDYAyu91N2EAHQz1dFp4xdiFuqNpHe0tuwYOFk4SgCGq4OLc763y07WMFzmQqe6e/As7eLuVXiIHqhAn67KX6xxpRoFQ2SU12R351TJXUlMfLsKrfUyW52c6VmNXK+Yl2CbX7W0UQZze38njipIkFyjgB6w0CKDS7SsD+fVuaxnNB35yW6cIJMCVS3yh68tw==
         home_dir: /srv/logs/log-1/ukba
+
+    hmrc:
+        comment: HMRC
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAgbRGIQu/LxGjnsSsWg0pxTryVy5Zy6RahJt49bBcAzSZb8JPpFQfkwIbVXpVdRY3PTzBXOrslOIBmL0jMKI0QzqrHTZtIoCIS5dBdd/NOTjpDwy8J1tBNW82WT+F8pWmkYb3EvGXlD8IWDunBxAbKJIRbkiD6grj04GKBGJNJ/I4YZxltRy0gEzWfALMYc02ASunmZhddaaYDzUxBpd3u5VqouWuRsmDVXRgoL6Djpl8rv2TQXeRg4J2hVxomP8+C9QkQtHhBSkXSWgUi/MVc7e7YZxrQHL5k/WmorOQR65iR+qEe6KK3PzgDlMbpUuMrB1OSaMmWdiq1G8WSadCQQ==
+        home_dir: /srv/logs/log-1/hmrc
