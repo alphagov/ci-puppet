@@ -20,6 +20,11 @@ class ci_environment::jenkins_job_support::mysql {
       password => 'contacts',
       require  => Class['::mysql::server'];
 
+    'content_planner_test':
+      user     => 'content_planner',
+      password => 'content_planner',
+      require  => Class['::mysql::server'];
+
     [
       'datainsights_todays_activity_test',
       'datainsight_weekly_reach_test',
