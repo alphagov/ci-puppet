@@ -37,6 +37,10 @@ class ci_environment::jenkins_job_support {
     'vegeta', # HTTP load testing used by Router.
     'php5-cli', # Needed by redirector
     'dnsutils', # Needed by transition_dns_report
+    'libcairo2-dev', # alphagov/screenshot-as-a-service
+    'libjpeg8-dev', # alphagov/screenshot-as-a-service
+    'libpango1.0-dev', # alphagov/screenshot-as-a-service
+    'libgif-dev', # alphagov/screenshot-as-a-service
   ])
 
   package { 'golang':
