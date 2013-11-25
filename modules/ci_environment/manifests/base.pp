@@ -52,6 +52,9 @@ class ci_environment::base {
   rbenv::version { '2.0.0-p247':
     bundler_version => '1.3.5'
   }
+  rbenv::version { '2.0.0-p353':
+    bundler_version => '1.3.5'
+  }
 
   file { '/etc/sudoers.d/gds':
     ensure  => present,
