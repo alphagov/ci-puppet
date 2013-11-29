@@ -16,7 +16,7 @@ ci_environment::transition_logs::rssh_users:
         home_dir: /srv/logs/log-1/ukba
 
     ukba_akamai:
-        comment: UKBA: Akamai logs
+        comment: UKBA Akamai logs
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQC6HJYu/PdxZUEO2aOimO290Oo8Vt3nhKaLnfXa22YwEDF7zr1FSzwSjkZ9mr9qZby7Fzrmnc7A3u/f2vPB3mn+sq/GdIp8N8el8reXqJYXWiU3xkewfo5qmv3OCX0kp3EIHSuDxb9uhfQeZzUSTI1yt9+tLAtPy21n1RpT+hHce1pTc5ibwi1csdiECJA1SyPqpblLQtmCT8Vm+8mkRQajfELPKVu+BTQC3OUAZsa0ei4DRDFcV9tqiUMiVdoFRpRlZeRM2IZEtOMwp+HDdJCXsmEEmWpP51X1Lx+Vqjnq3eAAoIWtHCDnEPE/QYtpZ7MGkmjSGqEqUWQ10pDNS4ID
         home_dir: /srv/logs/log-1/ukba_akamai
 
