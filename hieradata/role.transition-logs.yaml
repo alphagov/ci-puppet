@@ -11,9 +11,14 @@ ci_environment::transition_logs::rssh_users:
         home_dir: /srv/logs/log-1/mhra
 
     ukba:
-        comment: UKBA
+        comment: UKBA Verizon: UKBA origin logs
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEA0pjO3igICcqu2cA6Emy3rFDGUOBMQi3zbK6NN9vg3S7E6OmUoUiHL4n8EaiX+JxEhGJxwTuvJtu9DL/J0UlCzgyMPopE6kzInYTNVGwtoE8KHeBywjDoH8xjNac5ew6c1bJs0Y0SWB5AK5NNSXKohSPDYAyu91N2EAHQz1dFp4xdiFuqNpHe0tuwYOFk4SgCGq4OLc763y07WMFzmQqe6e/As7eLuVXiIHqhAn67KX6xxpRoFQ2SU12R351TJXUlMfLsKrfUyW52c6VmNXK+Yl2CbX7W0UQZze38njipIkFyjgB6w0CKDS7SsD+fVuaxnNB35yW6cIJMCVS3yh68tw==
         home_dir: /srv/logs/log-1/ukba
+
+    ukba_akamai:
+        comment: UKBA: Akamai logs
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQC6HJYu/PdxZUEO2aOimO290Oo8Vt3nhKaLnfXa22YwEDF7zr1FSzwSjkZ9mr9qZby7Fzrmnc7A3u/f2vPB3mn+sq/GdIp8N8el8reXqJYXWiU3xkewfo5qmv3OCX0kp3EIHSuDxb9uhfQeZzUSTI1yt9+tLAtPy21n1RpT+hHce1pTc5ibwi1csdiECJA1SyPqpblLQtmCT8Vm+8mkRQajfELPKVu+BTQC3OUAZsa0ei4DRDFcV9tqiUMiVdoFRpRlZeRM2IZEtOMwp+HDdJCXsmEEmWpP51X1Lx+Vqjnq3eAAoIWtHCDnEPE/QYtpZ7MGkmjSGqEqUWQ10pDNS4ID
+        home_dir: /srv/logs/log-1/ukba_akamai
 
     hmrc:
         comment: HMRC
