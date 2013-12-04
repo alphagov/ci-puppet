@@ -24,3 +24,8 @@ ci_environment::transition_logs::rssh_users:
         comment: HMRC
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAgbRGIQu/LxGjnsSsWg0pxTryVy5Zy6RahJt49bBcAzSZb8JPpFQfkwIbVXpVdRY3PTzBXOrslOIBmL0jMKI0QzqrHTZtIoCIS5dBdd/NOTjpDwy8J1tBNW82WT+F8pWmkYb3EvGXlD8IWDunBxAbKJIRbkiD6grj04GKBGJNJ/I4YZxltRy0gEzWfALMYc02ASunmZhddaaYDzUxBpd3u5VqouWuRsmDVXRgoL6Djpl8rv2TQXeRg4J2hVxomP8+C9QkQtHhBSkXSWgUi/MVc7e7YZxrQHL5k/WmorOQR65iR+qEe6KK3PzgDlMbpUuMrB1OSaMmWdiq1G8WSadCQQ==
         home_dir: /srv/logs/log-1/hmrc
+
+    moj:
+        comment: MOJ
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQCZK03zGYmxnNte3+atd124fPUDtDkafx26Cjzba6HlI31bnCz+z4XNM0OcFH1l7OC/6GffQzVLZGej2B02C4WR8f36l1Qrucuq3vEvdbfAN0lucakR3Q1ttcGh/UyyUf/YSzGjsQmkvdI4cRtVT8ah1jCNJo11rcdY9BTWm2KSvzHmkiTdUu9fQFbYPB6/CuAvLX5mzYMWDvqRtzTU+iQt+uEn+Qo52NtUq9TFzFjgGjpmFn9lyX/+b086PvU0OOo1CF7+53O3S2ES2Osn3WphiAAjdWZrnjmg5XYxZZNFsJkhB7oXwaKx2Xf62aOztCElxmVJZ0uOgSvziSEgpiGt
+        home_dir: /srv/logs/log-1/moj
