@@ -42,6 +42,11 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA7r1lq8GxI3MtOz+38NcQEaIHKBM9lmgLLoEi3yHpP2LGld6H5UeAxg12sjsVsWsEwany1xpWI+kE7HLwrdXim4DwObAypgr92SlNUClz8iVUZmh0K/Y3gXvTwfM5/hqwtXrObm4i9xNqh2wCoa5HaWqRF9g1jZm+asMnW4r4FQ0=
         home_dir: /srv/logs/log-1/ea
 
+    ea_brand:
+        comment: Environment Agency Brand site
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEA6dKONnI2DV6QuCVMW4a7wsx5/oJWz1EY5Cx0n1i3H7vvp4255f3ti5gJ9ONMP0YyXX/68Kp5jQ8BENWveQCU3c63R/EatJVknFIitlsy1nw4wH+YiZ/6yACwzjYuJgPJRZ6GjBg00E51uWFns/CXLV5WFeHlILSYdIHTxT1ySv5S6daLVmgkm9dsfMFu/Qi/1s705eeM5Zjez2DAY1yRIeyXDSmNkc4jb3C2t8AUBq96fJ6xA68ooTN+EH03tAh5wDnhDQp/E4dFhnRZNDIPrnVdZML4tsL0bFIKtjo8jp+BrBT3s3I+QtMxkkoo4jZPO3X7ZYXd6nGWPgPv8SvB6Q==
+        home_dir: /srv/logs/log-1/ea_brand
+
     sfa:
         comment: Skills Funding Agency
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAhtrK86Sjr/MhOJWO2cBdo7Tv7EPCQxT7ysPniWezAITiSq8Y0q6LTRjMseeF0rb2mgZTZ4U9M15XTDhYa2gkK5eDtxtgY8Gz+f/UidTTlJhs8c955kwbchTUOSYhz/v3gjQmAFYtsur2DNhxaKNi8m+zUDfpmnERklsDpEWz3fv2nvU4UPrSV+FkjoOQhyUkIkKTq5Lj381jYGH96qVYrDYWU4MGjTZBqLivAHA2iOavNwoPCTeA/Z4SmoCJcmwQOkrFbcJjXtl9NNPFkCIdSInQfMANrjXSyH/ovgRn6qhzUw5goDsCwz5HQRZl/CAKUrdEg6O/hsqy9WORYZyBeQ==
