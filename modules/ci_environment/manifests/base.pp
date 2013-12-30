@@ -72,6 +72,14 @@ class ci_environment::base {
     require => Exec['apt-get-update']
   }
 
+  file { '/etc/fail2ban/jail.local':
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    source  => 'puppet:///modules/ci_environment/jail.local',
+    require => Class['fail2ban'],
+  }
+
   include ssh::server
 
   exec { 'apt-get-update':
