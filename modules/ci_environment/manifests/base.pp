@@ -6,6 +6,7 @@ class ci_environment::base {
   apt::ppa { 'ppa:gds/govuk': }
   apt::ppa { 'ppa:gds/ci': }
 
+  include ci_environment::fail2ban
   include harden
   include github_sshkeys
   include rbenv
@@ -66,18 +67,6 @@ class ci_environment::base {
   file { '/etc/ssh/ssh_known_hosts':
     ensure  => present,
     mode    => '0644',
-  }
-
-  class { 'fail2ban':
-    require => Exec['apt-get-update']
-  }
-
-  file { '/etc/fail2ban/jail.local':
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    source  => 'puppet:///modules/ci_environment/jail.local',
-    require => Class['fail2ban'],
   }
 
   include ssh::server
