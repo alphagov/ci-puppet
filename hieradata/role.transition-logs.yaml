@@ -51,3 +51,8 @@ ci_environment::transition_logs::rssh_users:
         comment: Skills Funding Agency
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAhtrK86Sjr/MhOJWO2cBdo7Tv7EPCQxT7ysPniWezAITiSq8Y0q6LTRjMseeF0rb2mgZTZ4U9M15XTDhYa2gkK5eDtxtgY8Gz+f/UidTTlJhs8c955kwbchTUOSYhz/v3gjQmAFYtsur2DNhxaKNi8m+zUDfpmnERklsDpEWz3fv2nvU4UPrSV+FkjoOQhyUkIkKTq5Lj381jYGH96qVYrDYWU4MGjTZBqLivAHA2iOavNwoPCTeA/Z4SmoCJcmwQOkrFbcJjXtl9NNPFkCIdSInQfMANrjXSyH/ovgRn6qhzUw5goDsCwz5HQRZl/CAKUrdEg6O/hsqy9WORYZyBeQ==
         home_dir: /srv/logs/log-1/sfa
+
+    monitor:
+        comment: Monitor
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDzt0dadFRf/nu6OpJtMoaJWp9AfPzrObk0Z7oYCA7QlnaGasgnvcs2yKB8ZhYJGyBI8NzyTKeiJr16UgWB7229V33BnP0HU2KZxbNN9Lcmw/VoXVbxT1QnHgajulnaAQIKMp89wda9w6NyjasPv4Q+L7qONGvyioheFcKMTjX2qd2vnXAajkC+/ypfSZOQopa0nlEAH1hbf3T1XkwJf8Ctcaza7BB77IFCL54CXSwn2ZJVl4FAYWkJkkxyuAHlKTXMKRtkGl6JodXffNN+7uueGrf0OPP5Y5TbIgikb5KAKOqSfoSAwTncCWXfYa+VFQzpJe+H9ke1M2R/Wyec+ygl
+        home_dir: /srv/logs/log-1/monitor
