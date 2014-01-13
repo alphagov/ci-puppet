@@ -2,9 +2,9 @@
 #
 # Installs fail2ban for IP blacklisting
 #
-class ci_environment::fail2ban {
-  $whitelist_ips = hiera('ci_environment::fail2ban::whitelist_ips')
-
+class ci_environment::fail2ban(
+  $whitelist_ips = ['127.0.0.1'],
+) {
   class { '::fail2ban':
     require => Exec['apt-get-update']
   }
