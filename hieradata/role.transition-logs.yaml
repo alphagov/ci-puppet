@@ -3,7 +3,7 @@ classes:
  - git
  - transition_logs
 
-transition_logs::rssh_users:
+transition_logs::accounts:
     mhra:
         comment: MHRA
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAAAgQDLxOkttJUcivHvVqWCsmLMvuyXtXe2mTceIh84mA05uwlVtPjdIC4bupl3yncswxnc6A6aJZk35FA8NCxod55eVicM1+sTgnQEIEDr7UxXFyvd89f0lOilojUuC4Mkt9Lun8wDRu1rW1i9chVoZQL5masYzJzku4DuK9e9DyJBGw==

@@ -2,9 +2,9 @@
 #
 # Class to install things only on the Transition Logs
 #
-class transition_logs {
-    $accounts = hiera('transition_logs::rssh_users')
-
+class transition_logs(
+  $accounts,
+) {
     package{'rssh':
         ensure => present,
     }
