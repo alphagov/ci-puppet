@@ -1,9 +1,9 @@
-# == Class: ci_environment::transition_logs
+# == Class: transition_logs
 #
 # Class to install things only on the Transition Logs
 #
-class ci_environment::transition_logs {
-    $accounts = hiera('ci_environment::transition_logs::rssh_users')
+class transition_logs {
+    $accounts = hiera('transition_logs::rssh_users')
 
     package{'rssh':
         ensure => present,
@@ -16,7 +16,7 @@ class ci_environment::transition_logs {
 
     file {'/etc/rssh.conf':
         ensure  => present,
-        content => template('ci_environment/etc/rssh.conf.erb'),
+        content => template('transition_logs/etc/rssh.conf.erb'),
     }
 
     file {['/srv/logs','/srv/logs/log-1']:
