@@ -35,3 +35,5 @@ mod 'clamav',       :git => 'git://github.com/alphagov/puppet-clamav',
                     :ref => '31af4f0c2753dd25bca3dd0c7cc69d273c4d640d'
 mod 'cpanm',        :git => 'git://github.com/alphagov/puppet-cpanm.git',
                     :ref => '4e3dfca9b5ca25da71a78412305710e665475698'
+mod 'rsyslog',      :git => 'git://github.com/alphagov/puppet-rsyslog.git',
+                    :ref => 'acf2755cda80e2ecd107ed8de4d275c383db0487'
