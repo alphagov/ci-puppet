@@ -80,6 +80,13 @@ GIT
     nginx (0.0.1)
 
 GIT
+  remote: git://github.com/alphagov/puppet-rsyslog.git
+  ref: acf2755cda80e2ecd107ed8de4d275c383db0487
+  sha: acf2755cda80e2ecd107ed8de4d275c383db0487
+  specs:
+    rsyslog (2.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-ssl.git
   ref: 23bbb5ab57f26269acce3d4b43e643781747a551
   sha: 23bbb5ab57f26269acce3d4b43e643781747a551
@@ -132,6 +139,7 @@ DEPENDENCIES
   puppetlabs/mysql (= 0.9.0)
   puppetlabs/nodejs (= 0.4.0)
   puppetlabs/stdlib (~> 4.0)
+  rsyslog (>= 0)
   saz/dnsmasq (= 1.0.1)
   ssl (>= 0)
 

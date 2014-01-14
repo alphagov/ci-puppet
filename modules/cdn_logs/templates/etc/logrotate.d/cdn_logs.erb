@@ -1,0 +1,12 @@
+<%= log_dir -%>/*.log
+{
+  rotate 12
+  monthly
+  compress
+  delaycompress
+  missingok
+  notifempty
+  postrotate
+    invoke-rc.d rsyslog reload >/dev/null 2>&1 || true
+  endscript
+}

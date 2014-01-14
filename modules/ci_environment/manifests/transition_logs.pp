@@ -29,4 +29,18 @@ class ci_environment::transition_logs {
     }
 
     Exec['apt-get-update'] -> Package['rssh'] -> File['/etc/rssh.conf'] -> File['/usr/lib/rssh/rssh_chroot_helper']
+
+    class { 'rsyslog':
+      log_user        => 'syslog',
+      run_user        => 'syslog',
+      run_group       => 'syslog',
+      purge_rsyslog_d => true,
+    }
+
+    # FIXME: We don't manage the version of Puppet in the Vagrant box and
+    # 3.0.2 doesn't lookup the correct boolean for `log_remote` from hiera.
+    class { 'rsyslog::client':
+      log_local  => true,
+      log_remote => false,
+    }
 }

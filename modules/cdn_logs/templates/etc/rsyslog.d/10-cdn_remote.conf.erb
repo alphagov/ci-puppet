@@ -1,0 +1,32 @@
+# Listen on TCP.
+$ModLoad imtcp
+
+# Server side SSL.
+$DefaultNetstreamDriver gtls
+
+# Self-signed, CA == Cert.
+$DefaultNetstreamDriverCAFile <%= @cert_file %>
+$DefaultNetstreamDriverCertFile <%= @cert_file %>
+$DefaultNetstreamDriverKeyFile <%= @key_file %>
+
+# Verify server, not client.
+$InputTCPServerStreamDriverMode 1
+$InputTCPServerStreamDriverAuthMode anon
+
+# Temporarily disable message de-dupe.
+$RepeatedMsgReduction off
+
+# Switch to remote ruleset
+$RuleSet fastly
+
+# Log everything from this source.
+*.* -<%= @log_dir -%>/redirector.log
+
+# Switch back to default ruleset
+$RuleSet RSYSLOG_DefaultRuleset
+
+$InputTCPServerBindRuleset fastly
+$InputTCPServerRun <%= @port %>
+
+# Restore message de-dupe.
+$RepeatedMsgReduction on
