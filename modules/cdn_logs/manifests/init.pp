@@ -47,4 +47,9 @@ class cdn_logs (
     ip    => 'any',
     proto => 'tcp',
   }
+
+  file { '/etc/logrotate.d/cdn_logs':
+    ensure  => file,
+    content => template('cdn_logs/etc/logrotate.d/cdn_logs.erb')
+  }
 }
