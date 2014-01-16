@@ -17,7 +17,7 @@ $InputTCPServerStreamDriverAuthMode anon
 $RepeatedMsgReduction off
 
 # Switch to remote ruleset
-$RuleSet fastly
+$RuleSet cdn
 
 # Log everything from this source.
 *.* -<%= @log_dir -%>/bouncer_and_redirector.log
@@ -25,7 +25,7 @@ $RuleSet fastly
 # Switch back to default ruleset
 $RuleSet RSYSLOG_DefaultRuleset
 
-$InputTCPServerBindRuleset fastly
+$InputTCPServerBindRuleset cdn
 $InputTCPServerRun <%= @port %>
 
 # Restore message de-dupe.
