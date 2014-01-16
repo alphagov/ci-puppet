@@ -20,7 +20,7 @@ $RepeatedMsgReduction off
 $RuleSet fastly
 
 # Log everything from this source.
-*.* -<%= @log_dir -%>/redirector.log
+*.* -<%= @log_dir -%>/bouncer_and_redirector.log
 
 # Switch back to default ruleset
 $RuleSet RSYSLOG_DefaultRuleset
