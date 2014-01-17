@@ -8,7 +8,7 @@ class cdn_logs (
   $key_file = '/etc/ssl/rsyslog.key',
   $cert,
   $cert_file = '/etc/ssl/rsyslog.crt',
-  $log_dir = '/srv/logs/cdn',
+  $log_dir = '/srv/logs/log-1/cdn',
 ) {
   file { $log_dir:
     ensure => directory,
