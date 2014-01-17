@@ -19,8 +19,11 @@ $RepeatedMsgReduction off
 # Switch to remote ruleset
 $RuleSet cdn
 
+# Record raw message content without leading space.
+$template NoFormat,"%msg:2:$:%\n"
+
 # Log everything from this source.
-*.* -<%= @log_dir -%>/bouncer_and_redirector.log
+*.* -<%= @log_dir -%>/bouncer_and_redirector.log;NoFormat
 
 # Switch back to default ruleset
 $RuleSet RSYSLOG_DefaultRuleset
