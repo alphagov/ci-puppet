@@ -1,7 +1,8 @@
 <%= log_dir -%>/*.log
 {
-  rotate 12
-  monthly
+  rotate 365
+  daily
+  dateext
   compress
   delaycompress
   missingok
