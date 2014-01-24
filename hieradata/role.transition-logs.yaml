@@ -41,6 +41,13 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA1LwP0IXMUhKFhdyhPtIkvvIROplJoNPfgUhiJrPK8MhHQ4AaWRWTzsYe+JrPF3D4D+xKRCbR1akc0g9FvbBpemqdl50x46MQLEVYlCFElhRbj5s9h2yhU5nmvujXLASvDx43YmtoEImc7/Vn/x7RduFIus4j0rJVMc9NoWLV/7c=
         home_dir: /srv/logs/log-1/ukti
 
+    # Note that dfe's ssh_key is actually @rgarner's at this time.
+    # When we get a real DFE key, replace this.
+    dfe:
+        comment: Department for Education
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAuoIglteQmEwL5/T3maYcomkZs44x1Rx/YRn31vMEuAaBHqYyD5mLUFMXQbCyFO6mZcjx+uOTOT6QhzIiKa8dJhAs5K/KFtjG/6vuwqFdC/Tpggvx6My/vDROsZVmPz4RFrd9XhoL2ybAXaHq6hfo+j112J/n+rkemqzmR/gz2TGFni9jSWG8fEzEkMwQR0iHZnGSFJI2UUR8trxyk32Pq3hkyEiA+XdipR/U8uPnBB2C3+Ms5NUaI8kFmQKYEumqU093dUD7iuekw3vA3elD8oR6UeDGcoRbMomT8oaatPtZl2rSw343M+tEQTC4VsUtcYAiK46sCxIsSjCI0+k2eQ==
+        home_dir: /srv/logs/log-1/dfe
+
     # Note that ea's ssh_key is actually @psd's at this time.
     # When we get a real EA key, replace this.
     ea:
