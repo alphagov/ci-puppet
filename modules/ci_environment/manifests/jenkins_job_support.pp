@@ -35,6 +35,7 @@ class ci_environment::jenkins_job_support {
     'bzr', # needed by some Go builds
     'libv8-dev', # Needed by things that require V8 headers
     'vegeta', # HTTP load testing used by Router.
+    'mawk-1.3.4', # Provides /opt/mawk required by pre-transition-stats
     'php5-cli', # Needed by redirector
     'dnsutils', # Needed by transition_dns_report
     'libcairo2-dev', # alphagov/screenshot-as-a-service
