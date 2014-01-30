@@ -5,9 +5,11 @@
 class ci_environment::transition_logs {
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
 
-    package{'rssh':
-        ensure => present,
-    }
+    ensure_packages([
+        'rssh',
+        # Provides /opt/mawk required by pre-transition-stats for processing logs
+        'mawk-1.3.4',
+    ])
 
     create_resources('account', $accounts, {
         shell          => '/usr/bin/rssh',
