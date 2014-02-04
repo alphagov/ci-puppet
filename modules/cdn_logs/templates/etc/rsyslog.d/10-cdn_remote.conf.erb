@@ -33,3 +33,6 @@ $InputTCPServerRun <%= @port %>
 
 # Restore message de-dupe.
 $RepeatedMsgReduction on
+
+# Use the same max-line-length as Fastly
+$MaxMessageSize 16k
