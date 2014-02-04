@@ -22,6 +22,9 @@ $RuleSet cdn
 # Record raw message content without leading space.
 $template NoFormat,"%msg:2:$:%\n"
 
+# Use the same max-line-length as Fastly
+$MaxMessageSize 16k
+
 # Log everything from this source.
 *.* -<%= @log_dir -%>/bouncer_and_redirector.log;NoFormat
 
@@ -33,6 +36,3 @@ $InputTCPServerRun <%= @port %>
 
 # Restore message de-dupe.
 $RepeatedMsgReduction on
-
-# Use the same max-line-length as Fastly
-$MaxMessageSize 16k
