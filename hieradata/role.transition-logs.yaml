@@ -69,3 +69,8 @@ ci_environment::transition_logs::rssh_users:
         comment: Monitor
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDzt0dadFRf/nu6OpJtMoaJWp9AfPzrObk0Z7oYCA7QlnaGasgnvcs2yKB8ZhYJGyBI8NzyTKeiJr16UgWB7229V33BnP0HU2KZxbNN9Lcmw/VoXVbxT1QnHgajulnaAQIKMp89wda9w6NyjasPv4Q+L7qONGvyioheFcKMTjX2qd2vnXAajkC+/ypfSZOQopa0nlEAH1hbf3T1XkwJf8Ctcaza7BB77IFCL54CXSwn2ZJVl4FAYWkJkkxyuAHlKTXMKRtkGl6JodXffNN+7uueGrf0OPP5Y5TbIgikb5KAKOqSfoSAwTncCWXfYa+VFQzpJe+H9ke1M2R/Wyec+ygl
         home_dir: /srv/logs/log-1/monitor
+
+    oft:
+        comment: Office of Fair Trading
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAnCDYGwMr1zG4ghJ/WergCkpTQeXlnRrBp2kWsRSVljWnZDrH1ekVX8PpbYUi8itqwzXc9takEIUEUxCwpiYv9GkoJg9wFC6v+45NzxNaqXjB4LTBIutJAwfIape9lJFGclivI6KXhVaqazPnmwdSWBMR9Ncc8e7C90DP9il/zEo6C4XDH8zoqB2wKX0rBMOEsM09PVVMq7RFnrpmMTr187iQozUpAZ1BLXnVDs2iNa9/5v7zpwEMwr8FFVRfo5tOfa+4wEPm1L/YvoiS/3zfsy6slaunXJoDVBWvyD5mtoch4Sk53LE9fP8RvnDPl9cxDbOAnAsnk4nWtIimOxqbLQ==
+        home_dir: /srv/logs/log-1/oft
