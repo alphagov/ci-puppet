@@ -13,6 +13,8 @@ class cdn_logs (
   file { $log_dir:
     ensure => directory,
     owner  => 'syslog',
+    group  => 'adm',
+    mode   => '0775',
   }
 
   file { $key_file:
