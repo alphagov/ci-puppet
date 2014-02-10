@@ -3,6 +3,43 @@
 # Class to install things only on the Transition Logs
 #
 class ci_environment::transition_logs {
+    $logs_processor_home = '/srv/logs/log-1/logs_processor'
+
+    create_resources(
+        'account',
+        {
+            'logs_processor':
+                home_dir => $logs_processor_home,
+                groups   => [ 'root', 'adm' ],
+                comment  => 'A user to process logs from Fastly and agencies and push into a GitHub repo',
+        },
+        { require => File['/srv/logs/log-1'] }
+    )
+
+    file {'logs_processor_sshdir':
+        ensure  => directory,
+        path    => "${logs_processor_home}/.ssh",
+        owner   => 'logs_processor',
+        group   => 'logs_processor',
+        mode    => '0700',
+    }
+
+    $private_key = "${logs_processor_home}/.ssh/id_rsa"
+    exec { 'Creating key pair for logs_processor':
+        command => "ssh-keygen -t rsa -C 'Provided by Puppet for logs_processor' -N '' -f ${private_key}",
+        creates => $private_key,
+        user    => 'logs_processor',
+        require => File['logs_processor_sshdir'],
+    }
+
+    file {"${logs_processor_home}/.gitconfig":
+        ensure  => 'present',
+        owner   => 'logs_processor',
+        group   => 'logs_processor',
+        mode    => '0644',
+        source  => 'puppet:///modules/ci_environment/logs_processor-dot-gitconfig',
+    }
+
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
 
     ensure_packages([
