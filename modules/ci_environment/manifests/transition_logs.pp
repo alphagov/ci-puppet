@@ -13,20 +13,12 @@ class ci_environment::transition_logs {
             require  => File['/srv/logs/log-1'],
     }
 
-    file {'logs_processor_sshdir':
-        ensure  => directory,
-        path    => "${logs_processor_home}/.ssh",
-        owner   => 'logs_processor',
-        group   => 'logs_processor',
-        mode    => '0700',
-    }
-
     $private_key = "${logs_processor_home}/.ssh/id_rsa"
     exec { 'Creating key pair for logs_processor':
         command => "ssh-keygen -t rsa -C 'Provided by Puppet for logs_processor' -N '' -f ${private_key}",
         creates => $private_key,
         user    => 'logs_processor',
-        require => File['logs_processor_sshdir'],
+        require => Account['logs_processor'],
     }
 
     file {"${logs_processor_home}/.gitconfig":
