@@ -5,15 +5,13 @@
 class ci_environment::transition_logs {
     $logs_processor_home = '/srv/logs/log-1/logs_processor'
 
-    create_resources(
-        'account',
-        'logs_processor' => {
+    account {
+        'logs_processor':
             home_dir => $logs_processor_home,
             groups   => [ 'root', 'adm' ],
             comment  => 'A user to process logs from Fastly and agencies and push into a GitHub repo',
-        },
-        { require => File['/srv/logs/log-1'] }
-    )
+            require  => File['/srv/logs/log-1'],
+    }
 
     file {'logs_processor_sshdir':
         ensure  => directory,
