@@ -13,10 +13,18 @@ class ci_environment::transition_logs {
             require  => File['/srv/logs/log-1'],
     }
 
-    $private_key = "${logs_processor_home}/.ssh/id_rsa"
-    exec { 'Creating key pair for logs_processor':
-        command => "ssh-keygen -t rsa -C 'Provided by Puppet for logs_processor' -N '' -f ${private_key}",
-        creates => $private_key,
+    $transition_stats_key = "${logs_processor_home}/.ssh/transition_stats_deploy_key_rsa"
+    exec { 'Creating transition-stats deploy key pair for logs_processor':
+        command => "ssh-keygen -t rsa -C 'Provided by Puppet for logs_processor' -N '' -f ${transition_stats_key}",
+        creates => $transition_stats_key,
+        user    => 'logs_processor',
+        require => Account['logs_processor'],
+    }
+
+    $pre_transition_stats_key = "${logs_processor_home}/.ssh/pre_transition_stats_deploy_key_rsa"
+    exec { 'Creating pre-transition-stats deploy key pair for logs_processor':
+        command => "ssh-keygen -t rsa -C 'Provided by Puppet for logs_processor' -N '' -f ${pre_transition_stats_key}",
+        creates => $pre_transition_stats_key,
         user    => 'logs_processor',
         require => Account['logs_processor'],
     }
