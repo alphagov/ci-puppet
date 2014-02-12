@@ -35,6 +35,16 @@ class ci_environment::transition_logs {
         group   => 'logs_processor',
         mode    => '0644',
         source  => 'puppet:///modules/ci_environment/logs_processor-dot-gitconfig',
+        require => Account['logs_processor'],
+    }
+
+    file {"${logs_processor_home}/.ssh/config":
+        ensure  => 'present',
+        owner   => 'logs_processor',
+        group   => 'logs_processor',
+        mode    => '0644',
+        source  => 'puppet:///modules/ci_environment/logs_processor_ssh_config',
+        require => Account['logs_processor'],
     }
 
     file {"${logs_processor_home}/process_transition_logs.sh":
@@ -43,6 +53,7 @@ class ci_environment::transition_logs {
         group   => 'logs_processor',
         mode    => '0744',
         source  => 'puppet:///modules/ci_environment/process_transition_logs.sh',
+        require => Account['logs_processor'],
     }
 
     $accounts = hiera('ci_environment::transition_logs::rssh_users')

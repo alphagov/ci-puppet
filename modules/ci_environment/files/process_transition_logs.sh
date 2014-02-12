@@ -2,7 +2,8 @@
 
 # This script expects that the user running it is able to pull and push to the
 # two repositories used here. For the logs_processor user on transition-logs-1,
-# this will be done using a deploy key added to those repos.
+# this will be done using separate deploy keys added to those repos and ssh
+# config to use the right key for each repo, by hostname aliases.
 
 set -e
 
@@ -19,7 +20,7 @@ do
         git pull origin master
         cd ..
     else
-        git clone "git@github.com:alphagov/$REPO.git"
+        git clone "git@github.com-$REPO:alphagov/$REPO.git"
     fi
 done
 
