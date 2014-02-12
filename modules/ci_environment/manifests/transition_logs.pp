@@ -37,6 +37,14 @@ class ci_environment::transition_logs {
         source  => 'puppet:///modules/ci_environment/logs_processor-dot-gitconfig',
     }
 
+    file {"${logs_processor_home}/.ssh/config":
+        ensure  => 'present',
+        owner   => 'logs_processor',
+        group   => 'logs_processor',
+        mode    => '0644',
+        source  => 'puppet:///modules/ci_environment/logs_processor_ssh_config',
+    }
+
     file {"${logs_processor_home}/process_transition_logs.sh":
         ensure  => 'present',
         owner   => 'logs_processor',
