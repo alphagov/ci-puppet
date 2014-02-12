@@ -33,7 +33,7 @@ class ci_environment::transition_logs {
         ensure  => 'present',
         owner   => 'logs_processor',
         group   => 'logs_processor',
-        mode    => '0644',
+        mode    => '0744',
         source  => 'puppet:///modules/ci_environment/process_transition_logs.sh',
     }
 
