@@ -79,3 +79,8 @@ ci_environment::transition_logs::rssh_users:
         comment: Competition Commission
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAkAiuGLGb5s72SLDtSiItsKg3k2e8iMu278DyNm0DgCgZkLtzCe3gXLpjnYP5y7mNJU8tkeQFlx0dyy9H9802tcIotcn+4IIqzTTF+4eh/gij60EhkrJpVO9h6g0WJ9m5cW4FkG2101b9Kf1X8BiNgRDKNgdWZOm94z+A40l2nrWDRTgWWiFlYifGBT98dwCc+2xSxVlq7Pqnvul2w19mOOhIXU2mk9y1VRGWXr6kdiRj1N9mb/KPRXy5wA7HSX7dUycU1Khq+i13SgfpnaEBCTtL3Itrn/csWQAWQW7UN2R7dCxgI5RwDQcrR7AwPxYvTv/q6bK5TmXdSK+Fpcf7SQ==
         home_dir: /srv/logs/log-1/cc
+
+    ipo:
+        comment: Intellectual Property Office
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDauf26PrS6xNMWrcDJls2IACJB754Zsgu2AHO9HLw6nNDPCgF5EWlcK9+4K9OyIuXZdDiW5N9r8aqywdffjpRyZc03czeHq281Fdtf/tfmmmwmEO09bRZd6Rehp2llrJ4ce/EkE32UgQqDibCu6PxCrDeS26cCCCwY/62awqX1eTQTf6jgkStlLID2xHnAiLUwKlD75tNyfQh+EqPg9YydWbWxFdLYwXBdAsTTd6SppD9amV30ujb/8xlNfGwCLlCAJjIt4edt0p6rrLFa2ki5PsrVSNX0r+BqBCYs0V9GS6HZhsS5oW4obVdJ/ijt4rzm2/4Zqpw4qZ6rKvu4rtrh
+        home_dir: /srv/logs/log-1/ipo
