@@ -7,6 +7,20 @@
 
 set -e
 
+# Set up rbenv for the logs_processor user, which is necessary because it
+# doesn't have a proper login shell
+if [ -f /etc/profile.d/rbenv.sh ]; then
+    source /etc/profile.d/rbenv.sh
+else
+    echo "Can't setup rbenv, so processing will fail"
+    exit 1
+fi
+
+BUNDLE_DIR='/srv/logs/log-1/logs_processor/bundle'
+if [ ! -d "$BUNDLE_DIR" ]; then
+    mkdir "$BUNDLE_DIR"
+fi
+
 # clone repos
 for REPO in transition-stats pre-transition-stats
 do
@@ -38,7 +52,7 @@ cd ..
 LOGS_DIR='/srv/logs/log-1/cdn'
 
 (cd pre-transition-stats &&
-    bundle install &&
+    bundle install --path "$BUNDLE_DIR" &&
     bundle exec bin/hits update "$LOGS_DIR" --output-dir '../transition-stats/hits')
 
 # move into transition-stats, which should already be on the right branch, to
