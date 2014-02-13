@@ -7,15 +7,6 @@
 
 set -e
 
-# Set up rbenv for the logs_processor user, which is necessary because it
-# doesn't have a proper login shell
-if [ -f /etc/profile.d/rbenv.sh ]; then
-    source /etc/profile.d/rbenv.sh
-else
-    echo "Can't setup rbenv, so processing will fail"
-    exit 1
-fi
-
 BUNDLE_DIR='/srv/logs/log-1/logs_processor/bundle'
 if [ ! -d "$BUNDLE_DIR" ]; then
     mkdir "$BUNDLE_DIR"
