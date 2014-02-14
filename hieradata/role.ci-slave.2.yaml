@@ -2,7 +2,7 @@
 classes:
  - rabbitmq
 
-jenkins::slave::labels: '"mongodb-2.4.9 rabbitmq java6"'
+jenkins::slave::labels: '"mongodb-2.4 rabbitmq java6"'
 
 mongodb::version: 2.4.9
 java::package: 'openjdk-6-jdk'
