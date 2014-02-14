@@ -57,6 +57,17 @@ class ci_environment::jenkins_master (
     notify => Class['jenkins::service'],
   }
 
+  # Jenkins plugin for creating lists filtered by various expressions
+  # https://wiki.jenkins-ci.org/display/JENKINS/View+Job+Filters
+  file {"${jenkins_home}/plugins/view-job-filters.jpi":
+    ensure => 'present',
+    owner  => 'jenkins',
+    group  => 'nogroup',
+    mode   => '0644',
+    source => 'puppet:///modules/ci_environment/jenkins-plugin-view-job-filters-1.26.jpi',
+    notify => Class['jenkins::service'],
+  }
+
   file {'/etc/ssl/certs/github.gds.pem':
     ensure  => 'present',
     content => $github_enterprise_cert,
