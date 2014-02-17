@@ -22,6 +22,7 @@ do
             exit 1
         fi
         git checkout master
+        git fetch
         git pull origin master
         cd ..
     else
