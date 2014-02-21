@@ -73,6 +73,8 @@ class ci_environment::transition_logs {
         'rssh',
         # Provides /opt/mawk required by pre-transition-stats for processing logs
         'mawk-1.3.4',
+        # We need to decompress some 7zipped agency logs
+        'p7zip-full'
     ])
 
     create_resources('account', $accounts, {
