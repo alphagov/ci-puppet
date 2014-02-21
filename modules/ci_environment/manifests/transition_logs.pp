@@ -56,6 +56,17 @@ class ci_environment::transition_logs {
         require => Account['logs_processor'],
     }
 
+    cron { 'process_fastly_logs':
+        ensure      => present,
+        environment => 'PATH=/usr/lib/rbenv/shims:/usr/sbin:/usr/bin:/sbin:/bin',
+        command     => "${logs_processor_home}/process_transition_logs.sh",
+        user        => logs_processor,
+        target      => logs_processor,
+        hour        => 7,
+        minute      => 15,
+        require     => File["${logs_processor_home}/process_transition_logs.sh"]
+    }
+
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
 
     ensure_packages([
