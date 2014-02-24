@@ -30,16 +30,6 @@ do
     fi
 done
 
-# checkout the right branch for transition-stats
-cd transition-stats
-BRANCH_NAME='redirector_fastly_hits'
-if git rev-parse --verify "$BRANCH_NAME"; then
-    git checkout "$BRANCH_NAME"
-else
-    git checkout -b "$BRANCH_NAME"
-fi
-cd ..
-
 # process logs
 LOGS_DIR='/srv/logs/log-1/cdn'
 
@@ -47,8 +37,7 @@ LOGS_DIR='/srv/logs/log-1/cdn'
     bundle install --path "$BUNDLE_DIR" &&
     bundle exec bin/hits update "$LOGS_DIR" --output-dir '../transition-stats/hits')
 
-# move into transition-stats, which should already be on the right branch, to
-# commit and push
+# move into transition-stats to commit and push to master
 cd transition-stats
 
 # we will probably have untracked files as well as changes in tracked files if
@@ -62,6 +51,4 @@ if ! git diff --cached --quiet; then
     git commit -m 'Redirector Fastly hits processed on '"$TIMESTAMP"
 fi
 
-git push origin "$BRANCH_NAME"
-
-git checkout master
+git push origin master
