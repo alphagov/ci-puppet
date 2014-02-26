@@ -26,6 +26,11 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAnpYwCIK38nLNSGSWFQ7KP7tY6sa1/py0YhRoWv3ZkpW3eIyFJ1hYjToZPe4s+AqYL4yMo2XYWOyhm+4LwWpEPizXn8/5pPGHA8LN9GfkuBDBxTto3bJNwwFoeN2V30sQjlMq8oPzansrnHsl4uunbPAxeBEIB5rqben2gvorPiJsFqaJA5RwMsJVvJQTbIK2B9b+9u+6NIkbAh8IPFo6sDXMEx5V2Hzx4wrslNVKUDKievIMdmZLnaVNWpjA1AKKnQstkviRQBpZNnQs+5IkbHa8QQPfBFWq+TNy74QwSz/MMdmVazPXLx20VlaYfydvL5grV2DvXBws0OrMc1j0VQ==
         home_dir: /srv/logs/log-1/ha
 
+    hmlr:
+        comment: Land Registry
+        ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEA7s2eQl8hpxtg9HiCalMAAXfDIW3tyL93fcvRWmqcKfwUbBBKvjepbSgS6bs1saJtFHV6TPYTP7Foq0H+JZhhvhdBiwZzc8QF6Xp2VSulee4L5bYCBmovgiE/ka1upoFPnX3xTigxN5qzVAfhj1zDmLaCUMrhCOAtJ0/aAG0w0IM=
+        home_dir: /srv/logs/log-1/hmlr
+
     hmrc:
         comment: HMRC
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAgbRGIQu/LxGjnsSsWg0pxTryVy5Zy6RahJt49bBcAzSZb8JPpFQfkwIbVXpVdRY3PTzBXOrslOIBmL0jMKI0QzqrHTZtIoCIS5dBdd/NOTjpDwy8J1tBNW82WT+F8pWmkYb3EvGXlD8IWDunBxAbKJIRbkiD6grj04GKBGJNJ/I4YZxltRy0gEzWfALMYc02ASunmZhddaaYDzUxBpd3u5VqouWuRsmDVXRgoL6Djpl8rv2TQXeRg4J2hVxomP8+C9QkQtHhBSkXSWgUi/MVc7e7YZxrQHL5k/WmorOQR65iR+qEe6KK3PzgDlMbpUuMrB1OSaMmWdiq1G8WSadCQQ==
