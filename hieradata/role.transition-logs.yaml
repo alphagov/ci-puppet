@@ -28,7 +28,7 @@ ci_environment::transition_logs::rssh_users:
 
     hmlr:
         comment: Land Registry
-        ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEA7s2eQl8hpxtg9HiCalMAAXfDIW3tyL93fcvRWmqcKfwUbBBKvjepbSgS6bs1saJtFHV6TPYTP7Foq0H+JZhhvhdBiwZzc8QF6Xp2VSulee4L5bYCBmovgiE/ka1upoFPnX3xTigxN5qzVAfhj1zDmLaCUMrhCOAtJ0/aAG0w0IM=
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAIEA7s2eQl8hpxtg9HiCalMAAXfDIW3tyL93fcvRWmqcKfwUbBBKvjepbSgS6bs1saJtFHV6TPYTP7Foq0H+JZhhvhdBiwZzc8QF6Xp2VSulee4L5bYCBmovgiE/ka1upoFPnX3xTigxN5qzVAfhj1zDmLaCUMrhCOAtJ0/aAG0w0IM=
         home_dir: /srv/logs/log-1/hmlr
 
     hmrc:
@@ -89,3 +89,8 @@ ci_environment::transition_logs::rssh_users:
         comment: Intellectual Property Office
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDauf26PrS6xNMWrcDJls2IACJB754Zsgu2AHO9HLw6nNDPCgF5EWlcK9+4K9OyIuXZdDiW5N9r8aqywdffjpRyZc03czeHq281Fdtf/tfmmmwmEO09bRZd6Rehp2llrJ4ce/EkE32UgQqDibCu6PxCrDeS26cCCCwY/62awqX1eTQTf6jgkStlLID2xHnAiLUwKlD75tNyfQh+EqPg9YydWbWxFdLYwXBdAsTTd6SppD9amV30ujb/8xlNfGwCLlCAJjIt4edt0p6rrLFa2ki5PsrVSNX0r+BqBCYs0V9GS6HZhsS5oW4obVdJ/ijt4rzm2/4Zqpw4qZ6rKvu4rtrh
         home_dir: /srv/logs/log-1/ipo
+
+    mca:
+        comment: Maritime and Coastguard Agency
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA6qRfKDBPaqupRX++WNz8nPvk/B9C0MVQJH4YmpJCUPJ9N2mZ3sDWuwLh10vHxAQdg2GezAz/ryuwVZ0bLq85g4S6jqCs8b+b1HKcdq10wTFmGw9qajJkKIub+OeWPwY9w/dUbdPD1CGZmb7y7YtOhbCsSVl/8lzUvqWoLtOtmHU=
+        home_dir: /srv/logs/log-1/mca
