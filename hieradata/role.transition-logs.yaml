@@ -28,7 +28,7 @@ ci_environment::transition_logs::rssh_users:
 
     hmlr:
         comment: Land Registry
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAIEA7s2eQl8hpxtg9HiCalMAAXfDIW3tyL93fcvRWmqcKfwUbBBKvjepbSgS6bs1saJtFHV6TPYTP7Foq0H+JZhhvhdBiwZzc8QF6Xp2VSulee4L5bYCBmovgiE/ka1upoFPnX3xTigxN5qzVAfhj1zDmLaCUMrhCOAtJ0/aAG0w0IM=
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAIEAkL/4EBQSX+NsHfvDjK+KVr0x9TETddJ3z8Bvkc6SyWGxz+bQDdYirjPt3oSgJmqVoZeCb6BpKRt871rL5SGAxFVnfEu30Myd+dkDBr9d+wFLne5q9zNjcenfFrd9o/YLxSiO2pRAzpWDeD1txf73xkyuGYK+8l3PLZOdSutuJLM=
         home_dir: /srv/logs/log-1/hmlr
 
     hmrc:
