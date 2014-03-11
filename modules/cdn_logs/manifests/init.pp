@@ -44,6 +44,13 @@ class cdn_logs (
     ],
   }
 
+  rsyslog::snippet { 'transition_logs_sftp':
+    content   => 'local7.*                       /var/log/sftp-server.log',
+    require   => [
+      Class['ci_environment::transition_logs']
+    ]
+  }
+
   ufw::allow { 'rsyslog_cdn_logs':
     port  => $port,
     ip    => 'any',
