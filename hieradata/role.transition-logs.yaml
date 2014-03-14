@@ -94,3 +94,8 @@ ci_environment::transition_logs::rssh_users:
         comment: Maritime and Coastguard Agency
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA6qRfKDBPaqupRX++WNz8nPvk/B9C0MVQJH4YmpJCUPJ9N2mZ3sDWuwLh10vHxAQdg2GezAz/ryuwVZ0bLq85g4S6jqCs8b+b1HKcdq10wTFmGw9qajJkKIub+OeWPwY9w/dUbdPD1CGZmb7y7YtOhbCsSVl/8lzUvqWoLtOtmHU=
         home_dir: /srv/logs/log-1/mca
+
+    coal_authority:
+        comment: The Coal Authority
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAIEAn3xbUzT9Csis0DL8iPgnOcA6hqdzt49czebj1KAod4ojGxeKuoFavB2LByPn4wqvjZnz70D9g4ZeU9Y5wuSN2PVjiH5XrRBSMe6x0RvaNFpISFQz5LdpUHNO0ysMkdfsq5qytyxZ8PujAllRPnGC7zEEgl6LVNtFPTxwQj4lz/c=
+        home_dir: /srv/logs/log-1/coal_authority
