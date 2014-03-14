@@ -80,6 +80,7 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAnCDYGwMr1zG4ghJ/WergCkpTQeXlnRrBp2kWsRSVljWnZDrH1ekVX8PpbYUi8itqwzXc9takEIUEUxCwpiYv9GkoJg9wFC6v+45NzxNaqXjB4LTBIutJAwfIape9lJFGclivI6KXhVaqazPnmwdSWBMR9Ncc8e7C90DP9il/zEo6C4XDH8zoqB2wKX0rBMOEsM09PVVMq7RFnrpmMTr187iQozUpAZ1BLXnVDs2iNa9/5v7zpwEMwr8FFVRfo5tOfa+4wEPm1L/YvoiS/3zfsy6slaunXJoDVBWvyD5mtoch4Sk53LE9fP8RvnDPl9cxDbOAnAsnk4nWtIimOxqbLQ==
         home_dir: /srv/logs/log-1/oft
 
+    # This is the same key as the Department for Business, Innovation & Skills (bis)
     cc:
         comment: Competition Commission
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAkAiuGLGb5s72SLDtSiItsKg3k2e8iMu278DyNm0DgCgZkLtzCe3gXLpjnYP5y7mNJU8tkeQFlx0dyy9H9802tcIotcn+4IIqzTTF+4eh/gij60EhkrJpVO9h6g0WJ9m5cW4FkG2101b9Kf1X8BiNgRDKNgdWZOm94z+A40l2nrWDRTgWWiFlYifGBT98dwCc+2xSxVlq7Pqnvul2w19mOOhIXU2mk9y1VRGWXr6kdiRj1N9mb/KPRXy5wA7HSX7dUycU1Khq+i13SgfpnaEBCTtL3Itrn/csWQAWQW7UN2R7dCxgI5RwDQcrR7AwPxYvTv/q6bK5TmXdSK+Fpcf7SQ==
@@ -99,3 +100,9 @@ ci_environment::transition_logs::rssh_users:
         comment: The Coal Authority
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAIEAn3xbUzT9Csis0DL8iPgnOcA6hqdzt49czebj1KAod4ojGxeKuoFavB2LByPn4wqvjZnz70D9g4ZeU9Y5wuSN2PVjiH5XrRBSMe6x0RvaNFpISFQz5LdpUHNO0ysMkdfsq5qytyxZ8PujAllRPnGC7zEEgl6LVNtFPTxwQj4lz/c=
         home_dir: /srv/logs/log-1/coal_authority
+
+    # This is the same key as the Competition Commission (cc)
+    bis:
+        comment: "Department for Business, Innovation & Skills"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAkAiuGLGb5s72SLDtSiItsKg3k2e8iMu278DyNm0DgCgZkLtzCe3gXLpjnYP5y7mNJU8tkeQFlx0dyy9H9802tcIotcn+4IIqzTTF+4eh/gij60EhkrJpVO9h6g0WJ9m5cW4FkG2101b9Kf1X8BiNgRDKNgdWZOm94z+A40l2nrWDRTgWWiFlYifGBT98dwCc+2xSxVlq7Pqnvul2w19mOOhIXU2mk9y1VRGWXr6kdiRj1N9mb/KPRXy5wA7HSX7dUycU1Khq+i13SgfpnaEBCTtL3Itrn/csWQAWQW7UN2R7dCxgI5RwDQcrR7AwPxYvTv/q6bK5TmXdSK+Fpcf7SQ==
+        home_dir: /srv/logs/log-1/bis
