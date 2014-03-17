@@ -5,6 +5,8 @@ classes:
  - ci_environment::transition_logs
  - ci_environment::firewall_config::transition_logs
 
+ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
+
 ci_environment::transition_logs::rssh_users:
     mhra:
         comment: MHRA

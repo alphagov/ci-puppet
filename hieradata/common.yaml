@@ -102,4 +102,3 @@ cdn_logs::cert: |
   gaIwgZ8xCzAJBgNVBAYTAkdCMQ8wDQYDVQQIEwZMb25kb24xDzANBgNVBAcTBkxv
   bmRvbjEjMCEGA1UEChMaR292ZXJubWVudCBEaWdpdGFsIFNlcnZpY2UxJDAiBgNV
 
-ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
