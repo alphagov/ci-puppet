@@ -8,7 +8,7 @@ FORGE
   specs:
     attachmentgenie/locales (1.0.2)
       puppetlabs/stdlib (>= 2.2.1)
-    attachmentgenie/ssh (1.1.1)
+    attachmentgenie/ssh (1.2.1)
       puppetlabs/stdlib (>= 2.2.1)
     attachmentgenie/ufw (1.1.0)
       puppetlabs/stdlib (>= 2.2.1)
@@ -118,7 +118,7 @@ GIT
 
 DEPENDENCIES
   attachmentgenie/locales (= 1.0.2)
-  attachmentgenie/ssh (= 1.1.1)
+  attachmentgenie/ssh (= 1.2.1)
   attachmentgenie/ufw (= 1.1.0)
   clamav (>= 0)
   cpanm (>= 0)
