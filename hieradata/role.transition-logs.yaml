@@ -118,3 +118,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "Defra - Darwin Initiative"
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEA162Kr65miLEcUnCr0kM6B2VDqxRzKJTv9OSKgYBT75KGLUngzkdWMkKhYgtEoeMT2dvHB712Q8s6E5mkyuWRFDwOiMioO/Vk8QfdL7a/gY0brtP7WQN/fQvDE2lflxCdGZ2x0zeTcC3xLbAiYX1TtiRUjIE/rBhQhpxDI1FxhKIM+9f5G7t71Hntro6dFXCLgIrX9BwNRWaTLdX6TjSRCCmh2iibMk7+leg681pTmCxm8rTwJFYHwwHvmQV8XLxHwD+KNWHlogTmGyzSWgFYtKncBkOvRSwm4+YmfjW2dN2ODJcBGZZyzlF193KwK5SrpSeNRbwDmQNjKVEAVtz+Lw==
         home_dir: /srv/logs/log-1/defra_darwin
+
+    hca:
+        comment: "Homes and Communities Agency"
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDJolBEx5B9hZkgDXRpNsYQdQGyppxaUYGSuIJoOLvf6vbYgFUvlau2M9CMpRyNm1xj7r1P2h/jWJxZw0J6NZE7ZQU1utdUmhFRam+G6e9UpBJG25O899nPgHu9sH1AOzrc+mYAGazaPeekzk0YOuhbsJqP/9OZjodklT3y0N0mtFRjTeg98+skCKQIH3gGMgCYSK8zsI6XklKn/dgufF3F1+X85XfpEn+P9tw+DANF5pnDXjAcZU46zmFX03RUFW1sZBNqXueRJTjy4ZvgSQdkRKlDgX/ZJSi6sPiGSDi1v1LLL8Nob7fRkU48z80FsKUos6XjBu1OcltYM/Lk2ioF
+        home_dir: /srv/logs/log-1/hca
