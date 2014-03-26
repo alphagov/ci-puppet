@@ -111,8 +111,13 @@ ci_environment::transition_logs::rssh_users:
 
     defra:
         comment: "Department for Environment, Food & Rural Affairs"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAtUuxaYSgIyv3faCSsEwpSZLZzZLE71hczL2dmnh/8Vfnw583svPVqxvje3KfcbAbBPoUlVZVUDDcJ1QTEOXtnsqwLvpvFaRcQ/ROI7pT+hdoINiihd0sUaZPyMWvTw2U8XFYV3l4Hdig+FFwX9hzbVQuGEr/sXFK3n/bIK52U/tFqDgUWlGtEYIrIdEU4okysRiGQJTWzHbzHxzEQXZjxsKJFYMOdyoHJzp1kBRPoQajgachUq2wkUmbnqiJ9TpS5tzdwZsoBTvPRek/w9CZo4AsONLQZYB6Z01RNa+cL9VG3jAckkQMCrYzxlNwW7qy7NbSK9xgTQjyIc6O0BX44Q==
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAsv5tlhDcL8aeyYGes6/lkS9efkpBEhaoHI3rg/y2GW3v6hdxUU4M1w+KaRTkG5XInW1KwZ7wcRe30kC2fubffz5QG9i8xMmoSDU8HTShtXsY05Z/dIgKWHmcYckfdkKtd0SbJJJcYHv5a7sAje8Y0/As7mEzguYCvGUK5UE7+mrDzNeQfY5/IkuOU6iZvHpjPRwqX2cmcvhUcan7b9dWx7uMUYwdtkcw5OIK4yP0eKnVml43wuWmCXKyprWkcGkbD6wSYvf1xsfae70fWlxmkQRcZERsAP5caHuwir5hwCilrBGfb/OdXFtBGLxsS3mh2qEFgZ9epjmJuSwG3rYpgw==
         home_dir: /srv/logs/log-1/defra
+
+    defra_rdpe:
+        comment: "DEFRA - Rural Development Programme for England Network"
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAtUuxaYSgIyv3faCSsEwpSZLZzZLE71hczL2dmnh/8Vfnw583svPVqxvje3KfcbAbBPoUlVZVUDDcJ1QTEOXtnsqwLvpvFaRcQ/ROI7pT+hdoINiihd0sUaZPyMWvTw2U8XFYV3l4Hdig+FFwX9hzbVQuGEr/sXFK3n/bIK52U/tFqDgUWlGtEYIrIdEU4okysRiGQJTWzHbzHxzEQXZjxsKJFYMOdyoHJzp1kBRPoQajgachUq2wkUmbnqiJ9TpS5tzdwZsoBTvPRek/w9CZo4AsONLQZYB6Z01RNa+cL9VG3jAckkQMCrYzxlNwW7qy7NbSK9xgTQjyIc6O0BX44Q==
+        home_dir: /srv/logs/log-1/defra_rdpe
 
     defra_darwin:
         comment: "Defra - Darwin Initiative"
