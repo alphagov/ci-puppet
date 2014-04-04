@@ -128,3 +128,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "Homes and Communities Agency"
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDJolBEx5B9hZkgDXRpNsYQdQGyppxaUYGSuIJoOLvf6vbYgFUvlau2M9CMpRyNm1xj7r1P2h/jWJxZw0J6NZE7ZQU1utdUmhFRam+G6e9UpBJG25O899nPgHu9sH1AOzrc+mYAGazaPeekzk0YOuhbsJqP/9OZjodklT3y0N0mtFRjTeg98+skCKQIH3gGMgCYSK8zsI6XklKn/dgufF3F1+X85XfpEn+P9tw+DANF5pnDXjAcZU46zmFX03RUFW1sZBNqXueRJTjy4ZvgSQdkRKlDgX/ZJSi6sPiGSDi1v1LLL8Nob7fRkU48z80FsKUos6XjBu1OcltYM/Lk2ioF
         home_dir: /srv/logs/log-1/hca
+
+    hpa:
+        comment: "Health Protection Agency"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAoCec+BxVuTJzS8ByAIxQGmy0MEyVla8hfzXLCnmbv8DZd84viX4mfgdut9OcwBuI/pbgEoCKD/XO0izA5pMwekJYcaDrWsNQrXBUxHaOxSe/wuylA8CNqWWZyvTjQ83rsl9mxyv+Ym6y25ZSASTGp3Dxu6wLnKwdzSS6SdgPaU01DIL6nFVpeCvdZs9mwQjx18T3B7dQ3LwZxuDpU5ZW8EeAWm+L59yXlXvf8HxocQRTLeXvPOHLGADAHrXYAHrAiaFIMll0g3MjIP/uVIitE7/NDr9XFkpbNNmdcZ64gdYyU8iOMawRNlqniAGSvH9oBq6JHECPX6DeFq2Vg9p2bw==
+        home_dir: /srv/logs/log-1/hpa
