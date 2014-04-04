@@ -133,3 +133,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "Health Protection Agency"
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAoCec+BxVuTJzS8ByAIxQGmy0MEyVla8hfzXLCnmbv8DZd84viX4mfgdut9OcwBuI/pbgEoCKD/XO0izA5pMwekJYcaDrWsNQrXBUxHaOxSe/wuylA8CNqWWZyvTjQ83rsl9mxyv+Ym6y25ZSASTGp3Dxu6wLnKwdzSS6SdgPaU01DIL6nFVpeCvdZs9mwQjx18T3B7dQ3LwZxuDpU5ZW8EeAWm+L59yXlXvf8HxocQRTLeXvPOHLGADAHrXYAHrAiaFIMll0g3MjIP/uVIitE7/NDr9XFkpbNNmdcZ64gdYyU8iOMawRNlqniAGSvH9oBq6JHECPX6DeFq2Vg9p2bw==
         home_dir: /srv/logs/log-1/hpa
+
+    vmd:
+        comment: "Veterinary Medicines Directorate"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAly7UxSZG/jayBLekN5XtZNA2M9x8E9XbLHpJBVwP8HG0165OgtDX8c7n1a/e3QEkLd7yjIPt6I7dCfF+YQHWRBlR+JSSOHIWoW7l+hTCRoyesFCf80HmFq/ICKdMuUIHGKhetFs0PF8kLvnv6zM+LMIx7D7HPZhcuUzEvZX3mFsNuS/0JcmfgoJAV4VC6A1MUr+7a33KYkUM7hcCGuQEyfFT3Fd9lEEaMMETlb7BSZFFU9X7hM2fZu8yh9xzqNBPjhve+QLVA/d2SAA6ElGqKmI3PyVx0bLCqhFxx2+ptpJ+eKtrDZaQSExJYENKq8MVkBgGiLezYZSqZdbdrAApBw==
+        home_dir: /srv/logs/log-1/vmd
