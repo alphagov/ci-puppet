@@ -42,6 +42,7 @@ class ci_environment::jenkins_job_support {
     'libjpeg8-dev', # alphagov/screenshot-as-a-service
     'libpango1.0-dev', # alphagov/screenshot-as-a-service
     'libgif-dev', # alphagov/screenshot-as-a-service
+    'cmake', # alphagov/spotlight
   ])
 
   package { 'golang':
