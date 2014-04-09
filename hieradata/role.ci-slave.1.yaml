@@ -1,6 +1,5 @@
 ---
-jenkins::slave::labels: '"mongodb-2.0.9 java6"'
+jenkins::slave::labels: '"mongodb-2.4 java6"'
 
-
-mongodb::version: 2.0.9
+mongodb::version: 2.4.9
 java::package: 'openjdk-6-jdk'
