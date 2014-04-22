@@ -138,3 +138,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "Veterinary Medicines Directorate"
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAly7UxSZG/jayBLekN5XtZNA2M9x8E9XbLHpJBVwP8HG0165OgtDX8c7n1a/e3QEkLd7yjIPt6I7dCfF+YQHWRBlR+JSSOHIWoW7l+hTCRoyesFCf80HmFq/ICKdMuUIHGKhetFs0PF8kLvnv6zM+LMIx7D7HPZhcuUzEvZX3mFsNuS/0JcmfgoJAV4VC6A1MUr+7a33KYkUM7hcCGuQEyfFT3Fd9lEEaMMETlb7BSZFFU9X7hM2fZu8yh9xzqNBPjhve+QLVA/d2SAA6ElGqKmI3PyVx0bLCqhFxx2+ptpJ+eKtrDZaQSExJYENKq8MVkBgGiLezYZSqZdbdrAApBw==
         home_dir: /srv/logs/log-1/vmd
+
+    natural_england:
+        comment: "Natural England"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAreYOtXyLSNVi+PQH9vZtRuhfiP0xghMy/N900pPOdaWeOdFD7NU4nxevS9DdS0ywUHbxbwgImBtVp38yV/AsZDuLJxfvoW5Nb2pCWpLzcWbsGiBO3Vqn0f9fgRW6gzi+ZMb5DIQPDQjpXNMLSp1g9tConvaurG2xrkU2hGr1OIGupms9GVgE4zsn/ZX9GzUwdIGMF9sr5XE0si2lm575rJ0xDoxe18hX/Wx7DESYv9Cfi9OFJrdjUOsm3KaFL4vrDeFypzCs8SYuW1JDLZwX4cAyLI+t4/hbgUHEZuJU1GSqZUSPdCoBTtJ+nyMB3cn/7zIEQa8Hfm0QAUWB9SBkHQ==
+        home_dir: /srv/logs/log-1/natural_england
