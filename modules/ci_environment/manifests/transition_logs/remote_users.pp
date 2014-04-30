@@ -13,4 +13,18 @@ define ci_environment::transition_logs::remote_users (
     require  => File['/srv/logs/log-1'],
   }
 
+  # Generate random cron times seeded with fqdn and username
+  $hour = fqdn_rand(8, $name)
+  $min  = fqdn_rand(59, $name)
+
+  # get backup target
+  $backup_target = hiera(backup_target, '/var/backups')
+
+  duplicity{$name:
+    directory => $home_dir,
+    target    => $backup_target,
+    hour      => $hour,
+    minute    => $min,
+    require   => Account[$name],
+  }
 }
