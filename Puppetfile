@@ -37,3 +37,5 @@ mod 'cpanm',        :git => 'git://github.com/alphagov/puppet-cpanm.git',
                     :ref => '4e3dfca9b5ca25da71a78412305710e665475698'
 mod 'rsyslog',      :git => 'git://github.com/alphagov/puppet-rsyslog.git',
                     :ref => 'acf2755cda80e2ecd107ed8de4d275c383db0487'
+mod 'duplicity',    :git => 'git@github.com:alphagov/puppet-duplicity.git',
+                    :ref => 'ce042a7451fcabb1814943d99fe36b00ce93b5db'
