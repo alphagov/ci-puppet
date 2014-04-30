@@ -68,7 +68,6 @@ class ci_environment::transition_logs {
     }
 
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
-
     ensure_packages([
         'rssh',
         # Provides /opt/mawk required by pre-transition-stats for processing logs
@@ -76,11 +75,7 @@ class ci_environment::transition_logs {
         # We need to decompress some 7zipped agency logs
         'p7zip-full'
     ])
-
-    create_resources('account', $accounts, {
-        shell          => '/usr/bin/rssh',
-        require        => File['/srv/logs/log-1'],
-        })
+    create_resources('ci_environment::transition_logs::remote_users', $accounts)
 
     file {'/etc/rssh.conf':
         ensure  => present,
