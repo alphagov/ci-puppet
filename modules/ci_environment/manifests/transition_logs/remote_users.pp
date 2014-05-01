@@ -18,11 +18,14 @@ define ci_environment::transition_logs::remote_users (
   $min  = fqdn_rand(59, $name)
 
   # get backup target
-  $backup_target = hiera(backup_target, '/var/backups')
+  # set a default of scp to localhost as the vagrant user.
+  # if testing stuff you will need to generate ssh keys
+  # and then add the public key to vagrant's authorized_keys.
+  $backup_target = hiera(backup_target, 'scp://vagrant@localhost//tmp')
 
   duplicity{$name:
     directory => $home_dir,
-    target    => $backup_target,
+    target    => "$backup_target/$name",
     hour      => $hour,
     minute    => $min,
     require   => Account[$name],
