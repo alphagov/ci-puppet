@@ -73,7 +73,9 @@ class ci_environment::transition_logs {
         # Provides /opt/mawk required by pre-transition-stats for processing logs
         'mawk-1.3.4',
         # We need to decompress some 7zipped agency logs
-        'p7zip-full'
+        'p7zip-full',
+        'python-paramiko',
+        'python-gobject-2'
     ])
     create_resources('ci_environment::transition_logs::remote_users', $accounts)
 
