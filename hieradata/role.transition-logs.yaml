@@ -121,7 +121,7 @@ ci_environment::transition_logs::rssh_users:
 
     defra_darwin:
         comment: "Defra - Darwin Initiative"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEA162Kr65miLEcUnCr0kM6B2VDqxRzKJTv9OSKgYBT75KGLUngzkdWMkKhYgtEoeMT2dvHB712Q8s6E5mkyuWRFDwOiMioO/Vk8QfdL7a/gY0brtP7WQN/fQvDE2lflxCdGZ2x0zeTcC3xLbAiYX1TtiRUjIE/rBhQhpxDI1FxhKIM+9f5G7t71Hntro6dFXCLgIrX9BwNRWaTLdX6TjSRCCmh2iibMk7+leg681pTmCxm8rTwJFYHwwHvmQV8XLxHwD+KNWHlogTmGyzSWgFYtKncBkOvRSwm4+YmfjW2dN2ODJcBGZZyzlF193KwK5SrpSeNRbwDmQNjKVEAVtz+Lw==
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEA7sUXCl3GUPidwCefLi09RvMPHmQI1PcBD/ywrW6iW8VACrz/k5gp1nGhG9IE/9PrSENaklYYLovOxj5AZ0wkM3CqDq3himn75U3cEbmFi5dPrKfozoTBeRq3T92jRDDqM5rsDV1NIdFsWHeetDdXVPLWWj0AxxNlmISZ0yojUZOiHgPBAAYoA7TG6sEhdosxJ51ORNLv6amvey7tiER6leNV/IcLq2AcE0aCY8gIUvY5kEdFnxkP15i7uAuACgo+b9KKmPzA9ZHZmzM95t0HEm6dBByHPrLolBfZtVJ3vJ28t/t8HySkst9fxbvZojKFPRF1w3VpvrZPm7a5ORpttw==
         home_dir: /srv/logs/log-1/defra_darwin
 
     hca:
