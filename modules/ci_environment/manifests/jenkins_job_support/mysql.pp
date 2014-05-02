@@ -56,6 +56,11 @@ class ci_environment::jenkins_job_support::mysql {
       password => 'release',
       require  => Class['::mysql::server'];
 
+    'search_admin_test':
+      user     => 'search_admin',
+      password => 'search_admin',
+      require  => Class['::mysql::server'];
+
     ['signonotron2_test', 'signonotron2_integration_test']:
       user     => 'signonotron2',
       password => 'signonotron2',
