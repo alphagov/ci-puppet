@@ -21,14 +21,16 @@ define ci_environment::transition_logs::remote_users (
   # set a default of scp to localhost as the vagrant user.
   # if testing stuff you will need to generate ssh keys
   # and then add the public key to vagrant's authorized_keys.
-  $backup_target = hiera(backup_target, 'scp://vagrant@localhost//tmp')
+  $backup_target = hiera('ci_environment::transition_logs::backup_target', false)
 
-  duplicity{$name:
-    directory => $home_dir,
-    target    => "$backup_target/$name",
-    hour      => $hour,
-    minute    => $min,
-    pubkey_id => '13B84C37AB52D76B3F53CF0E7C34BD7A05119BA4',
-    require   => Account[$name],
+  if $backup_target {
+    duplicity{$name:
+      directory => $home_dir,
+      target    => "$backup_target/$name",
+      hour      => $hour,
+      minute    => $min,
+      pubkey_id => '13B84C37AB52D76B3F53CF0E7C34BD7A05119BA4',
+      require   => Account[$name],
+    }
   }
 }
