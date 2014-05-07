@@ -1,13 +1,13 @@
 <%= log_dir -%>/*.log
 {
-  rotate 365
-  daily
+  rotate 8760
   dateext
+  dateformat -%Y%m%d-%s
   compress
-  delaycompress
+  size 1
   missingok
-  notifempty
   postrotate
     invoke-rc.d rsyslog reload >/dev/null 2>&1 || true
+    sleep 10
   endscript
 }
