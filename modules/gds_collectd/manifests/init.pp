@@ -22,4 +22,6 @@ class gds_collectd {
   collectd::plugin {'memory':}
   collectd::plugin {'cpu':}
   collectd::plugin {'interface':}
+  collectd::plugin {'df':}
+  collectd::plugin {'disk':}
 }
