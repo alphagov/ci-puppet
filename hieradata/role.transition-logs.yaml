@@ -143,3 +143,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "Natural England"
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAreYOtXyLSNVi+PQH9vZtRuhfiP0xghMy/N900pPOdaWeOdFD7NU4nxevS9DdS0ywUHbxbwgImBtVp38yV/AsZDuLJxfvoW5Nb2pCWpLzcWbsGiBO3Vqn0f9fgRW6gzi+ZMb5DIQPDQjpXNMLSp1g9tConvaurG2xrkU2hGr1OIGupms9GVgE4zsn/ZX9GzUwdIGMF9sr5XE0si2lm575rJ0xDoxe18hX/Wx7DESYv9Cfi9OFJrdjUOsm3KaFL4vrDeFypzCs8SYuW1JDLZwX4cAyLI+t4/hbgUHEZuJU1GSqZUSPdCoBTtJ+nyMB3cn/7zIEQa8Hfm0QAUWB9SBkHQ==
         home_dir: /srv/logs/log-1/natural_england
+
+    ofsted:
+        comment: "Ofsted"
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAvtXRyhSIuGoZ1WnUetlfzivoLB34NOIIapwWCtrYjFeXmlsOv+LRX06Fxu7xUyuIMwDT0CAz3RzOnWmop48JaD43mx0Bhak5/uk72SboKcCk3DiF7biq6AFDYA31eYqYGmOqFFxCGInssW4GwGmNm0QNNDjZh5MKM8OobEM2C/cQLbmRpzEUBM9FpPRElyzg8yxZQKSARyxTefyNelmvUSGZuuor9MROFUe4BsmjM7alZWR/sIj9kNSKqcJwEbbJ/+S/Yhburb22I/VWNdmusuoRvphUtpG9+fMahOEqhlu0w7wEt+5Z9K9nNJpls/H5alVTQGHaYcy8Q6n9niInBQ==
+        home_dir: /srv/logs/log-1/ofsted
