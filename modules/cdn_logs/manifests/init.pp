@@ -57,8 +57,14 @@ class cdn_logs (
     proto => 'tcp',
   }
 
+  # FIXME: once deployed this can be removed
   file { '/etc/logrotate.d/cdn_logs':
-    ensure  => file,
-    content => template('cdn_logs/etc/logrotate.d/cdn_logs.erb')
+    ensure  => absent,
   }
+
+  file { '/etc/logrotate.cdn_logs.conf':
+    ensure  => file,
+    content => template('cdn_logs/etc/logrotate.cdn_logs.conf.erb'),
+  }
+
 }
