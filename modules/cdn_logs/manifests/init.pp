@@ -67,4 +67,11 @@ class cdn_logs (
     content => template('cdn_logs/etc/logrotate.cdn_logs.conf.erb'),
   }
 
+  file { '/etc/cron.hourly/cdn_logs_rotate':
+    ensure  => file,
+    content => template('cdn_logs/etc/cron.hourly/cdn_logs_rotate'),
+    mode    => '0744',
+    require => File['/etc/logrotate.cdn_logs.conf'],
+  }
+
 }
