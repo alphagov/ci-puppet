@@ -1,6 +1,7 @@
 ---
 classes:
  - cdn_logs
+ - cdn_logs::backup
  - git
  - ci_environment::transition_logs
  - ci_environment::firewall_config::transition_logs
