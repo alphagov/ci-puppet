@@ -8,7 +8,7 @@ class ci_environment::transition_logs {
     account {
         'logs_processor':
             home_dir => $logs_processor_home,
-            groups   => [ 'root', 'adm' ],
+            groups   => [ 'syslog', 'adm' ],
             comment  => 'A user to process logs from Fastly and agencies and push into a GitHub repo',
             require  => File['/srv/logs/log-1'],
     }
