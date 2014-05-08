@@ -116,12 +116,20 @@ GIT
   specs:
     fail2ban (1.1.0)
 
+GIT
+  remote: git@github.com:alphagov/puppet-duplicity.git
+  ref: ce042a7451fcabb1814943d99fe36b00ce93b5db
+  sha: ce042a7451fcabb1814943d99fe36b00ce93b5db
+  specs:
+    duplicity (0.0.1)
+
 DEPENDENCIES
   attachmentgenie/locales (= 1.0.2)
   attachmentgenie/ssh (= 1.2.1)
   attachmentgenie/ufw (= 1.1.0)
   clamav (>= 0)
   cpanm (>= 0)
+  duplicity (>= 0)
   fail2ban (>= 0)
   gds/graphite (>= 0)
   gds_accounts (>= 0)
