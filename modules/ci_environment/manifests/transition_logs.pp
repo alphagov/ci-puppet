@@ -62,8 +62,8 @@ class ci_environment::transition_logs {
         command     => "${logs_processor_home}/process_transition_logs.sh",
         user        => logs_processor,
         target      => logs_processor,
-        hour        => 7,
-        minute      => 15,
+        hour        => absent,
+        minute      => 30,
         require     => File["${logs_processor_home}/process_transition_logs.sh"]
     }
 
