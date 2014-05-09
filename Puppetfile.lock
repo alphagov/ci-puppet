@@ -118,8 +118,8 @@ GIT
 
 GIT
   remote: git@github.com:alphagov/puppet-duplicity.git
-  ref: ce042a7451fcabb1814943d99fe36b00ce93b5db
-  sha: ce042a7451fcabb1814943d99fe36b00ce93b5db
+  ref: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
+  sha: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
   specs:
     duplicity (0.0.1)
 
