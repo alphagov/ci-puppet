@@ -13,6 +13,14 @@ define ci_environment::transition_logs::remote_users (
     require  => File['/srv/logs/log-1'],
   }
 
+  file {"${home_dir}/cache":
+    ensure  => directory,
+    owner   => 'logs_processor',
+    group   => 'gds',
+    mode    => '0775',
+    require => Account[$name],
+  }
+
   # Generate random cron times seeded with fqdn and username
   $hour = fqdn_rand(8, $name)
   $min  = fqdn_rand(59, $name)
