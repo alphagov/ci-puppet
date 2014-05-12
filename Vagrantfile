@@ -18,7 +18,10 @@ def vagrant_config(config, version)
     'ci-slave-1'  => {:ip => '172.16.11.11'},
     'ci-slave-2'  => {:ip => '172.16.11.12'},
     'ci-management-1' => {:ip => '172.16.11.13'},
-    'transition-logs-1' => {:ip => '172.16.11.20'},
+    'transition-logs-1' => {:ip => '172.16.11.20',
+      :extra_disks => [ { :name =>'sdb', :size => '524288'}, { :name => 'sdc', :size => '524288'}]
+
+    },
   }
   node_defaults = {
     :domain => 'internal',
@@ -68,11 +71,24 @@ def vagrant_config(config, version)
       # Isolate guests from host networking.
       modifyvm_args << "--natdnsproxy1" << "on"
       modifyvm_args << "--natdnshostresolver1" << "on"
-
       if version < 2
         node.vm.customize(modifyvm_args)
       else
-        node.vm.provider(:virtualbox) { |vb| vb.customize(modifyvm_args) }
+        node.vm.provider(:virtualbox)  do |vb|
+          vb.customize(modifyvm_args)
+          # Add extra disks if specified
+          if node_opts.has_key?(:extra_disks) and !node_opts[:extra_disks].nil?
+            disk_num = 0
+            for disk in node_opts[:extra_disks] do
+              disk_num += 1
+              disk_name = disk[:name]
+              disk_size = disk[:size]
+              file_to_disk =  "#{node_name}_extra_disk_#{disk_name}_controller_#{disk_num}.vdi"
+              vb.customize(['createhd', '--filename', file_to_disk, '--size', disk_size,  "--format", "vdi"])
+              vb.customize(['storageattach', :id, '--storagectl','SATA Controller', '--port', disk_num, '--device', 0, '--type', 'hdd', '--medium', file_to_disk])
+            end
+          end
+        end
       end
     end
   end
