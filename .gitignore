@@ -4,3 +4,4 @@
 /.vagrant
 /bin
 /build
+*.vdi
