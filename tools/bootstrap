@@ -56,10 +56,27 @@ EOF
   cp /etc/resolv.conf /etc/resolvconf/resolv.conf.d/original
 }
 
+partition_disks() {
+  echo "--> partioning disks" | pp
+  for disk in /dev/sd?; do
+    echo "--> checking ${disk}" | pp
+    if ! sudo parted -a optimal --script  ${disk} -- print
+    then
+      echo "--> partitioning ${disk}" | pp
+      sudo parted -a optimal --script ${disk} -- mklabel msdos
+      sudo parted -a optimal --script ${disk} -- mkpart primary 1 100%
+      sudo parted -a optimal --script ${disk} -- set 1 lvm on
+    else
+      echo "--> $disk already partitioned" | pp
+    fi
+  done
+}
+
 main() {
   quieten_sudo
   set_uk_apt_sources
   check_ruby
+  partition_disks
   if [ "$1" != "unset" ]; then
     fix_hostname $1
   fi
