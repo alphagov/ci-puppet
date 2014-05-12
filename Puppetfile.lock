@@ -57,6 +57,13 @@ GIT
     cpanm (0.0.1)
 
 GIT
+  remote: git://github.com/alphagov/puppet-ext4mount.git
+  ref: master
+  sha: d97f99cc2801b83152b905d1285fa34e689cb499
+  specs:
+    ext4mount (0.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-gds_accounts.git
   ref: v0.0.1
   sha: 3698859f788f95a866f2f7e0fa3cad9bcfa129b5
@@ -119,6 +126,14 @@ GIT
       puppetlabs/stdlib (>= 2.5)
 
 GIT
+  remote: git://github.com/puppetlabs/puppetlabs-lvm.git
+  ref: master
+  sha: b27bccecca2b9d527578c933221ffe361c6dce87
+  specs:
+    lvm (0.3.1)
+      puppetlabs/stdlib (~> 4.1.0)
+
+GIT
   remote: git://github.com/valentinroca/puppet-fail2ban
   ref: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
   sha: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
@@ -139,6 +154,7 @@ DEPENDENCIES
   clamav (>= 0)
   cpanm (>= 0)
   duplicity (>= 0)
+  ext4mount (>= 0)
   fail2ban (>= 0)
   gds/graphite (>= 0)
   gds_accounts (>= 0)
@@ -147,6 +163,7 @@ DEPENDENCIES
   gdsoperations/rbenv (= 1.0.1)
   harden (>= 0)
   jenkins (>= 0)
+  lvm (>= 0)
   mongodb (>= 0)
   nginx (>= 0)
   pdxcat/collectd (~> 0.0)

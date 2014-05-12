@@ -40,3 +40,5 @@ mod 'rsyslog',      :git => 'git://github.com/alphagov/puppet-rsyslog.git',
                     :ref => 'acf2755cda80e2ecd107ed8de4d275c383db0487'
 mod 'duplicity',    :git => 'git@github.com:alphagov/puppet-duplicity.git',
                     :ref => 'b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9'
+mod 'lvm',          :git => 'git://github.com/puppetlabs/puppetlabs-lvm.git'
+mod 'ext4mount',    :git => 'git://github.com/alphagov/puppet-ext4mount.git'
