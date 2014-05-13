@@ -4,6 +4,7 @@ classes:
  - cdn_logs::backup
  - git
  - ci_environment::transition_logs
+ - ci_environment::transition_logs::disks
  - ci_environment::firewall_config::transition_logs
 
 ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
