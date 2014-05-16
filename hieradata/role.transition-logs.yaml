@@ -149,3 +149,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "Ofsted"
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAvtXRyhSIuGoZ1WnUetlfzivoLB34NOIIapwWCtrYjFeXmlsOv+LRX06Fxu7xUyuIMwDT0CAz3RzOnWmop48JaD43mx0Bhak5/uk72SboKcCk3DiF7biq6AFDYA31eYqYGmOqFFxCGInssW4GwGmNm0QNNDjZh5MKM8OobEM2C/cQLbmRpzEUBM9FpPRElyzg8yxZQKSARyxTefyNelmvUSGZuuor9MROFUe4BsmjM7alZWR/sIj9kNSKqcJwEbbJ/+S/Yhburb22I/VWNdmusuoRvphUtpG9+fMahOEqhlu0w7wEt+5Z9K9nNJpls/H5alVTQGHaYcy8Q6n9niInBQ==
         home_dir: /srv/logs/log-1/ofsted
+
+    aib:
+        comment: "AAIB, MAIB and RAIB"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEArdfdRB3NNMSAUHBWEMaKCDPX8nounxsyTTk3vqhmoCXpEhpkShTZiznmksai9y172rLUnuoaKGz5l1tp/8xqma4vaF5O7+PUunVlCOXVD70CDuqqQHuhbZEF2m1V/fQQbFFnH2GmIRGPD0b76QgOoOlYTCuc7BFG0g8P+5IuSt7hurqHVHWlyjyFKzXiveBzfUD8BWOuRzXOtLXlFY8ImR84I8mNeI7lTCfWB3Nr7PaWnf0//wvPhjYKCy+bgrf9JsjFUCYlGUnOLterRiDbPC1O0+hLmsjcMlVn5kT0TthrnIrbVOYiQdaCVFMUTTq69JknNWp/clVPxeWji1UYEw==
+        home_dir: /srv/logs/log-1/aib
