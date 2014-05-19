@@ -65,11 +65,14 @@ class ci_environment::base {
     to_version => '2.0.0-p451',
   }
 
-  rbenv::version { '2.1.1':
-    bundler_version => '1.5.3'
+  rbenv::version { '2.1.2':
+    bundler_version => '1.6.2',
   }
   rbenv::alias { '2.1':
-    to_version => '2.1.1',
+    to_version => '2.1.2',
+  }
+  package { 'rbenv-ruby-2.1.1':
+    ensure => absent,
   }
 
   file { '/etc/sudoers.d/gds':
