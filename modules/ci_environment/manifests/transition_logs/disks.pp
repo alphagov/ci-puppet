@@ -17,8 +17,7 @@ class ci_environment::transition_logs::disks {
   logical_volume { 'remote_users':
     ensure       => present,
     volume_group => 'logs',
-    size         => '384G',
-
+    size         => '512G',
   }
 
   filesystem { '/dev/logs/remote_users':
