@@ -11,7 +11,7 @@ class ci_environment::transition_logs::disks {
 
   volume_group { 'logs':
     ensure           => present,
-    physical_volumes => ['/dev/sdc1', '/dev/sdb1'],
+    physical_volumes => ['/dev/sdb1', '/dev/sdc1'],
   }
 
   logical_volume { 'remote_users':
