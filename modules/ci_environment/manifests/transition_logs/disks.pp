@@ -5,9 +5,13 @@ class ci_environment::transition_logs::disks {
     ensure => present,
   }
 
+  physical_volume { '/dev/sdb1':
+    ensure => present,
+  }
+
   volume_group { 'logs':
     ensure           => present,
-    physical_volumes => '/dev/sdc1',
+    physical_volumes => ['/dev/sdc1', '/dev/sdb1'],
   }
 
   logical_volume { 'remote_users':
