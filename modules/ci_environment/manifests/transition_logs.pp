@@ -10,7 +10,7 @@ class ci_environment::transition_logs {
             home_dir => $logs_processor_home,
             groups   => [ 'syslog', 'adm' ],
             comment  => 'A user to process logs from Fastly and agencies and push into a GitHub repo',
-            require  => File['/srv/logs/log-1'],
+            require  => Ext4mount['/srv/logs/log-1'],
     }
 
     $transition_stats_key = "${logs_processor_home}/.ssh/transition_stats_deploy_key_rsa"
@@ -82,10 +82,6 @@ class ci_environment::transition_logs {
     file {'/etc/rssh.conf':
         ensure  => present,
         content => template('ci_environment/etc/rssh.conf.erb'),
-    }
-
-    file {['/srv/logs','/srv/logs/log-1']:
-        ensure => directory,
     }
 
     file {'/usr/lib/rssh/rssh_chroot_helper':

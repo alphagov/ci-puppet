@@ -11,10 +11,11 @@ class cdn_logs (
   $log_dir = '/srv/logs/log-1/cdn',
 ) {
   file { $log_dir:
-    ensure => directory,
-    owner  => 'syslog',
-    group  => 'adm',
-    mode   => '0775',
+    ensure  => directory,
+    owner   => 'syslog',
+    group   => 'adm',
+    mode    => '0775',
+    require => Ext4mount[$log_dir],
   }
 
   file { $key_file:
@@ -39,7 +40,8 @@ class cdn_logs (
       Class['ci_environment::transition_logs'],
       File[
         $key_file,
-        $cert_file
+        $cert_file,
+        $log_dir
       ]
     ],
   }
