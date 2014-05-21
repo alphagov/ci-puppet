@@ -30,6 +30,7 @@ class ci_environment::base {
     'libxslt1-dev',
     'logtail',
     'lsof',
+    'mercurial',
     'pv',
     'tar',
     'tree',
