@@ -2,31 +2,12 @@
 #
 # Installs phantomjs, by downloading from our s3 bucket.
 class phantomjs {
-
-  exec { 'download phantomjs':
-    command => '/usr/bin/curl -o phantomjs-1.9.7-linux-x86_64.tar.bz2 https://gds-public-readable-tarballs.s3.amazonaws.com/phantomjs-1.9.7-linux-x86_64.tar.bz2',
-    cwd     => '/usr/local/src',
-    creates => '/usr/local/src/phantomjs-1.9.7-linux-x86_64.tar.bz2',
-    require => Package['curl'],
-    timeout => 3600,
-    unless  => '/usr/bin/test "`shasum phantomjs-1.9.7-linux-x86_64.tar.bz2`" = "ca3581dfdfc22ceab2050cf55ea7200c535a7368 phantomjs-1.9.7-linux-x86_64.tar.bz2"'
+  package { 'phantomjs':
+    ensure => '1.9.7-0~ppa1',
   }
 
-  exec { 'unpack phantomjs':
-    require => Exec['download phantomjs'],
-    creates => '/usr/local/src/phantomjs-1.9.7-linux-x86_64',
-    cwd     => '/usr/local/src',
-    command => '/bin/tar -jxf ./phantomjs-1.9.7-linux-x86_64.tar.bz2'
-  }
-
+  # FIXME: remove when this has been run everywhere
   file { '/usr/local/bin/phantomjs':
-    ensure  => link,
-    target  => '/usr/local/src/phantomjs-1.9.7-linux-x86_64/bin/phantomjs',
-    require => Exec['unpack phantomjs'],
+    ensure  => absent,
   }
-
-  package { 'libfontconfig1':
-    ensure => present,
-  }
-
 }
