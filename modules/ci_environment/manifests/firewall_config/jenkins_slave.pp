@@ -14,4 +14,9 @@ class ci_environment::firewall_config::jenkins_slave
     proto => 'udp',
     ip    => 'any',
   }
+  ufw::allow { 'allow-cdn-acceptance-tests-8080-8090':
+    port  => '8080:8090',
+    proto => 'tcp',
+    ip    =? 'any'
+  }
 }
