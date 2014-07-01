@@ -1,6 +1,6 @@
 # == Class: rabbitmq
 #
-# Installs and starts rabbitmq-server using the GDS PPA version.
+# Installs and starts rabbitmq-server
 class rabbitmq {
 
   package { 'rabbitmq-server':
