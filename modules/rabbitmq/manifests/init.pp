@@ -1,10 +1,11 @@
 # == Class: rabbitmq
 #
-# Installs and starts rabbitmq-server using the GDS PPA version.
+# Installs and starts rabbitmq-server
 class rabbitmq {
+  include rabbitmq::repo
 
   package { 'rabbitmq-server':
-    ensure => present,
+    ensure => '3.3.4-1',
     name   => 'rabbitmq-server',
   }
 
