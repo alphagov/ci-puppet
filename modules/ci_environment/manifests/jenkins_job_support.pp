@@ -102,9 +102,18 @@ class ci_environment::jenkins_job_support {
     require => [Exec['set-licence-selected'], Exec['set-licence-seen']],
   }
 
+  apt::source { 'elasticsearch':
+    location     => 'http://apt.production.alphagov.co.uk/elasticsearch-0.90',
+    release      => 'stable',
+    architecture => $::architecture,
+    key          => '37E3ACBB',
+    include_src  => false,
+  }
+
   class { 'elasticsearch':
     version            => '0.90.12',
-    number_of_replicas => '0'
+    number_of_replicas => '0',
+    require            => Apt::Source['elasticsearch'],
   }
 
   class { 'redis':
