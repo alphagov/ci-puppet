@@ -103,7 +103,7 @@ class ci_environment::jenkins_job_support {
   }
 
   class { 'elasticsearch':
-    version            => "0.20.6-ppa1~${::lsbdistcodename}1",
+    version            => '0.90.12',
     number_of_replicas => '0'
   }
 
