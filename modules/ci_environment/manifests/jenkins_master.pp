@@ -39,6 +39,7 @@ class ci_environment::jenkins_master (
     isdefaultvhost => true,
     servername     => $jenkins_servername,
     serveraliases  => $jenkins_serveraliases,
+    magic          => 'add_header Strict-Transport-Security "max-age=31536000";'
   }
 
   file {'/etc/ssl/certs/github.gds.pem':
