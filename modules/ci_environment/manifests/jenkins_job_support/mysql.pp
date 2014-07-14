@@ -1,13 +1,8 @@
 # == Class: ci_environment::jenkins_job_support::mysql
 # Installs mysql on the server
 class ci_environment::jenkins_job_support::mysql {
-  class { '::mysql': }
   class { '::mysql::server':
-    require     => Class['::mysql']
-  }
-
-  mysql::server::config { 'innodb':
-    settings => {
+    override_options => {
       'mysqld' => {
         'innodb_flush_log_at_trx_commit'     => '0',
       },
