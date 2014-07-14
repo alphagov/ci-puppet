@@ -9,7 +9,7 @@ gem 'puppet', ENV['PUPPET_VERSION'] || '~> 3.1.0'
 gem 'facter', ENV['FACTER_VERSION'] || '~> 1.6.0'
 
 # Dependency management.
-gem "librarian-puppet-maestrodev"
+gem "librarian-puppet", '1.1.2'
 
 # Testing utilities.
 gem 'rake'
