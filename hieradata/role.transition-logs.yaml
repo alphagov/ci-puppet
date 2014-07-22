@@ -151,6 +151,11 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAvtXRyhSIuGoZ1WnUetlfzivoLB34NOIIapwWCtrYjFeXmlsOv+LRX06Fxu7xUyuIMwDT0CAz3RzOnWmop48JaD43mx0Bhak5/uk72SboKcCk3DiF7biq6AFDYA31eYqYGmOqFFxCGInssW4GwGmNm0QNNDjZh5MKM8OobEM2C/cQLbmRpzEUBM9FpPRElyzg8yxZQKSARyxTefyNelmvUSGZuuor9MROFUe4BsmjM7alZWR/sIj9kNSKqcJwEbbJ/+S/Yhburb22I/VWNdmusuoRvphUtpG9+fMahOEqhlu0w7wEt+5Z9K9nNJpls/H5alVTQGHaYcy8Q6n9niInBQ==
         home_dir: /srv/logs/log-1/ofsted
 
+    statistics:
+        comment: "UK Statistics Authority"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAmIY6f4Iw3gG/Jhz5Az/vM5Oip7uSWlCHqO844/wzqv4yhZ4oI0zGRLmKNWev9TK+vtmQGQwX1PFO52FesAla+zK6XwzrHVx8pxPdBHa2znLEBFoJB1QOopOqLMjZZoYVupCpuD375gvpOkuSzShULKpJGNv2H7Hembv37VTlQql1K2VCcJraZ+WJul2OQAf8QTleU8nMXCh0raLfWgr46v3mFROFQueMVhYGhY42QuKhfbqwvMYFvDoYoOBZWsT85pm0N+Qqt+/30Coz+09upKFeHDVAfZtHSRCBzWN74XQOAwNRGnDbt/oiuFzhFlIFmrA7p4MrQ8LRJxrIR9Sr8w==
+        home_dir: /srv/logs/log-1/statistics
+
     aib:
         comment: "AAIB, MAIB and RAIB"
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEArdfdRB3NNMSAUHBWEMaKCDPX8nounxsyTTk3vqhmoCXpEhpkShTZiznmksai9y172rLUnuoaKGz5l1tp/8xqma4vaF5O7+PUunVlCOXVD70CDuqqQHuhbZEF2m1V/fQQbFFnH2GmIRGPD0b76QgOoOlYTCuc7BFG0g8P+5IuSt7hurqHVHWlyjyFKzXiveBzfUD8BWOuRzXOtLXlFY8ImR84I8mNeI7lTCfWB3Nr7PaWnf0//wvPhjYKCy+bgrf9JsjFUCYlGUnOLterRiDbPC1O0+hLmsjcMlVn5kT0TthrnIrbVOYiQdaCVFMUTTq69JknNWp/clVPxeWji1UYEw==
