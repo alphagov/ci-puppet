@@ -44,6 +44,7 @@ class ci_environment::jenkins_job_support {
     'libpango1.0-dev', # alphagov/screenshot-as-a-service
     'libgif-dev', # alphagov/screenshot-as-a-service
     'cmake', # alphagov/spotlight
+    'libffi-dev', # alphagov/backdrop
   ])
 
   package { 'golang':
