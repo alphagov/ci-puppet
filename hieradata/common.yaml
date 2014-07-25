@@ -113,3 +113,4 @@ cdn_logs::cert: |
   OmQVTqKNteZopB3dwsc4la9Y5PMCJ8OlJcm5BrV4A8mD
   -----END CERTIFICATE-----
 
+rabbitmq::delete_guest_user: true

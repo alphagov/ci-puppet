@@ -5,7 +5,6 @@ classes:
  - ci_environment::firewall_config::jenkins_slave
  - mongodb
  - gds_mongodb
- - rabbitmq
 
 ci_environment::jenkins_slave::jenkins_home: /home/jenkins
 
