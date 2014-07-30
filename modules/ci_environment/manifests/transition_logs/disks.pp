@@ -1,23 +1,27 @@
 #class to set up disks on transition-logs-1
 class ci_environment::transition_logs::disks {
 
+  physical_volume { '/dev/sdb1':
+    ensure => present,
+  }
+
   physical_volume { '/dev/sdc1':
     ensure => present,
   }
 
-  physical_volume { '/dev/sdb1':
+  physical_volume { '/dev/sdd1':
     ensure => present,
   }
 
   volume_group { 'logs':
     ensure           => present,
-    physical_volumes => ['/dev/sdb1', '/dev/sdc1'],
+    physical_volumes => ['/dev/sdb1', '/dev/sdc1', '/dev/sdd1'],
   }
 
   logical_volume { 'remote_users':
     ensure       => present,
     volume_group => 'logs',
-    size         => '512G',
+    size         => '1024G',
   }
 
   filesystem { '/dev/logs/remote_users':
