@@ -15,6 +15,11 @@ class ci_environment::jenkins_job_support::mysql {
   }
 
   mysql::db {
+    'collections_publisher_test':
+      user     => 'collections_pub',
+      password => 'collections_publisher',
+      require  => Class['::mysql::server'];
+
     'contacts_test':
       user     => 'contacts',
       password => 'contacts',
