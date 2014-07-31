@@ -160,3 +160,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "AAIB, MAIB and RAIB"
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEArdfdRB3NNMSAUHBWEMaKCDPX8nounxsyTTk3vqhmoCXpEhpkShTZiznmksai9y172rLUnuoaKGz5l1tp/8xqma4vaF5O7+PUunVlCOXVD70CDuqqQHuhbZEF2m1V/fQQbFFnH2GmIRGPD0b76QgOoOlYTCuc7BFG0g8P+5IuSt7hurqHVHWlyjyFKzXiveBzfUD8BWOuRzXOtLXlFY8ImR84I8mNeI7lTCfWB3Nr7PaWnf0//wvPhjYKCy+bgrf9JsjFUCYlGUnOLterRiDbPC1O0+hLmsjcMlVn5kT0TthrnIrbVOYiQdaCVFMUTTq69JknNWp/clVPxeWji1UYEw==
         home_dir: /srv/logs/log-1/aib
+
+    charity_commission:
+        comment: "The Charity Commission"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAis6f9D82TxDgMh3mUY9CTxQYZ45O8gWUvlYAp9yvuoYjZ9e4cJgDzi+//5ig59VE/Az5vZyqORCx9WDwpuukE7KM57WLuypUl6jMrHxvdzIgQb03QGPsZYP14vVRcPdYunnhXm9XwykPpJLEfktBmYRcUyUyLbbqThU6Z+zvTtIr7SRA6RVx0L1qd6Z9kMpFemAwDDadRZzaoTVDzMbBrEt7WlBBKoLouWOekzaP+OHX7u/Da+0jdA1M90tr/7TjLfKiQGvpHNYkipCZPjjJm0PGiTjs3KpZHOHKAD7mONqc7FN8JZtyOqQ72+GLPxgCvAode64AOjrd6i8N5iNFXQ==
+        home_dir: /srv/logs/log-1/charity_commission
