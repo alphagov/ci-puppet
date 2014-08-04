@@ -15,7 +15,7 @@ class ci_environment::jenkins_job_support::postgresql {
   exec { 'Load pgcrypto for postgres db transition_test':
     user    => 'postgres',
     command => 'psql -d transition_test -c "CREATE EXTENSION IF NOT EXISTS pgcrypto"',
-    # TODO: Need an unless to test if extension is already present
+    unless  => 'psql -d transition_test -c "\dx" | grep -q pgcrypto',
     require => Postgresql::Server::Db['transition_test'],
   }
 }
