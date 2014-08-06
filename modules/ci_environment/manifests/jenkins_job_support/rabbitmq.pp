@@ -8,6 +8,8 @@ class ci_environment::jenkins_job_support::rabbitmq {
       password => 'content_store';
     'govuk_seed_crawler':
       password => 'govuk_seed_crawler';
+    'govuk_crawler_worker':
+      password => 'govuk_crawler_worker';
   }
 
   rabbitmq_user_permissions {
@@ -19,6 +21,10 @@ class ci_environment::jenkins_job_support::rabbitmq {
       configure_permission => '^govuk_seed_crawler.*',
       read_permission      => '^govuk_seed_crawler.*',
       write_permission     => '^govuk_seed_crawler.*';
+    'govuk_crawler_worker@/':
+      configure_permission => '^govuk_crawler_worker.*',
+      read_permission      => '^govuk_crawler_worker.*',
+      write_permission     => '^govuk_crawler_worker.*';
   }
 
   gds_rabbitmq::exchange {
