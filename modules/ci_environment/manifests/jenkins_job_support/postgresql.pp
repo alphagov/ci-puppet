@@ -16,7 +16,7 @@ class ci_environment::jenkins_job_support::postgresql {
     owner    => 'transition',
     password => $transition_password,
     user     => 'transition',
-    require  => [Class['govuk_postgresql::server'], Postgresql::Server::Role['transition']],
+    require  => [Class['postgresql::server'], Postgresql::Server::Role['transition']],
   }
 
   exec { 'Load pgcrypto for postgres db transition_test':
