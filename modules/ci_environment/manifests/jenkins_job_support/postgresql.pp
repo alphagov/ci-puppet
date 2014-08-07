@@ -5,11 +5,18 @@ class ci_environment::jenkins_job_support::postgresql {
   include postgresql::server::contrib
   include postgresql::lib::devel
 
+  $transition_password = postgresql_password('transition', 'transition')
+
+  postgresql::server::role { 'transition':
+    password_hash => $transition_password,
+  }
+
   postgresql::server::db { 'transition_test':
     encoding => 'UTF8',
     owner    => 'transition',
-    password => postgresql_password('transition', 'transition'),
+    password => $transition_password,
     user     => 'transition',
+    require  => [Class['govuk_postgresql::server'], Postgresql::Server::Role['transition']],
   }
 
   exec { 'Load pgcrypto for postgres db transition_test':
