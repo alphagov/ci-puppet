@@ -13,7 +13,9 @@ mod 'puppetlabs/java',             '0.3.0'
 mod 'puppetlabs/mysql',            '0.9.0'
 mod 'puppetlabs/nodejs',           '0.4.0'
 mod 'puppetlabs/postgresql'
-mod 'puppetlabs/rabbitmq'
+mod 'puppetlabs/rabbitmq',
+  :git => 'git://github.com/alphagov/puppetlabs-rabbitmq.git',
+  :ref => 'strip-backslashes'
 mod 'puppetlabs/stdlib',           '~> 4.0'
 mod 'saz/dnsmasq',                 '1.0.1'
 
