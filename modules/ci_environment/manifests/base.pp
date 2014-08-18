@@ -90,6 +90,18 @@ class ci_environment::base {
 
   include ssh::server
 
+  # Required for hwe-support-status script
+  package {'update-manager-core':
+    ensure => present,
+  }
+  $latest_lte_supported = 'trusty'
+  # Force us to a kernel that is 'supported', requires a reboot to be certain
+  package {["linux-generic-lts-${latest_lte_supported}", "linux-image-generic-lts-${latest_lte_supported}"]:
+    ensure  => present,
+    require => Package['update-manager-core'],
+    unless  => '/usr/bin/hwe-support-status',
+  }
+
   exec { 'apt-get-update':
     command => '/usr/bin/apt-get update || true',
   }
