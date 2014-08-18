@@ -90,6 +90,12 @@ class ci_environment::base {
 
   include ssh::server
 
+  $latest_lte_supported = 'trusty'
+  # Force us to a kernel that is 'supported', requires a reboot to be certain
+  package {["linux-generic-lts-${latest_lte_supported}", "linux-image-generic-lts-${latest_lte_supported}", 'update-manager-core']:
+    ensure  => present,
+  }
+
   exec { 'apt-get-update':
     command => '/usr/bin/apt-get update || true',
   }
