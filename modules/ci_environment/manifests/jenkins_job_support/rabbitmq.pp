@@ -9,7 +9,8 @@ class ci_environment::jenkins_job_support::rabbitmq {
     'govuk_seed_crawler':
       password => 'govuk_seed_crawler';
     'govuk_crawler_worker':
-      password => 'govuk_crawler_worker';
+      password => 'govuk_crawler_worker',
+      tags     => ['monitoring'];
   }
 
   rabbitmq_user_permissions {
