@@ -47,8 +47,14 @@ class ci_environment::jenkins_job_support {
     'libffi-dev', # alphagov/backdrop
   ])
 
-  package { 'golang':
-    ensure => '2:1.2.2-0~ppa1~precise1',
+  class { 'goenv':
+    global_version => '1.2.2',
+  }
+  goenv::version { ['1.2.2', '1.3.1']: }
+
+  # FIXME remove once cleaned up everywhere.
+  package { ['golang', 'golang-doc', 'golang-go', 'golang-go-linux-amd64', 'golang-src']:
+    ensure => purged,
   }
 
   # Needed to notify github of build statuses
