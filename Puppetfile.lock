@@ -9,6 +9,8 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     gdsoperations/elasticsearch (0.0.1)
       puppetlabs/stdlib (>= 3.0.0)
+    gdsoperations/goenv (0.0.1)
+      puppetlabs/stdlib (>= 3.0.0)
     gdsoperations/openconnect (1.0.0)
       puppetlabs/stdlib (>= 3.0.0)
     gdsoperations/rbenv (1.0.1)
@@ -170,6 +172,7 @@ DEPENDENCIES
   attachmentgenie/ufw (= 1.1.0)
   gds/graphite (>= 0)
   gdsoperations/elasticsearch (= 0.0.1)
+  gdsoperations/goenv (= 0.0.1)
   gdsoperations/openconnect (>= 0)
   gdsoperations/rbenv (= 1.0.1)
   pdxcat/collectd (~> 0.0)
@@ -184,4 +187,3 @@ DEPENDENCIES
   puppetlabs/stdlib (~> 4.0)
   saz/dnsmasq (= 1.0.1)
   valentinroca/fail2ban (>= 0)
-
