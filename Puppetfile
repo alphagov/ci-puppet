@@ -1,4 +1,4 @@
-forge 'https://forgeapi.puppetlabs.com/'
+forge 'https://forgeapi.puppetlabs.com'
 
 mod 'attachmentgenie/locales',     '1.0.2'
 mod 'attachmentgenie/ssh',         '1.2.1'
