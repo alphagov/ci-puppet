@@ -33,6 +33,7 @@ class ci_environment::jenkins_job_support {
     'aspell', 'aspell-en', 'libaspell-dev', # Needed by rummager
     'libqtwebkit-dev', # Needed by capybara-webkit (Publisher)
     'bzr', # needed by some Go builds
+    'mercurial', # needed by some Go builds
     'libv8-dev', # Needed by things that require V8 headers
     'vegeta', # HTTP load testing used by Router.
     'mawk-1.3.4', # Provides /opt/mawk required by pre-transition-stats
@@ -51,6 +52,9 @@ class ci_environment::jenkins_job_support {
     global_version => '1.2.2',
   }
   goenv::version { ['1.2.2', '1.3.1']: }
+  package { 'godep':
+    ensure => latest,
+  }
 
   # FIXME remove once cleaned up everywhere.
   package { ['golang', 'golang-doc', 'golang-go', 'golang-go-linux-amd64', 'golang-src']:
