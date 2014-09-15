@@ -7,9 +7,6 @@
 #  that requires them
 #
 class ci_environment::jenkins_job_support {
-  # redirector's tests require some Perl packages (see below)
-  include cpanm::install
-
   # should be used to install gems in jenkins build scripts
   package { 'bundler':
     ensure   => '1.1.4',
@@ -38,8 +35,6 @@ class ci_environment::jenkins_job_support {
     'vegeta', # HTTP load testing used by Router.
     'mawk-1.3.4', # Provides /opt/mawk required by pre-transition-stats
     'p7zip-full', # Provides /usr/bin/7z required by pre-transition-stats
-    'php5-cli', # Needed by redirector
-    'dnsutils', # Needed by transition_dns_report
     'libcairo2-dev', # alphagov/screenshot-as-a-service
     'libjpeg8-dev', # alphagov/screenshot-as-a-service
     'libpango1.0-dev', # alphagov/screenshot-as-a-service
@@ -78,18 +73,6 @@ class ci_environment::jenkins_job_support {
   class { 'ci_environment::jenkins_job_support::rabbitmq': }
   class { 'phantomjs': }
   class { 'xvfb': } # Needed by capybara-webkit (used in Publisher)
-
-  # redirector's tests require these Perl packages
-  package { [
-    'Text::CSV',
-    'YAML',
-    'Crypt::SSLeay',
-    'Mozilla::CA',
-    'XML::Parser',
-  ]:
-    ensure   => present,
-    provider => 'cpanm',
-  }
 
   class { 'clamav': }
 
