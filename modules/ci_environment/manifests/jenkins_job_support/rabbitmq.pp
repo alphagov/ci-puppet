@@ -6,6 +6,8 @@ class ci_environment::jenkins_job_support::rabbitmq {
   rabbitmq_user {
     'content_store':
       password => 'content_store';
+    'email_alert_service_test':
+      password => 'email_alert_service_test';
     'govuk_seed_crawler':
       password => 'govuk_seed_crawler';
     'govuk_crawler_worker':
