@@ -1,4 +1,2 @@
 ---
 jenkins::slave::labels: '"mongodb-2.4 cdn-acceptance-test"'
-
-mongodb::version: 2.4.9
