@@ -51,11 +51,6 @@ class ci_environment::jenkins_job_support {
     ensure => latest,
   }
 
-  # FIXME remove once cleaned up everywhere.
-  package { ['golang', 'golang-doc', 'golang-go', 'golang-go-linux-amd64', 'golang-src']:
-    ensure => purged,
-  }
-
   # Needed to notify github of build statuses
   package { 'ghtools':
     ensure   => '0.21.0',
