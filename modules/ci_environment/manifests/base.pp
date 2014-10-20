@@ -75,11 +75,11 @@ class ci_environment::base {
   rbenv::version { '2.1.2':
     bundler_version => '1.6.5',
   }
-  rbenv::alias { '2.1':
-    to_version => '2.1.2',
+  rbenv::version { '2.1.3':
+    bundler_version => '1.7.3',
   }
-  package { 'rbenv-ruby-2.1.1':
-    ensure => absent,
+  rbenv::alias { '2.1':
+    to_version => '2.1.3',
   }
 
   file { '/etc/sudoers.d/gds':
