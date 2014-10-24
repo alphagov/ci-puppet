@@ -92,9 +92,4 @@ class ci_environment::base {
   package {["linux-generic-lts-${latest_lte_supported}", "linux-image-generic-lts-${latest_lte_supported}", 'update-manager-core']:
     ensure  => present,
   }
-
-  exec { 'apt-get-update':
-    command => '/usr/bin/apt-get update || true',
-  }
-  Exec <| title == 'apt-get-update' |> -> Package <| provider == 'apt' |>
 }
