@@ -4,9 +4,10 @@ classes:
   - apt::unattended_upgrades
   - ci_environment::base
   - ci_environment::dns
-  - gds_collectd
-  - gds_accounts
   - ci_environment::firewall_config::base
+  - etcd
+  - gds_accounts
+  - gds_collectd
   - locales
 
 apt::always_apt_update: true

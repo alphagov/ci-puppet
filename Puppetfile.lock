@@ -1,6 +1,8 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
+    KyleAnderson/etcd (0.4.1)
+      puppetlabs/stdlib (>= 0.1.6)
     attachmentgenie/locales (1.0.2)
       puppetlabs/stdlib (>= 2.2.1)
     attachmentgenie/ssh (1.2.1)
@@ -149,6 +151,7 @@ GIT
     alphagov/duplicity (0.0.1)
 
 DEPENDENCIES
+  KyleAnderson/etcd (>= 0)
   alphagov/clamav (>= 0)
   alphagov/duplicity (>= 0)
   alphagov/ext4mount (>= 0)
