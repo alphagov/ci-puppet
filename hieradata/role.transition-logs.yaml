@@ -173,6 +173,13 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAuoIglteQmEwL5/T3maYcomkZs44x1Rx/YRn31vMEuAaBHqYyD5mLUFMXQbCyFO6mZcjx+uOTOT6QhzIiKa8dJhAs5K/KFtjG/6vuwqFdC/Tpggvx6My/vDROsZVmPz4RFrd9XhoL2ybAXaHq6hfo+j112J/n+rkemqzmR/gz2TGFni9jSWG8fEzEkMwQR0iHZnGSFJI2UUR8trxyk32Pq3hkyEiA+XdipR/U8uPnBB2C3+Ms5NUaI8kFmQKYEumqU093dUD7iuekw3vA3elD8oR6UeDGcoRbMomT8oaatPtZl2rSw343M+tEQTC4VsUtcYAiK46sCxIsSjCI0+k2eQ==
         home_dir: /srv/logs/log-1/ktp
 
+    # Note that psn's ssh_key is actually @rgarner's. They've given us ad-hoc log files
+    # to upload.
+    psn:
+        comment: Public Services network
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAuoIglteQmEwL5/T3maYcomkZs44x1Rx/YRn31vMEuAaBHqYyD5mLUFMXQbCyFO6mZcjx+uOTOT6QhzIiKa8dJhAs5K/KFtjG/6vuwqFdC/Tpggvx6My/vDROsZVmPz4RFrd9XhoL2ybAXaHq6hfo+j112J/n+rkemqzmR/gz2TGFni9jSWG8fEzEkMwQR0iHZnGSFJI2UUR8trxyk32Pq3hkyEiA+XdipR/U8uPnBB2C3+Ms5NUaI8kFmQKYEumqU093dUD7iuekw3vA3elD8oR6UeDGcoRbMomT8oaatPtZl2rSw343M+tEQTC4VsUtcYAiK46sCxIsSjCI0+k2eQ==
+        home_dir: /srv/logs/log-1/psn
+
     ofqual:
         comment: Ofqual
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAgEA1PPS/mPSZTG9Lkly1wfOOkuwvu6F3ha01OidC05zy9SRJiZYA5tCAU8UgRyh1Z8fDz61vgxWwrLORdnvfyMjUBqyVr1NNSdZnjVAHRj4p1cky3+JCx99UnJhSiD+uFXnZ7/6nJPHawvi9GBlOUVfQAWbClqNbXQzZf4owgJDNV6DSUTv5VOepL/Lu3PsovqPQSbyd1+0v9Fssxc70WZR/V0XVqx5JVZNV4qUjK/A4ML0eEk4TSOHbN3uB8vJpgnayrPMiIUXqJAJHztinzBb5QAieiBGfXHktQnbaOA4r+10aaL+TxHHTcgP6zP6DOK7CO2io6kOHa+5eWQvtsiJlKfq3WVsLAsTWlFuY2ddKmhjS062eHMP6GOmwEXafG61wyYfHHC4RkrulvRL3Ku+YV8kGC4J6i7boLRqY2xJnlY7Rl13VvSXfsS2HNE9TPBz/NqhYc0kqeoeviwGtCSOw9zL0HQj+eTb3b8uRDxmVwQFfmNgYpCebQxOyEzSLjlurcxV2DvWgtUgifTO8vDxZ98uMCOV6cMFyLPbLnBVOc3U5olBB0AteS87mN2naQr09ydNF5ABZ/KRA/wmGQi7GgHI0LnJ9nt5C0ZGCjwor5JLgX50uHFHWGR3l4cWY5XOwlgiUfHeiM1V4B6ti9KOSZj6HGTIkuf/KvVIGin5gp8=
