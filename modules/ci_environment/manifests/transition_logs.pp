@@ -89,7 +89,7 @@ class ci_environment::transition_logs {
         mode   => '4775',
     }
 
-    Exec['apt-get-update'] -> Package['rssh'] -> File['/etc/rssh.conf'] -> File['/usr/lib/rssh/rssh_chroot_helper']
+    Package['rssh'] -> File['/etc/rssh.conf'] -> File['/usr/lib/rssh/rssh_chroot_helper']
 
     class { 'rsyslog':
       log_user        => 'syslog',

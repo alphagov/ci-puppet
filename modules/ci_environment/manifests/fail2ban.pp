@@ -5,9 +5,7 @@
 class ci_environment::fail2ban(
   $whitelist_ips = ['127.0.0.1'],
 ) {
-  class { '::fail2ban':
-    require => Exec['apt-get-update']
-  }
+  include ::fail2ban
 
   file { '/etc/fail2ban/jail.local':
     owner   => 'root',

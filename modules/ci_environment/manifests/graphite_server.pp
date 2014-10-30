@@ -7,7 +7,6 @@ class ci_environment::graphite_server {
 
   package {'ssl-cert':
     ensure  => latest,
-    require => Exec['apt-get-update'],
   }
 
   class {'nginx::server':

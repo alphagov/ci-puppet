@@ -26,7 +26,6 @@ class ci_environment::jenkins_master (
 
   package {'ssl-cert':
     ensure  => '1.0.28ubuntu0.1',
-    require => Exec['apt-get-update'],
   }
 
   class {'nginx::server':

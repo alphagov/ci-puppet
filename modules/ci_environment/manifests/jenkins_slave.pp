@@ -20,5 +20,5 @@ class ci_environment::jenkins_slave (
     jenkins_home => $jenkins_home,
   }
 
-  Exec['apt-get-update'] -> Class['java'] -> Class['jenkins::slave'] -> Class['jenkins_user']
+  Class['java'] -> Class['jenkins::slave'] -> Class['jenkins_user']
 }
