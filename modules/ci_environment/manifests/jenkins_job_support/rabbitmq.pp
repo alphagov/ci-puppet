@@ -6,6 +6,8 @@ class ci_environment::jenkins_job_support::rabbitmq {
   rabbitmq_user {
     'content_store':
       password => 'content_store';
+    'content_register_test':
+      password => 'content_register';
     'email_alert_service_test':
       password => 'email_alert_service_test';
     'govuk_seed_crawler':
@@ -20,6 +22,10 @@ class ci_environment::jenkins_job_support::rabbitmq {
       configure_permission => '^amq\.gen.*$',
       read_permission      => '^(amq\.gen.*|published_documents_test)$',
       write_permission     => '^(amq\.gen.*|published_documents_test)$';
+    'content_register_test@/':
+      configure_permission => '^(amq\.gen.*|content_register_test)$',
+      read_permission      => '^(amq\.gen.*|content_register_test|content_register_published_documents_test_exchange)$',
+      write_permission     => '^(amq\.gen.*|content_register_test|content_register_published_documents_test_exchange)$';
     'email_alert_service_test@/':
       configure_permission => '^(amq\.gen.*|email_alert_service_published_documents_test_exchange|email_alert_service_published_documents_test_queue)$',
       read_permission      => '^(amq\.gen.*|email_alert_service_published_documents_test_exchange|email_alert_service_published_documents_test_queue)$',
@@ -35,14 +41,11 @@ class ci_environment::jenkins_job_support::rabbitmq {
   }
 
   gds_rabbitmq::exchange {
-    'published_documents_test@/':
-      ensure   => present,
-      type     => 'topic';
-  }
-
-  gds_rabbitmq::exchange {
-    'email_alert_service_published_documents_test_exchange@/':
-      ensure   => present,
+    [
+      'content_register_published_documents_test_exchange@/',
+      'email_alert_service_published_documents_test_exchange@/',
+      'published_documents_test@/',
+    ]:
       type     => 'topic';
   }
 }
