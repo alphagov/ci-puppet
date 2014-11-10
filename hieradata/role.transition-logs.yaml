@@ -189,3 +189,8 @@ ci_environment::transition_logs::rssh_users:
         comment: Innovate UK
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAACAQDNh5wZ8G122o3sOvv8Kk+/j+JNGTGujhx60f1UC2kg90fDUoej7DJvbshqD8TQWp4H3FackZKhX3HHHWjAXc8VHcF7tfMzzJmna88UbJ1pzf23K00d7DJY4EXZDYcElMFlkzst0R3/aFn8H3Sc3rk3nhcVQNjdb6InVFwXo7Qo8RSVn5fivYutniEceHXW6w3xKjxrLnrFQeVenqwLZi3IH+DGNKk+Pj8q1yNXy+V/I89t5sjngAREKKYuCezgMuThMjlML6tCPIu2PMcUJrVueiyMGAvYdxXEpc8aKUrlK4BWfgrH1uwKklDXM11yzcUrpuotK/Qyxvmiw/aUXlCMn76TY5puvIhYlD2Ze3qc4FGTxCM9D1Kh4uGG4RZwnA2h0BCKr0H8o6sGl59MgFo8dAdZEy1ClxEfMmWI2xjiiS/kA11b064CdgsTuwjboo3EG3DA55+lSC206FdXCW5kDI+uXJ2lXDnpM5defD+A/YQHdZf0qBO7SV4hZ2AeUzNxj6jYTKWRjC9C6U5TLcVnzH1HRxrWQ3u8g4oOiM2jm+K1/jswv2EIeP5rF6kZd7cKn3dceBlqnT0kBaDsDMDjKC+uekOuO0yjLNh3RjiXNH52dFlr/lGM9JrXdzuMQMidzcmFwVsAEjL+vz6VNStGpiUdZdYe6+OT13fmySgfZQ==
         home_dir: /srv/logs/log-1/innovateuk
+
+    hs2:
+        comment: High Speed Two (HS2) Limited
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQC1YqXc8VPQIbfBu7SnVmrCuTmjg+7y+hftR86FWlnC9++goVYregV/dopUVWRvg3kHrN1F5JvH8EOtVtgK7SVwJYb5kAWJ9thUVBh68YWR7f1GlT8RC/tPFYdSlT6ULBDRM88ytPaQTqBioIhNF99fH15WkyAbupOW3fKBM3YasI/ZEl4DQ+17fxeakBdIci/cGmUTiXF/B9cih5S1ZrDEyBUKk5mr2rJksya8xPVxKvPI8i1iAj0n3ci4Rb+m0/ImdMGfiyNX3T82OsCk83nxgULizFgrdZNoQLNlbBtY4waLmwa/QGToGUordQkOd904CFvY9S5l+hmojLkM/VcX
+        home_dir: /srv/logs/log-1/hs2
