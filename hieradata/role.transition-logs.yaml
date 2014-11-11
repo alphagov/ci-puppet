@@ -194,3 +194,8 @@ ci_environment::transition_logs::rssh_users:
         comment: High Speed Two (HS2) Limited
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQC1YqXc8VPQIbfBu7SnVmrCuTmjg+7y+hftR86FWlnC9++goVYregV/dopUVWRvg3kHrN1F5JvH8EOtVtgK7SVwJYb5kAWJ9thUVBh68YWR7f1GlT8RC/tPFYdSlT6ULBDRM88ytPaQTqBioIhNF99fH15WkyAbupOW3fKBM3YasI/ZEl4DQ+17fxeakBdIci/cGmUTiXF/B9cih5S1ZrDEyBUKk5mr2rJksya8xPVxKvPI8i1iAj0n3ci4Rb+m0/ImdMGfiyNX3T82OsCk83nxgULizFgrdZNoQLNlbBtY4waLmwa/QGToGUordQkOd904CFvY9S5l+hmojLkM/VcX
         home_dir: /srv/logs/log-1/hs2
+
+    dfid_stabilisation:
+        comment: DFID Stabilisation Unit
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDUtmUOQr6PCvUT+4YkutCg58q97wkF+srLSmZWYsbNXWPSLhMZu7uC9IbKL+ZmBJQwY6Kmx4ZYdONJhnpqaB9pjtLm/dx7qjEHExeGAHK1jcFmHsSi45b83r7VRA2Iu2r7zjt6Cxq6H+YCC8QmgTBvvKdW9FTrfnSotaeBjl8ZrsIP3bnCShJrnchrNIew9vmRhm+EhdCfrvmqm1MyEhCj4zH7Oz2zQWNmFfpPOoXgmEBvasO1w3r0gnu9BXcTZA8VVlRaUlxlODAa8IK3+cQRQTNItrg+uQfMSb7YznrA6IujxKZIc0IdJJznciHetY0wtyXAkqRQwxcy3e4XjQh7
+        home_dir: /srv/logs/log-1/dfid_stabilisation
