@@ -199,3 +199,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "DFID Stabilisation Unit"
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDUtmUOQr6PCvUT+4YkutCg58q97wkF+srLSmZWYsbNXWPSLhMZu7uC9IbKL+ZmBJQwY6Kmx4ZYdONJhnpqaB9pjtLm/dx7qjEHExeGAHK1jcFmHsSi45b83r7VRA2Iu2r7zjt6Cxq6H+YCC8QmgTBvvKdW9FTrfnSotaeBjl8ZrsIP3bnCShJrnchrNIew9vmRhm+EhdCfrvmqm1MyEhCj4zH7Oz2zQWNmFfpPOoXgmEBvasO1w3r0gnu9BXcTZA8VVlRaUlxlODAa8IK3+cQRQTNItrg+uQfMSb7YznrA6IujxKZIc0IdJJznciHetY0wtyXAkqRQwxcy3e4XjQh7
         home_dir: /srv/logs/log-1/dfid_stabilisation
+
+    companies:
+        comment: "Companies House"
+        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEAk29VAar6R2Zr2Nwl1r5oD6jgGm7XSjUx2q1B4kDIxsuMvd7xSJNtBjBMf9NiLz8kktxVTEaZUw3Jn+HkRN3EBcVnX4yYQ5DtCPwQTfdq2vq8w5C8ICA9lFY93paeRjLO6erE0gLw4iclr4+pU6jOxo7q191pJhqQEjUhqZf4AKE=
+        home_dir: /srv/logs/log-1/companies
