@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+DIST_PREFERRED = 'precise'
+
 if Vagrant::VERSION < "1.1.0"
   $stderr.puts "WARNING: Using old Vagrantfile format! Please upgrade to Vagrant >1.1.\n"
   Vagrant::Config.run do |config|
@@ -13,6 +15,8 @@ else
 end
 
 def vagrant_config(config, version)
+  dist = ENV['gds_ci_dist'] || DIST_PREFERRED
+
   nodes = {
     'ci-master-1' => {:ip => '172.16.11.10'},
     'ci-slave-1'  => {:ip => '172.16.11.11'},
@@ -34,7 +38,11 @@ def vagrant_config(config, version)
     :memory => 384,
   }
 
-  config.vm.box     = "puppetlabs/ubuntu-12.04-64-puppet"
+  if dist == 'precise'
+    config.vm.box     = "puppetlabs/ubuntu-12.04-64-puppet"
+  else
+    config.vm.box     = "puppetlabs/ubuntu-14.04-64-puppet"
+  end
 
   config.vm.provision :shell, :path => 'tools/bootstrap'
   config.vm.provision :puppet do |puppet|
