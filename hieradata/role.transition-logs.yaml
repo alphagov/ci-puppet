@@ -204,3 +204,8 @@ ci_environment::transition_logs::rssh_users:
         comment: "Companies House"
         ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEAk29VAar6R2Zr2Nwl1r5oD6jgGm7XSjUx2q1B4kDIxsuMvd7xSJNtBjBMf9NiLz8kktxVTEaZUw3Jn+HkRN3EBcVnX4yYQ5DtCPwQTfdq2vq8w5C8ICA9lFY93paeRjLO6erE0gLw4iclr4+pU6jOxo7q191pJhqQEjUhqZf4AKE=
         home_dir: /srv/logs/log-1/companies
+
+    sfa_apporg:
+        comment: "Apprenticeships"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAhael8c2CCipKECB57cTZ1ClwiDWiXV66CMUq0bsW9GiSjAaPsKjA7PyKoOiXbm5wiNUVqZc1fbNPwW9iNr4GsC5DGkCw7KJDJhwRA2k6c3NqbGTEcneYgIAtKprHR3LeoR7+C7GHVLUFQ7yJiSOpu8SO9cTT3161Qy9G3oYf2QF3NY1DfG4VcekrlLGiM4pu9aA2mpnlGnsUcU6Sg0C0niHZUodgvbf0wcv9RFB/REg+PbmMrJWW9XLXDc01cC6jtH/bTwac8eEwdHkDUscRb9Wny0yn4+8a/SlfpMguVbFl7GNPeche1j2ADfmrKFbK3tp+jxkeqOiJ2UpyFFPHAQ==
+        home_dir: /srv/logs/log-1/sfa_apporg
