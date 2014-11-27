@@ -35,6 +35,7 @@ class ci_environment::base {
     'tar',
     'tree',
     'unzip',
+    'update-notifier-common',
     'vim-nox',
     'xz-utils',
     'zip',
