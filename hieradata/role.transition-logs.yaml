@@ -7,6 +7,8 @@ classes:
  - ci_environment::transition_logs::disks
  - ci_environment::firewall_config::transition_logs
 
+apt::unattended_upgrades::auto_reboot: false
+
 ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
 
 ci_environment::transition_logs::rssh_users:
