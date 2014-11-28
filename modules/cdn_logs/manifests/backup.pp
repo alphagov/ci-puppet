@@ -6,12 +6,13 @@ class cdn_logs::backup (
 
 if $backup_target {
     duplicity{'cdn':
-      directory => $log_dir,
-      target    => "${backup_target}/cdn",
-      hour      => 22,
-      minute    => 10,
-      pubkey_id => '13B84C37AB52D76B3F53CF0E7C34BD7A05119BA4',
-      require   => File[$log_dir],
+      directory         => $log_dir,
+      target            => "${backup_target}/cdn",
+      hour              => 22,
+      minute            => 10,
+      pubkey_id         => '13B84C37AB52D76B3F53CF0E7C34BD7A05119BA4',
+      remove_older_than => '30D',
+      require           => File[$log_dir],
     }
   }
 }

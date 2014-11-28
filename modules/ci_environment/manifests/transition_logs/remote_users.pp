@@ -33,12 +33,13 @@ define ci_environment::transition_logs::remote_users (
 
   if $backup_target {
     duplicity{$name:
-      directory => $home_dir,
-      target    => "${backup_target}/${name}",
-      hour      => $hour,
-      minute    => $min,
-      pubkey_id => '13B84C37AB52D76B3F53CF0E7C34BD7A05119BA4',
-      require   => Account[$name],
+      directory         => $home_dir,
+      target            => "${backup_target}/${name}",
+      hour              => $hour,
+      minute            => $min,
+      pubkey_id         => '13B84C37AB52D76B3F53CF0E7C34BD7A05119BA4',
+      remove_older_than => '30D',
+      require           => Account[$name],
     }
   }
 }
