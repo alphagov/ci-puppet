@@ -1,4 +1,0 @@
----
-classes:
- - ci_environment::graphite_server
- - ci_environment::firewall_config::graphite_server
