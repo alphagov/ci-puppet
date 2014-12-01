@@ -41,8 +41,9 @@ class ci_environment::base {
     'zip',
   ])
 
+  # FIXME: remove once this has run on all servers
   rbenv::version { '1.9.3-p392':
-    bundler_version => '1.6.5'
+    ensure => absent,
   }
   rbenv::version { '1.9.3-p484':
     bundler_version => '1.6.5'
