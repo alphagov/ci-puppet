@@ -83,13 +83,16 @@ def vagrant_config(config, version)
           # Add extra disks if specified
           if node_opts.has_key?(:extra_disks) and !node_opts[:extra_disks].nil?
             disk_num = 0
+            port_num = 0
             for disk in node_opts[:extra_disks] do
               disk_num += 1
+              port_num += 1
+              port_num = 0 if port_num > 1
               disk_name = disk[:name]
               disk_size = disk[:size]
               file_to_disk =  "#{node_name}_extra_disk_#{disk_name}_controller_#{disk_num}.vdi"
               vb.customize(['createhd', '--filename', file_to_disk, '--size', disk_size,  "--format", "vdi"])
-              vb.customize(['storageattach', :id, '--storagectl','SATA Controller', '--port', disk_num, '--device', 0, '--type', 'hdd', '--medium', file_to_disk])
+              vb.customize(['storageattach', :id, '--storagectl','IDE Controller', '--port', port_num, '--device', 0, '--type', 'hdd', '--medium', file_to_disk])
             end
           end
         end
