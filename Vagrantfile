@@ -82,6 +82,7 @@ def vagrant_config(config, version)
           # Add extra disks if specified
           if node_opts.has_key?(:extra_disks) and !node_opts[:extra_disks].nil?
             disk_num = 0
+            vb.customize(['storagectl', :id, '--name', 'SATA Controller', '--add', 'sata'])
             for disk in node_opts[:extra_disks] do
               disk_num += 1
               disk_name = disk[:name]
