@@ -7,7 +7,7 @@ classes:
 ci_environment::jenkins_user::jenkins_home: /var/lib/jenkins
 ci_environment::jenkins_master::jenkins_home: /var/lib/jenkins
 
-jenkins::version: "1.532.1"
+jenkins::version: "1.532.2"
 jenkins::plugin_hash:
     greenballs:
         version: "1.12"
