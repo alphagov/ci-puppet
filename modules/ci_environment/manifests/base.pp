@@ -4,7 +4,10 @@
 #
 class ci_environment::base {
   apt::ppa { 'ppa:gds/govuk': }
-  apt::ppa { 'ppa:gds/ci': }
+
+  if $::lsbdistcodename != 'trusty' {
+    apt::ppa { 'ppa:gds/ci': }
+  }
 
   include ci_environment::fail2ban
   include harden

@@ -53,7 +53,7 @@ class ci_environment::jenkins_job_support {
 
   # Needed to notify github of build statuses
   package { 'ghtools':
-    ensure   => '0.21.0',
+    ensure   => '0.22.0',
     provider => pip,
     require  => Package['python-pip'],
   }
@@ -111,10 +111,21 @@ class ci_environment::jenkins_job_support {
     max_memory => '256mb',
   }
 
+  if $::lsbdistcodename == 'precise' {
+    $nodejs_ensure = '0.10.32-1chl1~precise1'
+  } else {
+    $nodejs_ensure = 'latest'
+
+    # The official Ubuntu Trusty nodejs package doesn't include npm, so add that too
+    package { 'npm':
+      ensure => 'latest',
+    }
+  }
+
   # uglifier requires a JavaScript runtime
   # alphagov/spotlight requires a decent version of Node (0.10+) and grunt-cli
   package { 'nodejs':
-    ensure => "0.10.32-1chl1~${::lsbdistcodename}1",
+    ensure => $nodejs_ensure,
   }
   package { 'grunt-cli':
     ensure   => '0.1.9',

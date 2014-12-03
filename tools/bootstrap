@@ -2,6 +2,8 @@
 
 set -eu
 
+source /etc/lsb-release
+
 pp() {
   local blue="\033[34m"
   local reset="\033[0m"
@@ -20,7 +22,7 @@ set_uk_apt_sources() {
   sed -i 's|http://us|http://gb|' /etc/apt/sources.list
   apt-get update -qq
   apt-get install -qq python-software-properties curl 2>&1 | pp
-  test -f /etc/apt/sources.list.d/gds-govuk-precise.list || add-apt-repository -y ppa:gds/govuk 2>&1 | pp
+  test -f /etc/apt/sources.list.d/gds-govuk-${DISTRIB_CODENAME}.list || add-apt-repository -y ppa:gds/govuk 2>&1 | pp
   apt-get update -qq
 }
 
