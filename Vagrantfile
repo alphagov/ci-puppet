@@ -32,8 +32,7 @@ def vagrant_config(config, version)
     :memory => 384,
   }
 
-  config.vm.box     = "puppet-precise64"
-  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-1204-x64.box"
+  config.vm.box     = "puppetlabs/ubuntu-12.04-64-puppet"
 
   config.vm.provision :shell, :path => 'tools/bootstrap'
   config.vm.provision :puppet do |puppet|
@@ -83,6 +82,7 @@ def vagrant_config(config, version)
           # Add extra disks if specified
           if node_opts.has_key?(:extra_disks) and !node_opts[:extra_disks].nil?
             disk_num = 0
+            vb.customize(['storagectl', :id, '--name', 'SATA Controller', '--add', 'sata'])
             for disk in node_opts[:extra_disks] do
               disk_num += 1
               disk_name = disk[:name]
