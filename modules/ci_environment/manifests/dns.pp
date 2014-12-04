@@ -19,7 +19,7 @@ class ci_environment::dns {
 
   file { '/etc/hosts.dns':
     content => $hosts,
-    notify  => Class['dnsmasq::service'],
+    notify  => Class['dnsmasq'],
   }
 
   $nameservers = hiera('nameservers', ['8.8.8.8', '8.8.4.4'])
@@ -36,7 +36,7 @@ class ci_environment::dns {
     group   => 'root',
     mode    => '0644',
     content => template('ci_environment/resolv.conf.erb'),
-    notify  => Class['dnsmasq::service'],
+    notify  => Class['dnsmasq'],
   }
 
 }
