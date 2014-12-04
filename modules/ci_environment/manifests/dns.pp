@@ -19,6 +19,7 @@ class ci_environment::dns {
 
   file { '/etc/hosts.dns':
       content => $hosts,
+    notify  => Class['dnsmasq::service'],
   }
 
   $nameservers = hiera('nameservers', ['8.8.8.8', '8.8.4.4'])
