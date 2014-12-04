@@ -13,12 +13,12 @@ class ci_environment::dns {
   $hosts = hiera('gds_dns::server::hosts', '')
 
   dnsmasq::conf { 'internal-dns':
-      ensure  => present,
-      content => template('ci_environment/internal-dns.erb'),
+    ensure  => present,
+    content => template('ci_environment/internal-dns.erb'),
   }
 
   file { '/etc/hosts.dns':
-      content => $hosts,
+    content => $hosts,
     notify  => Class['dnsmasq::service'],
   }
 
