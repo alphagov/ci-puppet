@@ -13,12 +13,13 @@ class ci_environment::dns {
   $hosts = hiera('gds_dns::server::hosts', '')
 
   dnsmasq::conf { 'internal-dns':
-      ensure  => present,
-      content => template('ci_environment/internal-dns.erb'),
+    ensure  => present,
+    content => template('ci_environment/internal-dns.erb'),
   }
 
   file { '/etc/hosts.dns':
-      content => $hosts,
+    content => $hosts,
+    notify  => Class['dnsmasq'],
   }
 
   $nameservers = hiera('nameservers', ['8.8.8.8', '8.8.4.4'])
@@ -35,7 +36,7 @@ class ci_environment::dns {
     group   => 'root',
     mode    => '0644',
     content => template('ci_environment/resolv.conf.erb'),
-    notify  => Class['dnsmasq::service'],
+    notify  => Class['dnsmasq'],
   }
 
 }
