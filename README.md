@@ -1,5 +1,4 @@
 # ci-puppet
-This is a repo cloned from [puppet-skeleton](https://github.com/alphagov/puppet-skeleton)
 
 ## Development Workflow
 
