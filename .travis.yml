@@ -5,8 +5,7 @@ rvm:
   - 1.9.3
   - ruby-head
 env:
-  - PUPPET_VERSION="~> 3.1.0"
-  - PUPPET_VERSION="~> 3.2.0"
+  - PUPPET_VERSION="~> 3.7.1"
 matrix:
   allow_failures:
     - rvm: ruby-head
