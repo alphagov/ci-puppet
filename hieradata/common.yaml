@@ -10,7 +10,7 @@ classes:
   - locales
 
 apt::always_apt_update: true
-apt::unattended_upgrades::auto_reboot: true
+apt::unattended_upgrades::auto_reboot: false
 
 jenkins::lts: 1
 
