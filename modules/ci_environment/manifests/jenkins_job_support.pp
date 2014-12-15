@@ -46,7 +46,7 @@ class ci_environment::jenkins_job_support {
   class { 'goenv':
     global_version => '1.2.2',
   }
-  goenv::version { ['1.2.2', '1.3.1', '1.3.3']: }
+  goenv::version { ['1.2.2', '1.3.1', '1.3.3', '1.4']: }
   package { ['golang-gom', 'godep']:
     ensure => latest,
   }
