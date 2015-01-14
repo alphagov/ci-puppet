@@ -44,10 +44,6 @@ class ci_environment::base {
     'zip',
   ])
 
-  # FIXME: remove once this has run on all servers
-  rbenv::version { '1.9.3-p392':
-    ensure => absent,
-  }
   rbenv::version { '1.9.3-p484':
     bundler_version => '1.6.5'
   }
@@ -90,16 +86,6 @@ class ci_environment::base {
   }
   rbenv::alias { '2.2':
     to_version => '2.2.0'
-  }
-
-  # FIXME: remove once this is cleaned up everywhere
-  package { 'rbenv-ruby-2.1.3':
-    ensure => purged,
-  }
-  file { '/usr/lib/rbenv/versions/2.1.3':
-    ensure  => absent,
-    force   => true,
-    require => Package['rbenv-ruby-2.1.3'],
   }
 
   file { '/etc/sudoers.d/gds':
