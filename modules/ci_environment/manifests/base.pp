@@ -47,8 +47,9 @@ class ci_environment::base {
   rbenv::version { '1.9.3-p484':
     bundler_version => '1.6.5'
   }
+  # FIXME: remove once this has run on all servers
   rbenv::version { '1.9.3-p545':
-    bundler_version => '1.6.5'
+    ensure => absent,
   }
   rbenv::version { '1.9.3-p550':
     bundler_version => '1.7.4'
