@@ -84,6 +84,13 @@ class ci_environment::base {
     to_version => '2.1.4'
   }
 
+  rbenv::version { '2.2.0':
+    bundler_version => '1.7.11'
+  }
+  rbenv::alias { '2.2':
+    to_version => '2.2.0'
+  }
+
   # FIXME: remove once this is cleaned up everywhere
   package { 'rbenv-ruby-2.1.3':
     ensure => purged,
