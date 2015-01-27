@@ -41,6 +41,7 @@ class ci_environment::jenkins_job_support {
     'libgif-dev', # alphagov/screenshot-as-a-service
     'cmake', # alphagov/spotlight
     'libffi-dev', # alphagov/backdrop
+    'python-sphinx', # gds/opsmanual
   ])
 
   class { 'goenv':
