@@ -115,3 +115,4 @@ cdn_logs::cert: |
   -----END CERTIFICATE-----
 
 rabbitmq::delete_guest_user: true
+rabbitmq::package_ensure: '3.4.3-1'
