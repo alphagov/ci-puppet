@@ -67,6 +67,15 @@ class ci_environment::transition_logs {
         require     => File["${logs_processor_home}/process_transition_logs.sh"]
     }
 
+    cron { 'restart_rsyslog':
+        ensure      => present,
+        environment => 'PATH=/usr/sbin:/usr/bin:/sbin:/bin',
+        command     => 'service rsyslog restart',
+        user        => root,
+        hour        => absent,
+        minute      => 5
+    }
+
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
     ensure_packages([
         'rssh',
