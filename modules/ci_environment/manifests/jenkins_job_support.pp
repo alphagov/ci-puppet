@@ -58,7 +58,7 @@ class ci_environment::jenkins_job_support {
 
   # Needed to notify github of build statuses
   package { 'ghtools':
-    ensure   => '0.22.0',
+    ensure   => '0.23.0',
     provider => pip,
     require  => Package['python-pip'],
   }
