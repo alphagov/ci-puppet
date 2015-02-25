@@ -47,10 +47,6 @@ class ci_environment::base {
   rbenv::version { '1.9.3-p484':
     bundler_version => '1.6.5'
   }
-  # FIXME: remove once this has run on all servers
-  rbenv::version { '1.9.3-p545':
-    ensure => absent,
-  }
   rbenv::version { '1.9.3-p550':
     bundler_version => '1.7.4'
   }
@@ -60,10 +56,6 @@ class ci_environment::base {
 
   rbenv::version { '2.0.0-p353':
     bundler_version => '1.6.5'
-  }
-  # FIXME: remove once this has run on all servers
-  rbenv::version { '2.0.0-p451':
-    ensure => absent,
   }
   rbenv::version { '2.0.0-p594':
     bundler_version => '1.7.4'
@@ -78,8 +70,11 @@ class ci_environment::base {
   rbenv::version { '2.1.4':
     bundler_version => '1.7.4'
   }
+  rbenv::version { '2.1.5':
+    bundler_version => '1.8.3'
+  }
   rbenv::alias { '2.1':
-    to_version => '2.1.4'
+    to_version => '2.1.5'
   }
 
   rbenv::version { '2.2.0':
