@@ -7,11 +7,6 @@
 #  that requires them
 #
 class ci_environment::jenkins_job_support {
-  # should be used to install gems in jenkins build scripts
-  package { 'bundler':
-    ensure   => '1.1.4',
-    provider => 'gem',
-  }
 
   # add packages here that you require for builds to run in Jenkins
   ensure_packages([
@@ -32,7 +27,6 @@ class ci_environment::jenkins_job_support {
     'bzr', # needed by some Go builds
     'mercurial', # needed by some Go builds
     'libv8-dev', # Needed by things that require V8 headers
-    'vegeta', # HTTP load testing used by Router.
     'mawk-1.3.4', # Provides /opt/mawk required by pre-transition-stats
     'p7zip-full', # Provides /usr/bin/7z required by pre-transition-stats
     'libcairo2-dev', # alphagov/screenshot-as-a-service
