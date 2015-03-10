@@ -7,11 +7,6 @@
 #  that requires them
 #
 class ci_environment::jenkins_job_support {
-  # should be used to install gems in jenkins build scripts
-  package { 'bundler':
-    ensure   => '1.1.4',
-    provider => 'gem',
-  }
 
   # add packages here that you require for builds to run in Jenkins
   ensure_packages([
