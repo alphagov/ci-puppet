@@ -27,7 +27,6 @@ class ci_environment::jenkins_job_support {
     'bzr', # needed by some Go builds
     'mercurial', # needed by some Go builds
     'libv8-dev', # Needed by things that require V8 headers
-    'vegeta', # HTTP load testing used by Router.
     'mawk-1.3.4', # Provides /opt/mawk required by pre-transition-stats
     'p7zip-full', # Provides /usr/bin/7z required by pre-transition-stats
     'libcairo2-dev', # alphagov/screenshot-as-a-service
