@@ -1,182 +1,182 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    attachmentgenie/locales (1.0.2)
-      puppetlabs/stdlib (>= 2.2.1)
-    attachmentgenie/ssh (1.2.1)
-      puppetlabs/stdlib (>= 2.2.1)
-    attachmentgenie/ufw (1.1.0)
-      puppetlabs/stdlib (>= 2.2.1)
-    gdsoperations/elasticsearch (0.0.1)
-      puppetlabs/stdlib (>= 3.0.0)
-    gdsoperations/goenv (0.0.2)
-      puppetlabs/stdlib (>= 3.0.0)
-    gdsoperations/openconnect (1.0.0)
-      puppetlabs/stdlib (>= 3.0.0)
-    gdsoperations/rbenv (1.2.0)
-    nanliu/staging (0.4.1)
-    pdxcat/collectd (0.0.3)
-      puppetlabs/stdlib (>= 2.0.0)
-    puppetlabs/apt (1.3.0)
-      puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/concat (1.1.0)
-      puppetlabs/stdlib (>= 4.0.0)
-    puppetlabs/firewall (1.1.3)
-    puppetlabs/git (0.0.2)
-    puppetlabs/java (1.2.0)
-      puppetlabs/stdlib (>= 2.4.0)
-    puppetlabs/mysql (0.9.0)
-      puppetlabs/stdlib (>= 2.2.1)
-    puppetlabs/nodejs (0.4.0)
-      puppetlabs/apt (>= 0.0.3)
-      puppetlabs/stdlib (>= 2.0.0)
-    puppetlabs/postgresql (3.4.1)
-      puppetlabs/apt (< 2.0.0, >= 1.1.0)
-      puppetlabs/concat (< 2.0.0, >= 1.0.0)
-      puppetlabs/firewall (>= 0.0.4)
-      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs/stdlib (4.1.0)
-    saz/dnsmasq (1.0.1)
-    torrancew/account (0.0.5)
+    attachmentgenie-locales (1.0.2)
+      puppetlabs-stdlib (>= 2.2.1)
+    attachmentgenie-ssh (1.2.1)
+      puppetlabs-stdlib (>= 2.2.1)
+    attachmentgenie-ufw (1.1.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    gdsoperations-elasticsearch (0.0.1)
+      puppetlabs-stdlib (>= 3.0.0)
+    gdsoperations-goenv (0.0.2)
+      puppetlabs-stdlib (>= 3.0.0)
+    gdsoperations-openconnect (1.0.0)
+      puppetlabs-stdlib (>= 3.0.0)
+    gdsoperations-rbenv (1.2.0)
+    nanliu-staging (0.4.1)
+    pdxcat-collectd (0.0.3)
+      puppetlabs-stdlib (>= 2.0.0)
+    puppetlabs-apt (1.3.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-concat (1.1.0)
+      puppetlabs-stdlib (>= 4.0.0)
+    puppetlabs-firewall (1.1.3)
+    puppetlabs-git (0.0.2)
+    puppetlabs-java (1.2.0)
+      puppetlabs-stdlib (>= 2.4.0)
+    puppetlabs-mysql (0.9.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-nodejs (0.4.0)
+      puppetlabs-apt (>= 0.0.3)
+      puppetlabs-stdlib (>= 2.0.0)
+    puppetlabs-postgresql (3.4.1)
+      puppetlabs-apt (< 2.0.0, >= 1.1.0)
+      puppetlabs-concat (< 2.0.0, >= 1.0.0)
+      puppetlabs-firewall (>= 0.0.4)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-stdlib (4.1.0)
+    saz-dnsmasq (1.0.1)
+    torrancew-account (0.0.5)
 
 GIT
   remote: git://github.com/alphagov/puppet-clamav
   ref: 31af4f0c2753dd25bca3dd0c7cc69d273c4d640d
   sha: 31af4f0c2753dd25bca3dd0c7cc69d273c4d640d
   specs:
-    alphagov/clamav (0.0.1)
-      puppetlabs/stdlib (>= 3.0.0)
+    alphagov-clamav (0.0.1)
+      puppetlabs-stdlib (>= 3.0.0)
 
 GIT
   remote: git://github.com/alphagov/puppet-ext4mount.git
   ref: master
   sha: d97f99cc2801b83152b905d1285fa34e689cb499
   specs:
-    alphagov/ext4mount (0.0.1)
+    alphagov-ext4mount (0.0.1)
 
 GIT
   remote: git://github.com/alphagov/puppet-gds_accounts.git
   ref: v0.0.1
   sha: 3698859f788f95a866f2f7e0fa3cad9bcfa129b5
   specs:
-    alphagov/gds_accounts (0.0.1)
-      puppetlabs/stdlib (>= 3.0.0)
-      torrancew/account (= 0.0.5)
+    alphagov-gds_accounts (0.0.1)
+      puppetlabs-stdlib (>= 3.0.0)
+      torrancew-account (= 0.0.5)
 
 GIT
   remote: git://github.com/alphagov/puppet-harden.git
   ref: 5b27ee25e19f0c5421665246b76a13def8058e1c
   sha: 5b27ee25e19f0c5421665246b76a13def8058e1c
   specs:
-    alphagov/harden (0.0.1)
+    alphagov-harden (0.0.1)
 
 GIT
   remote: git://github.com/alphagov/puppet-jenkins.git
   ref: ca40459bea5a9dc91e12e8014c9878fcd2856ee7
   sha: ca40459bea5a9dc91e12e8014c9878fcd2856ee7
   specs:
-    alphagov/jenkins (0.2.4)
-      puppetlabs/apt (>= 0.0.3)
-      puppetlabs/stdlib (>= 2.0.0)
+    alphagov-jenkins (0.2.4)
+      puppetlabs-apt (>= 0.0.3)
+      puppetlabs-stdlib (>= 2.0.0)
 
 GIT
   remote: git://github.com/alphagov/puppet-nginx.git
   ref: 1a87dd9fb29f5f137e3d4ee42ddcf45c9054700e
   sha: 1a87dd9fb29f5f137e3d4ee42ddcf45c9054700e
   specs:
-    alphagov/nginx (0.0.1)
+    alphagov-nginx (0.0.1)
 
 GIT
   remote: git://github.com/alphagov/puppet-rsyslog.git
   ref: acf2755cda80e2ecd107ed8de4d275c383db0487
   sha: acf2755cda80e2ecd107ed8de4d275c383db0487
   specs:
-    alphagov/rsyslog (2.0.1)
+    alphagov-rsyslog (2.0.1)
 
 GIT
   remote: git://github.com/alphagov/puppet-ssl.git
   ref: 23bbb5ab57f26269acce3d4b43e643781747a551
   sha: 23bbb5ab57f26269acce3d4b43e643781747a551
   specs:
-    alphagov/ssl (0.0.1)
+    alphagov-ssl (0.0.1)
 
 GIT
   remote: git://github.com/alphagov/puppetlabs-mongodb.git
   ref: dc077a209efdf8d80fac40d40fec575b6a0949d2
   sha: dc077a209efdf8d80fac40d40fec575b6a0949d2
   specs:
-    alphagov/mongodb (0.1.0)
-      puppetlabs/apt (>= 0.0.2)
+    alphagov-mongodb (0.1.0)
+      puppetlabs-apt (>= 0.0.2)
 
 GIT
   remote: git://github.com/alphagov/puppetlabs-rabbitmq.git
   ref: strip-backslashes
   sha: a6a98e4ab722a01ca47a39ca371eccbcfa4888b6
   specs:
-    puppetlabs/rabbitmq (4.0.0)
-      nanliu/staging (>= 0.3.1)
-      puppetlabs/apt (>= 1.0.0)
-      puppetlabs/stdlib (>= 2.0.0)
+    puppetlabs-rabbitmq (4.0.0)
+      nanliu-staging (>= 0.3.1)
+      puppetlabs-apt (>= 1.0.0)
+      puppetlabs-stdlib (>= 2.0.0)
 
 GIT
   remote: git://github.com/gds-operations/puppet-graphite.git
   ref: 45663a5cd8ed72d7cb8d19e535136cacd893689d
   sha: 45663a5cd8ed72d7cb8d19e535136cacd893689d
   specs:
-    gds/graphite (0.1.0)
-      puppetlabs/stdlib (>= 2.5)
+    gds-graphite (0.1.0)
+      puppetlabs-stdlib (>= 2.5)
 
 GIT
   remote: git://github.com/puppetlabs/puppetlabs-lvm.git
   ref: master
   sha: b27bccecca2b9d527578c933221ffe361c6dce87
   specs:
-    puppetlabs/lvm (0.3.1)
-      puppetlabs/stdlib (~> 4.1.0)
+    puppetlabs-lvm (0.3.1)
+      puppetlabs-stdlib (~> 4.1.0)
 
 GIT
   remote: git://github.com/valentinroca/puppet-fail2ban
   ref: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
   sha: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
   specs:
-    valentinroca/fail2ban (1.1.0)
+    valentinroca-fail2ban (1.1.0)
 
 GIT
   remote: git@github.com:alphagov/puppet-duplicity.git
   ref: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
   sha: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
   specs:
-    alphagov/duplicity (0.0.1)
+    alphagov-duplicity (0.0.1)
 
 DEPENDENCIES
-  alphagov/clamav (>= 0)
-  alphagov/duplicity (>= 0)
-  alphagov/ext4mount (>= 0)
-  alphagov/gds_accounts (>= 0)
-  alphagov/harden (>= 0)
-  alphagov/jenkins (>= 0)
-  alphagov/mongodb (>= 0)
-  alphagov/nginx (>= 0)
-  alphagov/rsyslog (>= 0)
-  alphagov/ssl (>= 0)
-  attachmentgenie/locales (= 1.0.2)
-  attachmentgenie/ssh (= 1.2.1)
-  attachmentgenie/ufw (= 1.1.0)
-  gds/graphite (>= 0)
-  gdsoperations/elasticsearch (= 0.0.1)
-  gdsoperations/goenv (= 0.0.2)
-  gdsoperations/openconnect (>= 0)
-  gdsoperations/rbenv (= 1.2.0)
-  pdxcat/collectd (~> 0.0)
-  puppetlabs/apt (~> 1.3.0)
-  puppetlabs/git (= 0.0.2)
-  puppetlabs/java (>= 0)
-  puppetlabs/lvm (>= 0)
-  puppetlabs/mysql (= 0.9.0)
-  puppetlabs/nodejs (= 0.4.0)
-  puppetlabs/postgresql (>= 0)
-  puppetlabs/rabbitmq (>= 0)
-  puppetlabs/stdlib (~> 4.0)
-  saz/dnsmasq (= 1.0.1)
-  valentinroca/fail2ban (>= 0)
+  alphagov-clamav (>= 0)
+  alphagov-duplicity (>= 0)
+  alphagov-ext4mount (>= 0)
+  alphagov-gds_accounts (>= 0)
+  alphagov-harden (>= 0)
+  alphagov-jenkins (>= 0)
+  alphagov-mongodb (>= 0)
+  alphagov-nginx (>= 0)
+  alphagov-rsyslog (>= 0)
+  alphagov-ssl (>= 0)
+  attachmentgenie-locales (= 1.0.2)
+  attachmentgenie-ssh (= 1.2.1)
+  attachmentgenie-ufw (= 1.1.0)
+  gds-graphite (>= 0)
+  gdsoperations-elasticsearch (= 0.0.1)
+  gdsoperations-goenv (= 0.0.2)
+  gdsoperations-openconnect (>= 0)
+  gdsoperations-rbenv (= 1.2.0)
+  pdxcat-collectd (~> 0.0)
+  puppetlabs-apt (~> 1.3.0)
+  puppetlabs-git (= 0.0.2)
+  puppetlabs-java (>= 0)
+  puppetlabs-lvm (>= 0)
+  puppetlabs-mysql (= 0.9.0)
+  puppetlabs-nodejs (= 0.4.0)
+  puppetlabs-postgresql (>= 0)
+  puppetlabs-rabbitmq (>= 0)
+  puppetlabs-stdlib (~> 4.0)
+  saz-dnsmasq (= 1.0.1)
+  valentinroca-fail2ban (>= 0)
 
