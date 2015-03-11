@@ -12,6 +12,9 @@ classes:
 apt::always_apt_update: true
 apt::unattended_upgrades::auto_reboot: false
 
+gds_elasticsearch::version: '0.90.12'
+gds_elasticsearch::number_of_replicas: 0
+
 jenkins::lts: 1
 
 locales::default_value: en_GB.UTF-8
