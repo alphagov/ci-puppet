@@ -26,7 +26,6 @@ class ci_environment::jenkins_job_support {
     'libqtwebkit-dev', # Needed by capybara-webkit (Publisher)
     'bzr', # needed by some Go builds
     'mercurial', # needed by some Go builds
-    'libv8-dev', # Needed by things that require V8 headers
     'mawk-1.3.4', # Provides /opt/mawk required by pre-transition-stats
     'p7zip-full', # Provides /usr/bin/7z required by pre-transition-stats
     'libcairo2-dev', # alphagov/screenshot-as-a-service
@@ -36,6 +35,15 @@ class ci_environment::jenkins_job_support {
     'cmake', # alphagov/spotlight
     'libffi-dev', # alphagov/backdrop
   ])
+
+  # libv8 development headers.  Needed by some gems (eg therubyracer)
+  if $::lsbdistcodename == 'precise' {
+    ensure_packages(['libv8-dev'])
+  } else {
+    # On trusty, npm indirectly depends on libv8-3.14-dev which conflicts with
+    # libv8-dev (even though they're both 3.14)
+    ensure_packages(['libv8-3.14-dev'])
+  }
 
   class { 'goenv':
     global_version => '1.2.2',
