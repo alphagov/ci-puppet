@@ -48,6 +48,13 @@ GIT
       puppetlabs-stdlib (>= 3.0.0)
 
 GIT
+  remote: git://github.com/alphagov/puppet-duplicity.git
+  ref: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
+  sha: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
+  specs:
+    alphagov-duplicity (0.0.1)
+
+GIT
   remote: git://github.com/alphagov/puppet-ext4mount.git
   ref: master
   sha: d97f99cc2801b83152b905d1285fa34e689cb499
@@ -140,13 +147,6 @@ GIT
   sha: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
   specs:
     valentinroca-fail2ban (1.1.0)
-
-GIT
-  remote: git@github.com:alphagov/puppet-duplicity.git
-  ref: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
-  sha: b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9
-  specs:
-    alphagov-duplicity (0.0.1)
 
 DEPENDENCIES
   alphagov-clamav (>= 0)
