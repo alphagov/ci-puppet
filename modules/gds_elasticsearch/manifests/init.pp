@@ -46,7 +46,7 @@ class gds_elasticsearch (
     onlyif      => '/usr/bin/test -f /etc/init.d/elasticsearch',
     command     => '/etc/init.d/elasticsearch stop && /bin/rm -f /etc/init.d/elasticsearch && /usr/sbin/update-rc.d elasticsearch remove',
     before      => Elasticsearch::Instance[$::fqdn],
-    require     => Class['elasticsearch'],
+    require     => Package['elasticsearch'],
   }
 
   # FIXME: Remove this once it's run everywhere
