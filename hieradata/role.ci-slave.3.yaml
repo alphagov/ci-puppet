@@ -1,2 +1,4 @@
 ---
-jenkins::slave::labels: '"elasticsearch-0.90 mongodb-2.4 postgresql-9.3"'
+jenkins::slave::labels: '"elasticsearch-1.4 mongodb-2.4 postgresql-9.3"'
+
+gds_elasticsearch::version: '1.4.2'
