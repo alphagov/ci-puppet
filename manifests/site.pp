@@ -2,8 +2,16 @@
 $machine_role = regsubst($::clientcert, '^(.*)-\d\..*$', '\1')
 $machine_id = regsubst($::clientcert, '^.*-(\d)\..*$', '\1')
 node default {
-  ensure_packages(['libaugeas-ruby'])
-  Package['libaugeas-ruby'] -> Augeas <| |>
+  if $::lsbdistcodename == 'precise' {
+    # on precise the libaugeas-ruby package is an alias for libaugeas-ruby1.8
+    # which will pull in ruby1.8 as the default system ruby interpreter.  This
+    # breaks many things.
+    $ruby_augeas_package = 'libaugeas-ruby1.9.1'
+  } else {
+    $ruby_augeas_package = 'libaugeas-ruby'
+  }
+  ensure_packages([$ruby_augeas_package])
+  Package[$ruby_augeas_package] -> Augeas <| |>
 
   hiera_include('classes')
 }
