@@ -2,6 +2,9 @@
 $machine_role = regsubst($::clientcert, '^(.*)-\d\..*$', '\1')
 $machine_id = regsubst($::clientcert, '^.*-(\d)\..*$', '\1')
 node default {
+  ensure_packages(['libaugeas-ruby'])
+  Package['libaugeas-ruby'] -> Augeas <| |>
+
   hiera_include('classes')
 }
 
