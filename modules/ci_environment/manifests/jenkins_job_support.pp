@@ -88,11 +88,6 @@ class ci_environment::jenkins_job_support {
     require => [Exec['set-licence-selected'], Exec['set-licence-seen']],
   }
 
-  # FIXME: remove this once it's run everywhere.
-  apt::source { 'elasticsearch':
-    ensure => absent,
-  }
-
   include gds_elasticsearch
 
   class { 'redis':

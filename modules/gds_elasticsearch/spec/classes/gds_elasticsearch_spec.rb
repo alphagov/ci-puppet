@@ -2,6 +2,7 @@ require_relative '../../../../spec_helper'
 
 describe 'gds_elasticsearch', :type => :class do
   let(:facts) {{
+    :lsbdistid => 'ubuntu',
     :operatingsystem => 'Ubuntu',
     :kernel => 'Linux',
   }}
