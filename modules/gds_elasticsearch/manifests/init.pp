@@ -88,6 +88,7 @@ class gds_elasticsearch (
     },
     datadir       => '/mnt/elasticsearch',
     init_defaults => {
+      'JAVA_HOME'    => '/usr/lib/jvm/default-java',
       'ES_HEAP_SIZE' => $heap_size,
     },
   }
