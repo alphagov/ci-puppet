@@ -1,4 +1,4 @@
 ---
-jenkins::slave::labels: '"mongodb-2.4 rabbitmq java6"'
+jenkins::slave::labels: '"elasticsearch-0.90 mongodb-2.4 rabbitmq java6"'
 
 java::package: 'openjdk-6-jdk'
