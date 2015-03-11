@@ -1,6 +1,7 @@
 language: ruby
 # Ignore lock file to facilitate matrix builds.
 before_install: rm Gemfile.lock
+before_script: bundle exec librarian-puppet install
 rvm:
   - 1.9.3
   - ruby-head
