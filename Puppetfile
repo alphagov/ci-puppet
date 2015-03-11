@@ -22,7 +22,7 @@ mod 'saz/dnsmasq',                 '1.0.1'
 
 mod 'alphagov/clamav',        :git => 'git://github.com/alphagov/puppet-clamav',
                               :ref => '31af4f0c2753dd25bca3dd0c7cc69d273c4d640d'
-mod 'alphagov/duplicity',     :git => 'git@github.com:alphagov/puppet-duplicity.git',
+mod 'alphagov/duplicity',     :git => 'git://github.com/alphagov/puppet-duplicity.git',
                               :ref => 'b9ea2e67ed1bb293fc3e13d4ba20ba3fc0f199f9'
 mod 'alphagov/ext4mount',     :git => 'git://github.com/alphagov/puppet-ext4mount.git'
 mod 'valentinroca/fail2ban',  :git => 'git://github.com/valentinroca/puppet-fail2ban',
