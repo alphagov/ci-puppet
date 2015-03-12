@@ -13,6 +13,7 @@ apt::always_apt_update: true
 apt::purge_sources_list_d: true
 apt::unattended_upgrades::auto_reboot: false
 
+# Version potentially overridden on individual ci-slave machines
 gds_elasticsearch::version: '0.90.12'
 gds_elasticsearch::number_of_replicas: 0
 
