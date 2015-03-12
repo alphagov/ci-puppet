@@ -96,6 +96,16 @@ class ci_environment::jenkins_job_support {
     require => [Exec['set-licence-selected'], Exec['set-licence-seen']],
   }
 
+  # FIXME: remove once this has run everywhere.
+  package { [
+      'openjdk-6-jdk',
+      'openjsk-6-jre',
+      'openjdk-6-jre-headless',
+      'openjdk-6-jre-lib',
+    ]:
+      ensure => purged;
+  }
+
   include gds_elasticsearch
 
   class { 'redis':
