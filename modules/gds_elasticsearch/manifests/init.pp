@@ -49,23 +49,6 @@ class gds_elasticsearch (
     require     => Package['elasticsearch'],
   }
 
-  # FIXME: Remove this once it's run everywhere
-  exec {"stop_old_elasticsearch-${cluster_name}_service":
-    command => "service elasticsearch-${cluster_name} stop || /bin/true",
-    onlyif  => "test -f /etc/init/elasticsearch-${cluster_name}.conf",
-  }
-  # FIXME: Remove this once it's run everywhere
-  file { "/etc/init/elasticsearch-${cluster_name}.conf":
-    ensure  => absent,
-    require => Exec["stop_old_elasticsearch-${cluster_name}_service"],
-    before  => Elasticsearch::Instance[$::fqdn],
-  }
-  # FIXME: Remove this once it's run everywhere
-  file { "/var/lib/elasticsearch-${cluster_name}":
-    ensure => absent,
-    force  => true,
-  }
-
   elasticsearch::instance { $::fqdn:
     config        => {
       'cluster.name'             => $cluster_name,
