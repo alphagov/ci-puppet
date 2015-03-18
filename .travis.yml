@@ -2,3 +2,6 @@ language: ruby
 before_script: bundle exec librarian-puppet install
 rvm:
   - 1.9.3
+notifications:
+  email:
+    on_success: never
