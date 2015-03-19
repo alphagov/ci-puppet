@@ -17,11 +17,12 @@ class ci_environment::jenkins_master (
   validate_string($github_enterprise_cert, $jenkins_servername, $jenkins_home)
   validate_array($jenkins_serveraliases)
 
+  include java
   include jenkins
   include jenkins_user
   include jenkins_job_support
 
-  Class['jenkins'] -> Class['jenkins_user']
+  Class['java'] -> Class['jenkins'] -> Class['jenkins_user']
   Package <| title == 'jenkins' |> -> Jenkins::Plugin <| |>
 
   package {'ssl-cert':
