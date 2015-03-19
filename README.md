@@ -15,6 +15,17 @@
 - ...
 - Profit!
 
+### Oracle Java 7 "fun"
+
+The Oracle Java 7 installer needs to be preseeded with the oracle tarball. If
+jdk-7u9-linux-x64.tar.gz is present in the `vendor` folder, the vagrant
+bootstrap script will copy it into the necessary location before provisioning.
+
+Due to Oracle's licence terms we can't commit this tarball to this (public)
+repository, nor can we make it available at a download URL that we make public,
+so determining where to download this tarball from is left as an exercise for
+the reader.
+
 ## Provisioning a new environment or a new machine
 
 See the [ci-deployment][] repository [README][] for instructions.

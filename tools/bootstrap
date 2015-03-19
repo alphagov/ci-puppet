@@ -70,6 +70,10 @@ main() {
   if [ "$1" != "unset" ]; then
     fix_hostname $1
   fi
+  if [ -f /vagrant/vendor/jdk-7u9-linux-x64.tar.gz ]; then
+    mkdir -p /var/cache/oracle-jdk7-installer
+    cp /vagrant/vendor/jdk-7u9-linux-x64.tar.gz /var/cache/oracle-jdk7-installer
+  fi
 }
 
 if [ $# -eq 1 ]; then
