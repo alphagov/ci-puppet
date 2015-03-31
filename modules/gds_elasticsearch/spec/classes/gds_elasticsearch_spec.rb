@@ -2,6 +2,7 @@ require_relative '../../../../spec_helper'
 
 describe 'gds_elasticsearch', :type => :class do
   let(:facts) {{
+    :fqdn => 'test.example.com',
     :lsbdistid => 'ubuntu',
     :operatingsystem => 'Ubuntu',
     :kernel => 'Linux',
@@ -40,5 +41,30 @@ describe 'gds_elasticsearch', :type => :class do
     end
 
     it { should contain_class('elasticsearch').with_manage_repo(false) }
+  end
+
+  describe "enabling dynamic scripting" do
+    let(:params) {{}}
+
+    it "should not be added to 0.90" do
+      params[:version] = '0.90.3'
+
+      instance = subject.resource('elasticsearch::instance', facts[:fqdn])
+      expect(instance[:config]).not_to have_key('script.groovy.sandbox.enabled')
+    end
+
+    it "should not be added for 1.4.2" do
+      params[:version] = '1.4.2'
+
+      instance = subject.resource('elasticsearch::instance', facts[:fqdn])
+      expect(instance[:config]).not_to have_key('script.groovy.sandbox.enabled')
+    end
+
+    it "should be added for 1.4.3" do
+      params[:version] = '1.4.3'
+
+      instance = subject.resource('elasticsearch::instance', facts[:fqdn])
+      expect(instance[:config]['script.groovy.sandbox.enabled']).to eq(true)
+    end
   end
 end
