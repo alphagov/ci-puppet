@@ -73,8 +73,11 @@ class ci_environment::base {
   rbenv::version { '2.1.5':
     bundler_version => '1.8.3'
   }
+  rbenv::version { '2.1.6':
+    bundler_version => '1.9.4',
+  }
   rbenv::alias { '2.1':
-    to_version => '2.1.5'
+    to_version => '2.1.6'
   }
 
   rbenv::version { '2.2.0':
