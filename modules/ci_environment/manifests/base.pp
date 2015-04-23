@@ -80,9 +80,11 @@ class ci_environment::base {
     to_version => '2.1.6'
   }
 
+  # FIXME: remove once purged everywhere
   rbenv::version { '2.2.0':
-    bundler_version => '1.7.11'
+    ensure => absent,
   }
+
   rbenv::version { '2.2.1':
     bundler_version => '1.8.3'
   }
