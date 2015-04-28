@@ -1,4 +1,6 @@
 ---
+apt::unattended_upgrades::auto_reboot: true
+
 classes:
  - git
  - ci_environment::jenkins_slave
