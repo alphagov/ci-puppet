@@ -48,6 +48,10 @@ class ci_environment::jenkins_job_support::mysql {
       'efg_test2',
       'efg_test3',
       'efg_test4',
+      'efg_test5',
+      'efg_test6',
+      'efg_test7',
+      'efg_test8',
     ]:
       user     => 'efg',
       password => 'efg',
