@@ -57,11 +57,12 @@ class ci_environment::base {
   rbenv::version { '2.0.0-p353':
     bundler_version => '1.6.5'
   }
+  # FIXME: remove once purged everywhere
   rbenv::version { '2.0.0-p594':
-    bundler_version => '1.7.4'
+    ensure => absent,
   }
   rbenv::alias { '2.0.0':
-    to_version => '2.0.0-p594',
+    to_version => '2.0.0-p353',
   }
 
   rbenv::version { '2.1.2':
@@ -81,12 +82,8 @@ class ci_environment::base {
   }
 
   # FIXME: remove once purged everywhere
-  rbenv::version { '2.2.0':
-    ensure => absent,
-  }
-
   rbenv::version { '2.2.1':
-    bundler_version => '1.8.3'
+    ensure => absent,
   }
   rbenv::version { '2.2.2':
     bundler_version => '1.9.4',
