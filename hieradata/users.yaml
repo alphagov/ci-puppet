@@ -67,9 +67,6 @@ gds_accounts::accounts:
     ppotter:
         comment: Philip Potter
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQCsYvhPkvKma2RwWVwUNJ2fcoNjlObibUka0fl5WcctTokz8RISDkOAPjz+L0QmGsq/Dhgn/mbspKFyNKvQsujeooEpaO+cjYPXoUF1NTxhbUrMEu2uE+CPoj4zPbAZ9A6LdxkL13F3gJwZi9k8K9+6AnJeB4IrCLS5KHRiL+tBZMLPvKnn54M6PCfkWJH6zVO92plFTpRX1W4GanUwYGTemFX0qUwFgZu9OJvGiR+ZQKJMQ2Y3O+IMHv1KusfBrO+Q4iWn+A5VcJRoxml3lr0fYlbaetCpszkaY5HbQsLPDGtvsN1jXj2ghVe2ZbK8SKe13g+LSqYxmIX5qCAoEi+J
-    psd:
-        comment: Paul Downey
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA7r1lq8GxI3MtOz+38NcQEaIHKBM9lmgLLoEi3yHpP2LGld6H5UeAxg12sjsVsWsEwany1xpWI+kE7HLwrdXim4DwObAypgr92SlNUClz8iVUZmh0K/Y3gXvTwfM5/hqwtXrObm4i9xNqh2wCoa5HaWqRF9g1jZm+asMnW4r4FQ0=
     robyoung:
         comment: Rob Young
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDNSWWdnRGOEO0lfF0dwLwgdkgoXyRjpjQBEG2CtnccRctQUA+xMZ4Wf+RO4BLdevfKG3Ac7mlvuyM8VIU8n6zp+yvOf73eUJMbWAESqrzWer0KvoFtOZTvlOiKMFXxccI1nRxOn239nB3XBXqZQ5H02R10/vqOn6enAnPP47OCqtmwoO+tv4vh5D0rzmDekiiciy/u1ensQI5JrBHSB4QbNlTOufRqs+Kp7aGQSpif02ualkj8/FO/Onv8RWXnl2TtDfxU7LNi0aw/8h2RdZWxC8i52LtiJOiKLB6cwc6D9j7G4d90DL3Y2zY3OJOWR8JYrHgHz+iXR9l96XnJJ/z7
