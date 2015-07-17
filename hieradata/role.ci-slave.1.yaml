@@ -1,4 +1,4 @@
 ---
-jenkins::slave::labels: '"elasticsearch-1.4 mongodb-2.4"'
+jenkins::slave::labels: '"elasticsearch-1.4 mongodb-2.4 ubuntu-precise"'
 
 gds_elasticsearch::version: '1.4.4'
