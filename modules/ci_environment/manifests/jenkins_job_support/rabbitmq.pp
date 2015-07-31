@@ -15,6 +15,8 @@ class ci_environment::jenkins_job_support::rabbitmq {
     'govuk_crawler_worker':
       password => 'govuk_crawler_worker',
       tags     => ['monitoring'];
+    'publishing_api':
+      password => 'publishing_api';
   }
 
   rabbitmq_user_permissions {
@@ -38,6 +40,10 @@ class ci_environment::jenkins_job_support::rabbitmq {
       configure_permission => '^govuk_crawler_worker.*',
       read_permission      => '^govuk_crawler_worker.*',
       write_permission     => '^govuk_crawler_worker.*';
+    'publishing_api@/':
+      configure_permission => '^amq\.gen.*$',
+      read_permission      => '^(amq\.gen.*|published_documents_test)$',
+      write_permission     => '^(amq\.gen.*|published_documents_test)$';
   }
 
   gds_rabbitmq::exchange {
