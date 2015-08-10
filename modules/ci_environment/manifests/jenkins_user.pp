@@ -9,7 +9,10 @@ class ci_environment::jenkins_user (
   $npm_auth,
   $npm_email,
   $rubygems_api_key,
-  $gemfury_api_key
+  $gemfury_api_key,
+  $pypi_username,
+  $pypi_test_password,
+  $pypi_live_password
 ) {
   validate_string($jenkins_home)
 
@@ -52,6 +55,14 @@ class ci_environment::jenkins_user (
     mode    => '0600',
     content => template('ci_environment/dotgem/credentials.erb'),
     require => File['jenkins_dotgem_dir'],
+  }
+
+  file {"${jenkins_home}/.pypirc":
+    ensure  => present,
+    owner   => 'jenkins',
+    group   => 'jenkins',
+    mode    => '0600',
+    content => template('ci_environment/pypirc.erb'),
   }
 
   file {"${jenkins_home}/.gem/gemfury":
