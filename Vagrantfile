@@ -45,6 +45,8 @@ def vagrant_config(config, version)
     config.vm.box     = "puppetlabs/ubuntu-14.04-64-puppet"
   end
 
+  config.vm.box_version = '1.0.1'
+
   config.vm.provision :shell, :path => 'tools/bootstrap'
   config.vm.provision :puppet do |puppet|
     puppet.manifest_file  = "site.pp"
