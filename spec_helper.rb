@@ -1,6 +1,7 @@
 require 'csv'
 require 'rspec-puppet'
 require 'puppet'
+require 'hiera-puppet-helper'
 
 HERE = File.expand_path(File.dirname(__FILE__))
 

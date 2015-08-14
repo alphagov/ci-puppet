@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/bobtfish/hiera-puppet-helper.git
+  revision: 155f132c0b225db4ff64db49f17d6c5bf354b871
+  specs:
+    hiera-puppet-helper (2.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,6 +87,7 @@ PLATFORMS
 
 DEPENDENCIES
   facter (= 2.2.0)
+  hiera-puppet-helper!
   librarian-puppet (~> 2.0)
   parallel (~> 1.0.0)
   parallel_tests (~> 0.16.10)
