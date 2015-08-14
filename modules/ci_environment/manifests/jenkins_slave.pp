@@ -6,10 +6,17 @@
 #
 class ci_environment::jenkins_slave (
   $jenkins_home,
+  $labels = []
 ) {
+  validate_array($labels)
 
   include java
-  include jenkins::slave
+
+  $labels_with_distribution = concat($labels, [downcase("${::lsbdistid}-${::lsbdistcodename}")])
+  class { 'jenkins::slave':
+    labels => sprintf('\'%s\'', join($labels_with_distribution, ' ')),
+  }
+
   include jenkins_job_support
 
   class {'github_gds_cert':

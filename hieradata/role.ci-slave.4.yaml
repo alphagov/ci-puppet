@@ -1,2 +1,5 @@
 ---
-jenkins::slave::labels: '"elasticsearch-1.4 mongodb-2.4 cdn-acceptance-test ubuntu-precise"'
+ci_environment::jenkins_slave::labels:
+  - 'elasticsearch-1.4'
+  - 'mongodb-2.4'
+  - 'cdn-acceptance-test'
