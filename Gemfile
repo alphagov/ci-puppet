@@ -17,5 +17,6 @@ gem 'puppet-syntax'
 gem 'puppet-lint', '~> 0.3.0'
 gem 'rspec-puppet', '~> 0.1.0'
 gem 'puppetlabs_spec_helper', '~> 0.4.0'
+gem 'hiera-puppet-helper', :git => 'git://github.com/bobtfish/hiera-puppet-helper.git'
 gem "parallel_tests", "~> 0.16.10"
 gem "parallel", "~> 1.0.0"
