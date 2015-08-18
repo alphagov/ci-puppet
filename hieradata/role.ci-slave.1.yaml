@@ -2,3 +2,4 @@
 ci_environment::jenkins_slave::labels:
   - 'elasticsearch-1.4'
   - 'mongodb-2.4'
+  - 'postgresql-9.3'
