@@ -76,9 +76,7 @@ class ci_environment::transition_logs {
         minute      => 5
     }
 
-    $accounts = hiera('ci_environment::transition_logs::rssh_users')
     ensure_packages([
-        'rssh',
         # Provides /opt/mawk required by pre-transition-stats for processing logs
         'mawk-1.3.4',
         # We need to decompress some 7zipped agency logs
@@ -86,19 +84,6 @@ class ci_environment::transition_logs {
         'python-paramiko',
         'python-gobject-2'
     ])
-    create_resources('ci_environment::transition_logs::remote_users', $accounts)
-
-    file {'/etc/rssh.conf':
-        ensure  => present,
-        content => template('ci_environment/etc/rssh.conf.erb'),
-    }
-
-    file {'/usr/lib/rssh/rssh_chroot_helper':
-        ensure => present,
-        mode   => '4775',
-    }
-
-    Package['rssh'] -> File['/etc/rssh.conf'] -> File['/usr/lib/rssh/rssh_chroot_helper']
 
     class { 'rsyslog':
       log_user        => 'syslog',
