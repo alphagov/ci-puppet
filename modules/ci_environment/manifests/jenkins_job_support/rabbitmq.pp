@@ -5,7 +5,8 @@ class ci_environment::jenkins_job_support::rabbitmq {
 
   rabbitmq_user {
     'content_store':
-      password => 'content_store';
+      # FIXME: remove once this has run.
+      ensure => absent;
     'content_register_test':
       password => 'content_register';
     'email_alert_service_test':
@@ -21,9 +22,8 @@ class ci_environment::jenkins_job_support::rabbitmq {
 
   rabbitmq_user_permissions {
     'content_store@/':
-      configure_permission => '^amq\.gen.*$',
-      read_permission      => '^(amq\.gen.*|published_documents_test)$',
-      write_permission     => '^(amq\.gen.*|published_documents_test)$';
+      # FIXME: remove once this has run.
+      ensure => absent;
     'content_register_test@/':
       configure_permission => '^(amq\.gen.*|content_register_test)$',
       read_permission      => '^(amq\.gen.*|content_register_test|content_register_published_documents_test_exchange)$',
