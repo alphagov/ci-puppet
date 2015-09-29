@@ -82,6 +82,6 @@ jenkins::plugin_hash:
     build-pipeline-plugin:
         version: "1.3.3"
     github-oauth:
-        version: "0.14"
+        version: "0.22"
     rebuild:
         version: "1.22"
