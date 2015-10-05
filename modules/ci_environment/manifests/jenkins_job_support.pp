@@ -45,7 +45,7 @@ class ci_environment::jenkins_job_support {
   }
 
   class { 'goenv':
-    global_version => '1.4.2',
+    global_version => '1.5.1',
   }
   goenv::version { ['1.3.3', '1.4.2', '1.4.3', '1.5.1']: }
   # FIXME: Remove once cleaned up everywhere.
