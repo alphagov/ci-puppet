@@ -33,6 +33,10 @@ class ci_environment::jenkins_job_support {
     'libgif-dev', # alphagov/screenshot-as-a-service
     'cmake', # alphagov/spotlight
     'libffi-dev', # alphagov/backdrop
+    'binutils', # alphagov/mapit
+    'libproj-dev', # alphagov/mapit
+    'gdal-bin', # alphagov/mapit
+    'libgdal-dev', # alphagov/mapit
   ])
 
   # libv8 development headers.  Needed by some gems (eg therubyracer)
