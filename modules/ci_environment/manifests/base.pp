@@ -54,14 +54,6 @@ class ci_environment::base {
     to_version => '1.9.3-p550',
   }
 
-  # FIXME: remove these once deployed everywhere.
-  rbenv::version { '2.0.0-p353':
-    ensure => absent,
-  }
-  file { "${rbenv::params::rbenv_root}/versions/2.0.0":
-    ensure => absent,
-  }
-
   rbenv::version { '2.1.2':
     bundler_version => '1.6.5',
   }
