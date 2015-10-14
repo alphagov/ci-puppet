@@ -3,6 +3,7 @@ classes:
  - git
  - ci_environment::jenkins_master
  - ci_environment::firewall_config::jenkins_master
+ - pact_broker
 
 ci_environment::jenkins_user::jenkins_home: /var/lib/jenkins
 ci_environment::jenkins_master::jenkins_home: /var/lib/jenkins
