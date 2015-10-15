@@ -47,5 +47,6 @@ class pact_broker::app (
 
   file { "${app_root}/config.ru":
     content => template('pact_broker/config.ru.erb'),
+    mode    => '0600',
   }
 }
