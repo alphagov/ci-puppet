@@ -33,12 +33,13 @@ class pact_broker::app (
 
   # bash -l used to pick up environment (including rbenv setup)
   exec { 'bash -l -c "bundle install --path vendor/bundle"':
-    cwd       => $app_root,
-    user      => $user,
-    path      => '/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin',
-    creates   => "${app_root}/Gemfile.lock",
-    require   => Rbenv::Version[$ruby_version],
-    subscribe => File["${app_root}/Gemfile"],
+    cwd         => $app_root,
+    user        => $user,
+    path        => '/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin',
+    environment => 'TMP=/tmp',
+    creates     => "${app_root}/Gemfile.lock",
+    require     => Rbenv::Version[$ruby_version],
+    subscribe   => File["${app_root}/Gemfile"],
   }
 
   file { "${app_root}/config.ru":
