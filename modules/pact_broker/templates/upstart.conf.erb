@@ -11,7 +11,7 @@ respawn
 respawn limit 5 20
 
 script
-  cd <%= @deploy_dir %>
+  cd <%= @deploy_dir %>/app
   exec sudo -u <%= @user %> -E \
     exec bundle exec unicorn -c unicorn.rb \
     >>/var/log/pact_broker.log \

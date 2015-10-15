@@ -40,7 +40,6 @@ class pact_broker (
 ) {
 
   # vHost
-
   nginx::vhost::proxy  { $vhost:
     ssl           => true,
     ssl_redirect  => true,
@@ -51,34 +50,25 @@ class pact_broker (
   }
 
   # User
-
   user { $user:
     home       => $deploy_dir,
     managehome => true,
   }
 
   # Application
-
-  file { "${deploy_dir}/Gemfile":
-    source => 'puppet:///modules/pact_broker/Gemfile',
-    owner  => $user,
-    mode   => '0644',
+  class { 'pact_broker::app':
+    app_root    => "${deploy_dir}/app",
+    user        => $user,
+    db_user     => $db_user,
+    db_password => $db_password,
+    db_name     => $db_name,
+    require     => User[$user],
   }
 
-  exec { 'bundle install --path vendor/bundle':
-    cwd       => $deploy_dir,
-    user      => $user,
-    path      => '/usr/lib/rbenv/shims:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin',
-    creates   => "${deploy_dir}/Gemfile.lock",
-    subscribe => File["${deploy_dir}/Gemfile"],
-    notify    => Service['pact-broker'],
-  }
-
-  file { "${deploy_dir}/config.ru":
-    content => template('pact_broker/config.ru.erb'),
-    owner   => $user,
-    mode    => '0644',
-    notify  => Service['pact-broker'],
+  # Database
+  postgresql::server::db { $db_name:
+    user     => $db_user,
+    password => $db_password,
   }
 
   # Service
@@ -109,12 +99,4 @@ class pact_broker (
     enable => true,
   }
 
-  # Database
-
-  include postgresql::lib::devel
-
-  postgresql::server::db { $db_name:
-    user     => $db_user,
-    password => $db_password,
-  }
 }
