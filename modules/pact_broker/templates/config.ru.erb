@@ -21,6 +21,7 @@ app = PactBroker::App.new do | config |
   # config.log_dir = "./log"
   # config.auto_migrate_db = true
   # config.use_hal_browser = true
+  config.logger = Logger.new($stdout)
   config.database_connection = Sequel.connect(db_url, :encoding => 'utf8', :logger => config.logger)
 end
 
