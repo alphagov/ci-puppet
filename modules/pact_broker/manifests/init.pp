@@ -27,6 +27,11 @@
 # [*db_name*]
 #   The database user, password and database name to use.
 #
+# [*auth_user*]
+# [*auth_password*]
+#   The HTTP Basic Auth user and password to be configured for all write
+#   requests (all non-GET requests) to the app.
+#
 class pact_broker (
   $port = 3112,
   $vhost = 'pact-broker',
@@ -37,6 +42,8 @@ class pact_broker (
   $db_user = 'pact_broker',
   $db_password,
   $db_name = 'pact_broker',
+  $auth_user = 'pact_ci',
+  $auth_password,
 ) {
 
   # vHost
@@ -57,12 +64,14 @@ class pact_broker (
 
   # Application
   class { 'pact_broker::app':
-    app_root    => "${deploy_dir}/app",
-    user        => $user,
-    db_user     => $db_user,
-    db_password => $db_password,
-    db_name     => $db_name,
-    require     => User[$user],
+    app_root      => "${deploy_dir}/app",
+    user          => $user,
+    db_user       => $db_user,
+    db_password   => $db_password,
+    db_name       => $db_name,
+    auth_user     => $auth_user,
+    auth_password => $auth_password,
+    require       => User[$user],
   }
 
   # Database

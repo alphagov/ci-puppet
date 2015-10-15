@@ -16,6 +16,19 @@ db_url = "postgres://<%= @db_user %>:<%= CGI.escape(@db_password) %>@localhost/<
 # Have a look at the Sequel documentation to make decisions about things like connection pooling
 # and connection validation.
 
+class NonGetBasicAuth < Rack::Auth::Basic
+  def call(env)
+    if ['GET', 'HEAD'].include?(env['REQUEST_METHOD'])
+      return @app.call(env)
+    end
+    super
+  end
+end
+
+use NonGetBasicAuth, "Restricted write access" do |username, password|
+  username == "<%= @auth_user %>" && password == "<%= @auth_password %>"
+end
+
 app = PactBroker::App.new do | config |
   # change these from their default values if desired
   # config.log_dir = "./log"

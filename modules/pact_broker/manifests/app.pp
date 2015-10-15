@@ -8,6 +8,8 @@ class pact_broker::app (
   $db_user,
   $db_password,
   $db_name,
+  $auth_user,
+  $auth_password,
 ) {
   $ruby_version = '2.2.3'
 
