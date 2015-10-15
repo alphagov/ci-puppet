@@ -12,8 +12,9 @@ respawn limit 5 20
 
 script
   cd <%= @deploy_dir %>/app
-  exec sudo -u <%= @user %> -E \
-    exec bundle exec unicorn -c unicorn.rb \
+  # Using `bash -l` to pick up profile including rbenv setup
+  exec sudo -u <%= @user %> \
+    bash -l -c "exec bundle exec unicorn -c <%= @deploy_dir %>/unicorn.rb" \
     >>/var/log/pact_broker.log \
     2>>/var/log/pact_broker.err.log
 end script
