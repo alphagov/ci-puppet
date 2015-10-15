@@ -13,22 +13,23 @@ class pact_broker::app (
 
   include postgresql::lib::devel
 
+  File {
+    owner => $user,
+    group => $user,
+    mode  => '0644',
+  }
+
   file { $app_root:
     ensure => directory,
-    owner  => $user,
     mode   => '0755',
   }
 
   file { "${app_root}/.ruby-version":
     content => "${ruby_version}\n",
-    owner   => $user,
-    mode    => '0644',
   }
 
   file { "${app_root}/Gemfile":
     source => 'puppet:///modules/pact_broker/Gemfile',
-    owner  => $user,
-    mode   => '0644',
   }
 
   # bash -l used to pick up environment (including rbenv setup)
@@ -44,7 +45,5 @@ class pact_broker::app (
 
   file { "${app_root}/config.ru":
     content => template('pact_broker/config.ru.erb'),
-    owner   => $user,
-    mode    => '0644',
   }
 }

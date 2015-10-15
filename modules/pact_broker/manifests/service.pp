@@ -10,6 +10,7 @@ class pact_broker::service (
 
   file { "${deploy_dir}/unicorn.rb":
     owner   => $user,
+    group   => $user,
     mode    => '0644',
     content => template('pact_broker/unicorn.rb.erb'),
     notify  => Service['pact-broker'],

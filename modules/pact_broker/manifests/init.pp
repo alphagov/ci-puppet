@@ -82,6 +82,7 @@ class pact_broker (
   file { '/etc/logrotate.d/pact_broker':
     source => 'puppet:///modules/pact_broker/logrotate',
     owner  => 'root',
+    group  => 'root',
     mode   => '0644',
   }
 }
