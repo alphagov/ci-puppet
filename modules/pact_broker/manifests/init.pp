@@ -71,21 +71,12 @@ class pact_broker (
     password => $db_password,
   }
 
-  # Service
-
-  file { "${deploy_dir}/unicorn.rb":
-    owner   => $user,
-    mode    => '0644',
-    content => template('pact_broker/unicorn.rb.erb'),
-    notify  => Service['pact-broker'],
-  }
-
-  file { '/etc/init/pact-broker.conf':
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
-    content => template('pact_broker/upstart.conf.erb'),
-    notify  => Service['pact-broker'],
+  class { 'pact_broker::service':
+    deploy_dir => $deploy_dir,
+    user       => $user,
+    port       => $port,
+    subscribe  => Class['pact_broker::app'],
+    require    => Postgresql::Server::Db[$db_name],
   }
 
   file { '/etc/logrotate.d/pact_broker':
@@ -93,10 +84,4 @@ class pact_broker (
     owner  => 'root',
     mode   => '0644',
   }
-
-  service { 'pact-broker':
-    ensure => running,
-    enable => true,
-  }
-
 }
