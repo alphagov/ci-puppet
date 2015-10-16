@@ -33,16 +33,19 @@ class pact_broker::app (
   file { "${app_root}/Gemfile":
     source => 'puppet:///modules/pact_broker/Gemfile',
   }
+  file { "${app_root}/Gemfile.lock":
+    source => 'puppet:///modules/pact_broker/Gemfile.lock',
+  }
 
   # bash -l used to pick up environment (including rbenv setup)
-  exec { 'bash -l -c "bundle install --path vendor/bundle"':
+  exec { 'bash -l -c "bundle install --deployment --path vendor/bundle"':
     cwd         => $app_root,
     user        => $user,
     path        => '/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin',
     environment => 'TMP=/tmp',
-    creates     => "${app_root}/Gemfile.lock",
+    refreshonly => true,
     require     => Rbenv::Version[$ruby_version],
-    subscribe   => File["${app_root}/Gemfile"],
+    subscribe   => File["${app_root}/Gemfile.lock"],
   }
 
   file { "${app_root}/config.ru":
