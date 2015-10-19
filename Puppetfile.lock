@@ -35,7 +35,7 @@ FORGE
       puppetlabs-firewall (>= 0.0.4)
       puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
     puppetlabs-stdlib (4.1.0)
-    saz-dnsmasq (1.1.0)
+    saz-dnsmasq (1.2.0)
       puppetlabs-stdlib (>= 2.0.0)
     torrancew-account (0.0.5)
 
@@ -177,6 +177,6 @@ DEPENDENCIES
   puppetlabs-postgresql (>= 0)
   puppetlabs-rabbitmq (>= 0)
   puppetlabs-stdlib (~> 4.0)
-  saz-dnsmasq (= 1.1.0)
+  saz-dnsmasq (= 1.2.0)
   valentinroca-fail2ban (>= 0)
 
