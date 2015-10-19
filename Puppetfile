@@ -7,8 +7,9 @@ mod 'elasticsearch/elasticsearch', '0.4.0'
 mod 'gdsoperations/goenv',         '0.0.4'
 mod 'gdsoperations/openconnect'
 mod 'gdsoperations/rbenv',         '1.2.0'
+mod 'jfryman/nginx',               '0.2.7'
 mod 'pdxcat/collectd',             '~> 0.0'
-mod 'puppetlabs/apt',              '~> 1.7.0'
+mod 'puppetlabs/apt',              '~> 1.7'
 mod 'puppetlabs/git',              '0.0.2'
 mod 'puppetlabs/java'
 mod 'puppetlabs/lvm',              '0.3.3'
@@ -38,9 +39,5 @@ mod 'alphagov/jenkins',       :git => 'git://github.com/alphagov/puppet-jenkins.
                               :ref => 'ca40459bea5a9dc91e12e8014c9878fcd2856ee7'
 mod 'alphagov/mongodb',       :git => 'git://github.com/alphagov/puppetlabs-mongodb.git',
                               :ref => 'dc077a209efdf8d80fac40d40fec575b6a0949d2'
-mod 'alphagov/nginx',         :git => 'git://github.com/alphagov/puppet-nginx.git',
-                              :ref => '1a87dd9fb29f5f137e3d4ee42ddcf45c9054700e'
 mod 'alphagov/rsyslog',       :git => 'git://github.com/alphagov/puppet-rsyslog.git',
                               :ref => 'acf2755cda80e2ecd107ed8de4d275c383db0487'
-mod 'alphagov/ssl',           :git => 'git://github.com/alphagov/puppet-ssl.git',
-                              :ref => '23bbb5ab57f26269acce3d4b43e643781747a551'
