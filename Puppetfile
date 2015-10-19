@@ -11,6 +11,7 @@ mod 'pdxcat/collectd',             '~> 0.0'
 mod 'puppetlabs/apt',              '~> 1.7.0'
 mod 'puppetlabs/git',              '0.0.2'
 mod 'puppetlabs/java'
+mod 'puppetlabs/lvm',              '0.3.3'
 mod 'puppetlabs/mysql',            '0.9.0'
 mod 'puppetlabs/nodejs',           '0.4.0'
 mod 'puppetlabs/postgresql'
@@ -35,7 +36,6 @@ mod 'alphagov/harden',        :git => 'git://github.com/alphagov/puppet-harden.g
                               :ref => '5b27ee25e19f0c5421665246b76a13def8058e1c'
 mod 'alphagov/jenkins',       :git => 'git://github.com/alphagov/puppet-jenkins.git',
                               :ref => 'ca40459bea5a9dc91e12e8014c9878fcd2856ee7'
-mod 'puppetlabs/lvm',         :git => 'git://github.com/puppetlabs/puppetlabs-lvm.git'
 mod 'alphagov/mongodb',       :git => 'git://github.com/alphagov/puppetlabs-mongodb.git',
                               :ref => 'dc077a209efdf8d80fac40d40fec575b6a0949d2'
 mod 'alphagov/nginx',         :git => 'git://github.com/alphagov/puppet-nginx.git',

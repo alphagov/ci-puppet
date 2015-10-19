@@ -24,6 +24,8 @@ FORGE
     puppetlabs-git (0.0.2)
     puppetlabs-java (1.2.0)
       puppetlabs-stdlib (>= 2.4.0)
+    puppetlabs-lvm (0.3.3)
+      puppetlabs-stdlib (>= 4.1.0)
     puppetlabs-mysql (0.9.0)
       puppetlabs-stdlib (>= 2.2.1)
     puppetlabs-nodejs (0.4.0)
@@ -134,14 +136,6 @@ GIT
       puppetlabs-stdlib (>= 2.5)
 
 GIT
-  remote: git://github.com/puppetlabs/puppetlabs-lvm.git
-  ref: master
-  sha: b27bccecca2b9d527578c933221ffe361c6dce87
-  specs:
-    puppetlabs-lvm (0.3.1)
-      puppetlabs-stdlib (~> 4.1.0)
-
-GIT
   remote: git://github.com/valentinroca/puppet-fail2ban
   ref: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
   sha: 201ac7d0f30a118234a7f2edf4be4bd5c99954ce
@@ -171,7 +165,7 @@ DEPENDENCIES
   puppetlabs-apt (~> 1.7.0)
   puppetlabs-git (= 0.0.2)
   puppetlabs-java (>= 0)
-  puppetlabs-lvm (>= 0)
+  puppetlabs-lvm (= 0.3.3)
   puppetlabs-mysql (= 0.9.0)
   puppetlabs-nodejs (= 0.4.0)
   puppetlabs-postgresql (>= 0)
