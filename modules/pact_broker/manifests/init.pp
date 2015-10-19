@@ -11,10 +11,10 @@
 #   The vhost name to configure in nginx
 #
 # [*ssl_cert*]
-#   The ssl certificate file to use (relative to /etc/ssl)
+#   The ssl certificate file to use
 #
 # [*ssl_key*]
-#   The ssl key file to use (relative to /etc/ssl)
+#   The ssl key file to use
 #
 # [*user*]
 #   The user to run the app as
@@ -35,8 +35,8 @@
 class pact_broker (
   $port = 3112,
   $vhost = 'pact-broker',
-  $ssl_cert = 'certs/ssl-cert-snakeoil.pem',
-  $ssl_key = 'private/ssl-cert-snakeoil.key',
+  $ssl_cert = '/etc/ssl/certs/ssl-cert-snakeoil.pem',
+  $ssl_key = '/etc/ssl/private/ssl-cert-snakeoil.key',
   $user = 'pact_broker',
   $deploy_dir = '/srv/pact_broker',
   $db_user = 'pact_broker',
@@ -46,14 +46,17 @@ class pact_broker (
   $auth_password,
 ) {
 
-  # vHost
-  nginx::vhost::proxy  { $vhost:
-    ssl           => true,
-    ssl_redirect  => true,
-    ssl_cert      => $ssl_cert,
-    ssl_key       => $ssl_key,
-    magic         => 'add_header Strict-Transport-Security "max-age=31536000";',
-    upstream_port => $port,
+  include nginx
+
+  nginx::resource::vhost { $vhost:
+    proxy            => "http://localhost:${port}/",
+    proxy_set_header => concat($::nginx::config::proxy_set_header, 'X-Forwarded-Proto $scheme'),
+    ssl              => true,
+    rewrite_to_https => true,
+    ssl_cert         => $ssl_cert,
+    ssl_key          => $ssl_key,
+    index_files      => [],
+    add_header       => {'Strict-Transport-Security' => '"max-age=31536000"'},
   }
 
   # User
