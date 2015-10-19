@@ -15,7 +15,7 @@ class gds_elasticsearch::repo(
     location     => "http://apt.production.alphagov.co.uk/elasticsearch-${repo_version}",
     release      => 'stable',
     architecture => $::architecture,
-    key          => '37E3ACBB',
+    key          => '3803E444EB0235822AA36A66EC5FE1A937E3ACBB',
     include_src  => false,
   }
 }
