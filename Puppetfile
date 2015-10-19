@@ -18,7 +18,7 @@ mod 'puppetlabs/rabbitmq',
   :git => 'git://github.com/alphagov/puppetlabs-rabbitmq.git',
   :ref => 'strip-backslashes'
 mod 'puppetlabs/stdlib',           '~> 4.0'
-mod 'saz/dnsmasq',                 '1.0.1'
+mod 'saz/dnsmasq',                 '1.1.0'
 
 mod 'alphagov/clamav',        :git => 'git://github.com/alphagov/puppet-clamav',
                               :ref => '31af4f0c2753dd25bca3dd0c7cc69d273c4d640d'
