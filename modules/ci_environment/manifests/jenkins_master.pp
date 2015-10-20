@@ -9,21 +9,28 @@
 #
 # === Parameters
 #
+# [*vhost*]
+#   The vhost name for the Jenkins web UI
+#
 # [*ssl_cert*]
 # [*ssl_key*]
 #   Absolute path to the ssl cert and key for the nginx vhost to use.
 #
+# [*legacy_...*]
+#   Legacy vhosts and SSL certs to be support the migration to the new domain
+#
 class ci_environment::jenkins_master (
   $github_enterprise_cert,
-  $jenkins_servername,
-  $jenkins_serveraliases = [],
+  $vhost,
   $ssl_cert = '/etc/ssl/certs/ssl-cert-snakeoil.pem',
   $ssl_key = '/etc/ssl/private/ssl-cert-snakeoil.key',
+  $legacy_vhost = undef,
+  $legacy_vhost_ssl_cert = '/etc/ssl/certs/ssl-cert-snakeoil.pem',
+  $legacy_vhost_ssl_key = '/etc/ssl/private/ssl-cert-snakeoil.key',
   $slave_user = 'slave',
   $jenkins_home
 ) {
-  validate_string($github_enterprise_cert, $jenkins_servername, $jenkins_home)
-  validate_array($jenkins_serveraliases)
+  validate_string($github_enterprise_cert, $vhost, $jenkins_home)
 
   apt::source { 'govuk-jenkins':
     location     => 'http://apt.production.alphagov.co.uk/govuk-jenkins',
@@ -45,8 +52,7 @@ class ci_environment::jenkins_master (
 
   include nginx
 
-  nginx::resource::vhost { $jenkins_servername:
-    server_name      => flatten([$jenkins_servername, $jenkins_serveraliases]),
+  nginx::resource::vhost { $vhost:
     listen_options   => 'default',
     proxy            => 'http://localhost:8080/',
     proxy_set_header => $::nginx::config::proxy_set_header, # Necessary until https://github.com/jfryman/puppet-nginx/pull/700 is released
@@ -56,6 +62,20 @@ class ci_environment::jenkins_master (
     ssl_key          => $ssl_key,
     index_files      => [],
     add_header       => {'Strict-Transport-Security' => '"max-age=31536000"'},
+  }
+
+  # FIXME: remove this vhost when we're no longer using the old domain anywhere
+  if $legacy_vhost != undef {
+    nginx::resource::vhost { $legacy_vhost:
+      proxy            => 'http://localhost:8080/',
+      proxy_set_header => $::nginx::config::proxy_set_header, # Necessary until https://github.com/jfryman/puppet-nginx/pull/700 is released
+      ssl              => true,
+      rewrite_to_https => true,
+      ssl_cert         => $legacy_vhost_ssl_cert,
+      ssl_key          => $legacy_vhost_ssl_key,
+      index_files      => [],
+      add_header       => {'Strict-Transport-Security' => '"max-age=31536000"'},
+    }
   }
 
   file {'/etc/ssl/certs/github.gds.pem':
