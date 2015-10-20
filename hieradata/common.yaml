@@ -109,8 +109,6 @@ ci_environment::jenkins_master::jenkins_servername: 'ci.alphagov.co.uk'
 gds_elasticsearch::version: '1.4.4'
 gds_elasticsearch::number_of_replicas: 0
 
-jenkins::lts: 1
-
 locales::default_value: en_GB.UTF-8
 locales::available:
   - "en_GB.UTF-8 UTF-8"
