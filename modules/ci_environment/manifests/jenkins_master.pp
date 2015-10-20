@@ -25,8 +25,18 @@ class ci_environment::jenkins_master (
   validate_string($github_enterprise_cert, $jenkins_servername, $jenkins_home)
   validate_array($jenkins_serveraliases)
 
+  apt::source { 'govuk-jenkins':
+    location     => 'http://apt.production.alphagov.co.uk/govuk-jenkins',
+    release      => 'stable',
+    architecture => $::architecture,
+    key          => '3803E444EB0235822AA36A66EC5FE1A937E3ACBB',
+    include_src  => false,
+  }
+
   include java
-  include jenkins
+  class { 'jenkins':
+    repo => 0,
+  }
   include jenkins_user
   include jenkins_job_support
 

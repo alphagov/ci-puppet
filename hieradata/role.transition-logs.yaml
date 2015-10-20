@@ -9,8 +9,6 @@ classes:
 
 apt::unattended_upgrades::auto_reboot: false
 
-ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
-
 ci_environment::transition_logs::rssh_users:
     mhra:
         comment: "MHRA"
@@ -211,3 +209,5 @@ ci_environment::transition_logs::rssh_users:
         comment: "Apprenticeships"
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAhael8c2CCipKECB57cTZ1ClwiDWiXV66CMUq0bsW9GiSjAaPsKjA7PyKoOiXbm5wiNUVqZc1fbNPwW9iNr4GsC5DGkCw7KJDJhwRA2k6c3NqbGTEcneYgIAtKprHR3LeoR7+C7GHVLUFQ7yJiSOpu8SO9cTT3161Qy9G3oYf2QF3NY1DfG4VcekrlLGiM4pu9aA2mpnlGnsUcU6Sg0C0niHZUodgvbf0wcv9RFB/REg+PbmMrJWW9XLXDc01cC6jtH/bTwac8eEwdHkDUscRb9Wny0yn4+8a/SlfpMguVbFl7GNPeche1j2ADfmrKFbK3tp+jxkeqOiJ2UpyFFPHAQ==
         home_dir: /srv/logs/log-1/sfa_apporg
+
+ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
