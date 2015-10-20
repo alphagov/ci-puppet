@@ -54,6 +54,13 @@ class ci_environment::base {
     to_version => '1.9.3-p550',
   }
 
+  rbenv::version { '2.0.0-p353':
+    bundler_version => '1.6.5'
+  }
+  rbenv::alias { '2.0.0':
+    to_version => '2.0.0-p353',
+  }
+
   rbenv::version { '2.1.2':
     bundler_version => '1.6.5',
   }
