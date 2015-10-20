@@ -56,10 +56,6 @@ ci_environment::jenkins_master::github_enterprise_cert: |
     LWIWJn/KXkog8bU776IixxWlO8l1TwiCUoDS9YsLIKIRCT74QE48qA==
     -----END CERTIFICATE-----
 
-ssl::params::ssl_path: '/etc/ssl'
-ssl::params::ssl_cert_file: 'certs/ssl-cert-snakeoil.pem'
-ssl::params::ssl_key_file: 'private/ssl-cert-snakeoil.key'
-
 # Self signed. For transition-logs development.
 cdn_logs::key: |
   -----BEGIN RSA PRIVATE KEY-----
@@ -118,6 +114,9 @@ cdn_logs::cert: |
   ywj3Z5o8PdM49oUR1rmQt2eQPRvMo8Rzh6xqNaV54t3dslOfL2Hre+dS63U/8cvu
   OmQVTqKNteZopB3dwsc4la9Y5PMCJ8OlJcm5BrV4A8mD
   -----END CERTIFICATE-----
+
+nginx::config::confd_purge: true
+nginx::config::vhost_purge: true
 
 rabbitmq::delete_guest_user: true
 rabbitmq::package_ensure: '3.4.3-1'
