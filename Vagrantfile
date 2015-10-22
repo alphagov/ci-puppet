@@ -18,7 +18,7 @@ def vagrant_config(config, version)
   dist = ENV['gds_ci_dist'] || DIST_PREFERRED
 
   nodes = {
-    'ci-master-1' => {:ip => '172.16.11.10'},
+    'ci-master-1' => {:ip => '172.16.11.10', :memory => 1024},
     'ci-slave-1'  => {:ip => '172.16.11.11'},
     'ci-slave-2'  => {:ip => '172.16.11.12'},
     'ci-slave-3'  => {:ip => '172.16.11.13'},
