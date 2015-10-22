@@ -29,6 +29,35 @@ use NonGetBasicAuth, "Restricted write access" do |username, password|
   username == "<%= @auth_user %>" && password == "<%= @auth_password %>"
 end
 
+# Version handler that supports branch names as well as numeric versions.
+# Branch names sort after any numeric versions so that latest will always
+# return the latest released version
+class CustomVersionParser
+  def self.call(string_version)
+    case string_version
+    when "master", /\Abranch-/
+      Version.new(string_version)
+    else
+      Version.new(::Versionomy.parse(string_version))
+    end
+  rescue ::Versionomy::Errors::ParseError => e
+    nil
+  end
+
+  Version = Struct.new(:version) do
+    def branch?
+      version.is_a?(String)
+    end
+
+    def <=>(other)
+      return version <=> other.version if branch? && other.branch?
+      return -1 if branch?
+      return 1 if other.branch?
+      version <=> other.version
+    end
+  end
+end
+
 app = PactBroker::App.new do | config |
   # change these from their default values if desired
   # config.log_dir = "./log"
@@ -36,6 +65,7 @@ app = PactBroker::App.new do | config |
   # config.use_hal_browser = true
   config.logger = Logger.new($stdout)
   config.database_connection = Sequel.connect(db_url, :encoding => 'utf8', :logger => config.logger)
+  config.version_parser = CustomVersionParser
 end
 
 run app
