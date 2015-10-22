@@ -24,6 +24,17 @@ class pact_broker::service (
     notify  => Service['pact-broker'],
   }
 
+  file { [
+    '/var/log/pact_broker.log',
+    '/var/log/pact_broker.err.log',
+  ]:
+    ensure => present,
+    owner  => $user,
+    group  => $user,
+    mode   => '0644',
+    before => Service['pact-broker'],
+  }
+
   service { 'pact-broker':
     ensure => running,
     enable => true,

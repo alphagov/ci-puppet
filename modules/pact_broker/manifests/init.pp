@@ -92,9 +92,9 @@ class pact_broker (
   }
 
   file { '/etc/logrotate.d/pact_broker':
-    source => 'puppet:///modules/pact_broker/logrotate',
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0644',
+    content => template('pact_broker/logrotate.erb'),
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
   }
 }
