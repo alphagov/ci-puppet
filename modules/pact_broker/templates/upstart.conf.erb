@@ -14,6 +14,10 @@ setuid <%= @user %>
 setgid <%= @user %>
 chdir <%= @deploy_dir %>/app
 
+env DATABASE_URL='postgres://<%= @db_user %>:<%= CGI.escape(@db_password) %>@localhost/<%= @db_name %>'
+env AUTH_USERNAME='<%= @auth_user %>'
+env AUTH_PASSWORD='<%= @auth_password %>'
+
 script
   # Using `bash -l` to pick up profile including rbenv setup
   exec bash -l -c "exec bundle exec unicorn -c <%= @deploy_dir %>/unicorn.rb" \

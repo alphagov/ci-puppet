@@ -67,14 +67,9 @@ class pact_broker (
 
   # Application
   class { 'pact_broker::app':
-    app_root      => "${deploy_dir}/app",
-    user          => $user,
-    db_user       => $db_user,
-    db_password   => $db_password,
-    db_name       => $db_name,
-    auth_user     => $auth_user,
-    auth_password => $auth_password,
-    require       => User[$user],
+    app_root => "${deploy_dir}/app",
+    user     => $user,
+    require  => User[$user],
   }
 
   # Database
@@ -84,11 +79,16 @@ class pact_broker (
   }
 
   class { 'pact_broker::service':
-    deploy_dir => $deploy_dir,
-    user       => $user,
-    port       => $port,
-    subscribe  => Class['pact_broker::app'],
-    require    => Postgresql::Server::Db[$db_name],
+    deploy_dir    => $deploy_dir,
+    user          => $user,
+    port          => $port,
+    db_user       => $db_user,
+    db_password   => $db_password,
+    db_name       => $db_name,
+    auth_user     => $auth_user,
+    auth_password => $auth_password,
+    subscribe     => Class['pact_broker::app'],
+    require       => Postgresql::Server::Db[$db_name],
   }
 
   file { '/etc/logrotate.d/pact_broker':
