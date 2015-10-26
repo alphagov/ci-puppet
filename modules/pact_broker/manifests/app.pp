@@ -5,11 +5,6 @@
 class pact_broker::app (
   $app_root,
   $user,
-  $db_user,
-  $db_password,
-  $db_name,
-  $auth_user,
-  $auth_password,
 ) {
   $ruby_version = '2.2.3'
 
@@ -49,7 +44,6 @@ class pact_broker::app (
   }
 
   file { "${app_root}/config.ru":
-    content => template('pact_broker/config.ru.erb'),
-    mode    => '0600',
+    source => 'puppet:///modules/pact_broker/config.ru',
   }
 }

@@ -4,7 +4,7 @@ require 'sequel'
 # require 'pg' # for postgres
 require 'pact_broker'
 
-db_url = "postgres://<%= @db_user %>:<%= CGI.escape(@db_password) %>@localhost/<%= @db_name %>"
+db_url = ENV.fetch('DATABASE_URL')
 
 # For postgres:
 # $ psql postgres
@@ -25,8 +25,10 @@ class NonGetBasicAuth < Rack::Auth::Basic
   end
 end
 
+AUTH_USERNAME = ENV.fetch('AUTH_USERNAME')
+AUTH_PASSWORD = ENV.fetch('AUTH_PASSWORD')
 use NonGetBasicAuth, "Restricted write access" do |username, password|
-  username == "<%= @auth_user %>" && password == "<%= @auth_password %>"
+  username == AUTH_USERNAME && password == AUTH_PASSWORD
 end
 
 # Version handler that supports branch names as well as numeric versions.

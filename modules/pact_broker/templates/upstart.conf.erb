@@ -10,11 +10,17 @@ respawn
 # and should be killed off.
 respawn limit 5 20
 
+setuid <%= @user %>
+setgid <%= @user %>
+chdir <%= @deploy_dir %>/app
+
+env DATABASE_URL='postgres://<%= @db_user %>:<%= CGI.escape(@db_password) %>@localhost/<%= @db_name %>'
+env AUTH_USERNAME='<%= @auth_user %>'
+env AUTH_PASSWORD='<%= @auth_password %>'
+
 script
-  cd <%= @deploy_dir %>/app
   # Using `bash -l` to pick up profile including rbenv setup
-  exec sudo -u <%= @user %> \
-    bash -l -c "exec bundle exec unicorn -c <%= @deploy_dir %>/unicorn.rb" \
+  exec bash -l -c "exec bundle exec unicorn -c <%= @deploy_dir %>/unicorn.rb" \
     >>/var/log/pact_broker.log \
     2>>/var/log/pact_broker.err.log
 end script
