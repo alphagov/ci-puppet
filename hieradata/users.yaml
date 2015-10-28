@@ -9,6 +9,9 @@ gds_accounts::accounts:
     annashipman:
         comment: Anna Shipman
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDAuPt8UVjsxrbNUxy1v+Rmu+hq4bMAa7YAgAgyAuNrDq1G++RzLntZMiAELXWaxOrGNk738d6qpi/rMIyAY9l87woaA2/WRhFExkx2U5nnvLNItkxPKiOYHi1+LmQ++swb5zcg1P+TvkLPeNm95G61G1MxzEuROv/vAlk8IPPPWp08Qg+3vby7P0zyeu7KT8uwfSEIcXPxkofeMRXPiD4DSudYACEV5DB15YX37mlqu26QqyarTVCUMSvu916ejDSMeL/uE0aNYVAYSLmEbtat1MX0rZsnL+Z3F4UqkR6lmYHrK6++ZjeJ/TXAECdfH4uqdJlgfjXkQedg/LQFc9ZH
+    benlovell:
+        comment: Ben Lovell
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDQYfJ4+uozMlwkedXizLVLVmGXbr5BcmilzsHqxoVLWvXqM9Je0FdBloWdXk3iAu5xKYePPgmP/25ryAjGHEnoddiisAyFjsDmW/xRkN0NXtBmghgFYxim+S9YC28A3iq5mlXcHzYnJRTbGxbCIOCt2/oti2JJpNkDNwoQhtTlfFCwyvTIQ+thVHQp4Cf/wKElpkyq7NM9M9iLvSO0lWAfz7acbrHECIW4onP1XE4k48sRZD3gl2FuQAjBlKIyJ0Gbs8NP6ptHFlGNCX0FrUYmTcz/llBAutgDoXGYJu3KTE84dP788627k1nxoa3LbBaBZx8dbqtuU0EP77dwuiI1
     benilovj:
         comment: Jake Benilov
         ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDPIo5R4UkyrgC9DHG1FucwrCXs3UjL1bWLzQtx/wbmx8JKSkVzW0Y5urMx3m087aHzin8ySc0oYltEVCPix0sBaHLH+QHL60yjohgRecmX//PGE0y4mVaB6e8ntLzv8vVApc1Uyz0PiaX2H1nbW6neWm0eagTr92gDvX4U5I2pTMC05qjXS09xFd/nPb4Z7G7BYLYiBa9yy1qkJvRyhKf3htOHGLoHwAgtJepKJMe1xTz8YOWHumcxn2e2j5Z16/wwcvaSGrhzwQgsZ2uWULWNvlKuC2nRJe+ZZjNcKxpHLKUcc68sW5yZgLHMJ7u0ebUX+rGWlMt6pyEiOBnm3nG3
