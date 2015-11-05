@@ -30,18 +30,6 @@ class ci_environment::jenkins_job_support::mysql {
       password => 'content_planner',
       require  => Class['::mysql::server'];
 
-    # FIXME: Remove once these databases are gone from CI machines
-    [
-      'datainsights_todays_activity_test',
-      'datainsight_weekly_reach_test',
-      'datainsights_format_success_test',
-      'datainsight_insidegov_test',
-    ]:
-      ensure   => 'absent',
-      user     => 'datainsight',
-      password => 'datainsight',
-      require  => Class['::mysql::server'];
-
     [
       'efg_test',
       'efg_test1',
