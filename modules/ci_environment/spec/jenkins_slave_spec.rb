@@ -12,6 +12,7 @@ describe 'ci_environment::jenkins_slave', :type => :class do
     :kernel => 'Linux',
   }}
   let(:hiera_data) {{
+    'ci_environment::jenkins_job_support::postgresql::mapit_role_password' => 'mapit',
     'ci_environment::jenkins_user::rubygems_api_key' => 'a_rubygems_key',
     'ci_environment::jenkins_user::gemfury_api_key' => 'a_gemfury_key',
     'ci_environment::jenkins_user::pypi_username' => 'pp-developers',
