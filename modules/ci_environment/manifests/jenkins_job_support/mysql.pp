@@ -80,13 +80,6 @@ class ci_environment::jenkins_job_support::mysql {
       password => 'tariff',
       require  => Class['::mysql::server'];
 
-    # FIXME: Remove once this database has gone from CI machines
-    'transition_test':
-      ensure   => 'absent',
-      user     => 'transition',
-      password => 'transition',
-      require  => Class['::mysql::server'];
-
     [
       'whitehall_development',
       'whitehall_test',
