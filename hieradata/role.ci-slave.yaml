@@ -21,3 +21,4 @@ jenkins::slave::version: 1.9
 mongodb::replSet: 'gds-ci'
 mongodb::enable_10gen: true
 mongodb::version: 2.4.9
+mongodb::smallfiles: true
