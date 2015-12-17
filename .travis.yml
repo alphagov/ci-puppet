@@ -1,4 +1,5 @@
 language: ruby
+sudo: false
 before_script: bundle exec librarian-puppet install
 rvm:
   - 1.9.3
