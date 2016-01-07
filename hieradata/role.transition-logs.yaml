@@ -210,4 +210,9 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAhael8c2CCipKECB57cTZ1ClwiDWiXV66CMUq0bsW9GiSjAaPsKjA7PyKoOiXbm5wiNUVqZc1fbNPwW9iNr4GsC5DGkCw7KJDJhwRA2k6c3NqbGTEcneYgIAtKprHR3LeoR7+C7GHVLUFQ7yJiSOpu8SO9cTT3161Qy9G3oYf2QF3NY1DfG4VcekrlLGiM4pu9aA2mpnlGnsUcU6Sg0C0niHZUodgvbf0wcv9RFB/REg+PbmMrJWW9XLXDc01cC6jtH/bTwac8eEwdHkDUscRb9Wny0yn4+8a/SlfpMguVbFl7GNPeche1j2ADfmrKFbK3tp+jxkeqOiJ2UpyFFPHAQ==
         home_dir: /srv/logs/log-1/sfa_apporg
 
+    local_directgov:
+        comment: "Local Directgov Transitions"
+        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEArVhrrl3//8m4C3YppF+Pjt+1wceDng+S+E2Ld+XJDRbLkpJ1sQSIomgI3EKm3iAUf5HvdPWhSKl+MP8VrD9BkEi7jT4MjDGppXfPrGrMBfWCGN9hDGzDu/TIK0aRda1oaWQh/olk5tcuo2J4gVjwyxHIHzay62WWfNdr85dIS+7Jmj5NglsM1y6HqcV0MWnz6xu7vvaG5u2iztaAQ0BOEPN0KFJjV/EtaKc5lrbAycrFLylzyUgCa0/yltR2aV+1NRUqN0lO13J/idafmLAqgdZAZ0ZbiabrnQHWKY4F4pXSCeuj3QeoecjuVwc91iEWn04XCUb/awiSUei4eymxvw==
+        home_dir: /srv/logs/log-1/local_directgov
+
 ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
