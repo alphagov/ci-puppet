@@ -5,7 +5,6 @@ classes:
   - ci_environment::base
   - ci_environment::dns
   - ci_environment::unused_kernels
-  - gds_collectd
   - gds_accounts
   - ci_environment::firewall_config::base
   - locales
