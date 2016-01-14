@@ -12,207 +12,207 @@ apt::unattended_upgrades::auto_reboot: false
 ci_environment::transition_logs::rssh_users:
     mhra:
         comment: "MHRA"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAAAgQDLxOkttJUcivHvVqWCsmLMvuyXtXe2mTceIh84mA05uwlVtPjdIC4bupl3yncswxnc6A6aJZk35FA8NCxod55eVicM1+sTgnQEIEDr7UxXFyvd89f0lOilojUuC4Mkt9Lun8wDRu1rW1i9chVoZQL5masYzJzku4DuK9e9DyJBGw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/mhra
 
     ukba:
         comment: "UKBA Verizon UKBA origin logs"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEA0pjO3igICcqu2cA6Emy3rFDGUOBMQi3zbK6NN9vg3S7E6OmUoUiHL4n8EaiX+JxEhGJxwTuvJtu9DL/J0UlCzgyMPopE6kzInYTNVGwtoE8KHeBywjDoH8xjNac5ew6c1bJs0Y0SWB5AK5NNSXKohSPDYAyu91N2EAHQz1dFp4xdiFuqNpHe0tuwYOFk4SgCGq4OLc763y07WMFzmQqe6e/As7eLuVXiIHqhAn67KX6xxpRoFQ2SU12R351TJXUlMfLsKrfUyW52c6VmNXK+Yl2CbX7W0UQZze38njipIkFyjgB6w0CKDS7SsD+fVuaxnNB35yW6cIJMCVS3yh68tw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ukba
 
     ukba_akamai:
         comment: "UKBA Akamai logs"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQC6HJYu/PdxZUEO2aOimO290Oo8Vt3nhKaLnfXa22YwEDF7zr1FSzwSjkZ9mr9qZby7Fzrmnc7A3u/f2vPB3mn+sq/GdIp8N8el8reXqJYXWiU3xkewfo5qmv3OCX0kp3EIHSuDxb9uhfQeZzUSTI1yt9+tLAtPy21n1RpT+hHce1pTc5ibwi1csdiECJA1SyPqpblLQtmCT8Vm+8mkRQajfELPKVu+BTQC3OUAZsa0ei4DRDFcV9tqiUMiVdoFRpRlZeRM2IZEtOMwp+HDdJCXsmEEmWpP51X1Lx+Vqjnq3eAAoIWtHCDnEPE/QYtpZ7MGkmjSGqEqUWQ10pDNS4ID
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ukba_akamai
 
     ha:
         comment: "Highways Agency"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAnpYwCIK38nLNSGSWFQ7KP7tY6sa1/py0YhRoWv3ZkpW3eIyFJ1hYjToZPe4s+AqYL4yMo2XYWOyhm+4LwWpEPizXn8/5pPGHA8LN9GfkuBDBxTto3bJNwwFoeN2V30sQjlMq8oPzansrnHsl4uunbPAxeBEIB5rqben2gvorPiJsFqaJA5RwMsJVvJQTbIK2B9b+9u+6NIkbAh8IPFo6sDXMEx5V2Hzx4wrslNVKUDKievIMdmZLnaVNWpjA1AKKnQstkviRQBpZNnQs+5IkbHa8QQPfBFWq+TNy74QwSz/MMdmVazPXLx20VlaYfydvL5grV2DvXBws0OrMc1j0VQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ha
 
     hmlr:
         comment: "Land Registry"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAIEAkL/4EBQSX+NsHfvDjK+KVr0x9TETddJ3z8Bvkc6SyWGxz+bQDdYirjPt3oSgJmqVoZeCb6BpKRt871rL5SGAxFVnfEu30Myd+dkDBr9d+wFLne5q9zNjcenfFrd9o/YLxSiO2pRAzpWDeD1txf73xkyuGYK+8l3PLZOdSutuJLM=
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/hmlr
 
     hmrc:
         comment: "HMRC"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAgbRGIQu/LxGjnsSsWg0pxTryVy5Zy6RahJt49bBcAzSZb8JPpFQfkwIbVXpVdRY3PTzBXOrslOIBmL0jMKI0QzqrHTZtIoCIS5dBdd/NOTjpDwy8J1tBNW82WT+F8pWmkYb3EvGXlD8IWDunBxAbKJIRbkiD6grj04GKBGJNJ/I4YZxltRy0gEzWfALMYc02ASunmZhddaaYDzUxBpd3u5VqouWuRsmDVXRgoL6Djpl8rv2TQXeRg4J2hVxomP8+C9QkQtHhBSkXSWgUi/MVc7e7YZxrQHL5k/WmorOQR65iR+qEe6KK3PzgDlMbpUuMrB1OSaMmWdiq1G8WSadCQQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/hmrc
 
     moj:
         comment: "MOJ"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQCZK03zGYmxnNte3+atd124fPUDtDkafx26Cjzba6HlI31bnCz+z4XNM0OcFH1l7OC/6GffQzVLZGej2B02C4WR8f36l1Qrucuq3vEvdbfAN0lucakR3Q1ttcGh/UyyUf/YSzGjsQmkvdI4cRtVT8ah1jCNJo11rcdY9BTWm2KSvzHmkiTdUu9fQFbYPB6/CuAvLX5mzYMWDvqRtzTU+iQt+uEn+Qo52NtUq9TFzFjgGjpmFn9lyX/+b086PvU0OOo1CF7+53O3S2ES2Osn3WphiAAjdWZrnjmg5XYxZZNFsJkhB7oXwaKx2Xf62aOztCElxmVJZ0uOgSvziSEgpiGt
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/moj
 
     ukti:
         comment: "UK Trade and Industry"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA1LwP0IXMUhKFhdyhPtIkvvIROplJoNPfgUhiJrPK8MhHQ4AaWRWTzsYe+JrPF3D4D+xKRCbR1akc0g9FvbBpemqdl50x46MQLEVYlCFElhRbj5s9h2yhU5nmvujXLASvDx43YmtoEImc7/Vn/x7RduFIus4j0rJVMc9NoWLV/7c=
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ukti
 
     # Note that dfe's ssh_key is actually @rgarner's at this time.
     # When we get a real DFE key, replace this.
     dfe:
         comment: "Department for Education"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAuoIglteQmEwL5/T3maYcomkZs44x1Rx/YRn31vMEuAaBHqYyD5mLUFMXQbCyFO6mZcjx+uOTOT6QhzIiKa8dJhAs5K/KFtjG/6vuwqFdC/Tpggvx6My/vDROsZVmPz4RFrd9XhoL2ybAXaHq6hfo+j112J/n+rkemqzmR/gz2TGFni9jSWG8fEzEkMwQR0iHZnGSFJI2UUR8trxyk32Pq3hkyEiA+XdipR/U8uPnBB2C3+Ms5NUaI8kFmQKYEumqU093dUD7iuekw3vA3elD8oR6UeDGcoRbMomT8oaatPtZl2rSw343M+tEQTC4VsUtcYAiK46sCxIsSjCI0+k2eQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/dfe
 
     # Note that ea's ssh_key is actually @psd's at this time.
     # When we get a real EA key, replace this.
     ea:
         comment: "Environment Agency"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA7r1lq8GxI3MtOz+38NcQEaIHKBM9lmgLLoEi3yHpP2LGld6H5UeAxg12sjsVsWsEwany1xpWI+kE7HLwrdXim4DwObAypgr92SlNUClz8iVUZmh0K/Y3gXvTwfM5/hqwtXrObm4i9xNqh2wCoa5HaWqRF9g1jZm+asMnW4r4FQ0=
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ea
 
     ea_brand:
         comment: "Environment Agency Brand site"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEA6dKONnI2DV6QuCVMW4a7wsx5/oJWz1EY5Cx0n1i3H7vvp4255f3ti5gJ9ONMP0YyXX/68Kp5jQ8BENWveQCU3c63R/EatJVknFIitlsy1nw4wH+YiZ/6yACwzjYuJgPJRZ6GjBg00E51uWFns/CXLV5WFeHlILSYdIHTxT1ySv5S6daLVmgkm9dsfMFu/Qi/1s705eeM5Zjez2DAY1yRIeyXDSmNkc4jb3C2t8AUBq96fJ6xA68ooTN+EH03tAh5wDnhDQp/E4dFhnRZNDIPrnVdZML4tsL0bFIKtjo8jp+BrBT3s3I+QtMxkkoo4jZPO3X7ZYXd6nGWPgPv8SvB6Q==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ea_brand
 
     sfa:
         comment: "Skills Funding Agency"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAhtrK86Sjr/MhOJWO2cBdo7Tv7EPCQxT7ysPniWezAITiSq8Y0q6LTRjMseeF0rb2mgZTZ4U9M15XTDhYa2gkK5eDtxtgY8Gz+f/UidTTlJhs8c955kwbchTUOSYhz/v3gjQmAFYtsur2DNhxaKNi8m+zUDfpmnERklsDpEWz3fv2nvU4UPrSV+FkjoOQhyUkIkKTq5Lj381jYGH96qVYrDYWU4MGjTZBqLivAHA2iOavNwoPCTeA/Z4SmoCJcmwQOkrFbcJjXtl9NNPFkCIdSInQfMANrjXSyH/ovgRn6qhzUw5goDsCwz5HQRZl/CAKUrdEg6O/hsqy9WORYZyBeQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/sfa
 
     monitor:
         comment: "Monitor"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDzt0dadFRf/nu6OpJtMoaJWp9AfPzrObk0Z7oYCA7QlnaGasgnvcs2yKB8ZhYJGyBI8NzyTKeiJr16UgWB7229V33BnP0HU2KZxbNN9Lcmw/VoXVbxT1QnHgajulnaAQIKMp89wda9w6NyjasPv4Q+L7qONGvyioheFcKMTjX2qd2vnXAajkC+/ypfSZOQopa0nlEAH1hbf3T1XkwJf8Ctcaza7BB77IFCL54CXSwn2ZJVl4FAYWkJkkxyuAHlKTXMKRtkGl6JodXffNN+7uueGrf0OPP5Y5TbIgikb5KAKOqSfoSAwTncCWXfYa+VFQzpJe+H9ke1M2R/Wyec+ygl
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/monitor
 
     oft:
         comment: "Office of Fair Trading"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAnCDYGwMr1zG4ghJ/WergCkpTQeXlnRrBp2kWsRSVljWnZDrH1ekVX8PpbYUi8itqwzXc9takEIUEUxCwpiYv9GkoJg9wFC6v+45NzxNaqXjB4LTBIutJAwfIape9lJFGclivI6KXhVaqazPnmwdSWBMR9Ncc8e7C90DP9il/zEo6C4XDH8zoqB2wKX0rBMOEsM09PVVMq7RFnrpmMTr187iQozUpAZ1BLXnVDs2iNa9/5v7zpwEMwr8FFVRfo5tOfa+4wEPm1L/YvoiS/3zfsy6slaunXJoDVBWvyD5mtoch4Sk53LE9fP8RvnDPl9cxDbOAnAsnk4nWtIimOxqbLQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/oft
 
     # This is the same key as the Department for Business, Innovation & Skills (bis)
     cc:
         comment: "Competition Commission"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAkAiuGLGb5s72SLDtSiItsKg3k2e8iMu278DyNm0DgCgZkLtzCe3gXLpjnYP5y7mNJU8tkeQFlx0dyy9H9802tcIotcn+4IIqzTTF+4eh/gij60EhkrJpVO9h6g0WJ9m5cW4FkG2101b9Kf1X8BiNgRDKNgdWZOm94z+A40l2nrWDRTgWWiFlYifGBT98dwCc+2xSxVlq7Pqnvul2w19mOOhIXU2mk9y1VRGWXr6kdiRj1N9mb/KPRXy5wA7HSX7dUycU1Khq+i13SgfpnaEBCTtL3Itrn/csWQAWQW7UN2R7dCxgI5RwDQcrR7AwPxYvTv/q6bK5TmXdSK+Fpcf7SQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/cc
 
     ipo:
         comment: "Intellectual Property Office"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDauf26PrS6xNMWrcDJls2IACJB754Zsgu2AHO9HLw6nNDPCgF5EWlcK9+4K9OyIuXZdDiW5N9r8aqywdffjpRyZc03czeHq281Fdtf/tfmmmwmEO09bRZd6Rehp2llrJ4ce/EkE32UgQqDibCu6PxCrDeS26cCCCwY/62awqX1eTQTf6jgkStlLID2xHnAiLUwKlD75tNyfQh+EqPg9YydWbWxFdLYwXBdAsTTd6SppD9amV30ujb/8xlNfGwCLlCAJjIt4edt0p6rrLFa2ki5PsrVSNX0r+BqBCYs0V9GS6HZhsS5oW4obVdJ/ijt4rzm2/4Zqpw4qZ6rKvu4rtrh
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ipo
 
     mca:
         comment: "Maritime and Coastguard Agency"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEA6qRfKDBPaqupRX++WNz8nPvk/B9C0MVQJH4YmpJCUPJ9N2mZ3sDWuwLh10vHxAQdg2GezAz/ryuwVZ0bLq85g4S6jqCs8b+b1HKcdq10wTFmGw9qajJkKIub+OeWPwY9w/dUbdPD1CGZmb7y7YtOhbCsSVl/8lzUvqWoLtOtmHU=
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/mca
 
     coal_authority:
         comment: "The Coal Authority"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAIEAn3xbUzT9Csis0DL8iPgnOcA6hqdzt49czebj1KAod4ojGxeKuoFavB2LByPn4wqvjZnz70D9g4ZeU9Y5wuSN2PVjiH5XrRBSMe6x0RvaNFpISFQz5LdpUHNO0ysMkdfsq5qytyxZ8PujAllRPnGC7zEEgl6LVNtFPTxwQj4lz/c=
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/coal_authority
 
     # This is the same key as the Competition Commission (cc)
     bis:
         comment: "Department for Business, Innovation & Skills"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAkAiuGLGb5s72SLDtSiItsKg3k2e8iMu278DyNm0DgCgZkLtzCe3gXLpjnYP5y7mNJU8tkeQFlx0dyy9H9802tcIotcn+4IIqzTTF+4eh/gij60EhkrJpVO9h6g0WJ9m5cW4FkG2101b9Kf1X8BiNgRDKNgdWZOm94z+A40l2nrWDRTgWWiFlYifGBT98dwCc+2xSxVlq7Pqnvul2w19mOOhIXU2mk9y1VRGWXr6kdiRj1N9mb/KPRXy5wA7HSX7dUycU1Khq+i13SgfpnaEBCTtL3Itrn/csWQAWQW7UN2R7dCxgI5RwDQcrR7AwPxYvTv/q6bK5TmXdSK+Fpcf7SQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/bis
 
     defra:
         comment: "Department for Environment, Food & Rural Affairs"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAsv5tlhDcL8aeyYGes6/lkS9efkpBEhaoHI3rg/y2GW3v6hdxUU4M1w+KaRTkG5XInW1KwZ7wcRe30kC2fubffz5QG9i8xMmoSDU8HTShtXsY05Z/dIgKWHmcYckfdkKtd0SbJJJcYHv5a7sAje8Y0/As7mEzguYCvGUK5UE7+mrDzNeQfY5/IkuOU6iZvHpjPRwqX2cmcvhUcan7b9dWx7uMUYwdtkcw5OIK4yP0eKnVml43wuWmCXKyprWkcGkbD6wSYvf1xsfae70fWlxmkQRcZERsAP5caHuwir5hwCilrBGfb/OdXFtBGLxsS3mh2qEFgZ9epjmJuSwG3rYpgw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/defra
 
     defra_rdpe:
         comment: "DEFRA - Rural Development Programme for England Network"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAtUuxaYSgIyv3faCSsEwpSZLZzZLE71hczL2dmnh/8Vfnw583svPVqxvje3KfcbAbBPoUlVZVUDDcJ1QTEOXtnsqwLvpvFaRcQ/ROI7pT+hdoINiihd0sUaZPyMWvTw2U8XFYV3l4Hdig+FFwX9hzbVQuGEr/sXFK3n/bIK52U/tFqDgUWlGtEYIrIdEU4okysRiGQJTWzHbzHxzEQXZjxsKJFYMOdyoHJzp1kBRPoQajgachUq2wkUmbnqiJ9TpS5tzdwZsoBTvPRek/w9CZo4AsONLQZYB6Z01RNa+cL9VG3jAckkQMCrYzxlNwW7qy7NbSK9xgTQjyIc6O0BX44Q==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/defra_rdpe
 
     defra_darwin:
         comment: "Defra - Darwin Initiative"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEA7sUXCl3GUPidwCefLi09RvMPHmQI1PcBD/ywrW6iW8VACrz/k5gp1nGhG9IE/9PrSENaklYYLovOxj5AZ0wkM3CqDq3himn75U3cEbmFi5dPrKfozoTBeRq3T92jRDDqM5rsDV1NIdFsWHeetDdXVPLWWj0AxxNlmISZ0yojUZOiHgPBAAYoA7TG6sEhdosxJ51ORNLv6amvey7tiER6leNV/IcLq2AcE0aCY8gIUvY5kEdFnxkP15i7uAuACgo+b9KKmPzA9ZHZmzM95t0HEm6dBByHPrLolBfZtVJ3vJ28t/t8HySkst9fxbvZojKFPRF1w3VpvrZPm7a5ORpttw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/defra_darwin
 
     hca:
         comment: "Homes and Communities Agency"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDJolBEx5B9hZkgDXRpNsYQdQGyppxaUYGSuIJoOLvf6vbYgFUvlau2M9CMpRyNm1xj7r1P2h/jWJxZw0J6NZE7ZQU1utdUmhFRam+G6e9UpBJG25O899nPgHu9sH1AOzrc+mYAGazaPeekzk0YOuhbsJqP/9OZjodklT3y0N0mtFRjTeg98+skCKQIH3gGMgCYSK8zsI6XklKn/dgufF3F1+X85XfpEn+P9tw+DANF5pnDXjAcZU46zmFX03RUFW1sZBNqXueRJTjy4ZvgSQdkRKlDgX/ZJSi6sPiGSDi1v1LLL8Nob7fRkU48z80FsKUos6XjBu1OcltYM/Lk2ioF
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/hca
 
     hpa:
         comment: "Health Protection Agency"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAoCec+BxVuTJzS8ByAIxQGmy0MEyVla8hfzXLCnmbv8DZd84viX4mfgdut9OcwBuI/pbgEoCKD/XO0izA5pMwekJYcaDrWsNQrXBUxHaOxSe/wuylA8CNqWWZyvTjQ83rsl9mxyv+Ym6y25ZSASTGp3Dxu6wLnKwdzSS6SdgPaU01DIL6nFVpeCvdZs9mwQjx18T3B7dQ3LwZxuDpU5ZW8EeAWm+L59yXlXvf8HxocQRTLeXvPOHLGADAHrXYAHrAiaFIMll0g3MjIP/uVIitE7/NDr9XFkpbNNmdcZ64gdYyU8iOMawRNlqniAGSvH9oBq6JHECPX6DeFq2Vg9p2bw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/hpa
 
     vmd:
         comment: "Veterinary Medicines Directorate"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAly7UxSZG/jayBLekN5XtZNA2M9x8E9XbLHpJBVwP8HG0165OgtDX8c7n1a/e3QEkLd7yjIPt6I7dCfF+YQHWRBlR+JSSOHIWoW7l+hTCRoyesFCf80HmFq/ICKdMuUIHGKhetFs0PF8kLvnv6zM+LMIx7D7HPZhcuUzEvZX3mFsNuS/0JcmfgoJAV4VC6A1MUr+7a33KYkUM7hcCGuQEyfFT3Fd9lEEaMMETlb7BSZFFU9X7hM2fZu8yh9xzqNBPjhve+QLVA/d2SAA6ElGqKmI3PyVx0bLCqhFxx2+ptpJ+eKtrDZaQSExJYENKq8MVkBgGiLezYZSqZdbdrAApBw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/vmd
 
     natural_england:
         comment: "Natural England"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAreYOtXyLSNVi+PQH9vZtRuhfiP0xghMy/N900pPOdaWeOdFD7NU4nxevS9DdS0ywUHbxbwgImBtVp38yV/AsZDuLJxfvoW5Nb2pCWpLzcWbsGiBO3Vqn0f9fgRW6gzi+ZMb5DIQPDQjpXNMLSp1g9tConvaurG2xrkU2hGr1OIGupms9GVgE4zsn/ZX9GzUwdIGMF9sr5XE0si2lm575rJ0xDoxe18hX/Wx7DESYv9Cfi9OFJrdjUOsm3KaFL4vrDeFypzCs8SYuW1JDLZwX4cAyLI+t4/hbgUHEZuJU1GSqZUSPdCoBTtJ+nyMB3cn/7zIEQa8Hfm0QAUWB9SBkHQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/natural_england
 
     ofsted:
         comment: "Ofsted"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAvtXRyhSIuGoZ1WnUetlfzivoLB34NOIIapwWCtrYjFeXmlsOv+LRX06Fxu7xUyuIMwDT0CAz3RzOnWmop48JaD43mx0Bhak5/uk72SboKcCk3DiF7biq6AFDYA31eYqYGmOqFFxCGInssW4GwGmNm0QNNDjZh5MKM8OobEM2C/cQLbmRpzEUBM9FpPRElyzg8yxZQKSARyxTefyNelmvUSGZuuor9MROFUe4BsmjM7alZWR/sIj9kNSKqcJwEbbJ/+S/Yhburb22I/VWNdmusuoRvphUtpG9+fMahOEqhlu0w7wEt+5Z9K9nNJpls/H5alVTQGHaYcy8Q6n9niInBQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ofsted
 
     statistics:
         comment: "UK Statistics Authority"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAmIY6f4Iw3gG/Jhz5Az/vM5Oip7uSWlCHqO844/wzqv4yhZ4oI0zGRLmKNWev9TK+vtmQGQwX1PFO52FesAla+zK6XwzrHVx8pxPdBHa2znLEBFoJB1QOopOqLMjZZoYVupCpuD375gvpOkuSzShULKpJGNv2H7Hembv37VTlQql1K2VCcJraZ+WJul2OQAf8QTleU8nMXCh0raLfWgr46v3mFROFQueMVhYGhY42QuKhfbqwvMYFvDoYoOBZWsT85pm0N+Qqt+/30Coz+09upKFeHDVAfZtHSRCBzWN74XQOAwNRGnDbt/oiuFzhFlIFmrA7p4MrQ8LRJxrIR9Sr8w==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/statistics
 
     aib:
         comment: "AAIB, MAIB and RAIB"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEArdfdRB3NNMSAUHBWEMaKCDPX8nounxsyTTk3vqhmoCXpEhpkShTZiznmksai9y172rLUnuoaKGz5l1tp/8xqma4vaF5O7+PUunVlCOXVD70CDuqqQHuhbZEF2m1V/fQQbFFnH2GmIRGPD0b76QgOoOlYTCuc7BFG0g8P+5IuSt7hurqHVHWlyjyFKzXiveBzfUD8BWOuRzXOtLXlFY8ImR84I8mNeI7lTCfWB3Nr7PaWnf0//wvPhjYKCy+bgrf9JsjFUCYlGUnOLterRiDbPC1O0+hLmsjcMlVn5kT0TthrnIrbVOYiQdaCVFMUTTq69JknNWp/clVPxeWji1UYEw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/aib
 
     charity_commission:
         comment: "The Charity Commission"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAis6f9D82TxDgMh3mUY9CTxQYZ45O8gWUvlYAp9yvuoYjZ9e4cJgDzi+//5ig59VE/Az5vZyqORCx9WDwpuukE7KM57WLuypUl6jMrHxvdzIgQb03QGPsZYP14vVRcPdYunnhXm9XwykPpJLEfktBmYRcUyUyLbbqThU6Z+zvTtIr7SRA6RVx0L1qd6Z9kMpFemAwDDadRZzaoTVDzMbBrEt7WlBBKoLouWOekzaP+OHX7u/Da+0jdA1M90tr/7TjLfKiQGvpHNYkipCZPjjJm0PGiTjs3KpZHOHKAD7mONqc7FN8JZtyOqQ72+GLPxgCvAode64AOjrd6i8N5iNFXQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/charity_commission
 
     # Note that ktp's ssh_key is actually @rgarner's. They've given us ad-hoc log files
     # to upload.
     ktp:
         comment: "Innovate UK Knowledge Transfer Partnerships"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAuoIglteQmEwL5/T3maYcomkZs44x1Rx/YRn31vMEuAaBHqYyD5mLUFMXQbCyFO6mZcjx+uOTOT6QhzIiKa8dJhAs5K/KFtjG/6vuwqFdC/Tpggvx6My/vDROsZVmPz4RFrd9XhoL2ybAXaHq6hfo+j112J/n+rkemqzmR/gz2TGFni9jSWG8fEzEkMwQR0iHZnGSFJI2UUR8trxyk32Pq3hkyEiA+XdipR/U8uPnBB2C3+Ms5NUaI8kFmQKYEumqU093dUD7iuekw3vA3elD8oR6UeDGcoRbMomT8oaatPtZl2rSw343M+tEQTC4VsUtcYAiK46sCxIsSjCI0+k2eQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ktp
 
     # Note that psn's ssh_key is actually @rgarner's. They've given us ad-hoc log files
     # to upload.
     psn:
         comment: "Public Services Network"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAQEAuoIglteQmEwL5/T3maYcomkZs44x1Rx/YRn31vMEuAaBHqYyD5mLUFMXQbCyFO6mZcjx+uOTOT6QhzIiKa8dJhAs5K/KFtjG/6vuwqFdC/Tpggvx6My/vDROsZVmPz4RFrd9XhoL2ybAXaHq6hfo+j112J/n+rkemqzmR/gz2TGFni9jSWG8fEzEkMwQR0iHZnGSFJI2UUR8trxyk32Pq3hkyEiA+XdipR/U8uPnBB2C3+Ms5NUaI8kFmQKYEumqU093dUD7iuekw3vA3elD8oR6UeDGcoRbMomT8oaatPtZl2rSw343M+tEQTC4VsUtcYAiK46sCxIsSjCI0+k2eQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/psn
 
     ofqual:
         comment: "Ofqual"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAgEA1PPS/mPSZTG9Lkly1wfOOkuwvu6F3ha01OidC05zy9SRJiZYA5tCAU8UgRyh1Z8fDz61vgxWwrLORdnvfyMjUBqyVr1NNSdZnjVAHRj4p1cky3+JCx99UnJhSiD+uFXnZ7/6nJPHawvi9GBlOUVfQAWbClqNbXQzZf4owgJDNV6DSUTv5VOepL/Lu3PsovqPQSbyd1+0v9Fssxc70WZR/V0XVqx5JVZNV4qUjK/A4ML0eEk4TSOHbN3uB8vJpgnayrPMiIUXqJAJHztinzBb5QAieiBGfXHktQnbaOA4r+10aaL+TxHHTcgP6zP6DOK7CO2io6kOHa+5eWQvtsiJlKfq3WVsLAsTWlFuY2ddKmhjS062eHMP6GOmwEXafG61wyYfHHC4RkrulvRL3Ku+YV8kGC4J6i7boLRqY2xJnlY7Rl13VvSXfsS2HNE9TPBz/NqhYc0kqeoeviwGtCSOw9zL0HQj+eTb3b8uRDxmVwQFfmNgYpCebQxOyEzSLjlurcxV2DvWgtUgifTO8vDxZ98uMCOV6cMFyLPbLnBVOc3U5olBB0AteS87mN2naQr09ydNF5ABZ/KRA/wmGQi7GgHI0LnJ9nt5C0ZGCjwor5JLgX50uHFHWGR3l4cWY5XOwlgiUfHeiM1V4B6ti9KOSZj6HGTIkuf/KvVIGin5gp8=
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/ofqual
 
     innovateuk:
         comment: "Innovate UK"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAACAQDNh5wZ8G122o3sOvv8Kk+/j+JNGTGujhx60f1UC2kg90fDUoej7DJvbshqD8TQWp4H3FackZKhX3HHHWjAXc8VHcF7tfMzzJmna88UbJ1pzf23K00d7DJY4EXZDYcElMFlkzst0R3/aFn8H3Sc3rk3nhcVQNjdb6InVFwXo7Qo8RSVn5fivYutniEceHXW6w3xKjxrLnrFQeVenqwLZi3IH+DGNKk+Pj8q1yNXy+V/I89t5sjngAREKKYuCezgMuThMjlML6tCPIu2PMcUJrVueiyMGAvYdxXEpc8aKUrlK4BWfgrH1uwKklDXM11yzcUrpuotK/Qyxvmiw/aUXlCMn76TY5puvIhYlD2Ze3qc4FGTxCM9D1Kh4uGG4RZwnA2h0BCKr0H8o6sGl59MgFo8dAdZEy1ClxEfMmWI2xjiiS/kA11b064CdgsTuwjboo3EG3DA55+lSC206FdXCW5kDI+uXJ2lXDnpM5defD+A/YQHdZf0qBO7SV4hZ2AeUzNxj6jYTKWRjC9C6U5TLcVnzH1HRxrWQ3u8g4oOiM2jm+K1/jswv2EIeP5rF6kZd7cKn3dceBlqnT0kBaDsDMDjKC+uekOuO0yjLNh3RjiXNH52dFlr/lGM9JrXdzuMQMidzcmFwVsAEjL+vz6VNStGpiUdZdYe6+OT13fmySgfZQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/innovateuk
 
     hs2:
         comment: "High Speed Two (HS2) Limited"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQC1YqXc8VPQIbfBu7SnVmrCuTmjg+7y+hftR86FWlnC9++goVYregV/dopUVWRvg3kHrN1F5JvH8EOtVtgK7SVwJYb5kAWJ9thUVBh68YWR7f1GlT8RC/tPFYdSlT6ULBDRM88ytPaQTqBioIhNF99fH15WkyAbupOW3fKBM3YasI/ZEl4DQ+17fxeakBdIci/cGmUTiXF/B9cih5S1ZrDEyBUKk5mr2rJksya8xPVxKvPI8i1iAj0n3ci4Rb+m0/ImdMGfiyNX3T82OsCk83nxgULizFgrdZNoQLNlbBtY4waLmwa/QGToGUordQkOd904CFvY9S5l+hmojLkM/VcX
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/hs2
 
     dfid_stabilisation:
         comment: "DFID Stabilisation Unit"
-        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQDUtmUOQr6PCvUT+4YkutCg58q97wkF+srLSmZWYsbNXWPSLhMZu7uC9IbKL+ZmBJQwY6Kmx4ZYdONJhnpqaB9pjtLm/dx7qjEHExeGAHK1jcFmHsSi45b83r7VRA2Iu2r7zjt6Cxq6H+YCC8QmgTBvvKdW9FTrfnSotaeBjl8ZrsIP3bnCShJrnchrNIew9vmRhm+EhdCfrvmqm1MyEhCj4zH7Oz2zQWNmFfpPOoXgmEBvasO1w3r0gnu9BXcTZA8VVlRaUlxlODAa8IK3+cQRQTNItrg+uQfMSb7YznrA6IujxKZIc0IdJJznciHetY0wtyXAkqRQwxcy3e4XjQh7
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/dfid_stabilisation
 
     companies:
         comment: "Companies House"
-        ssh_key: AAAAB3NzaC1yc2EAAAABIwAAAIEAk29VAar6R2Zr2Nwl1r5oD6jgGm7XSjUx2q1B4kDIxsuMvd7xSJNtBjBMf9NiLz8kktxVTEaZUw3Jn+HkRN3EBcVnX4yYQ5DtCPwQTfdq2vq8w5C8ICA9lFY93paeRjLO6erE0gLw4iclr4+pU6jOxo7q191pJhqQEjUhqZf4AKE=
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/companies
 
     sfa_apporg:
         comment: "Apprenticeships"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEAhael8c2CCipKECB57cTZ1ClwiDWiXV66CMUq0bsW9GiSjAaPsKjA7PyKoOiXbm5wiNUVqZc1fbNPwW9iNr4GsC5DGkCw7KJDJhwRA2k6c3NqbGTEcneYgIAtKprHR3LeoR7+C7GHVLUFQ7yJiSOpu8SO9cTT3161Qy9G3oYf2QF3NY1DfG4VcekrlLGiM4pu9aA2mpnlGnsUcU6Sg0C0niHZUodgvbf0wcv9RFB/REg+PbmMrJWW9XLXDc01cC6jtH/bTwac8eEwdHkDUscRb9Wny0yn4+8a/SlfpMguVbFl7GNPeche1j2ADfmrKFbK3tp+jxkeqOiJ2UpyFFPHAQ==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/sfa_apporg
 
     local_directgov:
         comment: "Local Directgov Transitions"
-        ssh_key: AAAAB3NzaC1yc2EAAAABJQAAAQEArVhrrl3//8m4C3YppF+Pjt+1wceDng+S+E2Ld+XJDRbLkpJ1sQSIomgI3EKm3iAUf5HvdPWhSKl+MP8VrD9BkEi7jT4MjDGppXfPrGrMBfWCGN9hDGzDu/TIK0aRda1oaWQh/olk5tcuo2J4gVjwyxHIHzay62WWfNdr85dIS+7Jmj5NglsM1y6HqcV0MWnz6xu7vvaG5u2iztaAQ0BOEPN0KFJjV/EtaKc5lrbAycrFLylzyUgCa0/yltR2aV+1NRUqN0lO13J/idafmLAqgdZAZ0ZbiabrnQHWKY4F4pXSCeuj3QeoecjuVwc91iEWn04XCUb/awiSUei4eymxvw==
+        ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/local_directgov
 
 ssh::server::subsystem_sftp: /usr/lib/openssh/sftp-server -f LOCAL7 -l VERBOSE
