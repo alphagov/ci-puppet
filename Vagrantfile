@@ -24,7 +24,6 @@ def vagrant_config(config, version)
     'ci-slave-3'  => {:ip => '172.16.11.13'},
     'ci-slave-4'  => {:ip => '172.16.11.14'},
     'ci-slave-5'  => {:ip => '172.16.11.15'},
-    'ci-management-1' => {:ip => '172.16.11.09'},
     'transition-logs-1' => {:ip => '172.16.11.20',
                             :extra_disks => [
                               { :name => 'sdb', :size => '524288'},
