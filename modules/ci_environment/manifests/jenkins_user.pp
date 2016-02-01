@@ -17,11 +17,11 @@ class ci_environment::jenkins_user (
   validate_string($jenkins_home)
 
   file {'jenkins_sshdir':
-    ensure  => directory,
-    path    => "${jenkins_home}/.ssh",
-    owner   => 'jenkins',
-    group   => 'jenkins',
-    mode    => '0700',
+    ensure => directory,
+    path   => "${jenkins_home}/.ssh",
+    owner  => 'jenkins',
+    group  => 'jenkins',
+    mode   => '0700',
   }
 
   $private_key = "${jenkins_home}/.ssh/id_rsa"
@@ -33,19 +33,19 @@ class ci_environment::jenkins_user (
   }
 
   file {"${jenkins_home}/.gitconfig":
-    ensure  => 'present',
-    owner   => 'jenkins',
-    group   => 'nogroup',
-    mode    => '0644',
-    source  => 'puppet:///modules/ci_environment/jenkins-dot-gitconfig',
+    ensure => 'present',
+    owner  => 'jenkins',
+    group  => 'nogroup',
+    mode   => '0644',
+    source => 'puppet:///modules/ci_environment/jenkins-dot-gitconfig',
   }
 
   file {'jenkins_dotgem_dir':
-    ensure  => directory,
-    path    => "${jenkins_home}/.gem",
-    owner   => 'jenkins',
-    group   => 'jenkins',
-    mode    => '0700',
+    ensure => directory,
+    path   => "${jenkins_home}/.gem",
+    owner  => 'jenkins',
+    group  => 'jenkins',
+    mode   => '0700',
   }
 
   file {"${jenkins_home}/.gem/credentials":

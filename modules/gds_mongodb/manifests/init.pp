@@ -1,10 +1,10 @@
 # class to configure a replica set
 class gds_mongodb($members, $replSet) {
   file { '/etc/mongodb':
-    ensure  => 'directory',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
+    ensure => 'directory',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
   }
 
   file { '/etc/mongodb/configure-replica-set.js':
