@@ -105,8 +105,8 @@ class ci_environment::base {
   }
 
   file { '/etc/ssh/ssh_known_hosts':
-    ensure  => present,
-    mode    => '0644',
+    ensure => present,
+    mode   => '0644',
   }
 
   include ssh::server

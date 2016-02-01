@@ -4,6 +4,13 @@ GIT
   specs:
     hiera-puppet-helper (2.0.1)
 
+GIT
+  remote: git://github.com/rodjek/puppet-lint.git
+  revision: 2546fed6be894bbcff15c3f48d4b6f6bc15d94d1
+  ref: 2546fe
+  specs:
+    puppet-lint (1.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,7 +61,6 @@ GEM
       facter (> 1.6, < 3)
       hiera (~> 1.0)
       json_pure
-    puppet-lint (0.3.2)
     puppet-syntax (1.2.0)
       puppet (>= 2.7.0)
       rake
@@ -92,7 +98,7 @@ DEPENDENCIES
   parallel (~> 1.0.0)
   parallel_tests (~> 0.16.10)
   puppet (= 3.7.1)
-  puppet-lint (~> 0.3.0)
+  puppet-lint!
   puppet-syntax
   puppetlabs_spec_helper (~> 0.4.0)
   rake

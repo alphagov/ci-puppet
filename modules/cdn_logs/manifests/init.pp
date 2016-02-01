@@ -34,8 +34,8 @@ class cdn_logs (
   }
 
   rsyslog::snippet { '10-cdn_remote':
-    content   => template('cdn_logs/etc/rsyslog.d/10-cdn_remote.conf.erb'),
-    require   => [
+    content => template('cdn_logs/etc/rsyslog.d/10-cdn_remote.conf.erb'),
+    require => [
       # Parent log dir and rsyslog configs.
       Class['ci_environment::transition_logs'],
       File[
@@ -47,8 +47,8 @@ class cdn_logs (
   }
 
   rsyslog::snippet { 'transition_logs_sftp':
-    content   => 'local7.*                       /var/log/sftp-server.log',
-    require   => [
+    content => 'local7.*                       /var/log/sftp-server.log',
+    require => [
       Class['ci_environment::transition_logs']
     ]
   }
