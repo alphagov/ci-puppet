@@ -50,7 +50,7 @@ class cdn_logs (
     content => 'local7.*                       /var/log/sftp-server.log',
     require => [
       Class['ci_environment::transition_logs']
-    ]
+    ],
   }
 
   ufw::allow { 'rsyslog_cdn_logs':

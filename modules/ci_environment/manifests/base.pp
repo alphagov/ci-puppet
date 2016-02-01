@@ -44,17 +44,17 @@ class ci_environment::base {
   ])
 
   rbenv::version { '1.9.3-p484':
-    bundler_version => '1.6.5'
+    bundler_version => '1.6.5',
   }
   rbenv::version { '1.9.3-p550':
-    bundler_version => '1.7.4'
+    bundler_version => '1.7.4',
   }
   rbenv::alias { '1.9.3':
     to_version => '1.9.3-p550',
   }
 
   rbenv::version { '2.0.0-p353':
-    bundler_version => '1.6.5'
+    bundler_version => '1.6.5',
   }
   rbenv::alias { '2.0.0':
     to_version => '2.0.0-p353',
@@ -64,10 +64,10 @@ class ci_environment::base {
     bundler_version => '1.6.5',
   }
   rbenv::version { '2.1.4':
-    bundler_version => '1.7.4'
+    bundler_version => '1.7.4',
   }
   rbenv::version { '2.1.5':
-    bundler_version => '1.8.3'
+    bundler_version => '1.8.3',
   }
   rbenv::version { '2.1.6':
     bundler_version => '1.9.4',
@@ -79,7 +79,7 @@ class ci_environment::base {
     bundler_version => '1.10.6',
   }
   rbenv::alias { '2.1':
-    to_version => '2.1.8'
+    to_version => '2.1.8',
   }
 
   rbenv::version { '2.2.2':
@@ -92,21 +92,21 @@ class ci_environment::base {
     bundler_version => '1.10.6',
   }
   rbenv::alias { '2.2':
-    to_version => '2.2.4'
+    to_version => '2.2.4',
   }
 
   rbenv::version { '2.3.0':
     bundler_version => '1.11.2',
   }
   rbenv::alias { '2.3':
-    to_version => '2.3.0'
+    to_version => '2.3.0',
   }
 
   file { '/etc/sudoers.d/gds':
     ensure  => present,
     mode    => '0440',
     content => '%gds ALL=(ALL) NOPASSWD: ALL
-'
+',
   }
 
   file { '/etc/ssh/ssh_known_hosts':
