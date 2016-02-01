@@ -90,6 +90,13 @@ class ci_environment::base {
     to_version => '2.2.3'
   }
 
+  rbenv::version { '2.3.0':
+    bundler_version => '1.11.2',
+  }
+  rbenv::alias { '2.3':
+    to_version => '2.3.0'
+  }
+
   file { '/etc/sudoers.d/gds':
     ensure  => present,
     mode    => '0440',
