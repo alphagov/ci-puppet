@@ -11,6 +11,8 @@ class ci_environment::unused_kernels {
   file { '/etc/cron.daily/remove_unused_kernels':
     ensure => present,
     source => 'puppet:///modules/ci_environment/etc/cron.daily/remove_unused_kernels',
+    owner  => 'root',
+    group  => 'root',
     mode   => '0755',
   }
 }
