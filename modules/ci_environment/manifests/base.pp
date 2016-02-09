@@ -9,7 +9,6 @@ class ci_environment::base {
     apt::ppa { 'ppa:gds/ci': }
   }
 
-  include ci_environment::fail2ban
   include harden
   include github_sshkeys
   include rbenv
