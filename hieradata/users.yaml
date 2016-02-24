@@ -48,6 +48,3 @@ gds_accounts::accounts:
     richardboulton:
         comment: Richard Boulton
         ssh_key: replace-key-cve-2016-0777
-    tommypalmer:
-        comment: Tommy Palmer
-        ssh_key: replace-key-cve-2016-0777
