@@ -61,6 +61,8 @@ GEM
       facter (> 1.6, < 3)
       hiera (~> 1.0)
       json_pure
+    puppet-lint-trailing_comma-check (0.3.1)
+      puppet-lint (~> 1.0)
     puppet-syntax (1.2.0)
       puppet (>= 2.7.0)
       rake
@@ -99,6 +101,7 @@ DEPENDENCIES
   parallel_tests (~> 0.16.10)
   puppet (= 3.7.1)
   puppet-lint!
+  puppet-lint-trailing_comma-check
   puppet-syntax
   puppetlabs_spec_helper (~> 0.4.0)
   rake

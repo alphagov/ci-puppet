@@ -3,7 +3,7 @@
 class ci_environment::jenkins_job_support::mysql {
   class { '::mysql': }
   class { '::mysql::server':
-    require     => Class['::mysql']
+    require     => Class['::mysql'],
   }
 
   mysql::server::config { 'innodb':
@@ -11,7 +11,7 @@ class ci_environment::jenkins_job_support::mysql {
       'mysqld' => {
         'innodb_flush_log_at_trx_commit'     => '0',
       },
-    }
+    },
   }
 
   mysql::db {

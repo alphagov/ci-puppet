@@ -64,7 +64,7 @@ class ci_environment::transition_logs {
         target      => logs_processor,
         hour        => absent,
         minute      => 30,
-        require     => File["${logs_processor_home}/process_transition_logs.sh"]
+        require     => File["${logs_processor_home}/process_transition_logs.sh"],
     }
 
     cron { 'restart_rsyslog':
@@ -73,7 +73,7 @@ class ci_environment::transition_logs {
         command     => 'service rsyslog restart',
         user        => root,
         hour        => absent,
-        minute      => 5
+        minute      => 5,
     }
 
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
@@ -84,7 +84,7 @@ class ci_environment::transition_logs {
         # We need to decompress some 7zipped agency logs
         'p7zip-full',
         'python-paramiko',
-        'python-gobject-2'
+        'python-gobject-2',
     ])
     create_resources('ci_environment::transition_logs::remote_users', $accounts)
 

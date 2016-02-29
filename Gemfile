@@ -15,6 +15,7 @@ gem "librarian-puppet", '~> 2.0'
 gem 'rake'
 gem 'puppet-syntax'
 gem 'puppet-lint', :github => 'rodjek/puppet-lint', :ref => '2546fe'
+gem 'puppet-lint-trailing_comma-check', :require => false
 gem 'rspec-puppet', '~> 0.1.0'
 gem 'puppetlabs_spec_helper', '~> 0.4.0'
 gem 'hiera-puppet-helper', :git => 'git://github.com/bobtfish/hiera-puppet-helper.git'
