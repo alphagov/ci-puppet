@@ -77,6 +77,7 @@ class ci_environment::jenkins_job_support {
   class { 'ci_environment::jenkins_job_support::mysql': }
   class { 'ci_environment::jenkins_job_support::postgresql': }
   class { 'ci_environment::jenkins_job_support::rabbitmq': }
+  include ci_environment::jenkins_job_support::nmap
   class { 'phantomjs': }
   class { 'xvfb': } # Needed by capybara-webkit (used in Publisher)
 
