@@ -4,12 +4,12 @@
 #
 class ci_environment::jenkins_job_support::nmap (){
 
+  # FIXME: Remove once deployed
   package { 'nmap':
-    ensure => latest,
+    ensure => purged,
   }
-
   file { '/etc/sudoers.d/jenkins-nmap':
-    ensure  => present,
+    ensure  => absent,
     mode    => '0440',
     content => 'jenkins ALL=NOPASSWD:/usr/bin/nmap
 ',
