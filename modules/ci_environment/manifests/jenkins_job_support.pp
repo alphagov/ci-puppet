@@ -74,14 +74,13 @@ class ci_environment::jenkins_job_support {
     provider => gem,
   }
 
-  include ci_environment::jenkins_job_support::mysql
-  include ci_environment::jenkins_job_support::postgresql
-  include ci_environment::jenkins_job_support::rabbitmq
-  include ci_environment::jenkins_job_support::nmap
-  include phantomjs
-  include xvfb # Needed by capybara-webkit (used in Publisher)
+  class { 'ci_environment::jenkins_job_support::mysql': }
+  class { 'ci_environment::jenkins_job_support::postgresql': }
+  class { 'ci_environment::jenkins_job_support::rabbitmq': }
+  class { 'phantomjs': }
+  class { 'xvfb': } # Needed by capybara-webkit (used in Publisher)
 
-  include clamav
+  class { 'clamav': }
 
   # asset-manager relies on this symlink being present
   # pointing at clamscan not clamdscan because the clamav user doesn't
