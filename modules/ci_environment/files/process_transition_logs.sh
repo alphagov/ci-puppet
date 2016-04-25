@@ -48,7 +48,7 @@ git add hits/
 # --quiet implies --exit-code as well as suppressing output
 if ! git diff --cached --quiet; then
     TIMESTAMP=$(date +"%F %T")
-    git commit -m 'Redirector Fastly hits processed on '"$TIMESTAMP"
+    git commit -m 'Bouncer Fastly hits processed on '"$TIMESTAMP"
 fi
 
 git push origin master
