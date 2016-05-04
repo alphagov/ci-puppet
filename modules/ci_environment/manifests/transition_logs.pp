@@ -80,7 +80,7 @@ class ci_environment::transition_logs {
         command => '/usr/local/bin/check_rsyslog_status_transition',
         user    => root,
         minute  => '*/5',
-        require => File["/usr/local/bin/check_rsyslog_status_transition"],
+        require => File['/usr/local/bin/check_rsyslog_status_transition'],
     }
 
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
