@@ -56,6 +56,14 @@ class ci_environment::transition_logs {
         require => Account['logs_processor'],
     }
 
+    file { '/usr/local/bin/check_rsyslog_status_transition':
+        ensure => present,
+        mode   => '0750',
+        owner  => root,
+        group  => root,
+        source => 'puppet:///modules/ci_environment/check_rsyslog_status_transition.sh',
+    }
+
     cron { 'process_fastly_logs':
         ensure      => present,
         environment => 'PATH=/usr/lib/rbenv/shims:/usr/sbin:/usr/bin:/sbin:/bin',
@@ -67,13 +75,10 @@ class ci_environment::transition_logs {
         require     => File["${logs_processor_home}/process_transition_logs.sh"],
     }
 
-    cron { 'restart_rsyslog':
-        ensure      => present,
-        environment => 'PATH=/usr/sbin:/usr/bin:/sbin:/bin',
-        command     => 'service rsyslog restart',
-        user        => root,
-        hour        => absent,
-        minute      => 5,
+    cron { 'check_rsyslog_status_transition':
+        ensure  => present,
+        command => '/usr/local/bin/check_rsyslog_status_transition',
+        minute  => '*/5',
     }
 
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
@@ -81,6 +86,7 @@ class ci_environment::transition_logs {
         'rssh',
         # Provides /opt/mawk required by pre-transition-stats for processing logs
         'mawk-1.3.4',
+        'nagios-plugins-basic',
         # We need to decompress some 7zipped agency logs
         'p7zip-full',
         'python-paramiko',
