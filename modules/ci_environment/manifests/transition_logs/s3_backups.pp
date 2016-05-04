@@ -26,7 +26,7 @@ class ci_environment::transition_logs::s3_backups(
   $directory = '/srv/logs/log-1',
   $hour = 4,
   $minute = 15,
-  $retention = 30,
+  $retention = 4,
   $s3_bucket = undef,
   $s3_aws_id = undef,
   $s3_aws_key = undef,
