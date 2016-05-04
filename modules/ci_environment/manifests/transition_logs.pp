@@ -58,7 +58,9 @@ class ci_environment::transition_logs {
 
     file { '/usr/local/bin/check_rsyslog_status_transition':
         ensure => present,
-        mode   => '0755',
+        mode   => '0750',
+        owner  => root,
+        group  => root,
         source => 'puppet:///modules/ci_environment/check_rsyslog_status_transition.sh',
     }
 
@@ -76,7 +78,9 @@ class ci_environment::transition_logs {
     cron { 'check_rsyslog_status_transition':
         ensure  => present,
         command => '/usr/local/bin/check_rsyslog_status_transition',
+        user    => root,
         minute  => '*/5',
+        require => File["/usr/local/bin/check_rsyslog_status_transition"],
     }
 
     $accounts = hiera('ci_environment::transition_logs::rssh_users')
