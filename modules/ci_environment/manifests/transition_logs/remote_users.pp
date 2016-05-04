@@ -10,7 +10,7 @@ define ci_environment::transition_logs::remote_users (
     ssh_key  => $ssh_key,
     home_dir => $home_dir,
     shell    => '/usr/bin/rssh',
-    require  => Ext4mount['/srv/logs/log-1'],
+    require  => [Ext4mount['/srv/logs/log-1'], Package['rssh']],
   }
 
   file {"${home_dir}/cache":

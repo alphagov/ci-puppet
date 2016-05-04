@@ -117,4 +117,8 @@ class ci_environment::transition_logs {
       log_local  => true,
       log_remote => false,
     }
+
+  # S3 backups
+  include ci_environment::transition_logs::s3_backups
+
 }
