@@ -9,6 +9,16 @@
 # [*minute*]
 #   Defines the minute to run the cron job
 #
+# [*pubkey_id*]
+#   The public gpg key fingerprint to a key that 
+#   has been uploaded to keyserver.ubuntu.com.
+#   This module uses only the public key for encryption.
+#
+#   A keypair should have been generated locally on 
+#   the user's machine and the private key stored safely
+#   offline. Backup files can be decrypted with this private
+#   key, though it is outside the scope of this module.
+#
 # [*retention*]
 #   Defines the number of full backups to retain
 #
@@ -37,7 +47,7 @@ class ci_environment::transition_logs::s3_backups(
     bucket                => $s3_bucket,
     dest_id               => $s3_aws_id,
     dest_key              => $s3_aws_key,
-    pubkey_id             => '13B84C37AB52D76B3F53CF0E7C34BD7A05119BA4',
+    pubkey_id             => '05793B692E9C76BAAE19FB9FA95451F692B59227',
     hour                  => $hour,
     minute                => $minute,
     remove_all_but_n_full => $retention,
