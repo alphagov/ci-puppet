@@ -5,3 +5,4 @@
 /bin
 /build
 *.vdi
+.DS_Store
