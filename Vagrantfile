@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-DIST_PREFERRED = 'precise'
+DIST_PREFERRED = 'trusty'
 
 if Vagrant::VERSION < "1.1.0"
   $stderr.puts "WARNING: Using old Vagrantfile format! Please upgrade to Vagrant >1.1.\n"
