@@ -1,13 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-DIST_PREFERRED = 'precise'
+DIST_PREFERRED = 'trusty'
+MINIMUM_VAGRANT_VERSION = '1.1.0'
 
-if Vagrant::VERSION < "1.1.0"
-  $stderr.puts "WARNING: Using old Vagrantfile format! Please upgrade to Vagrant >1.1.\n"
-  Vagrant::Config.run do |config|
-    vagrant_config(config, 1)
-  end
+if Vagrant::VERSION < MINIMUM_VAGRANT_VERSION
+  $stderr.puts "Using a Vagrant version earlier than #{MINIMUM_VAGRANT_VERSION} is not supported"
+  exit(1)
 else
   Vagrant.configure("2") do |config|
     vagrant_config(config, 2)
