@@ -6,5 +6,6 @@ class gds_elasticsearch::estools {
   package { 'estools':
     ensure   => '1.1.1',
     provider => 'pip',
+    require  => Package['python-pip'],
   }
 }
