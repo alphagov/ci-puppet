@@ -45,7 +45,6 @@ class ci_environment::jenkins_master (
     repo => 0,
   }
   include jenkins_user
-  include jenkins_job_support
 
   Class['java'] -> Class['jenkins'] -> Class['jenkins_user']
   Package <| title == 'jenkins' |> -> Jenkins::Plugin <| |>
