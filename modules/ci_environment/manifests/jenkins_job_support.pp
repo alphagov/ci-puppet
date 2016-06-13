@@ -99,12 +99,7 @@ class ci_environment::jenkins_job_support {
     'set-licence-seen':
       command => '/bin/echo debconf shared/accepted-oracle-license-v1-1 seen true | /usr/bin/debconf-set-selections';
   }
-  # Install Java 7 for ElasticSearch
-  package { 'oracle-java7-installer':
-    ensure  => present,
-    require => [Exec['set-licence-selected'], Exec['set-licence-seen']],
-  }
-  # Install Java 8 for Licensify
+  # Install Java 8 for Licensify and Elasticsearch
   package { 'oracle-java8-installer':
     ensure  => present,
     require => [Exec['set-licence-selected'], Exec['set-licence-seen']],
@@ -116,6 +111,7 @@ class ci_environment::jenkins_job_support {
       'openjsk-6-jre',
       'openjdk-6-jre-headless',
       'openjdk-6-jre-lib',
+      'oracle-java7-installer',
     ]:
       ensure => purged;
   }
