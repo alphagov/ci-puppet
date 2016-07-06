@@ -47,6 +47,7 @@ class pact_broker (
 ) {
 
   include nginx
+  include postgresql::server
 
   nginx::resource::vhost { $vhost:
     proxy            => "http://localhost:${port}/",
