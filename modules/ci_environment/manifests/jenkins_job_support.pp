@@ -49,13 +49,9 @@ class ci_environment::jenkins_job_support {
   }
 
   class { 'goenv':
-    global_version => '1.5.3',
+    global_version => '1.6.3',
   }
-  goenv::version { ['1.3.3', '1.4.2', '1.4.3', '1.5.1', '1.5.3', '1.6.2']: }
-  # FIXME: Remove once cleaned up everywhere.
-  goenv::version { ['1.2.2', '1.3.1', '1.4.1']:
-    ensure => absent,
-  }
+  goenv::version { ['1.3.3', '1.4.2', '1.4.3', '1.5.1', '1.5.3', '1.6.2', '1.6.3']: }
 
   package { ['golang-gom', 'godep']:
     ensure => latest,
