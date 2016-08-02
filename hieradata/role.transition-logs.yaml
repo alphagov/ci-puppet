@@ -199,6 +199,11 @@ ci_environment::transition_logs::rssh_users:
         ssh_key: replace-key-cve-2016-0777
         home_dir: /srv/logs/log-1/dfid_stabilisation
 
+    dfid_r4d:
+        comment: "DFID R4D"
+        ssh_key: AAAAB3NzaC1yc2EAAAADAQABAAABAQChrGWzDVAKGpMdQLKFBBQNS+2d4QwG1G1fEBUHa8mw6FS4G0FsX8AczAPzZwaCozyUziDCR1GvECqPO/1NBX7dnTURYMCnglN4lIgnZQAD79cTpDsokQpMWtZKRuxtlxj/MVYaR3Ypu51sVouEGzeQW0j5EF2D6pA1BkshqemNTqS3qkyWeFdSRQmYiq9qsKggRNK7aEB21ngVfEPja0sYrzbnrnvy+ekAFoXJPq2wQvZ5LT48WMkHsVUvaIMaxf4BHAr5GHpgFSPvTX69TUAZnqR5cOIMRlASC61/DmIM+/AO+62PNEVreSGyMQhd4U3RUBRyuxcwozqOYl9VRkIj
+        home_dir: /srv/logs/log-1/dfid_r4d
+
     companies:
         comment: "Companies House"
         ssh_key: replace-key-cve-2016-0777
