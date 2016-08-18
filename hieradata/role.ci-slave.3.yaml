@@ -1,5 +1,24 @@
 ---
+classes:
+ - mongodb::client # In MongoDB 3.x the client is no longer included as part of the server install
+
 ci_environment::jenkins_slave::labels:
   - 'elasticsearch-1.4'
-  - 'mongodb-2.4'
+  - 'mongodb-3.2'
   - 'postgresql-9.3'
+
+apt::sources:
+  'mongodb3.2':
+    location: 'http://repo.mongodb.org/apt/ubuntu/'
+    release: 'trusty/mongodb-org/3.2'
+    architecture: ::architecture
+    repos: 'multiverse'
+    key: '42F3E95A2C4F08279C4960ADD68FA50FEA312927'
+
+mongodb::globals::version: '3.2.9'
+mongodb::globals::manage_package: true
+mongodb::replSet::sets: 'gds-ci-mongodb-3'
+gds_mongodb::replSet: 'gds-ci-mongodb-3'
+gds_mongodb::service: 'mongod'
+
+

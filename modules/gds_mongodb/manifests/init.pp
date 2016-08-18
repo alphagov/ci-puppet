@@ -1,5 +1,22 @@
+# == Class: gds_mongodb
+#
 # class to configure a replica set
-class gds_mongodb($members, $replSet) {
+#
+# === Parameters
+# [*members*]
+#   Individual hosts in a replicaset. Defined as an array.
+#
+# [*replSet*]
+#   Name of the replicaset.
+#
+# [*service*]
+#   MongoDB-Server daemon name.
+#
+class gds_mongodb(
+  $members,
+  $replSet,
+  $service
+) {
   file { '/etc/mongodb':
     ensure => 'directory',
     owner  => 'root',
@@ -21,7 +38,7 @@ class gds_mongodb($members, $replSet) {
     unless  => "/usr/bin/mongo --host ${members[0]} --quiet --eval 'rs.status().ok' | grep -q 1",
     require => [
       File['/etc/mongodb/configure-replica-set.js'],
-      Service['mongodb'],
+      Service[$service],
     ],
   }
 }

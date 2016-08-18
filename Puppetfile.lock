@@ -7,6 +7,7 @@ FORGE
       puppetlabs-stdlib (>= 2.2.1)
     attachmentgenie-ufw (1.1.0)
       puppetlabs-stdlib (>= 2.2.1)
+    darin-zypprepo (1.0.2)
     elasticsearch-elasticsearch (0.4.0)
       puppetlabs-stdlib (>= 3.2.0)
     gdsoperations-goenv (0.0.4)
@@ -18,27 +19,33 @@ FORGE
       puppetlabs-concat (< 2.0.0, >= 1.1.1)
       puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
     nanliu-staging (0.4.1)
-    puppetlabs-apt (1.8.0)
-      puppetlabs-stdlib (>= 2.2.1)
+    puppet-archive (1.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+    puppet-unattended_upgrades (2.0.0)
+      puppetlabs-apt (< 3.0.0, >= 2.2.0)
+      puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
+    puppetlabs-apt (2.2.2)
+      puppetlabs-stdlib (< 5.0.0, >= 4.5.0)
     puppetlabs-concat (1.2.4)
       puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs-firewall (1.1.3)
     puppetlabs-git (0.0.2)
-    puppetlabs-java (1.2.0)
-      puppetlabs-stdlib (>= 2.4.0)
+    puppetlabs-java (1.6.0)
+      puppetlabs-stdlib (< 5.0.0, >= 2.4.0)
     puppetlabs-lvm (0.3.3)
       puppetlabs-stdlib (>= 4.1.0)
+    puppetlabs-mongodb (0.13.0)
+      puppetlabs-apt (< 3.0.0, >= 1.0.0)
+      puppetlabs-stdlib (< 5.0.0, >= 2.2.0)
     puppetlabs-mysql (0.9.0)
       puppetlabs-stdlib (>= 2.2.1)
     puppetlabs-nodejs (0.4.0)
       puppetlabs-apt (>= 0.0.3)
       puppetlabs-stdlib (>= 2.0.0)
-    puppetlabs-postgresql (3.4.1)
-      puppetlabs-apt (< 2.0.0, >= 1.1.0)
-      puppetlabs-concat (< 2.0.0, >= 1.0.0)
-      puppetlabs-firewall (>= 0.0.4)
-      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
-    puppetlabs-stdlib (4.9.0)
+    puppetlabs-postgresql (4.4.0)
+      puppetlabs-apt (< 3.0.0, >= 1.8.0)
+      puppetlabs-concat (< 2.0.0, >= 1.1.0)
+      puppetlabs-stdlib (~> 4.0)
+    puppetlabs-stdlib (4.6.0)
     saz-dnsmasq (1.2.0)
       puppetlabs-stdlib (>= 2.0.0)
     torrancew-account (0.0.5)
@@ -82,28 +89,11 @@ GIT
     alphagov-harden (0.0.1)
 
 GIT
-  remote: git://github.com/alphagov/puppet-jenkins.git
-  ref: ca40459bea5a9dc91e12e8014c9878fcd2856ee7
-  sha: ca40459bea5a9dc91e12e8014c9878fcd2856ee7
-  specs:
-    alphagov-jenkins (0.2.4)
-      puppetlabs-apt (>= 0.0.3)
-      puppetlabs-stdlib (>= 2.0.0)
-
-GIT
   remote: git://github.com/alphagov/puppet-rsyslog.git
   ref: acf2755cda80e2ecd107ed8de4d275c383db0487
   sha: acf2755cda80e2ecd107ed8de4d275c383db0487
   specs:
     alphagov-rsyslog (2.0.1)
-
-GIT
-  remote: git://github.com/alphagov/puppetlabs-mongodb.git
-  ref: 1661646b1391c47417d1d25b0a541fdc53bf7729
-  sha: 1661646b1391c47417d1d25b0a541fdc53bf7729
-  specs:
-    alphagov-mongodb (0.1.0)
-      puppetlabs-apt (>= 0.0.2)
 
 GIT
   remote: git://github.com/alphagov/puppetlabs-rabbitmq.git
@@ -123,14 +113,24 @@ GIT
     gds-graphite (0.1.0)
       puppetlabs-stdlib (>= 2.5)
 
+GIT
+  remote: https://github.com/jenkinsci/puppet-jenkins.git
+  ref: v1.7.0
+  sha: c1da0b46afae711382bdb1f03f12750f30eeea88
+  specs:
+    jenkinsci-puppet-jenkins (1.7.0)
+      darin-zypprepo (< 2.0.0, >= 1.0.1)
+      puppet-archive (>= 0.4.8)
+      puppetlabs-apt (< 3.0.0, >= 0.0.3)
+      puppetlabs-java (< 2.0.0, >= 1.0.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.6.0)
+
 DEPENDENCIES
   alphagov-clamav (>= 0)
   alphagov-duplicity (>= 0)
   alphagov-ext4mount (>= 0)
   alphagov-gds_accounts (>= 0)
   alphagov-harden (>= 0)
-  alphagov-jenkins (>= 0)
-  alphagov-mongodb (>= 0)
   alphagov-rsyslog (>= 0)
   attachmentgenie-locales (= 1.0.2)
   attachmentgenie-ssh (= 1.2.1)
@@ -140,15 +140,18 @@ DEPENDENCIES
   gdsoperations-goenv (= 0.0.4)
   gdsoperations-openconnect (>= 0)
   gdsoperations-rbenv (= 1.2.0)
+  jenkinsci-puppet-jenkins (>= 0)
   jfryman-nginx (= 0.2.7)
-  puppetlabs-apt (~> 1.7)
+  puppet-unattended_upgrades (= 2.0.0)
+  puppetlabs-apt (~> 2.2.2)
   puppetlabs-git (= 0.0.2)
   puppetlabs-java (>= 0)
   puppetlabs-lvm (= 0.3.3)
+  puppetlabs-mongodb (= 0.13.0)
   puppetlabs-mysql (= 0.9.0)
   puppetlabs-nodejs (= 0.4.0)
-  puppetlabs-postgresql (>= 0)
+  puppetlabs-postgresql (= 4.4.0)
   puppetlabs-rabbitmq (>= 0)
-  puppetlabs-stdlib (~> 4.0)
+  puppetlabs-stdlib (~> 4.6.0)
   saz-dnsmasq (= 1.2.0)
 

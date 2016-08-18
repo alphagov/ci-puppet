@@ -9,6 +9,9 @@
 #
 # === Parameters
 #
+# [*github_enterprise_cert*]
+#   Auth cert for github enterprise.
+#
 # [*vhost*]
 #   The vhost name for the Jenkins web UI
 #
@@ -19,6 +22,18 @@
 # [*legacy_...*]
 #   Legacy vhosts and SSL certs to be support the migration to the new domain
 #
+# [*jenkins_home*]
+#   Jenkin's user base/home directory.
+#   Default: /var/lib/jenkins
+#
+# [*users_dir*]
+#   Directory that Jenkins keeps it's user configs. The default should be
+#   fine for installations from the official packages.
+#   Default: /var/lib/jenkins/users
+#
+# [*slave_user*]
+#   The account used by slave instances to authenticate with Jenkins master.
+#
 class ci_environment::jenkins_master (
   $github_enterprise_cert,
   $vhost,
@@ -28,7 +43,8 @@ class ci_environment::jenkins_master (
   $legacy_vhost_ssl_cert = '/etc/ssl/certs/ssl-cert-snakeoil.pem',
   $legacy_vhost_ssl_key = '/etc/ssl/private/ssl-cert-snakeoil.key',
   $slave_user = 'slave',
-  $jenkins_home
+  $jenkins_home,
+  $users_dir = '/var/lib/jenkins/users'
 ) {
   validate_string($github_enterprise_cert, $vhost, $jenkins_home)
 
@@ -37,16 +53,15 @@ class ci_environment::jenkins_master (
     release      => 'stable',
     architecture => $::architecture,
     key          => '3803E444EB0235822AA36A66EC5FE1A937E3ACBB',
-    include_src  => false,
+    include      => { 'src' => false },
   }
 
   include java
   class { 'jenkins':
-    repo => 0,
+    repo => false,
   }
   include jenkins_user
 
-  Class['java'] -> Class['jenkins'] -> Class['jenkins_user']
   Package <| title == 'jenkins' |> -> Jenkins::Plugin <| |>
 
   include nginx
@@ -63,7 +78,7 @@ class ci_environment::jenkins_master (
     add_header       => {'Strict-Transport-Security' => '"max-age=31536000"'},
   }
 
-  # FIXME: remove this vhost when we're no longer using the old domain anywhere
+  # The legacy_vhost is a redirect from the 'alphagov' domain to the ci 'publishing.service'.
   if $legacy_vhost != undef {
     nginx::resource::vhost { $legacy_vhost:
       proxy            => 'http://localhost:8080/',
@@ -93,10 +108,17 @@ class ci_environment::jenkins_master (
                 -storepass changeit | grep github.gds',
   }
 
-  jenkins::api_user { $slave_user: }
-  jenkins::api_user { 'pingdom': }
-  jenkins::api_user { 'github_build_trigger': }
-  jenkins::api_user { 'deploy_jenkins': }
+  file { $users_dir :
+    ensure => directory,
+    owner  => 'jenkins',
+  } ->
+
+  ci_environment::api_user { [
+    $slave_user,
+    'pingdom',
+    'github_build_trigger',
+    'deploy_jenkins',
+  ] : }
 
   file { "${jenkins_home}/hudson.plugins.warnings.WarningsPublisher.xml":
     ensure => 'present',

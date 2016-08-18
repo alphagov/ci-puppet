@@ -1,7 +1,7 @@
 ---
 classes:
   - apt
-  - apt::unattended_upgrades
+  - unattended_upgrades # reboot defaults to false
   - ci_environment::base
   - ci_environment::dns
   - ci_environment::unused_kernels
@@ -11,7 +11,6 @@ classes:
 
 apt::always_apt_update: true
 apt::purge_sources_list_d: true
-apt::unattended_upgrades::auto_reboot: false
 
 # Self signed. For transition-logs development.
 cdn_logs::key: |
