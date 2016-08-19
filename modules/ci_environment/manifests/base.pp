@@ -98,8 +98,13 @@ class ci_environment::base {
   rbenv::version { '2.3.0':
     bundler_version => '1.11.2',
   }
+
+  rbenv::version { '2.3.1':
+    bundler_version => '1.12.5',
+  }
+
   rbenv::alias { '2.3':
-    to_version => '2.3.0',
+    to_version => '2.3.1',
   }
 
   file { '/etc/sudoers.d/gds':
