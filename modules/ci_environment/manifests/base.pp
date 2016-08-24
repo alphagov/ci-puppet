@@ -5,15 +5,15 @@
 class ci_environment::base {
   apt::ppa { 'ppa:gds/govuk': }
 
-  apt::source { 'govuk-rbenv':
-    location     => 'http://apt.production.alphagov.co.uk/rbenv-ruby',
-    release      => $::lsbdistcodename,
-    architecture => $::architecture,
-    key          => '3803E444EB0235822AA36A66EC5FE1A937E3ACBB',
-    include_src  => false,
-  }
-
   if $::lsbdistcodename != 'trusty' {
+    apt::source { 'govuk-rbenv':
+      location     => 'http://apt.production.alphagov.co.uk/rbenv-ruby',
+      release      => $::lsbdistcodename,
+      architecture => $::architecture,
+      key          => '3803E444EB0235822AA36A66EC5FE1A937E3ACBB',
+      include_src  => false,
+    }
+
     apt::ppa { 'ppa:gds/ci': }
   }
 
