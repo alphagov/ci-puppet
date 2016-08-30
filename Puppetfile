@@ -12,6 +12,7 @@ mod 'puppetlabs/apt',              '~> 1.7'
 mod 'puppetlabs/git',              '0.0.2'
 mod 'puppetlabs/java'
 mod 'puppetlabs/lvm',              '0.3.3'
+mod 'puppetlabs/mongodb',          '0.3.0'
 mod 'puppetlabs/mysql',            '0.9.0'
 mod 'puppetlabs/nodejs',           '0.4.0'
 mod 'puppetlabs/postgresql'
@@ -34,7 +35,5 @@ mod 'alphagov/harden',        :git => 'git://github.com/alphagov/puppet-harden.g
                               :ref => '5b27ee25e19f0c5421665246b76a13def8058e1c'
 mod 'alphagov/jenkins',       :git => 'git://github.com/alphagov/puppet-jenkins.git',
                               :ref => 'ca40459bea5a9dc91e12e8014c9878fcd2856ee7'
-mod 'alphagov/mongodb',       :git => 'git://github.com/alphagov/puppetlabs-mongodb.git',
-                              :ref => '1661646b1391c47417d1d25b0a541fdc53bf7729'
 mod 'alphagov/rsyslog',       :git => 'git://github.com/alphagov/puppet-rsyslog.git',
                               :ref => 'acf2755cda80e2ecd107ed8de4d275c383db0487'

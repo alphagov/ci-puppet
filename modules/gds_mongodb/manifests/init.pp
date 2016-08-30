@@ -1,5 +1,5 @@
 # class to configure a replica set
-class gds_mongodb($members, $replSet) {
+class gds_mongodb($members, $replset) {
   file { '/etc/mongodb':
     ensure => 'directory',
     owner  => 'root',

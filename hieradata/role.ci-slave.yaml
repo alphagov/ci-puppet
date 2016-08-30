@@ -11,14 +11,14 @@ apt::unattended_upgrades::auto_reboot: true
 ci_environment::jenkins_slave::jenkins_home: /home/jenkins
 
 gds_mongodb::members: ['localhost']
-gds_mongodb::replSet: 'gds-ci'
+gds_mongodb::replset: 'gds-ci'
 
 jenkins::slave::manage_slave_user: 1
 jenkins::slave::slave_user: jenkins
 jenkins::slave::slave_home: /home/jenkins
 jenkins::slave::version: 1.9
 
-mongodb::replSet: 'gds-ci'
+mongodb::replset: 'gds-ci'
 mongodb::enable_10gen: true
 mongodb::version: 2.4.9
 mongodb::smallfiles: true
