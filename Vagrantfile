@@ -45,8 +45,6 @@ def vagrant_config(config, version)
     config.vm.box_version = '20160818.0.0'
   end
 
-  config.vm.box_version = '1.0.1'
-
   config.vm.provision :shell, :path => 'tools/bootstrap'
   config.vm.provision :puppet do |puppet|
     puppet.manifest_file  = "site.pp"
