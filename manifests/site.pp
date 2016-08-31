@@ -1,4 +1,4 @@
-# Use hiera as a lightweight ENC.
+# Use hiera as a lightweight ENC (external node classifier).
 $machine_role = regsubst($::clientcert, '^(.*)-\d\..*$', '\1')
 $machine_id = regsubst($::clientcert, '^.*-(\d)\..*$', '\1')
 node default {
