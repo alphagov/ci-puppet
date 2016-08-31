@@ -17,7 +17,7 @@ def vagrant_config(config, version)
   dist = ENV['gds_ci_dist'] || DIST_PREFERRED
 
   nodes = {
-    'ci-master-1' => {:ip => '172.16.11.10', :memory => 1024},
+    'ci-master-1' => {:ip => '172.16.11.10'},
     'ci-slave-1'  => {:ip => '172.16.11.11'},
     'ci-slave-2'  => {:ip => '172.16.11.12'},
     'ci-slave-3'  => {:ip => '172.16.11.13'},
@@ -38,12 +38,13 @@ def vagrant_config(config, version)
   }
 
   if dist == 'precise'
-    config.vm.box     = "puppetlabs/ubuntu-12.04-64-puppet"
+    config.vm.box          = "ubuntu/precise64"
+    config.vm.box_version  = '20160815.0.0'
   else
-    config.vm.box     = "puppetlabs/ubuntu-14.04-64-puppet"
+    config.vm.box          = "ubuntu/trusty64"
+    config.vm.box_version  = '20160818.0.0'
   end
 
-  config.vm.box_version = '1.0.1'
 
   config.vm.provision :shell, :path => 'tools/bootstrap'
   config.vm.provision :puppet do |puppet|
@@ -80,7 +81,7 @@ def vagrant_config(config, version)
       modifyvm_args = ['modifyvm', :id]
       modifyvm_args << "--name" << fqdn
       if node_opts[:memory]
-        modifyvm_args << "--memory" << node_opts[:memory]
+        modifyvm_args << "--memory" << 1024
       end
       # Isolate guests from host networking.
       modifyvm_args << "--natdnsproxy1" << "on"
