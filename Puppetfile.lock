@@ -26,6 +26,9 @@ FORGE
       puppetlabs-stdlib (>= 2.4.0)
     puppetlabs-lvm (0.3.3)
       puppetlabs-stdlib (>= 4.1.0)
+    puppetlabs-mongodb (0.13.0)
+      puppetlabs-apt (< 3.0.0, >= 1.0.0)
+      puppetlabs-stdlib (< 5.0.0, >= 2.2.0)
     puppetlabs-mysql (0.9.0)
       puppetlabs-stdlib (>= 2.2.1)
     puppetlabs-nodejs (0.4.0)
@@ -96,14 +99,6 @@ GIT
     alphagov-rsyslog (2.0.1)
 
 GIT
-  remote: git://github.com/alphagov/puppetlabs-mongodb.git
-  ref: 1661646b1391c47417d1d25b0a541fdc53bf7729
-  sha: 1661646b1391c47417d1d25b0a541fdc53bf7729
-  specs:
-    alphagov-mongodb (0.1.0)
-      puppetlabs-apt (>= 0.0.2)
-
-GIT
   remote: git://github.com/alphagov/puppetlabs-rabbitmq.git
   ref: strip-backslashes
   sha: a6a98e4ab722a01ca47a39ca371eccbcfa4888b6
@@ -136,7 +131,6 @@ DEPENDENCIES
   alphagov-gds_accounts (>= 0)
   alphagov-harden (>= 0)
   alphagov-jenkins (>= 0)
-  alphagov-mongodb (>= 0)
   alphagov-rsyslog (>= 0)
   attachmentgenie-locales (>= 0)
   attachmentgenie-ssh (= 1.2.1)
@@ -151,6 +145,7 @@ DEPENDENCIES
   puppetlabs-git (= 0.0.2)
   puppetlabs-java (>= 0)
   puppetlabs-lvm (= 0.3.3)
+  puppetlabs-mongodb (= 0.13.0)
   puppetlabs-mysql (= 0.9.0)
   puppetlabs-nodejs (= 0.4.0)
   puppetlabs-postgresql (>= 0)

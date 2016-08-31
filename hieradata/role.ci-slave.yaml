@@ -18,7 +18,7 @@ jenkins::slave::slave_user: jenkins
 jenkins::slave::slave_home: /home/jenkins
 jenkins::slave::version: 1.9
 
-mongodb::replSet: 'gds-ci'
-mongodb::enable_10gen: true
-mongodb::version: 2.4.9
+mongodb::replset::sets: 'gds-ci'
+mongodb::globals::version: 2.4.9
+mongodb::globals::server_package_name: mongodb-10gen
 mongodb::smallfiles: true
