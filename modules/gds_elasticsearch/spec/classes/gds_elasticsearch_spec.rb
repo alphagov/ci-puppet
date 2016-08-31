@@ -6,6 +6,7 @@ describe 'gds_elasticsearch', :type => :class do
     :lsbdistid => 'ubuntu',
     :operatingsystem => 'Ubuntu',
     :kernel => 'Linux',
+    :osfamily => 'Debian',
   }}
 
   describe '#version' do
