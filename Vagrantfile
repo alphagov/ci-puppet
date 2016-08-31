@@ -38,9 +38,11 @@ def vagrant_config(config, version)
   }
 
   if dist == 'precise'
-    config.vm.box     = "puppetlabs/ubuntu-12.04-64-puppet"
+    config.vm.box         = "ubuntu/precise64"
+    config.vm.box_version = '20160815.0.0'
   else
-    config.vm.box     = "puppetlabs/ubuntu-14.04-64-puppet"
+    config.vm.box         = "ubuntu/trusty64"
+    config.vm.box_version = '20160818.0.0'
   end
 
   config.vm.box_version = '1.0.1'
