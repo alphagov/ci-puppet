@@ -1,7 +1,14 @@
 ---
 ci_environment::jenkins_slave::labels:
   - 'elasticsearch-0.90'
-  - 'mongodb-2.4'
+  - 'mongodb-3.2'
   - 'postgresql-9.3'
 
 gds_elasticsearch::version: '0.90.12'
+
+gds_mongodb::enable_mongo3_repo: true
+mongodb::globals::version: 3.2.7
+mongodb::globals::server_package_name: mongodb-org-server
+mongodb::globals::manage_package: true
+mongodb::replset::sets: 'gds-ci-mongodb-3'
+gds_mongodb::replSet: 'gds-ci-mongodb-3'
