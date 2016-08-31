@@ -17,7 +17,7 @@ def vagrant_config(config, version)
   dist = ENV['gds_ci_dist'] || DIST_PREFERRED
 
   nodes = {
-    'ci-master-1' => {:ip => '172.16.11.10', :memory => 1024},
+    'ci-master-1' => {:ip => '172.16.11.10'},
     'ci-slave-1'  => {:ip => '172.16.11.11'},
     'ci-slave-2'  => {:ip => '172.16.11.12'},
     'ci-slave-3'  => {:ip => '172.16.11.13'},
@@ -80,7 +80,7 @@ def vagrant_config(config, version)
       modifyvm_args = ['modifyvm', :id]
       modifyvm_args << "--name" << fqdn
       if node_opts[:memory]
-        modifyvm_args << "--memory" << node_opts[:memory]
+        modifyvm_args << "--memory" << 1024
       end
       # Isolate guests from host networking.
       modifyvm_args << "--natdnsproxy1" << "on"
