@@ -1,6 +1,5 @@
 forge 'https://forgeapi.puppetlabs.com'
 
-mod 'attachmentgenie/locales',     '1.0.2'
 mod 'attachmentgenie/ssh',         '1.2.1'
 mod 'attachmentgenie/ufw',         '1.1.0'
 mod 'elasticsearch/elasticsearch', '0.4.0'
@@ -33,8 +32,10 @@ mod 'gds/graphite',           :git => 'git://github.com/gds-operations/puppet-gr
 mod 'alphagov/harden',        :git => 'git://github.com/alphagov/puppet-harden.git',
                               :ref => '5b27ee25e19f0c5421665246b76a13def8058e1c'
 mod 'alphagov/jenkins',       :git => 'git://github.com/alphagov/puppet-jenkins.git',
-                              :ref => 'ca40459bea5a9dc91e12e8014c9878fcd2856ee7'
+                              :ref => '14670f22c7dd2892d82e1fada5a66ed24bb36fa3'
 mod 'alphagov/mongodb',       :git => 'git://github.com/alphagov/puppetlabs-mongodb.git',
                               :ref => '1661646b1391c47417d1d25b0a541fdc53bf7729'
 mod 'alphagov/rsyslog',       :git => 'git://github.com/alphagov/puppet-rsyslog.git',
                               :ref => 'acf2755cda80e2ecd107ed8de4d275c383db0487'
+mod 'attachmentgenie/locales', :git => 'git://github.com/attachmentgenie/attachmentgenie-locales.git',
+                               :ref => 'dd3741905f79dc8de5ad01c7af2cd2845766a83f'
