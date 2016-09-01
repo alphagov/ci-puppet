@@ -1,8 +1,6 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    attachmentgenie-locales (1.0.2)
-      puppetlabs-stdlib (>= 2.2.1)
     attachmentgenie-ssh (1.2.1)
       puppetlabs-stdlib (>= 2.2.1)
     attachmentgenie-ufw (1.1.0)
@@ -116,6 +114,14 @@ GIT
       puppetlabs-stdlib (>= 2.0.0)
 
 GIT
+  remote: git://github.com/attachmentgenie/attachmentgenie-locales.git
+  ref: dd3741905f79dc8de5ad01c7af2cd2845766a83f
+  sha: dd3741905f79dc8de5ad01c7af2cd2845766a83f
+  specs:
+    attachmentgenie-locales (2.0.0)
+      puppetlabs-stdlib (< 5.0.0, >= 2.2.1)
+
+GIT
   remote: git://github.com/gds-operations/puppet-graphite.git
   ref: 45663a5cd8ed72d7cb8d19e535136cacd893689d
   sha: 45663a5cd8ed72d7cb8d19e535136cacd893689d
@@ -132,7 +138,7 @@ DEPENDENCIES
   alphagov-jenkins (>= 0)
   alphagov-mongodb (>= 0)
   alphagov-rsyslog (>= 0)
-  attachmentgenie-locales (= 1.0.2)
+  attachmentgenie-locales (>= 0)
   attachmentgenie-ssh (= 1.2.1)
   attachmentgenie-ufw (= 1.1.0)
   elasticsearch-elasticsearch (= 0.4.0)
