@@ -14,7 +14,7 @@ mod 'puppetlabs/lvm',              '0.3.3'
 mod 'puppetlabs/mongodb',          '0.13.0'
 mod 'puppetlabs/mysql',            '0.9.0'
 mod 'puppetlabs/nodejs',           '0.4.0'
-mod 'puppetlabs/postgresql'
+mod 'puppetlabs/postgresql',       '4.8.0'
 mod 'puppetlabs/rabbitmq',
   :git => 'git://github.com/alphagov/puppetlabs-rabbitmq.git',
   :ref => 'strip-backslashes'
