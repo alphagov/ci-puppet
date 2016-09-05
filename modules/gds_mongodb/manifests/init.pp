@@ -1,10 +1,18 @@
 # class to configure a replica set
-class gds_mongodb($members, $replSet) {
+class gds_mongodb($members, $replSet, $enable_mongo3_repo = false) {
+
   file { '/etc/mongodb':
     ensure => 'directory',
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
+  }
+
+  if $enable_mongo3_repo {
+    include ::gds_mongodb::repo::mongodb3
+    include ::mongodb::client             # In MongoDB 3.x the client is no longer included as part of the server install
+  } else {
+    include ::gds_mongodb::repo::mongodb2
   }
 
   file { '/etc/mongodb/configure-replica-set.js':
