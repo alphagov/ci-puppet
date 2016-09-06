@@ -17,12 +17,13 @@ def vagrant_config(config, version)
   dist = ENV['gds_ci_dist'] || DIST_PREFERRED
 
   nodes = {
-    'ci-master-1' => {:ip => '172.16.11.10'},
-    'ci-slave-1'  => {:ip => '172.16.11.11'},
-    'ci-slave-2'  => {:ip => '172.16.11.12'},
-    'ci-slave-3'  => {:ip => '172.16.11.13'},
-    'ci-slave-4'  => {:ip => '172.16.11.14'},
-    'ci-slave-5'  => {:ip => '172.16.11.15'},
+    'ci-master-1'       => {:ip => '172.16.11.10'},
+    'ci-slave-1'        => {:ip => '172.16.11.11'},
+    'ci-slave-2'        => {:ip => '172.16.11.12'},
+    'ci-slave-3'        => {:ip => '172.16.11.13'},
+    'ci-slave-4'        => {:ip => '172.16.11.14'},
+    'ci-slave-5'        => {:ip => '172.16.11.15'},
+    'ci-slave-eeSh7'    => {:ip => '172.16.11.16'},
     'transition-logs-1' => {:ip => '172.16.11.20',
                             :extra_disks => [
                               { :name => 'sdb', :size => '524288'},

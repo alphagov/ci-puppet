@@ -1,6 +1,7 @@
 # Use hiera as a lightweight ENC (external node classifier).
-$machine_role = regsubst($::clientcert, '^(.*)-\d\..*$', '\1')
-$machine_id = regsubst($::clientcert, '^.*-(\d)\..*$', '\1')
+$machine_role = regsubst($::clientcert, '^(.*)-[^\.]+\..*$', '\1')
+$machine_id = regsubst($::clientcert, '^.*-([^\.]+)\..*$', '\1')
+
 node default {
   if $::lsbdistcodename == 'precise' {
     # on precise the libaugeas-ruby package is an alias for libaugeas-ruby1.8

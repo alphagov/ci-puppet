@@ -24,4 +24,13 @@ class ci_environment::jenkins_job_support::postgresql (
       password_hash => postgresql_password('mapit', $mapit_role_password);
   }
 
+  if $::lsbdistcodename == 'trusty' {
+    apt::source { 'postgresql':
+      location     => 'http://apt.publishing.service.gov.uk/postgresql',
+      release      => "${::lsbdistcodename}-pgdg",
+      architecture => $::architecture,
+      key          => '3803E444EB0235822AA36A66EC5FE1A937E3ACBB',
+      include_src  => false,
+    }
+  }
 }
