@@ -32,4 +32,9 @@ class gds_mongodb($members, $replSet, $enable_mongo3_repo = false) {
       Service['mongodb'],
     ],
   }
+
+  package { 'mongodb-org-tools':
+    ensure  => present,
+    require => Class['::gds_mongodb::repo::mongodb3'],
+  }
 }
