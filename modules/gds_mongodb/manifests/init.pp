@@ -11,6 +11,12 @@ class gds_mongodb($members, $replSet, $enable_mongo3_repo = false) {
   if $enable_mongo3_repo {
     include ::gds_mongodb::repo::mongodb3
     include ::mongodb::client             # In MongoDB 3.x the client is no longer included as part of the server install
+
+    package { 'mongodb-org-tools':
+      ensure  => present,
+      require => Class['::gds_mongodb::repo::mongodb3'],
+    }
+
   } else {
     include ::gds_mongodb::repo::mongodb2
   }
@@ -31,10 +37,5 @@ class gds_mongodb($members, $replSet, $enable_mongo3_repo = false) {
       File['/etc/mongodb/configure-replica-set.js'],
       Service['mongodb'],
     ],
-  }
-
-  package { 'mongodb-org-tools':
-    ensure  => present,
-    require => Class['::gds_mongodb::repo::mongodb3'],
   }
 }
