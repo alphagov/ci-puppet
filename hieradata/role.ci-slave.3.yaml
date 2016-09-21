@@ -10,4 +10,5 @@ mongodb::globals::version: 3.2.7
 mongodb::globals::server_package_name: mongodb-org-server
 mongodb::globals::manage_package: true
 mongodb::replset::sets: 'gds-ci-mongodb-3'
+mongodb::server::pidfilepath: '/var/run/mongodb.pid'
 gds_mongodb::replSet: 'gds-ci-mongodb-3'
