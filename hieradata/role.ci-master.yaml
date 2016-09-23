@@ -86,3 +86,5 @@ jenkins::plugin_hash:
         version: "0.19"
     rebuild:
         version: "1.22"
+    slack:
+        vrsion: "1.7"
