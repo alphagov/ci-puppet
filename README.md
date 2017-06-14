@@ -1,5 +1,9 @@
 # ci-puppet
 
+**This repo is now deprecated**
+
+CI and transition logs are now configured through [govuk-puppet](https://github.com/alphagov/govuk-puppet).
+
 ## Development Workflow
 
 - Clone this repository
